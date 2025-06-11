@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Gemütliche und helle Neubau 1 Zimmer-Wohnung mit Balkon",
+    "price": 790,
+    "street": "Thomas-Jeffferson-Str.38,",
+    "city": "68309 Baden-Württemberg - Mannheim",
+    "latitude": "",
+    "longitude": "",
+    "price_per_sm": 19.75
+  },
+  {
+    "title": "Modern Wohnen im SULLIVAN Parkside",
+    "price": 985,
+    "street": "George-Sullivan-Ring 32,",
+    "city": "68309 Baden-Württemberg - Mannheim",
+    "latitude": 49.5242664,
+    "longitude": 8.5353502,
+    "price_per_sm": 26.62
+  },
+  {
+    "title": "Frisch renovierte, schicke 2-Zimmer-Altbauwohnung im Jungbusch",
+    "price": 740,
+    "street": "Jungbuschstraße 25,",
+    "city": "68159 Baden-Württemberg - Mannheim",
+    "latitude": 49.4938002,
+    "longitude": 8.4578347,
+    "price_per_sm": 14.51
+  },
+  {
+    "title": "WG-Zimmer - Shared flatin Mannheim",
+    "price": 440,
+    "street": "Beilstraße 28,",
+    "city": "68159 Baden-Württemberg - Mannheim",
+    "latitude": 49.494824,
+    "longitude": 8.4599441,
+    "price_per_sm": 4.4
+  },
+  {
+    "title": "Möblierte 2-Zimmer-Wohnung in Mannheim (für 2 Monate)",
+    "price": 750,
+    "street": "",
+    "city": "68161 Baden-Württemberg - Mannheim",
+    "latitude": "",
+    "longitude": "",
+    "price_per_sm": 15.0
+  },
+  {
+    "title": "3 Zi. helle, sonnige Dachgeschosswohnung",
+    "price": 915,
+    "street": "",
+    "city": "68219 Baden-Württemberg - Mannheim",
+    "latitude": "",
+    "longitude": "",
+    "price_per_sm": 53.82
+  },
+  {
+    "title": "++ ERSTBEZUG: Große 2-Zimmer-Wohnung mit Terrasse, EBK und modernem Bad ++",
+    "price": 1267,
+    "street": "Heinrich-Wittkamp-Str. 19,",
+    "city": "68167 Baden-Württemberg - Mannheim",
+    "latitude": 49.502039,
+    "longitude": 8.4936349,
+    "price_per_sm": 15.84
+  },
+  {
+    "title": "2 Zimmer Wohnung in der Seniorenresidenz Thomas Carree",
+    "price": 920,
+    "street": "",
+    "city": "68163 Baden-Württemberg - Mannheim",
+    "latitude": "",
+    "longitude": "",
+    "price_per_sm": 14.15
+  },
+  {
+    "title": "++ Direkt bezugsfertig: 3-Zi.-Whg. mit riesigem Balkon & Einbauküche zum Erstbezug ++",
+    "price": 1835,
+    "street": "Heinrich-Wittkamp-Straße 17b,",
+    "city": "68167 Baden-Württemberg - Mannheim",
+    "latitude": 49.502039,
+    "longitude": 8.4936349,
+    "price_per_sm": 15.04
+  },
+  {
+    "title": "++ Stilvoll wohnen - neue 2-Zi-Whg. mit EBK und Balkon im Wohnquartier Field 4 ++",
+    "price": 1316,
+    "street": "Heinrich-Wittkamp-Str. 19,",
+    "city": "68167 Baden-Württemberg - Mannheim",
+    "latitude": 49.502039,
+    "longitude": 8.4936349,
+    "price_per_sm": 16.87
+  }
+]

@@ -8,7 +8,6 @@ import rawData from './wohnungen.json';
 import stadtteile_mannheim from './stadtteile_mannheim.json';
 
 const MAPBOX_TOKEN = "pk.eyJ1IjoibGF1cmVudDE1NCIsImEiOiJjbWI4ZXRmYWowYnM3MmtzYnpxdnluNmlyIn0.5Y8kOPYR-F_Ac-bAJTPiog";
-
 function stringToColor(name) {
   let hash = 0;
   for (let i = 0; i < name.length; i++) {
@@ -17,7 +16,7 @@ function stringToColor(name) {
   const r = (hash >> 0) & 255;
   const g = (hash >> 8) & 255;
   const b = (hash >> 16) & 255;
-  return [r, g, b, 100];
+  return [r, g, b, 80];
 }
 
 const getCentroid = (feature) => {
@@ -56,6 +55,19 @@ const App = () => {
   }))
   );
 
+  const prices = data.map(d => d.price_per_qm);
+  const logPrices = prices.map(p => Math.log(p));
+  const minLog = Math.min(...logPrices);
+  const maxLog = Math.max(...logPrices);
+  // 💡 jetzt innerhalb der Komponente definiert
+  function priceToColor(price) {
+    const logP = Math.log(price);
+    const ratio = (logP - minLog) / (maxLog - minLog);
+    const r = Math.floor(255 * ratio);
+    const g = Math.floor(255 * (1 - Math.abs(ratio - 0.5) * 2));
+    const b = Math.floor(255 * (1 - ratio));
+    return [r, g, b, 180];
+  }
   const stadtteilLayerMannheim = new GeoJsonLayer({
     id: 'stadtteile',
     data: stadtteile_mannheim,
@@ -64,25 +76,31 @@ const App = () => {
     lineWidthScale: 2,
     lineWidthMinPixels: 1,
     getLineColor: [0, 0, 0, 200],
-    getFillColor: f => stringToColor(f.properties.name),
-                                                  pickable: true,
-                                                  getLineWidth: 1,
+    getFillColor: [180, 180, 255, 80]  // hellgrau-transparent
+
   });
 
   const stadtteilLabelLayer = new TextLayer({
     id: 'stadtteil-labels',
-    data: stadtteile_mannheim.features.map(f => ({
-      position: getCentroid(f),
-                                                 name: f.properties.name
-    })),
+    data: stadtteile_mannheim.features.map(f => {
+      const [lon, lat] = getCentroid(f);
+      return {
+        position: [lon, lat, 100], // 100 Meter über Grund
+        name: f.properties.name,
+      };
+    }),
     pickable: false,
     getPosition: d => d.position,
     getText: d => d.name,
-    getSize: 18,
+    getSize: 200,
+    sizeUnits: 'meters',
     getColor: [0, 0, 0, 255],
     fontFamily: 'Arial, sans-serif',
-    sizeUnits: 'pixels',
+    billboard: true, // optional: true für immer lesbar
+    characterSet: 'auto',
   });
+
+
 
   const columnLayer = new ColumnLayer({
     id: 'wohnungen',
@@ -95,22 +113,23 @@ const App = () => {
     elevationScale: 60,
     getPosition: d => d.position,
     getId: d => d.id,
-    getFillColor: d =>
-    selectedObjectId === d.id
-    ? [50, 150, 255, 180]
-    : [220, 220, 220, 200],
+    getFillColor: d => priceToColor(d.price_per_qm, minLog, maxLog),
     getLineColor: [0, 0, 0, 255],
     getLineWidth: 3,
     lineWidthUnits: 'pixels',
     getElevation: d => d.price_per_qm,
   });
 
-  const testAvgData = stadtteile_mannheim.features.map((feature, i) => ({
-    id: i,
-    name: feature.properties.name,
-    position: getCentroid(feature),
-                                                                        price_per_qm: Math.floor(8 + Math.random() * 10), // testwerte 8–18
-  }));
+  const testAvgData = stadtteile_mannheim.features.map((feature, i) => {
+    const [lon, lat] = getCentroid(feature);
+    return {
+      id: i,
+      name: feature.properties.name,
+      position: [lon, lat + 0.000], // 0.001 Grad ≈ 110m nach Süden
+      price_per_qm: Math.floor(8 + Math.random() * 10), // testwerte 8–18
+    };
+  });
+
 
   const avgColumnLayer = new ColumnLayer({
     id: 'stadtteil-avg-balken',
@@ -118,12 +137,13 @@ const App = () => {
     diskResolution: 6,
     radius: 130,
     extruded: true,
+    wireframe: true,
     pickable: true,
     elevationScale: 120,
     getPosition: d => d.position,
     getElevation: d => d.price_per_qm,
-    getFillColor: [153, 102, 255, 200], // lila
-    getLineColor: [80, 0, 130, 255], // dunkellila Kontur
+    getFillColor: [255, 140, 0, 140], // lila
+    getLineColor: [255, 255, 255, 255], // dunkellila Kontur
     getLineWidth: 1,
     lineWidthUnits: 'pixels',
   });
@@ -131,8 +151,10 @@ const App = () => {
   const layers = [
     stadtteilLayerMannheim,
     stadtteilLabelLayer,
-    viewMode === "avg" ? avgColumnLayer : columnLayer
+    viewMode === "avg" ? avgColumnLayer : columnLayer,
+
   ];
+
 
   return (
     <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
@@ -201,5 +223,6 @@ const App = () => {
       </div>
   );
 };
+
 
 export default App;

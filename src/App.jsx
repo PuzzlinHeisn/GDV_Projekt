@@ -3,7 +3,7 @@ import { DeckGL } from '@deck.gl/react';
 import { Map } from 'react-map-gl';
 import { ColumnLayer, GeoJsonLayer, TextLayer } from '@deck.gl/layers';
 import { Button } from '@mui/material';
-
+/*import bodenRichtwertMannheim from './mannheim-map.png'*/
 import rawData from './wohnungen.json';
 import stadtteile_mannheim from './stadtteile_mannheim.json';
 
@@ -80,6 +80,13 @@ const App = () => {
 
   });
 
+  /*const bodenrichtwertMannheimLayer = new BitmapLayer({
+    id: 'Bitmaplayer',
+    bounds: [8.43, 49.44, 8.55, 49.53],
+    image: bodenRichtwertMannheim,
+    pickable: true,
+  })
+*/
   const stadtteilLabelLayer = new TextLayer({
     id: 'stadtteil-labels',
     data: stadtteile_mannheim.features.map(f => {
@@ -149,6 +156,7 @@ const App = () => {
   });
 
   const layers = [
+    /*bodenrichtwertMannheimLayer,*/
     stadtteilLayerMannheim,
     stadtteilLabelLayer,
     viewMode === "avg" ? avgColumnLayer : columnLayer,

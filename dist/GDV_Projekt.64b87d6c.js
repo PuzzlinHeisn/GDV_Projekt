@@ -24959,7 +24959,7 @@ var _react1 = require("@deck.gl/react");
 var _reactMapGl = require("react-map-gl");
 var _layers = require("@deck.gl/layers");
 var _material = require("@mui/material");
-var _wohnungenJson = require("./wohnungen.json");
+/*import bodenRichtwertMannheim from './mannheim-map.png'*/ var _wohnungenJson = require("./wohnungen.json");
 var _wohnungenJsonDefault = parcelHelpers.interopDefault(_wohnungenJson);
 var _stadtteileMannheimJson = require("./stadtteile_mannheim.json");
 var _stadtteileMannheimJsonDefault = parcelHelpers.interopDefault(_stadtteileMannheimJson);
@@ -25047,7 +25047,13 @@ const App = ()=>{
             80
         ] // hellgrau-transparent
     });
-    const stadtteilLabelLayer = new (0, _layers.TextLayer)({
+    /*const bodenrichtwertMannheimLayer = new BitmapLayer({
+    id: 'Bitmaplayer',
+    bounds: [8.43, 49.44, 8.55, 49.53],
+    image: bodenRichtwertMannheim,
+    pickable: true,
+  })
+*/ const stadtteilLabelLayer = new (0, _layers.TextLayer)({
         id: 'stadtteil-labels',
         data: (0, _stadtteileMannheimJsonDefault.default).features.map((f)=>{
             const [lon, lat] = getCentroid(f);
@@ -25136,7 +25142,7 @@ const App = ()=>{
         lineWidthUnits: 'pixels'
     });
     const layers = [
-        stadtteilLayerMannheim,
+        /*bodenrichtwertMannheimLayer,*/ stadtteilLayerMannheim,
         stadtteilLabelLayer,
         viewMode === "avg" ? avgColumnLayer : columnLayer
     ];
@@ -25160,7 +25166,7 @@ const App = ()=>{
                 children: viewMode === "avg" ? "\uD83C\uDFE2 Einzelwohnungen anzeigen" : "\uD83D\uDCCA Durchschnitt pro Stadtteil"
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 161,
+                lineNumber: 169,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react1.DeckGL), {
@@ -25178,12 +25184,12 @@ const App = ()=>{
                     mapboxAccessToken: MAPBOX_TOKEN
                 }, void 0, false, {
                     fileName: "src/App.jsx",
-                    lineNumber: 195,
+                    lineNumber: 203,
                     columnNumber: 7
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 179,
+                lineNumber: 187,
                 columnNumber: 7
             }, undefined),
             selectedObjectId !== null && viewMode === "wohnungen" && (()=>{
@@ -25209,7 +25215,7 @@ const App = ()=>{
                             children: selectedObject.title
                         }, void 0, false, {
                             fileName: "src/App.jsx",
-                            lineNumber: 216,
+                            lineNumber: 224,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -25223,7 +25229,7 @@ const App = ()=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/App.jsx",
-                            lineNumber: 217,
+                            lineNumber: 225,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -25236,7 +25242,7 @@ const App = ()=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/App.jsx",
-                            lineNumber: 218,
+                            lineNumber: 226,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -25250,20 +25256,20 @@ const App = ()=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/App.jsx",
-                            lineNumber: 219,
+                            lineNumber: 227,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.jsx",
-                    lineNumber: 205,
+                    lineNumber: 213,
                     columnNumber: 11
                 }, undefined);
             })()
         ]
     }, void 0, true, {
         fileName: "src/App.jsx",
-        lineNumber: 160,
+        lineNumber: 168,
         columnNumber: 5
     }, undefined);
 };

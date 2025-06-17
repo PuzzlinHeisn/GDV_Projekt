@@ -8,9 +8,7 @@ import BarsStadtteileMannheimLayer from './components/decklayers/columnlayers/Ba
 import BarsWohnungenMannheimLayer from './components/decklayers/columnlayers/BarsWohnungenMannheimLayer';
 
 import ToggleBarViewButton from './components/buttons/ToggleBarViewButton';
-import WohnungInfoCard from './components/cards/WohnungInfoCard';
-
-
+import WohnungInfoCard from './components/cards/WohnungInfoCardMannheim';
 import { wohnungenDataMannheim } from './utils/processedDataMannheim';
 const MAPBOX_TOKEN = "pk.eyJ1IjoibGF1cmVudDE1NCIsImEiOiJjbWI4ZXRmYWowYnM3MmtzYnpxdnluNmlyIn0.5Y8kOPYR-F_Ac-bAJTPiog";
 
@@ -55,6 +53,7 @@ const INITIAL_VIEW_MANNHEIM = {
           controller={true}
           layers={''} // Muss später noch verändert werden 
           onClick={() => setSelectedObjectId(null)} // Reset Auswahl wenn man links klickt
+
         >
           <Map
             mapStyle="mapbox://styles/mapbox/dark-v11"
@@ -73,6 +72,7 @@ const INITIAL_VIEW_MANNHEIM = {
           initialViewState={INITIAL_VIEW_MANNHEIM}
           controller={true}
           layers={mannheimLayers}
+ 
           onClick={info => {
             if (info.object && viewMode === "wohnungen") {
               setSelectedObjectId(selectedObjectId === info.object.id ? null : info.object.id);

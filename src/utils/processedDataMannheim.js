@@ -1,5 +1,5 @@
 
-import rawData from '../data/wohnungen.json';
+import rawData from '../data/wohnungsdaten_mannheim.json';
 import { jitter } from '../utils/utilFunctions';
 
 export const wohnungenDataMannheim = rawData

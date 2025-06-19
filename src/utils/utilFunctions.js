@@ -22,11 +22,14 @@ export function jitter () {
  return((Math.random() - 0.5) * 0.0016)};
 
 export function priceToColor(price, minLog, maxLog) {
+
   const logP = Math.log(price);
-  const ratio = (logP - minLog) / (maxLog - minLog);
+  const ratio = Math.max(0, Math.min(1, (logP - minLog) / (maxLog - minLog || 0.0001)));
   const r = Math.floor(255 * ratio);
-  const g = Math.floor(255 * (1 - Math.abs(ratio - 0.5) * 2));
+  const g = Math.floor(255 * (1 - Math.abs(ratio - 0.5) * 2)); // grün in der Mitte
   const b = Math.floor(255 * (1 - ratio));
-  return [r, g, b, 180];
+  return [r, g, b];
 }
+
+
 

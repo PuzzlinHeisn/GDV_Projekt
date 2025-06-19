@@ -3,8 +3,10 @@
   import { wohnungenDataMannheim } from "../../../utils/processedDataMannheim";
   import { priceToColor } from "../../../utils/utilFunctions";
   const BarsWohnungenMannheimLayer = () => {
-    const prices = wohnungenDataMannheim.map(d => d.price_per_qm);
-    const logPrices = prices.map(p => Math.log(p));
+    const validPrices = wohnungenDataMannheim
+    .map(d => d.price_per_qm)
+    .filter(p => typeof p === 'number' && p > 0 && !isNaN(p));
+    const logPrices = validPrices.map(p => Math.log(p));
     const minLog = Math.min(...logPrices);
     const maxLog = Math.max(...logPrices);
     return new ColumnLayer({
@@ -18,7 +20,7 @@
       elevationScale: 75,
       getPosition: d => d.position,
       getId: d => d.id,
-      getFillColor: d => priceToColor(d.price_per_qm, minLog, maxLog),
+      getFillColor:  d => priceToColor(d.price_per_qm, minLog, maxLog),
       getLineColor: [0, 0, 0, 255],
       getLineWidth: 3,
       lineWidthUnits: 'pixels',

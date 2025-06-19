@@ -1,7 +1,7 @@
 // components/StadtteileOutlineLayer.jsx
 import React from 'react';
 import { GeoJsonLayer } from '@deck.gl/layers';
-import stadtteileMannheimGeoJSON from '../../../data/stadtteile_mannheim.json'
+import stadtteileMannheimGeoJSON from '../../../data/stadtteile_outline_mannheim.json'
 const StadtteileOutlineLayer = () => new GeoJsonLayer({
     id: 'stadtteile-outline',
     data: stadtteileMannheimGeoJSON,

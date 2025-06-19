@@ -1,8 +1,8 @@
  import React from "react";
  import { TextLayer } from "@deck.gl/layers";
- import stadtteile_mannheim from '../../../data/stadtteile_mannheim.json'
+ import stadtteile_mannheim from '../../../data/stadtteile_outline_mannheim.json'
  import { getCentroid } from "../../../utils/utilFunctions";
- const stadtteilLabelLayer = () => new TextLayer({
+ const stadtteilLabelLayerMannheim = () => new TextLayer({
     id: 'stadtteil-labels',
     data: stadtteile_mannheim.features.map(f => {
       const [lon, lat] = getCentroid(f);
@@ -22,4 +22,4 @@
     characterSet: 'auto',
   });
 
-  export default stadtteilLabelLayer;
+  export default stadtteilLabelLayerMannheim;

@@ -28,7 +28,7 @@ export function priceToColor(price, minLog, maxLog) {
   const r = Math.floor(255 * ratio);
   const g = Math.floor(255 * (1 - Math.abs(ratio - 0.5) * 2)); // grün in der Mitte
   const b = Math.floor(255 * (1 - ratio));
-  return [r, g, b];
+  return [r, g, b, 200];
 }
 
 

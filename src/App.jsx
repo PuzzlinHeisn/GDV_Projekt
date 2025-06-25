@@ -7,7 +7,7 @@ import StadtteilLabelLayerMannheim from './components/decklayers/textlayers/Stad
 import BarsWohnungenMannheimLayer from './components/decklayers/columnlayers/BarsWohnungenMannheimLayer';
 
 import ToggleBarViewButton from './components/buttons/ToggleBarViewButton';
-import WohnungInfoCard from './components/cards/WohnungInfoCardMannheim';
+import WohnungInfoCard from './components/cards/WohnungInfoCard';
 import { wohnungenDataMannheim } from './utils/processedDataMannheim';
 
 import BarsWohnungenKaiserslauternLayer from './components/decklayers/columnlayers/BarsWohnungenKLLayer';
@@ -62,7 +62,7 @@ const INITIAL_VIEW_MANNHEIM = {
   return (
     <div style={{ display: 'flex', height: '100vh', width: '100vw' }}>
       {/* Linke Seite: Kaiserslautern */}
-      <div style={{ flex: 1, borderRight: '2px solid #ccc', position: 'relative' }}>
+      <div style={{ flex: 1, position: 'relative' }}>
         <DeckGL
           initialViewState={INITIAL_VIEW_KL}
           controller={true}
@@ -78,7 +78,7 @@ const INITIAL_VIEW_MANNHEIM = {
 
         >
           <Map
-            mapStyle="mapbox://styles/mapbox/dark-v11"
+            mapStyle="mapbox://styles/mapbox/light-v11"
             mapboxAccessToken={MAPBOX_TOKEN}
           />
         </DeckGL>
@@ -108,7 +108,7 @@ const INITIAL_VIEW_MANNHEIM = {
 }}
         >
           <Map
-            mapStyle="mapbox://styles/mapbox/dark-v11"
+            mapStyle="mapbox://styles/mapbox/light-v11"
             mapboxAccessToken={MAPBOX_TOKEN}
           />
         </DeckGL>

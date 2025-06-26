@@ -10,7 +10,7 @@ const StadtteileOutlineLayer = () => new GeoJsonLayer({
     lineWidthScale: 4,
     lineWidthMinPixels: 3,
     getFillColor: [180, 180, 255, 80],
-    getLineColor: [255, 255, 255, 200],
+    getLineColor: [255, 255, 255],
   });
 
 export default StadtteileOutlineLayer;

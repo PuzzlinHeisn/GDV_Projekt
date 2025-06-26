@@ -1,7 +1,7 @@
   import React from "react";
   import { ColumnLayer } from "@deck.gl/layers";
   import { wohnungenDataKaiserslautern } from "../../../utils/processedDataKaiserslautern";
-  import { priceToColor } from "../../../utils/utilFunctions";
+  import { hexToRgbaArray } from "../../../utils/utilFunctions";
   const BarsWohnungenKaiserslauternLayer = () => {
     const validPrices = wohnungenDataKaiserslautern
     .map(d => d.price_per_qm)
@@ -20,12 +20,11 @@
       elevationScale: 75,
       getPosition: d => d.position,
       getId: d => d.id,
-      getFillColor: d => priceToColor(d.price_per_qm, minLog, maxLog),
+      getFillColor: d => hexToRgbaArray(d.color),
       getLineColor: [0, 0, 0, 255],
       getLineWidth: 3,
       lineWidthUnits: 'pixels',
       getElevation: d => d.price_per_qm,
   });
 }
-
   export default BarsWohnungenKaiserslauternLayer;

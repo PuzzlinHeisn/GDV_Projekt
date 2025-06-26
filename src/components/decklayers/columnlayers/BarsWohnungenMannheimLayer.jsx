@@ -1,7 +1,7 @@
   import React from "react";
   import { ColumnLayer } from "@deck.gl/layers";
   import { wohnungenDataMannheim } from "../../../utils/processedDataMannheim";
-  import { priceToColor } from "../../../utils/utilFunctions";
+  import { hexToRgbaArray } from "../../../utils/utilFunctions";
   const BarsWohnungenMannheimLayer = () => {
     const validPrices = wohnungenDataMannheim
     .map(d => d.price_per_qm)
@@ -20,7 +20,7 @@
       elevationScale: 75,
       getPosition: d => d.position,
       getId: d => d.id,
-      getFillColor:  d => priceToColor(d.price_per_qm, minLog, maxLog),
+      getFillColor:  d => hexToRgbaArray(d.color),
       getLineColor: [0, 0, 0, 255],
       getLineWidth: 3,
       lineWidthUnits: 'pixels',

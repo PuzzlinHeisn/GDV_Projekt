@@ -1,12 +1,15 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 import { green } from '@mui/material/colors';
-
-const WohnungInfoCard = ({ wohnung }) => (
+import merged_data from './../../data/merged_data.json'
+const WohnungInfoCard = ({ wohnungTitle }) => {
+  const wohnung = merged_data.find(w => w.title === wohnungTitle);
+  if (!wohnung) return null;
+    return(
     <Card
         sx={{
             position: 'absolute',
-            bottom: 20,
+            top: 20,
             left: 20,
             maxWidth: 300,
             zIndex: 999,
@@ -50,6 +53,6 @@ const WohnungInfoCard = ({ wohnung }) => (
 </Typography>
         </CardContent>        
     </Card>
-);
+)};
 
 export default WohnungInfoCard;

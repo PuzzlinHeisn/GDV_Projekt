@@ -21,11 +21,11 @@ const WohnungsBarChart = ({ data, selected, dataKey, label}) => {
                         <Cell
                             key={`cell-${entry.id ?? index}`}
                             fill={entry.title === selected
-                                ? '#ffffff'
+                                ? '#000000'
                                 : entry.color
                             }
-                            stroke={entry.title === selected ? '#000000' : undefined}
-                            strokeWidth={entry.title === selected ? 6 : 1}
+                            stroke={entry.title === selected ? '#ffffff' : undefined}
+                            strokeWidth={entry.title === selected ? 12 : 1}
                             />
                     ))}
                 </Bar>

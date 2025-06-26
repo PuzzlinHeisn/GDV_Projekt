@@ -5,12 +5,22 @@ import WohnungsBarChart from '../barcharts/WohnungsBarChart';
 import processedDataKaiserslautern from './../../utils/processedDataKaiserslautern'
 import processedDataMannheim from './../../utils/processedDataMannheim'
 import WohnungsBarChart from '../barcharts/WohnungsBarChart';
-
+import Slide from '@mui/material/Slide';
 
 const BottomChartBar = ({ selectedObject, learSelections }) => {
 
   return (
-    <AppBar position="fixed" color="default" sx={{ top: 'auto', bottom: 0, boxShadow: 10 }}>
+    <Slide direction="up" in={!!selectedObject} mountOnEnter unmountOnExit > 
+    <AppBar
+  position="fixed"
+  sx={{
+    top: 'auto',
+    bottom: 0,
+    boxShadow: 10,
+    backgroundColor: '#1e1e2f',
+    color: '#ffffff',
+  }}
+>
       <Toolbar>
         <Box sx={{ display: 'flex', width: '100%'}}>
           {selectedObject && (
@@ -66,6 +76,7 @@ const BottomChartBar = ({ selectedObject, learSelections }) => {
         </Box>
       </Toolbar>
     </AppBar>
+    </Slide>
   );
 };
  export default BottomChartBar;

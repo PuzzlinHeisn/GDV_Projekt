@@ -9,38 +9,42 @@ const CustomTooltip = ({ active, payload }) => {
     return (
         <Box
             sx={{
-                backgroundColor: "white",
-                maxWidth: 400,
-                boxShadow: 3,
+                backgroundColor: "#1e1e2f",
+                color: "#f5f5f5",
+                border: "1px solid #c792ea",
+                borderRadius: 2,
+                padding: 2,
+                maxWidth: 320,
+                boxShadow: 6,
             }}
         >
-            <Typography variant="body2" fontWeight="bold" gutterBottom>
+            <Typography variant="subtitle2" sx={{ fontWeight: "bold", color: "#c792ea", mb: 1 }}>
                 {wohnung.title}
             </Typography>
 
             <Typography variant="body2">
-                <strong>Preis €/m²:</strong> {wohnung.price_per_qm}
+                <strong style={{ color: "#c792ea" }}>Preis €/m²:</strong> {wohnung.price_per_qm}
             </Typography>
             <Typography variant="body2">
-                <strong>Preis Kalt:</strong> {wohnung.price_cold}
+                <strong style={{ color: "#c792ea" }}>Preis Kalt:</strong> {wohnung.price_cold}
             </Typography>
             <Typography variant="body2">
-                <strong>Preis Warm:</strong> {wohnung.price_warm}
+                <strong style={{ color: "#c792ea" }}>Preis Warm:</strong> {wohnung.price_warm}
             </Typography>
             <Typography variant="body2">
-                <strong>Fläche:</strong> {wohnung.qm} qm
+                <strong style={{ color: "#c792ea" }}>Fläche:</strong> {wohnung.qm} qm
             </Typography>
             <Typography variant="body2">
-                <strong>Adresse:</strong> {wohnung.street}
+                <strong style={{ color: "#c792ea" }}>Adresse:</strong> {wohnung.street}
             </Typography>
             <Typography variant="body2">
-                <strong>Stadt:</strong> {wohnung.city}
+                <strong style={{ color: "#c792ea" }}>Stadt:</strong> {wohnung.city}
             </Typography>
             <Typography variant="body2">
-                <strong>Zimmer:</strong> {wohnung.rooms}
+                <strong style={{ color: "#c792ea" }}>Zimmer:</strong> {wohnung.rooms}
             </Typography>
             <Typography variant="body2">
-                <strong>Etage:</strong> {wohnung.floor}
+                <strong style={{ color: "#c792ea" }}>Etage:</strong> {wohnung.floor}
             </Typography>
         </Box>
     );

@@ -43,7 +43,7 @@ const KaiserslauternMapView = ({ selected, setSelected, viewMode }) => {
           mapboxAccessToken={MAPBOX_TOKEN}
         />
       </DeckGL>
-      {selected && <WohnungInfoCard wohnungTitle={selected} />}
+      {selected && <WohnungInfoCard wohnungTitle={selected} selected={!!selected}/>}
     </div>
   );
 };

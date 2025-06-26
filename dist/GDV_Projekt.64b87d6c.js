@@ -24981,8 +24981,8 @@ const App = ()=>{
                 selectedObject: selectedObject
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 17,
-                columnNumber: 4
+                lineNumber: 18,
+                columnNumber: 3
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
@@ -65890,224 +65890,264 @@ var _material = require("@mui/material");
 var _colors = require("@mui/material/colors");
 var _mergedDataJson = require("./../../data/merged_data.json");
 var _mergedDataJsonDefault = parcelHelpers.interopDefault(_mergedDataJson);
-const WohnungInfoCard = ({ wohnungTitle })=>{
+var _zoom = require("@mui/material/Zoom");
+var _zoomDefault = parcelHelpers.interopDefault(_zoom);
+const WohnungInfoCard = ({ wohnungTitle, selected })=>{
     const wohnung = (0, _mergedDataJsonDefault.default).find((w)=>w.title === wohnungTitle);
     if (!wohnung) return null;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Card), {
-        sx: {
-            position: 'absolute',
-            top: 20,
-            left: 20,
-            maxWidth: 300,
-            zIndex: 999,
-            boxShadow: 9,
-            backgroundColor: 'background.paper'
-        },
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.CardContent), {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                    variant: "h5",
-                    gutterBottom: true,
-                    children: wohnung.title
-                }, void 0, false, {
-                    fileName: "src/components/cards/WohnungInfoCard.jsx",
-                    lineNumber: 21,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                    variant: "h6",
-                    children: [
-                        "Preis \u20AC/m\xb2: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                            variant: "h6",
-                            component: "span",
-                            sx: {
-                                color: 'secondary.main',
-                                fontWeight: 'bold'
-                            },
-                            children: wohnung.price_per_qm
-                        }, void 0, false, {
-                            fileName: "src/components/cards/WohnungInfoCard.jsx",
-                            lineNumber: 24,
-                            columnNumber: 15
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/cards/WohnungInfoCard.jsx",
-                    lineNumber: 23,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                    variant: "h6",
-                    children: [
-                        "Preis Kalt: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                            variant: "h6",
-                            component: "span",
-                            sx: {
-                                color: 'secondary.main',
-                                fontWeight: 'bold'
-                            },
-                            children: wohnung.price_cold
-                        }, void 0, false, {
-                            fileName: "src/components/cards/WohnungInfoCard.jsx",
-                            lineNumber: 28,
-                            columnNumber: 15
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/cards/WohnungInfoCard.jsx",
-                    lineNumber: 27,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                    variant: "h6",
-                    children: [
-                        "Preis Warm: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                            variant: "h6",
-                            component: "span",
-                            sx: {
-                                color: 'secondary.main',
-                                fontWeight: 'bold'
-                            },
-                            children: wohnung.price_warm
-                        }, void 0, false, {
-                            fileName: "src/components/cards/WohnungInfoCard.jsx",
-                            lineNumber: 32,
-                            columnNumber: 15
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/cards/WohnungInfoCard.jsx",
-                    lineNumber: 31,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                    variant: "h6",
-                    children: [
-                        "Fl\xe4che: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                            variant: "h6",
-                            component: "span",
-                            sx: {
-                                color: 'secondary.main',
-                                fontWeight: 'bold'
-                            },
-                            children: wohnung.qm
-                        }, void 0, false, {
-                            fileName: "src/components/cards/WohnungInfoCard.jsx",
-                            lineNumber: 36,
-                            columnNumber: 11
-                        }, undefined),
-                        " qm"
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/cards/WohnungInfoCard.jsx",
-                    lineNumber: 35,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                    variant: "h6",
-                    children: [
-                        "Adresse: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                            variant: "h6",
-                            component: "span",
-                            sx: {
-                                color: 'secondary.main',
-                                fontWeight: 'bold'
-                            },
-                            children: wohnung.street
-                        }, void 0, false, {
-                            fileName: "src/components/cards/WohnungInfoCard.jsx",
-                            lineNumber: 40,
-                            columnNumber: 12
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/cards/WohnungInfoCard.jsx",
-                    lineNumber: 39,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                    variant: "h6",
-                    children: [
-                        "Stadt: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                            variant: "h6",
-                            component: "span",
-                            sx: {
-                                color: 'secondary.main',
-                                fontWeight: 'bold'
-                            },
-                            children: wohnung.city
-                        }, void 0, false, {
-                            fileName: "src/components/cards/WohnungInfoCard.jsx",
-                            lineNumber: 44,
-                            columnNumber: 10
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/cards/WohnungInfoCard.jsx",
-                    lineNumber: 43,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                    variant: "h6",
-                    children: [
-                        "Anzahl Zimmer: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                            variant: "h6",
-                            component: "span",
-                            sx: {
-                                color: 'secondary.main',
-                                fontWeight: 'bold'
-                            },
-                            children: wohnung.rooms
-                        }, void 0, false, {
-                            fileName: "src/components/cards/WohnungInfoCard.jsx",
-                            lineNumber: 48,
-                            columnNumber: 18
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/cards/WohnungInfoCard.jsx",
-                    lineNumber: 47,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                    variant: "h6",
-                    children: [
-                        "Anzahl Etagen: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                            variant: "h6",
-                            component: "span",
-                            sx: {
-                                color: 'secondary.main',
-                                fontWeight: 'bold'
-                            },
-                            children: wohnung.floor
-                        }, void 0, false, {
-                            fileName: "src/components/cards/WohnungInfoCard.jsx",
-                            lineNumber: 52,
-                            columnNumber: 18
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/cards/WohnungInfoCard.jsx",
-                    lineNumber: 51,
-                    columnNumber: 1
-                }, undefined)
-            ]
-        }, void 0, true, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _zoomDefault.default), {
+        in: selected,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Card), {
+            sx: {
+                position: 'absolute',
+                top: 20,
+                left: 20,
+                maxWidth: 300,
+                zIndex: 999,
+                boxShadow: 9,
+                backgroundColor: 'black'
+            },
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.CardContent), {
+                sx: {
+                    backgroundColor: '#1e1e2f',
+                    borderRadius: 2
+                },
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "h5",
+                        sx: {
+                            color: '#ffffff'
+                        },
+                        gutterBottom: true,
+                        children: wohnung.title
+                    }, void 0, false, {
+                        fileName: "src/components/cards/WohnungInfoCard.jsx",
+                        lineNumber: 23,
+                        columnNumber: 3
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "h6",
+                        sx: {
+                            color: '#ffffff'
+                        },
+                        children: [
+                            "Preis \u20AC/m\xb2: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                                variant: "h6",
+                                component: "span",
+                                sx: {
+                                    color: '#c792ea',
+                                    fontWeight: 'bold'
+                                },
+                                children: wohnung.price_per_qm
+                            }, void 0, false, {
+                                fileName: "src/components/cards/WohnungInfoCard.jsx",
+                                lineNumber: 28,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/cards/WohnungInfoCard.jsx",
+                        lineNumber: 27,
+                        columnNumber: 3
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "h6",
+                        sx: {
+                            color: '#ffffff'
+                        },
+                        children: [
+                            "Preis Kalt: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                                variant: "h6",
+                                component: "span",
+                                sx: {
+                                    color: '#c792ea',
+                                    fontWeight: 'bold'
+                                },
+                                children: wohnung.price_cold
+                            }, void 0, false, {
+                                fileName: "src/components/cards/WohnungInfoCard.jsx",
+                                lineNumber: 32,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/cards/WohnungInfoCard.jsx",
+                        lineNumber: 31,
+                        columnNumber: 3
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "h6",
+                        sx: {
+                            color: '#ffffff'
+                        },
+                        children: [
+                            "Preis Warm: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                                variant: "h6",
+                                component: "span",
+                                sx: {
+                                    color: '#c792ea',
+                                    fontWeight: 'bold'
+                                },
+                                children: wohnung.price_warm
+                            }, void 0, false, {
+                                fileName: "src/components/cards/WohnungInfoCard.jsx",
+                                lineNumber: 36,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/cards/WohnungInfoCard.jsx",
+                        lineNumber: 35,
+                        columnNumber: 3
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "h6",
+                        sx: {
+                            color: '#ffffff'
+                        },
+                        children: [
+                            "Fl\xe4che: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                                variant: "h6",
+                                component: "span",
+                                sx: {
+                                    color: '#c792ea',
+                                    fontWeight: 'bold'
+                                },
+                                children: wohnung.qm
+                            }, void 0, false, {
+                                fileName: "src/components/cards/WohnungInfoCard.jsx",
+                                lineNumber: 40,
+                                columnNumber: 13
+                            }, undefined),
+                            " qm"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/cards/WohnungInfoCard.jsx",
+                        lineNumber: 39,
+                        columnNumber: 3
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "h6",
+                        sx: {
+                            color: '#ffffff'
+                        },
+                        children: [
+                            "Adresse: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                                variant: "h6",
+                                component: "span",
+                                sx: {
+                                    color: '#c792ea',
+                                    fontWeight: 'bold'
+                                },
+                                children: wohnung.street
+                            }, void 0, false, {
+                                fileName: "src/components/cards/WohnungInfoCard.jsx",
+                                lineNumber: 44,
+                                columnNumber: 14
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/cards/WohnungInfoCard.jsx",
+                        lineNumber: 43,
+                        columnNumber: 3
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "h6",
+                        sx: {
+                            color: '#ffffff'
+                        },
+                        children: [
+                            "Stadt: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                                variant: "h6",
+                                component: "span",
+                                sx: {
+                                    color: '#c792ea',
+                                    fontWeight: 'bold'
+                                },
+                                children: wohnung.city
+                            }, void 0, false, {
+                                fileName: "src/components/cards/WohnungInfoCard.jsx",
+                                lineNumber: 48,
+                                columnNumber: 12
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/cards/WohnungInfoCard.jsx",
+                        lineNumber: 47,
+                        columnNumber: 3
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "h6",
+                        sx: {
+                            color: '#ffffff'
+                        },
+                        children: [
+                            "Anzahl Zimmer: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                                variant: "h6",
+                                component: "span",
+                                sx: {
+                                    color: '#c792ea',
+                                    fontWeight: 'bold'
+                                },
+                                children: wohnung.rooms
+                            }, void 0, false, {
+                                fileName: "src/components/cards/WohnungInfoCard.jsx",
+                                lineNumber: 52,
+                                columnNumber: 20
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/cards/WohnungInfoCard.jsx",
+                        lineNumber: 51,
+                        columnNumber: 3
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                        variant: "h6",
+                        sx: {
+                            color: '#ffffff'
+                        },
+                        children: [
+                            "Anzahl Etagen: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                                variant: "h6",
+                                component: "span",
+                                sx: {
+                                    color: '#c792ea',
+                                    fontWeight: 'bold'
+                                },
+                                children: wohnung.floor
+                            }, void 0, false, {
+                                fileName: "src/components/cards/WohnungInfoCard.jsx",
+                                lineNumber: 56,
+                                columnNumber: 20
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/cards/WohnungInfoCard.jsx",
+                        lineNumber: 55,
+                        columnNumber: 3
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/cards/WohnungInfoCard.jsx",
+                lineNumber: 22,
+                columnNumber: 4
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/components/cards/WohnungInfoCard.jsx",
-            lineNumber: 20,
-            columnNumber: 9
+            lineNumber: 11,
+            columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/cards/WohnungInfoCard.jsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
@@ -66121,7 +66161,7 @@ $RefreshReg$(_c, "WohnungInfoCard");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"9mWks","@mui/material/colors":"2fNaz","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39","./../../data/merged_data.json":"jjorN"}],"9mWks":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"9mWks","@mui/material/colors":"2fNaz","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39","./../../data/merged_data.json":"jjorN","@mui/material/Zoom":"8GVbN"}],"9mWks":[function(require,module,exports,__globalThis) {
 /**
  * @mui/material v7.1.1
  *
@@ -84848,7 +84888,3466 @@ var _default = exports.default = blueGrey;
 },{}],"jjorN":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse('[{"title":"Modernes Appartement in zentraler Lage","price_cold":450,"price_warm":530,"qm":24,"price_per_qm":18.75,"rooms":"1","floor":"1","street":"H 1 12+13,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Wundersch\xf6ne und hochwertige 3-Zimmer-Penthouse Wohnung in Mannheim","price_cold":1785,"price_warm":2190,"qm":115.69,"price_per_qm":15.43,"rooms":"3","floor":"5","street":"Leonie-Ossowski-Promenade 15,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5031062,"longlitude":8.5189432},{"title":"32m\xb2 - Vollm\xf6bliertes Apartment in Unin\xe4he","price_cold":720,"price_warm":890,"qm":32,"price_per_qm":22.5,"rooms":"1","floor":"2","street":"Seckenheimer Stra\xdfe 68a,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4789407,"longlitude":8.4816894},{"title":"42m\xb2 - Vollm\xf6bliertes Apartment mit eigener Terrasse","price_cold":900,"price_warm":1070,"qm":42,"price_per_qm":21.43,"rooms":"1","floor":"1","street":"Seckenheimer Stra\xdfe 68a,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4789407,"longlitude":8.4816894},{"title":"2 Monat mietfrei! Zimmer f\xfcr Studenten und Azubis - Vollm\xf6bliert mit Internetflat zum 01.08.2025","price_cold":445,"price_warm":550,"qm":20.96,"price_per_qm":21.23,"rooms":"1","floor":"2","street":"Birkenauer Str. 49,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5149808,"longlitude":8.5286457},{"title":"Modernisierte 2-Zimmer-Wohnung mit Balkon in Mannheim","price_cold":850,"price_warm":1095,"qm":56.25,"price_per_qm":15.11,"rooms":"2","floor":"2","street":"Herzogenriedstra\xdfe 5,","city":"Neckarstadt-Ost/Wohlgelegen, 68169 Mannheim","latitude":49.5086518,"longlitude":8.4713089},{"title":"Nachmieter gesucht f\xfcr helle 2 Zimmer Wohnung in Neckarstadt Ost","price_cold":650,"price_warm":760,"qm":55,"price_per_qm":11.82,"rooms":"2","floor":"4","street":"Lange R\xf6tterstra\xdfe 61,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4972311,"longlitude":8.4845634},{"title":"Komfortable 2-Zimmer WG, mit separater kleiner Einbauk\xfcche","price_cold":785,"price_warm":984,"qm":42.48,"price_per_qm":18.48,"rooms":"2","floor":"2","street":"Leonie-Ossowski-Promenade 15,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5031062,"longlitude":8.5189432},{"title":"Sch\xf6ne und gepflegte 2-Zimmer-Wohnung mit gehobener Innenausstattung mit Einbauk\xfcche in Mannheim","price_cold":595,"price_warm":595,"qm":67,"price_per_qm":8.88,"rooms":"2","floor":"2","street":"Hagenauerstr. 21,","city":"Friedrichsfeld, 68229 Mannheim","latitude":49.4415729,"longlitude":8.58144},{"title":"Einzelapartment - Mannheimer Oststadt - UNTERMIETE","price_cold":540,"price_warm":660,"qm":26,"price_per_qm":20.77,"rooms":"1,5","floor":"1","street":"Mollstra\xdfe 6,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4805475,"longlitude":8.4799733},{"title":"Geschmackvolle 1-Zimmer-Wohnung mit Balkon und Einbauk\xfcche in Mannheim","price_cold":350,"price_warm":495,"qm":23.08,"price_per_qm":15.16,"rooms":"1","floor":"4","street":"Carl-Metz-Stra\xdfe 2,","city":"Lindenhof, 68163 Mannheim","latitude":49.4766909,"longlitude":8.4686792},{"title":"Attraktive 3-Zimmer-Wohnung in Mannheim","price_cold":720,"price_warm":910,"qm":60,"price_per_qm":12,"rooms":"3","floor":"2","street":"Rastatter Stra\xdfe 31,","city":"Seckenheim, 68239 Mannheim","latitude":49.4670429,"longlitude":8.556267},{"title":"Modernisierte 1-Zimmer-Wohnung mit Balkon und Einbauk\xfcche in Lortzringstr, Mannheim","price_cold":450,"price_warm":620,"qm":21,"price_per_qm":21.43,"rooms":"1","floor":"","street":"Lortzringstr 21,","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Charmantes 1-Zimmer-Apartment im Herzen Mannheims!!","price_cold":290,"price_warm":390,"qm":17,"price_per_qm":17.06,"rooms":"1","floor":"4","street":"Akademiestra\xdfe 6,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4920548,"longlitude":8.4576437},{"title":"695 \u20AC - 53.5 m\xb2 - 2.5 Zi. - 4.OG","price_cold":695,"price_warm":835,"qm":53.5,"price_per_qm":12.99,"rooms":"2,5","floor":"4","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Freundliche 1-Zimmer-Wohnung in Mannheim Innenstadt (m\xf6bliert)","price_cold":550,"price_warm":700,"qm":22,"price_per_qm":25,"rooms":"1","floor":"","street":"B 7 17,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Charmante 2,5-Dachgeschosswohnung in Mannheim Oststadt","price_cold":690,"price_warm":930,"qm":69,"price_per_qm":10,"rooms":"2,5","floor":"5","street":"Heinrich-Lanz-Stra\xdfe X,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4790816,"longlitude":8.4730167},{"title":"Familiengl\xfcck auf 132 Quadratmetern: 4-Zimmer-Penthousewohnung","price_cold":1945,"price_warm":2465,"qm":132.75,"price_per_qm":14.65,"rooms":"4","floor":"4","street":"George-Sullivan-Ring 40,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.523946,"longlitude":8.5355178},{"title":"Anschauen und Verlieben! Sonnige 3,5-Zimmer-Maisonette-Wohnung mit offenem Kamin in Neckarstadt-Ost","price_cold":1230,"price_warm":1580,"qm":104,"price_per_qm":11.83,"rooms":"3,5","floor":"5","street":"K\xe4fertaler Stra\xdfe 38,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.494692,"longlitude":8.4816331},{"title":"Freundliche 2-Zimmer-Wohnung in Mannheim n\xe4he Herschelbad","price_cold":875,"price_warm":1055,"qm":64,"price_per_qm":13.67,"rooms":"2","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Privat - Gepflegte Wohnung mit zwei Zimmern und EBK in Mannheim","price_cold":580,"price_warm":850,"qm":58,"price_per_qm":10,"rooms":"2","floor":"3","street":"B\xfcrgermeister-strasse 86,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5038247,"longlitude":8.467907},{"title":"Urbaner Lifestyle & Naturidyll in bester Harmonie \u2013 Exklusive Penthouse-Maisonette im gr\xfcnen Quadrat","price_cold":2150,"price_warm":2650,"qm":133,"price_per_qm":16.17,"rooms":"4","floor":"4","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"3-Zimmer-Wohnung mit Balkon und Neckarblick an der Neckarpromenade","price_cold":1067,"price_warm":1427,"qm":83,"price_per_qm":12.86,"rooms":"3","floor":"12","street":"Neckarpromenade 25,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4945814,"longlitude":8.4776041},{"title":"1-Zimmer, K\xfcche- Apartment in den Quadraten N\xe4he Wasserturm","price_cold":680,"price_warm":780,"qm":33,"price_per_qm":20.61,"rooms":"1","floor":"2","street":"T6, 33,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4885031,"longlitude":8.4745453},{"title":"3,5ZKBB in zentraler Lage. N\xe4he Hbf.","price_cold":1100,"price_warm":1380,"qm":94,"price_per_qm":11.7,"rooms":"3,5","floor":"3","street":"Kaiserring 34,","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":49.4822873,"longlitude":8.4730219},{"title":"Erstbezug nach Sanierung 1 Zimmer- Altbauwohnung mit Balkon zu vermieten ! www.immo-kraemer.de","price_cold":510,"price_warm":660,"qm":42,"price_per_qm":12.14,"rooms":"1","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfe Wohnung mit dem ganz bestimmten Charm in der Neckarstadt-West!","price_cold":1420,"price_warm":0,"qm":120,"price_per_qm":11.83,"rooms":"5","floor":"","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Feudenheim: ca. 174 m\xb2 Wohnfl\xe4che auf einer Ebene!","price_cold":1950,"price_warm":2250,"qm":174,"price_per_qm":11.21,"rooms":"4,5","floor":"0","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 1ZKB ab sofort zu vermieten!","price_cold":360,"price_warm":540,"qm":26,"price_per_qm":13.85,"rooms":"1","floor":"4","street":"Laurentiusstr. 19-21,","city":"Neckarstadt-West, 68167 Mannheim","latitude":49.4983679,"longlitude":8.4711834},{"title":"Moderne 3-Zimmer-Wohnung in Mannheim","price_cold":1150,"price_warm":1350,"qm":78,"price_per_qm":14.74,"rooms":"3","floor":"1","street":"Beilstra\xdfe 23,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4948799,"longlitude":8.4596438},{"title":"Lichtdurchflutete Single-Dachgeschosswohnung mit Dachloggia","price_cold":700,"price_warm":890,"qm":68,"price_per_qm":10.29,"rooms":"2","floor":"5","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Modernisierte 3-Zimmer-Wohnung mit Balkon und EBK in Mannheim","price_cold":1050,"price_warm":1230,"qm":115,"price_per_qm":9.13,"rooms":"3","floor":"3","street":"Relaisstra\xdfe 211,","city":"Rheinau, 68219 Mannheim","latitude":49.4245777,"longlitude":8.5351014},{"title":"Helle 3-Zimmer-Wohnung mit 2 Balkonen, Einbauk\xfcche \u2013 75\u202Fm\xb2 in Mannheim-Neckarau","price_cold":915,"price_warm":1075,"qm":75,"price_per_qm":12.2,"rooms":"3","floor":"2","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne, helle, 4-Zimmer Wohnung mit K\xfcchenzeile und Balkon in Mannheim, K\xe4fertal","price_cold":850,"price_warm":1100,"qm":98,"price_per_qm":8.67,"rooms":"4","floor":"2","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"WG-Zimmer im Jungbusch","price_cold":422,"price_warm":506,"qm":21,"price_per_qm":20.1,"rooms":"1","floor":"3","street":"Luisenring 23,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4929115,"longlitude":8.4595938},{"title":"Sch\xf6ne helle WG-Zimmer in Neckarstadt-West zu vermieten","price_cold":500,"price_warm":625,"qm":62,"price_per_qm":8.06,"rooms":"3","floor":"2","street":"Erlenstra\xdfe 25,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5044584,"longlitude":8.4682107},{"title":"Wundersch\xf6ne Garten-Wohnung mit gehobener Ausstattung, Einbauk\xfcche & Stellplatz in MA-Niederfeld","price_cold":1350,"price_warm":1500,"qm":90,"price_per_qm":15,"rooms":"2","floor":"1","street":"Wolframstra\xdfe 9,","city":"Neckarau, 68199 Mannheim","latitude":49.4543766,"longlitude":8.4788269},{"title":"1-Zimmer-Wohnung in Mannheim","price_cold":500,"price_warm":590,"qm":24,"price_per_qm":20.83,"rooms":"1","floor":"3","street":"S 3 8,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"** TOP - Wohnung ** 3 ZKB-Wohnung Mhm-Quadrate (K3) ** ... mit Blick ins Gr\xfcne :) !!!","price_cold":1230,"price_warm":1470,"qm":92,"price_per_qm":13.37,"rooms":"3","floor":"4","street":"K 3 16,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"4-Zimmer-Wohnung mit Balkon in Mannheim-Feudenheim \u2013 Frei ab 01.09.2025","price_cold":850,"price_warm":1200,"qm":98,"price_per_qm":8.67,"rooms":"4","floor":"","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"2-Zimmer-Penthouse-Wohnung mit luxuri\xf6ser Innenausstattung mit EBK in Mannheim","price_cold":1600,"price_warm":1800,"qm":60,"price_per_qm":26.67,"rooms":"2","floor":"5","street":"U3 16,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4922029,"longlitude":8.4726859},{"title":"Modernisierte 2-Raum-Wohnung mit Terrasse in Mannheim-Seckenheim","price_cold":650,"price_warm":800,"qm":55,"price_per_qm":11.82,"rooms":"2","floor":"","street":"","city":"Seckenheim, 68239 Mannheim","latitude":"","longlitude":""},{"title":"Helles, ruhiges 1 Zimmer Apartment","price_cold":360,"price_warm":530,"qm":26,"price_per_qm":13.85,"rooms":"1","floor":"","street":"Werderstra\xdfe 27,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4831394,"longlitude":8.4799158},{"title":"Modernes, helles & gepflegtes 1 ZKB Appartement mit Pantryk\xfcche in Mannheim - Schwetzingerstadt","price_cold":390,"price_warm":540,"qm":29,"price_per_qm":13.45,"rooms":"1","floor":"5","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Ideales Domizil f\xfcr ein ruhesuchendes Paar \u2013 Gepflegte und moderne Wohneinheit in Waldrandlage","price_cold":1150,"price_warm":1650,"qm":92,"price_per_qm":12.5,"rooms":"3,5","floor":"","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"*** Neu trifft Altbauflair *** 2-Zimmer-Schmuckst\xfcck im Herzen der Stadt","price_cold":1205,"price_warm":1490,"qm":90,"price_per_qm":13.39,"rooms":"2","floor":"2","street":"","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgige 5-Zi-Wohnung in erstklassiger Wohnlage zwischen Luisenpark und Neckar","price_cold":2000,"price_warm":2480,"qm":156,"price_per_qm":12.82,"rooms":"5","floor":"3","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Moderne 3-Zimmer-Wohnung mit Aufzug in Toplage von Mannheim-Lindenhof!","price_cold":1000,"price_warm":1300,"qm":74,"price_per_qm":13.51,"rooms":"3","floor":"","street":"","city":"Lindenhof, 68163 Mannheim","latitude":"","longlitude":""},{"title":"*Umzugsbonus* 3-Zimmer-Wohnung mit Einbauk\xfcche","price_cold":1377.55,"price_warm":1722.55,"qm":88.4,"price_per_qm":15.58,"rooms":"3","floor":"2","street":"George-Sullivan-Ring 46,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5236978,"longlitude":8.5358809},{"title":"7 Monate Zwischenmiete: Helle 2-Zimmer-Wohnung in zentraler Lage","price_cold":940,"price_warm":1100,"qm":65,"price_per_qm":14.46,"rooms":"2","floor":"3","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"3 Zimmer-Wohnung mit Balkon","price_cold":1150,"price_warm":1400,"qm":90,"price_per_qm":12.78,"rooms":"3","floor":"","street":"Fred-Joachim-Schoeps-STr. 13,","city":"Friedrichsfeld, 68229 Mannheim","latitude":49.4430093,"longlitude":8.5806532},{"title":"Eine der sch\xf6nsten Altbauwohnungen Mannheims\u2013 255 m\xb2 Wohngenuss mit Stil, Substanz & Seltenheitswert","price_cold":3300,"price_warm":3785,"qm":255,"price_per_qm":12.94,"rooms":"6","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Erstbezug! Moderne Wohnung mit Wintergarten, Gartennutzung und Arbeitszimmer","price_cold":1350,"price_warm":0,"qm":100,"price_per_qm":13.5,"rooms":"2,5","floor":"","street":"","city":"K\xe4fertal, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgige Wohnung mit 2 Balkonen, Fahrstuhl und EBK","price_cold":860,"price_warm":0,"qm":78,"price_per_qm":11.03,"rooms":"2","floor":"6","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Frisch Renoviert! Sch\xf6ne 2-Zimmer-Wohnung wartet auf neuen Mieter!","price_cold":653,"price_warm":904,"qm":58.29,"price_per_qm":11.2,"rooms":"2","floor":"4","street":"Geraer Ring 2,","city":"Vogelstang, 68309 Mannheim","latitude":49.510271,"longlitude":8.5373441},{"title":"Tauschwohnung: Tausch zentrale Wohnung mit Ausblick gegen Wohnung Berlin","price_cold":870,"price_warm":0,"qm":78,"price_per_qm":11.15,"rooms":"3","floor":"10","street":"Neckarpromenade 15,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4949612,"longlitude":8.476335},{"title":"m\xf6bliertes Zimmer","price_cold":580,"price_warm":580,"qm":60,"price_per_qm":9.67,"rooms":"1","floor":"5","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Gem\xfctliche und helle Neubau 1 Zimmer-Wohnung mit Balkon","price_cold":790,"price_warm":930,"qm":40,"price_per_qm":19.75,"rooms":"1","floor":"2","street":"Thomas-Jeffferson-Str.38,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Mannheimer Quadrate - WG Zimmer f\xfcr Juli 2025 !NUR JULI!","price_cold":450,"price_warm":0,"qm":13,"price_per_qm":34.62,"rooms":"2","floor":"","street":"U5 18,","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":49.4906427,"longlitude":8.4743229},{"title":"Mannheim Rheinau 2,5 Zimmer W.","price_cold":800,"price_warm":1030,"qm":65,"price_per_qm":12.31,"rooms":"2,5","floor":"5","street":"karlsruherstr 19,","city":"68219 Baden-W\xfcrttemberg - Mannheim","latitude":49.4333127,"longlitude":8.5241393},{"title":"Komplett m\xf6bliertes WG Zimmer zu vermieten (nur M\xe4nner)","price_cold":575,"price_warm":575,"qm":18,"price_per_qm":31.94,"rooms":"1","floor":"2","street":"","city":"68219 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Ganz oben angekommen: Exklusive Penthouse-Wohnung","price_cold":1710,"price_warm":2180,"qm":120.39,"price_per_qm":14.2,"rooms":"3","floor":"4","street":"George-Sullivan-Ring 30,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.524407,"longlitude":8.5357385},{"title":"Ein Zimmer f\xfcr einen Monat in einer Zweizimmerwohnung","price_cold":500,"price_warm":500,"qm":18,"price_per_qm":27.78,"rooms":"1","floor":"1","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"3 ZKB N\xe4he Universit\xe4t / WG tauglich","price_cold":1320,"price_warm":1320,"qm":106,"price_per_qm":12.45,"rooms":"3","floor":"2","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"VIEL PLATZ - SCH\xd6NER GRUNDRISS - EINBAUK\xdcCHE - WBS ERFORDERLICH","price_cold":780,"price_warm":0,"qm":87,"price_per_qm":8.97,"rooms":"3","floor":"0","street":"Franklin-D.-Roosevelt-Stra\xdfe 27,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.5217631,"longlitude":8.5264803},{"title":"Neuwertige, vollm\xf6blierte 3-Zimmer-Wohnung mit Terrasse & TG-Stellplatz \u2013 ab 10/2025 verf\xfcgbar","price_cold":1670,"price_warm":1927,"qm":109,"price_per_qm":15.32,"rooms":"3","floor":"0","street":"T4 7,","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":49.4899427,"longlitude":8.472641},{"title":"Voll m\xf6bilierte Wohnung in den Quadraten","price_cold":850,"price_warm":850,"qm":52,"price_per_qm":16.35,"rooms":"1","floor":"0","street":"S6,","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":49.4832445,"longlitude":8.4645749},{"title":"Sch\xf6ne m\xf6blierte 2-Zimmerwohnung","price_cold":1190,"price_warm":1340,"qm":58,"price_per_qm":20.52,"rooms":"2","floor":"0","street":"","city":"68199 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ner Wohnen","price_cold":581,"price_warm":700,"qm":58.39,"price_per_qm":9.95,"rooms":"2,5","floor":"4","street":"Pfalzplatz 11 A,","city":"68163 Baden-W\xfcrttemberg - Mannheim","latitude":49.4661955,"longlitude":8.4729501},{"title":"4 Zimmer Wohnung in Altrip Ludwigsplatz unrenoviert","price_cold":0,"price_warm":1250,"qm":105,"price_per_qm":0,"rooms":"4","floor":"1","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Charmantes 1-Zimmer-Apartment im Herzen Mannheims (Jungbusch)","price_cold":390,"price_warm":390,"qm":17,"price_per_qm":22.94,"rooms":"1","floor":"4","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"2zkb wohnung zu vermieten 480\u20AC","price_cold":630,"price_warm":630,"qm":48,"price_per_qm":13.12,"rooms":"1","floor":"","street":"","city":"68219 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"1 Zimmerappartment ab sofort zu vermieten","price_cold":450,"price_warm":0,"qm":20,"price_per_qm":22.5,"rooms":"1","floor":"3","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Wohnung Mannheim Feudenhenheim zwischenmiete","price_cold":590,"price_warm":590,"qm":40,"price_per_qm":14.75,"rooms":"1","floor":"","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sanierte 3-Zimmer Wohnung","price_cold":1000,"price_warm":1250,"qm":71.55,"price_per_qm":13.98,"rooms":"3","floor":"2","street":"R\xf6merstra\xdfe 87,","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":49.4996335,"longlitude":8.5440985},{"title":"3 Zimmer Wohnung in Mannheim/ Neckarau","price_cold":1203,"price_warm":1203,"qm":66,"price_per_qm":18.23,"rooms":"3","floor":"1","street":"","city":"68199 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"1-Zimmer Wohnung Neckarstadt West zu vermieten","price_cold":410,"price_warm":410,"qm":17,"price_per_qm":24.12,"rooms":"1","floor":"0","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Nachmieter f\xfcr DG-Wohnung in MA-Feudenheim gesucht","price_cold":450,"price_warm":450,"qm":50,"price_per_qm":9,"rooms":"2,5","floor":"1","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"M\xf6blierte 1 Zimmerwohnung in Mannheim zu vermieten","price_cold":600,"price_warm":670,"qm":22,"price_per_qm":27.27,"rooms":"1","floor":"4","street":"","city":"68165 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"ICH SUCHE EINE WG PARTNERIN MIT MIR WOHNEN","price_cold":370,"price_warm":370,"qm":70,"price_per_qm":5.29,"rooms":"2","floor":"2","street":"","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Zentrale 1,5-Zimmer Wohnung Innenstadt/Jungbusch 01.07 - 15.08.25","price_cold":740,"price_warm":740,"qm":50,"price_per_qm":14.8,"rooms":"1,5","floor":"2","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"ICH SUCHE EINE WG PARTNERIN","price_cold":360,"price_warm":360,"qm":70,"price_per_qm":5.14,"rooms":"2","floor":"2","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Studenten Wohnung Mannheim Jungbusch / 1-Zimmer-Wohnung Akademies","price_cold":440,"price_warm":490,"qm":21,"price_per_qm":20.95,"rooms":"1","floor":"1","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Gem\xfctliche 2-Zimmer-Wohnung mit Balkon und schicker EBK (Beispielbilder - Erdgeschoss Wohnung)","price_cold":1227,"price_warm":1415,"qm":78.1,"price_per_qm":15.71,"rooms":"2","floor":"0","street":"Heinrich-Wittkamp-Str. 19,","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":49.502039,"longlitude":8.4936349},{"title":"**ERSTBEZUG** Toll geschnittene 1-Zimmer-Wohnung mit TERRASSE und EBK im Neubauquartier \'Field 4\'","price_cold":808,"price_warm":918,"qm":43.9,"price_per_qm":18.41,"rooms":"1","floor":"0","street":"Heinrich-Wittkamp-Stra\xdfe 9,","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":49.5019327,"longlitude":8.4931599},{"title":"Wohnung in Franklin zu vermieten","price_cold":1055,"price_warm":1055,"qm":55,"price_per_qm":19.18,"rooms":"2","floor":"3","street":"Thomas-Jefferson,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.5176432,"longlitude":8.524556},{"title":"Zimmer mit 2 Betten, Balkon & K\xfcche \u2013 zentral am Wasserturm","price_cold":850,"price_warm":850,"qm":30,"price_per_qm":28.33,"rooms":"1","floor":"1","street":"","city":"68165 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Anmietung nur mit Wohnberechtigungsschein der in Baden-W\xfcrttemberg ausgestellt ist m\xf6glich!","price_cold":481,"price_warm":723,"qm":69.63,"price_per_qm":6.91,"rooms":"3","floor":"","street":"Max-Winterhalter-Ring 30,","city":"68307 Baden-W\xfcrttemberg - Mannheim","latitude":49.5499692,"longlitude":8.4776617},{"title":"1 Zimmer Wohnung","price_cold":600,"price_warm":600,"qm":42,"price_per_qm":14.29,"rooms":"1","floor":"5","street":"","city":"68163 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Moderne 3,5-Zimmer-Wohnung in zentraler Lage","price_cold":1200,"price_warm":1500,"qm":130,"price_per_qm":9.23,"rooms":"3,5","floor":"4","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"TOP Lage, neu m\xf6bliertes und renoviertes Appartement","price_cold":470,"price_warm":570,"qm":22,"price_per_qm":21.36,"rooms":"1","floor":"","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgige 1-2 ZKB in ruhiger Innenhoflage, U 6-Quadrat","price_cold":750,"price_warm":930,"qm":65,"price_per_qm":11.54,"rooms":"2","floor":"","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Nachmieter gesucht zum 01.08.2025 Neckarstadt-Ost","price_cold":730,"price_warm":730,"qm":45,"price_per_qm":16.22,"rooms":"1,5","floor":"","street":"","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Helles M\xe4dels komplett saniertes WG Zimmer 20m2","price_cold":750,"price_warm":750,"qm":20,"price_per_qm":37.5,"rooms":"3","floor":"2","street":"","city":"68219 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Modernisierte und WG taugliche 3-Zimmer-Dachgeschosswohnung in MA","price_cold":900,"price_warm":1300,"qm":114,"price_per_qm":7.89,"rooms":"3","floor":"4","street":"Hauptstra\xdfe 59,","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":49.4866997,"longlitude":8.5300409},{"title":"Gro\xdfz\xfcgige 2-Zimmer-Wohnung mit EBK und BALKON im Neubauquartier FIELD 4","price_cold":1201,"price_warm":1386,"qm":74.1,"price_per_qm":16.21,"rooms":"2","floor":"0","street":"Heinrich-Wittkamp-Stra\xdfe 13,","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":49.502039,"longlitude":8.4936349},{"title":"Hell 2-Zimmer-Wohnung mit Balkon im Herzen von Mannheim","price_cold":850,"price_warm":1070,"qm":60,"price_per_qm":14.17,"rooms":"2","floor":"3","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"1 Zimmer Wohnung Mannheim Quadrate","price_cold":565,"price_warm":565,"qm":40,"price_per_qm":14.12,"rooms":"1","floor":"3","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sanierte Wohnung mit zwei Zimmern und Einbauk\xfcche in Mannheim","price_cold":915,"price_warm":1065,"qm":65,"price_per_qm":14.08,"rooms":"2,5","floor":"2","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"3 ZKB 84m2 mit 2 Balkons in Mannheim K\xe4fertal","price_cold":1200,"price_warm":1200,"qm":84,"price_per_qm":14.29,"rooms":"3","floor":"2","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Charmante 2-Zimmer-Wohnung in Mannheim-Oststadt","price_cold":1100,"price_warm":1300,"qm":67,"price_per_qm":16.42,"rooms":"2","floor":"4","street":"","city":"68165 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Vier W\xe4nde f\xfcr eigene Tr\xe4ume, Wohnen in Mannheim-Franklin","price_cold":821,"price_warm":0,"qm":57.88,"price_per_qm":14.18,"rooms":"2","floor":"0","street":"Thomas-Jefferson-Str. 57a,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.5209353,"longlitude":8.5304581},{"title":"Studentenwohnhung in Mannheim, ideal f\xfcr duale Studenten!","price_cold":500,"price_warm":500,"qm":24,"price_per_qm":20.83,"rooms":"1","floor":"","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Apartment in Franklin, for rent for 6 months","price_cold":1055,"price_warm":1055,"qm":56,"price_per_qm":18.84,"rooms":"2","floor":"3","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Tolle Wohnung in Mannheim Neckarstadt-West!","price_cold":950,"price_warm":0,"qm":90,"price_per_qm":10.56,"rooms":"3","floor":"","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Wohnung zu vermieten in Mannheim!","price_cold":600,"price_warm":0,"qm":50,"price_per_qm":12,"rooms":"2","floor":"","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"3,5 ZKB Balkon Wohnung in Neckarstadt Ost zu vermieten","price_cold":1680,"price_warm":1680,"qm":9,"price_per_qm":186.67,"rooms":"3,5","floor":"4","street":"","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Mietwohnung","price_cold":600,"price_warm":800,"qm":50,"price_per_qm":12,"rooms":"2","floor":"2","street":"","city":"68307 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Einliegerwohnung in MA","price_cold":650,"price_warm":650,"qm":37,"price_per_qm":17.57,"rooms":"1","floor":"","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"3,5 Zimmerwohnung Mannheim feudenheim","price_cold":850,"price_warm":850,"qm":70,"price_per_qm":12.14,"rooms":"3,5","floor":"","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 1-Zi-Wohnung in Mannheim, N\xe4he Hochschule","price_cold":395,"price_warm":0,"qm":25,"price_per_qm":15.8,"rooms":"1","floor":"2","street":"Neckarauer Stra\xdfe 23,","city":"68199 Baden-W\xfcrttemberg - Mannheim","latitude":49.4555378,"longlitude":8.493902},{"title":"Top Chance! Beste Lage! Frisch renovierte 3-Zi-Wohnung! Aufzug!","price_cold":1200,"price_warm":1400,"qm":85,"price_per_qm":14.12,"rooms":"3","floor":"3","street":"","city":"68163 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"3 Zimmer Wohnung in Mannheim Sch\xf6nau zu vermieten","price_cold":1000,"price_warm":1280,"qm":86,"price_per_qm":11.63,"rooms":"3","floor":"2","street":"","city":"68307 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Wohnung 3,5 ZKB Mannheim","price_cold":800,"price_warm":980,"qm":86,"price_per_qm":9.3,"rooms":"3,5","floor":"4","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"1 Zimmer Wohnung in Mannheim zu Vermieten (5.00)","price_cold":365,"price_warm":490,"qm":33,"price_per_qm":11.06,"rooms":"1","floor":"0","street":"Humboldstra\xdfe 3-9,","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sehr sch\xf6ne 2 Zi - Wohnung in den Quadraten","price_cold":810,"price_warm":0,"qm":60,"price_per_qm":13.5,"rooms":"2","floor":"","street":"Q7 12b,","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":49.4860339,"longlitude":8.4746386},{"title":"2-ZKB-EG-Wohnung in den E-Quadraten zu vermieten","price_cold":1040,"price_warm":0,"qm":67,"price_per_qm":15.52,"rooms":"2","floor":"0","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Frisch renovierte 2er-WG in der Neckarstadt / Neubezug","price_cold":850,"price_warm":1080,"qm":59,"price_per_qm":14.41,"rooms":"2","floor":"","street":"Diesterwegstra\xdfe,","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":49.4988027,"longlitude":8.4654064},{"title":"4 ZKB Erdgrschoss Wohnung","price_cold":1400,"price_warm":1650,"qm":85,"price_per_qm":16.47,"rooms":"4","floor":"0","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"***EXKLUSIVE PENTHOUSE WOHNUNG: 2-Zimmer mit Einbauk\xfcche und modernem Bad in Mannheim***","price_cold":1325,"price_warm":1534,"qm":83.8,"price_per_qm":15.81,"rooms":"2","floor":"5","street":"Heinrich-Wittkamp-Stra\xdfe 9,","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":49.5019327,"longlitude":8.4931599},{"title":"*Umzugsbonus* Wohnen im Sullivan Parkside: Perfekt f\xfcr Familien!","price_cold":1420,"price_warm":1785,"qm":93.53,"price_per_qm":15.18,"rooms":"3","floor":"2","street":"George-Sullivan-Ring 42,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.524114,"longlitude":8.535953},{"title":"Top Zentral Schwetzingerstadt Mannheim","price_cold":990,"price_warm":1350,"qm":60,"price_per_qm":16.5,"rooms":"2","floor":"3","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Loft-Wohnung mit 3 Balkonen im Herzen Mannheims \u2013 2-Zi, 2 B\xe4der","price_cold":1400,"price_warm":1400,"qm":110,"price_per_qm":12.73,"rooms":"2","floor":"2","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"*Umzugsbonus* Gro\xdfz\xfcgige 2-Zimmer-Wohnung mit Dachterrassen","price_cold":1175,"price_warm":1495,"qm":80.87,"price_per_qm":14.53,"rooms":"2","floor":"3","street":"George-Sullivan-Ring 46,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.5236978,"longlitude":8.5358809},{"title":"Wundersch\xf6ne 4 ZKB Wohnung Nachmieter gesucht","price_cold":860,"price_warm":1150,"qm":96,"price_per_qm":8.96,"rooms":"4","floor":"3","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"5 ZKB, Balkon im historischen Kulturdenkmal, WG-geeignet","price_cold":1700,"price_warm":1990,"qm":135,"price_per_qm":12.59,"rooms":"5","floor":"4","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Schicke Wohnung in der Neckarstadt-West!","price_cold":1300,"price_warm":0,"qm":110,"price_per_qm":11.82,"rooms":"4","floor":"","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sanierte Wohnung in 1A-Lage n\xe4he HBF und Uni","price_cold":720,"price_warm":920,"qm":48,"price_per_qm":15,"rooms":"1,5","floor":"3","street":"Augartenstra\xdfe 9,","city":"68165 Baden-W\xfcrttemberg - Mannheim","latitude":49.4800206,"longlitude":8.4791215},{"title":"M\xf6bliertes Appartement, 20 qm mit Balkon, in Toplage in Kaiserslautern zu vermieten.","price_cold":350,"price_warm":480,"qm":20,"price_per_qm":17.5,"rooms":"1","floor":"0","street":"Wackenm\xfchlstra\xdfe 16,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4396452,"longlitude":7.7629146},{"title":"Tolle 1-ZKB in der Stadtmitte!!","price_cold":350,"price_warm":0,"qm":24,"price_per_qm":14.58,"rooms":"1","floor":"3","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Sehr helle 4 Zimmer Wohnung im Herzen von Kaiserslautern","price_cold":850,"price_warm":0,"qm":86,"price_per_qm":9.88,"rooms":"4","floor":"0","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Wohnung f\xfcr 2,5 Monate in Kaiserslautern","price_cold":1000,"price_warm":1000,"qm":67,"price_per_qm":14.93,"rooms":"2","floor":"4","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"\u203C\uFE0FWohnung KL Zentrum (Nachmieter ab sofort)\u203C\uFE0F","price_cold":850,"price_warm":850,"qm":65,"price_per_qm":13.08,"rooms":"2","floor":"2","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Demn\xe4chst frei! 3-Zimmer-Wohnung in Kaiserslautern","price_cold":627,"price_warm":0,"qm":61.53,"price_per_qm":10.19,"rooms":"3","floor":"1","street":"Stiftswaldstra\xdfe 37,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.4428727,"longlitude":7.7986784},{"title":"3 Zimmer Wohnung KL-Siegelbach","price_cold":610,"price_warm":900,"qm":70,"price_per_qm":8.71,"rooms":"2","floor":"0","street":"","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"1-Zimmer Appartement","price_cold":400,"price_warm":470,"qm":32,"price_per_qm":12.5,"rooms":"1","floor":"","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"IK | Kaiserslautern: Moderne 4 Zimmerwohnung in einer besonders sch\xf6nen Lage!","price_cold":2500,"price_warm":0,"qm":166,"price_per_qm":15.06,"rooms":"4","floor":"1","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Sonnige Wohnung mit herrlicher Aussicht ab sofort zu vermieten","price_cold":800,"price_warm":0,"qm":66,"price_per_qm":12.12,"rooms":"3","floor":"17","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Einzelzimmer","price_cold":325,"price_warm":500,"qm":19,"price_per_qm":17.11,"rooms":"1","floor":"14","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"sch\xf6ne 2 Zimmer Wohnung","price_cold":550,"price_warm":650,"qm":50,"price_per_qm":11,"rooms":"2","floor":"2","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3 Zimmer /K\xfcche /Bad in Bruchm\xfchlbach","price_cold":1300,"price_warm":0,"qm":98,"price_per_qm":13.27,"rooms":"3","floor":"0","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 1-Zi.- Whg. ab 1.7. zu verm. M\xf6biliert u. kpl. ausgest. mit K\xfcchenz., Waschmasch. u. Innenhof","price_cold":460,"price_warm":0,"qm":27.37,"price_per_qm":16.81,"rooms":"1","floor":"1","street":"Birnstra\xdfe 24,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4412008,"longlitude":7.779953},{"title":"Sch\xf6ne helle 3 Zimmer Wohnung in bester Lage","price_cold":890,"price_warm":0,"qm":91,"price_per_qm":9.78,"rooms":"3","floor":"0","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"1 Zimmer Wohnung in Kaiserslautern","price_cold":480,"price_warm":0,"qm":40,"price_per_qm":12,"rooms":"1","floor":"1","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Immediately Available: Quiet and Central 80sqm City-Apartment","price_cold":0,"price_warm":1900,"qm":80,"price_per_qm":0,"rooms":"2","floor":"","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3-Zimmer-Wohnung in Kaiserslautern","price_cold":629,"price_warm":0,"qm":61.53,"price_per_qm":10.22,"rooms":"3","floor":"2","street":"Stiftswaldstra\xdfe 39,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.4428541,"longlitude":7.7988885},{"title":"Wohnung direkt an der Uni Kaiserslautern - Beschreibung lesen!","price_cold":355,"price_warm":0,"qm":21,"price_per_qm":16.9,"rooms":"1","floor":"","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Stilvolle 4-Zimmer-Wohnung mit Dachterrasse im Herzen Kaiserslauterns","price_cold":1490,"price_warm":0,"qm":130,"price_per_qm":11.46,"rooms":"4","floor":"","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Wohnung zur Zweischenmiete, 15. Juni bis ca. Dez.","price_cold":650,"price_warm":650,"qm":46,"price_per_qm":14.13,"rooms":"2","floor":"3","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"KL City 3 ZKB Wohnung mit Balkon (Fu\xdfg\xe4ngerzone KL)","price_cold":560,"price_warm":810,"qm":79,"price_per_qm":7.09,"rooms":"3","floor":"2","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Attraktive 3 Zimmerwohnung","price_cold":600,"price_warm":0,"qm":60,"price_per_qm":10,"rooms":"3","floor":"","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Sanierte Wohnung N\xe4he Klinikum und FH","price_cold":510,"price_warm":0,"qm":45,"price_per_qm":11.33,"rooms":"1,5","floor":"4","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Nachmieter gesucht f\xfcr gem\xfctliche 1-Zimmerwohnung N\xe4he Stadtpark","price_cold":360,"price_warm":460,"qm":18,"price_per_qm":20,"rooms":"1","floor":"1","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"1-Zimmer Wohnung","price_cold":360,"price_warm":0,"qm":25,"price_per_qm":14.4,"rooms":"1","floor":"3","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Frisch renovierte 2-Zimmer-Wohnung","price_cold":680,"price_warm":680,"qm":50,"price_per_qm":13.6,"rooms":"2","floor":"4","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"KL Fu\xdfg\xe4ngerzone 2 ZKB Neu renoviert 94 qm","price_cold":890,"price_warm":990,"qm":94,"price_per_qm":9.47,"rooms":"2","floor":"1","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"freies WG Zimmer direkt am Stadtpark - mit 3 Mitbewohnern","price_cold":375,"price_warm":0,"qm":20,"price_per_qm":18.75,"rooms":"1","floor":"","street":"Pirmasenser Str.,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.439291,"longlitude":7.7639446},{"title":"3Zimmer 65m2 K\xfcche, Bad,1.Og. 650\u20AC kalt plus Nk in Kaiserslautern","price_cold":650,"price_warm":830,"qm":65,"price_per_qm":10,"rooms":"3","floor":"1","street":"Merianstr.19,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.4534546,"longlitude":7.7630246},{"title":"Wohnen, wo die Stadt pulsiert - renoviertes Apartment in Bestlage","price_cold":637,"price_warm":0,"qm":53,"price_per_qm":12.02,"rooms":"1","floor":"1","street":"Eisenbahnstra\xdfe 14-16,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4365576,"longlitude":7.7725761},{"title":"City-Wohntraum:Helle 2-Zimmer-Wohnung nach Sanierung zu vermieten","price_cold":864,"price_warm":0,"qm":72,"price_per_qm":12,"rooms":"2","floor":"1","street":"Eisenbahnstra\xdfe 14-16,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4365576,"longlitude":7.7725761},{"title":"Sch\xf6ne 2-Zimmer-Wohnung mit Balkon (Nordbahnstr. Kaiserslautern)","price_cold":540,"price_warm":0,"qm":63,"price_per_qm":8.57,"rooms":"2,5","floor":"2","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Wohnung 153 qm 1400.- plus 545 Nebenkosten","price_cold":1400,"price_warm":0,"qm":153,"price_per_qm":9.15,"rooms":"4","floor":"4","street":"St.- Marienplatz 19,","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":49.4419961,"longlitude":7.7609996},{"title":"2 Zimmer Wohnung - Stilvoll eingerichtet - voll m\xf6bliert - All-Inclusive!","price_cold":950,"price_warm":1100,"qm":45,"price_per_qm":21.11,"rooms":"2","floor":"2","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"M\xf6bilierte 1-Zimmer Wohnung n\xe4he Volkspark","price_cold":550,"price_warm":600,"qm":29,"price_per_qm":18.97,"rooms":"1","floor":"4","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 1-ZKB Wohnung in guter Lage - mit Stellplatz","price_cold":430,"price_warm":550,"qm":32,"price_per_qm":13.44,"rooms":"1","floor":"1","street":"Alex-M\xfcller-Stra\xdfe 97,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.4548147,"longlitude":7.7725333},{"title":"Vollm\xf6blierte 1 Zimmer Wohnung, zentral","price_cold":435,"price_warm":435,"qm":18,"price_per_qm":24.17,"rooms":"1","floor":"2","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"2 ZKB in einem Hochhaus im Zentrum von KL","price_cold":650,"price_warm":0,"qm":50.5,"price_per_qm":12.87,"rooms":"2","floor":"16","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Spacious Fully Furnished Apartment in Kaiserslautern","price_cold":0,"price_warm":0,"qm":99,"price_per_qm":0,"rooms":"3","floor":"0","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Zwischenmiete in Uni-N\xe4he \u2013 1-Zimmer-Wohnung in Kaiserslautern","price_cold":500,"price_warm":0,"qm":22,"price_per_qm":22.73,"rooms":"1","floor":"1","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Apartment zu vermieten","price_cold":400,"price_warm":483,"qm":33.71,"price_per_qm":11.87,"rooms":"1","floor":"","street":"Zollamtstra\xdfe 7,","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":49.435399,"longlitude":7.7702195},{"title":"2ZKB Kaiserslautern Zentrum / Altstadt","price_cold":730,"price_warm":0,"qm":62,"price_per_qm":11.77,"rooms":"2","floor":"1","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"2 Zimmerwohnung zu vermieten","price_cold":600,"price_warm":0,"qm":60,"price_per_qm":10,"rooms":"2","floor":"2","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Wohnung sucht neue Mieter","price_cold":0,"price_warm":0,"qm":95,"price_per_qm":0,"rooms":"2","floor":"0","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Apadment ins ramstein Einsiedlerhof","price_cold":500,"price_warm":500,"qm":28,"price_per_qm":17.86,"rooms":"1","floor":"2","street":"Weilerbacher Strasse 91,","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":49.4381523,"longlitude":7.6529655},{"title":"Charmante DG-Wohnung im Herzen von Kaiserslautern","price_cold":720,"price_warm":0,"qm":72,"price_per_qm":10,"rooms":"3,5","floor":"","street":"Benzinoring,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.4492,"longlitude":7.7724309},{"title":"1 Zimnmer in Kaiserslautern","price_cold":350,"price_warm":600,"qm":30,"price_per_qm":11.67,"rooms":"1","floor":"0","street":"Kurt Schumacher Str. 66,","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":49.4229826,"longlitude":7.7392562},{"title":"Apartment Kaiserslautern L\xe4mmchesberg N\xe4he Uni","price_cold":0,"price_warm":0,"qm":24,"price_per_qm":0,"rooms":"1","floor":"1","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Nachmieter gesucht: 3-Zimmer-Wohnung N\xe4he Westpfalz-Klinikum","price_cold":730,"price_warm":730,"qm":70,"price_per_qm":10.43,"rooms":"3","floor":"1","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"4 Zimmer Wohnung Kaiserslautern Unigebiet mit K\xfcche 1200 Kaltmite","price_cold":1200,"price_warm":1585,"qm":92,"price_per_qm":13.04,"rooms":"4","floor":"1","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"2,5 Zimmerwohnung in Hohenecken Wallbox vorhanden","price_cold":950,"price_warm":950,"qm":73,"price_per_qm":13.01,"rooms":"2,5","floor":"1","street":"","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Wohnung Kaiserslautern, Pariserstra\xdfe 161, 67655 KL","price_cold":950,"price_warm":950,"qm":75,"price_per_qm":12.67,"rooms":"3","floor":"2","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Moderne Wohnung 2ZKB Balkon inkl K\xfcche+Stellplatz, an der UNI","price_cold":890,"price_warm":0,"qm":66,"price_per_qm":13.48,"rooms":"2","floor":"0","street":"Theodor-Heuss-Stra\xdfe 1,","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":49.4259443,"longlitude":7.7487201},{"title":"Einraumwohnung KL-Uni Gebiet direkt am Davenportplatz","price_cold":375,"price_warm":525,"qm":24,"price_per_qm":15.62,"rooms":"1","floor":"0","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"2 Zimmerwohnung mit GARTEN in ruhiger Lage, Kaiserslautern","price_cold":950,"price_warm":950,"qm":70,"price_per_qm":13.57,"rooms":"2","floor":"1","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"117.09 Sch\xf6ne 1 ZKB Wohnung Slevogstr. 3 in 67659 Kaiserslautern","price_cold":450,"price_warm":650,"qm":37.04,"price_per_qm":12.15,"rooms":"1","floor":"2","street":"Slevogtstr. 3,","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":49.4445303,"longlitude":7.7443292},{"title":"KL-Erfenbach-sch\xf6ne 4 Zimmer-K\xfcche-Bad-Wohnung+Hof+KFZ-Stellplatz","price_cold":630,"price_warm":0,"qm":88,"price_per_qm":7.16,"rooms":"4","floor":"0","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Monteurapartment Tage/Wochenweise in Kaiserslautern","price_cold":0,"price_warm":0,"qm":25,"price_per_qm":0,"rooms":"1","floor":"","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3 Zimmer / K\xfcche / Bad / WC in Kaiserslautern / Dansenberg","price_cold":650,"price_warm":850,"qm":75,"price_per_qm":8.67,"rooms":"3","floor":"2","street":"Im Langacker 3,","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":49.4065109,"longlitude":7.7335543},{"title":"2-Zimmerwohnung mit Garten in Kaiserslautern-Espensteig","price_cold":700,"price_warm":950,"qm":70,"price_per_qm":10,"rooms":"2","floor":"1","street":"Espensteigstra\xdfe 12,","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":49.399321,"longlitude":7.7124942},{"title":"3 ZKB Kaiserslautern N\xe4he Klinikum - Voll eingerichtet -Befristet","price_cold":885,"price_warm":0,"qm":64,"price_per_qm":13.83,"rooms":"3","floor":"","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 2-Zimmer-Wohnung ab 15.07.2025","price_cold":630,"price_warm":790,"qm":62,"price_per_qm":10.16,"rooms":"2","floor":"3","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Dieses frisch renovierte Apartment wartet auf Sie...","price_cold":400,"price_warm":500,"qm":20,"price_per_qm":20,"rooms":"1","floor":"1","street":"Mannheimerstra\xdfe 128,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.4449924,"longlitude":7.7883071},{"title":"Sehr sch\xf6nes 1-Zimmer Appartement am Stadtrand von Kaiserslautern!","price_cold":550,"price_warm":730,"qm":33,"price_per_qm":16.67,"rooms":"1,5","floor":"4","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"1 Zimmer Wohnung zur Untermiete","price_cold":350,"price_warm":350,"qm":30,"price_per_qm":11.67,"rooms":"1","floor":"5","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"+++ GEPFLEGT UND M\xd6BLIERT +++ 1-Zi.-Apartment in KL nahe Altstadt","price_cold":419,"price_warm":499,"qm":22,"price_per_qm":19.05,"rooms":"1","floor":"3","street":"Haspelstr. 10,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.4487981,"longlitude":7.7760458},{"title":"Tolle, moderne 2 Zimmer Wohnung mit Einbauk\xfcche","price_cold":595,"price_warm":795,"qm":73.6,"price_per_qm":8.08,"rooms":"2","floor":"3","street":"Ulmenstra\xdfe 9,","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":49.418598,"longlitude":7.6957409},{"title":"1-Zimmer-Wohnung in direkter Unin\xe4he!!!","price_cold":390,"price_warm":480,"qm":24.02,"price_per_qm":16.24,"rooms":"1","floor":"","street":"Kurt-Schumacher-Stra\xdfe 34,","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":49.4255708,"longlitude":7.7437998},{"title":"stillvolle 2 ZKB \\"Villa Spatz\\"","price_cold":510,"price_warm":620,"qm":52,"price_per_qm":9.81,"rooms":"2","floor":"1","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle 3 ZKB Wohnung im Herzen von Kaiserslautern","price_cold":630,"price_warm":0,"qm":75.11,"price_per_qm":8.39,"rooms":"3","floor":"1","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle 1-Zimmer-Wohnung N\xe4he Klinikum / Innenstadt","price_cold":420,"price_warm":0,"qm":27,"price_per_qm":15.56,"rooms":"1","floor":"2","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"M\xf6blierte 3-Zi-Wohnung mit Balkon im Stadtzentrum Kaiserslautern","price_cold":1100,"price_warm":0,"qm":67,"price_per_qm":16.42,"rooms":"3","floor":"1","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Stilvolle, modernisierte 1,5-Raum-Wohnung mit Balkon und EBK in Kaiserslautern","price_cold":403,"price_warm":521,"qm":30,"price_per_qm":13.43,"rooms":"1,5","floor":"1","street":"Slevogtstra\xdfe 16,","city":"Kaiserslautern-West, 67659 Kaiserslautern","latitude":49.4447823,"longlitude":7.7434868},{"title":"Exklusive 3-Zimmer-Wohnung mit Balkon und EBK in Kaiserslautern in einem 2-Parteien-Hauses","price_cold":1100,"price_warm":1260,"qm":80,"price_per_qm":13.75,"rooms":"3","floor":"1","street":"Finstersichel 8,","city":"Erzh\xfctten Wiesenthalerhof, 67659 Kaiserslautern","latitude":49.4702116,"longlitude":7.7334404},{"title":"Freundliche 3-Zimmer-Wohnung mit gehobener Innenausstattung mit Balkon und EBK in Kaiserslautern","price_cold":790,"price_warm":955,"qm":83,"price_per_qm":9.52,"rooms":"3","floor":"1","street":"Malzstra\xdfe 8,","city":"Betzen, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"3-Zimmer-Wohnung mit Balkon auf dem Betzenberg","price_cold":550,"price_warm":760,"qm":72,"price_per_qm":7.64,"rooms":"3","floor":"1","street":"","city":"Betzen, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"3-Zimmer-Wohnung mit Balkon","price_cold":660,"price_warm":850,"qm":84,"price_per_qm":7.86,"rooms":"3","floor":"3","street":"Wiesenstr. 34,","city":"Innenstadt Ost, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sanierte 4-Raum-Wohnung in Kaiserslautern","price_cold":920,"price_warm":1240,"qm":117,"price_per_qm":7.86,"rooms":"4","floor":"4","street":"Schillerplatz 7,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"3 Zimmer, K\xfcche,Bad .G-WC , 7. OG, mit toller Aussicht auf Kaiserslautern","price_cold":850,"price_warm":1200,"qm":96,"price_per_qm":8.85,"rooms":"3","floor":"7","street":"Mainzerstr. 2,","city":"Innenstadt Ost, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"3 ZKDB mit gro\xdfem Balkon in ruhier Lage in Kaiserslautern","price_cold":950,"price_warm":1070,"qm":82,"price_per_qm":11.59,"rooms":"3","floor":"1","street":"Dessauerstrasse 2,","city":"B\xe4nnjerr\xfcck Karl-Pfaff-Siedlung, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Attraktive 2,5-Zimmer-Wohnung in Kaiserslautern","price_cold":410,"price_warm":500,"qm":63,"price_per_qm":6.51,"rooms":"2,5","floor":"2","street":"Mannheimer Strasse 000,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"[neu] 1 Zimmer in 3er WG - 80qm Wohnung","price_cold":175,"price_warm":295,"qm":17,"price_per_qm":10.29,"rooms":"1","floor":"2","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Ansprechende und sanierte 3-Zimmer-EG-Wohnung in Kaiserslautern","price_cold":777,"price_warm":917,"qm":88,"price_per_qm":8.83,"rooms":"3","floor":"1","street":"Hummelstra\xdfe 5,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"3,5 ZKB - 1. OG Design-Wohnung mit sch\xf6ner Architektur in einmaliger Lage | Ab 01.05.2025 verf\xfcgbar","price_cold":1900,"price_warm":2185,"qm":94,"price_per_qm":20.21,"rooms":"3,5","floor":"1","street":"Fliegerstr. 35,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Moderne Wohnung 3ZKB mit Einbauk\xfcche in herrlicher Lage in Hohenecken","price_cold":860,"price_warm":955,"qm":78,"price_per_qm":11.03,"rooms":"3","floor":"1","street":"","city":"Hohenecken, 67661 Kaiserslautern","latitude":"","longlitude":""},{"title":"Attraktive 2-Zimmer-Wohnung mit gehobener Innenausstattung mit Balkon und EBK in Kaiserslautern","price_cold":440,"price_warm":640,"qm":56,"price_per_qm":7.86,"rooms":"2","floor":"3","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Tolle Stadtwohnung mit Balkon und Stellplatz in frisch saniertem Altbau","price_cold":1500,"price_warm":1820,"qm":98,"price_per_qm":15.31,"rooms":"2","floor":"2","street":"Moltkestra\xdfe 62,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Ger\xe4umige 2 Zimmer-Wohnung in der Uniwohnstadt","price_cold":665,"price_warm":905,"qm":54.9,"price_per_qm":12.11,"rooms":"2","floor":"4","street":"Konrad-Adenauer-Stra\xdfe 59,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Charmante 3-Zimmer-Wohnung mit Balkon!","price_cold":1050,"price_warm":1250,"qm":90,"price_per_qm":11.67,"rooms":"3","floor":"","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"2-Zimmer-Wohnung in KL-N\xe4he Uni und Fraunhofer Institut (Wohnberechtigungsschein erforderlich)","price_cold":394.33,"price_warm":623.33,"qm":57.99,"price_per_qm":6.8,"rooms":"2","floor":"3","street":"Konrad-Adenauer-Stra\xdfe 13,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL-N\xe4he City - Ideal zur Nutzung als WG: Citynahe 4-Zimmerwohnung","price_cold":850,"price_warm":970,"qm":122.63,"price_per_qm":6.93,"rooms":"4","floor":"1","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL-Ost - gro\xdfz\xfcgige 3 -Zimmerwohnung mit sep. Eingang und Terrasse","price_cold":770,"price_warm":1020,"qm":115,"price_per_qm":6.7,"rooms":"3","floor":"0","street":"","city":"Gr\xfcbent\xe4lchen/Volkspark, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL-Stadtpark - Gro\xdfz\xfcgige 2-Zimmer-Penthousewohnung mit Dachterrasse in Top-Lage","price_cold":1450,"price_warm":1730,"qm":139.57,"price_per_qm":10.39,"rooms":"2","floor":"","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL-West - attraktive Wohnung mit 3 Zimmer, K\xfcche, Bad, 2 Balkone","price_cold":790,"price_warm":1000,"qm":75.23,"price_per_qm":10.5,"rooms":"3","floor":"1","street":"","city":"Kaiserslautern-West, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL Zentrumsnah, 5 ZKB nur an Studenten WG zu vermieten","price_cold":1175,"price_warm":1525,"qm":150,"price_per_qm":7.83,"rooms":"5","floor":"1","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"* EBK gegen Abstand * modernes Bad * Wohnk\xfcche + Schlafzimmer KL WEST * ARBEITERVIERTEL *","price_cold":378,"price_warm":565,"qm":42,"price_per_qm":9,"rooms":"1","floor":"2","street":"D\xfcrerstra\xdfe 12,","city":"Kaiserslautern-West, 67659 Kaiserslautern","latitude":49.4430517,"longlitude":7.7387562},{"title":"Helles Apartment mit sch\xf6ner Aussicht im UNI-Wohngebiet","price_cold":330,"price_warm":450,"qm":25,"price_per_qm":13.2,"rooms":"1","floor":"3","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"NEWER 4-ROOM-APARTMENT IN BEST CITY LOCATION! EXKLUSIVE, NEUWERTIGE 4ZKB WOHNUNG!","price_cold":1500,"price_warm":1790,"qm":129,"price_per_qm":11.63,"rooms":"4","floor":"2","street":"Marktstr. 12-14,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Erstbezug nach Sanierung - Gem\xfctliche Maisonette Wohnung in zentraler Lage","price_cold":975,"price_warm":0,"qm":99.84,"price_per_qm":9.77,"rooms":"4","floor":"","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"* EBK gegen Abstand 900 EUR VB * Bad mit Wanne * sch\xf6ner Balkon * HELL * ab 01.07. * BETZENBERG *","price_cold":420,"price_warm":630,"qm":50,"price_per_qm":8.4,"rooms":"2","floor":"16","street":"Kantstra\xdfe 66,","city":"Betzen, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Moderne 4-Zimmer-Wohnung in zentraler Innenstadtlage!","price_cold":1400,"price_warm":1400,"qm":144,"price_per_qm":9.72,"rooms":"4","floor":"1","street":"Richard-Wagner-Stra\xdfe 27,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Renovierte 3-Zimmer-Wohnung im Stadtzentrum von Kaiserslautern!","price_cold":612,"price_warm":712,"qm":68,"price_per_qm":9,"rooms":"3","floor":"3","street":"Fackelstra\xdfe 16,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Modernisierte 3-Zimmer-Wohnung in Innenstadtlage!","price_cold":985,"price_warm":1085,"qm":98,"price_per_qm":10.05,"rooms":"3","floor":"1","street":"Fackelstra\xdfe 16,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Kaiserberg, 5 ZKB, EBK, Tageslichtbad, Terrasse \'\'ERSTBEZUG NACH SANIERUNG\'\'","price_cold":980,"price_warm":1230,"qm":95,"price_per_qm":10.32,"rooms":"5","floor":"2","street":"","city":"Innenstadt Nord Kaiserberg, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"Stilvolle, modernisierte 2-Raum-Wohnung mit EBK in Kaiserslautern","price_cold":499,"price_warm":638,"qm":49,"price_per_qm":10.18,"rooms":"2","floor":"","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"* DIELENBODEN - LIEBHABER aufgepasst! * AB SOFORT * n\xe4he Bahnhof/Westpfalzklnik/Stadtpark *","price_cold":602,"price_warm":0,"qm":70,"price_per_qm":8.6,"rooms":"2","floor":"1","street":"Sturmstra\xdfe 3,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Wundersch\xf6ne 3-Zimmer-Wohnung mit Balkon","price_cold":730,"price_warm":880,"qm":83,"price_per_qm":8.8,"rooms":"3","floor":"2","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"F\xfcr die KLEINE FAMILIE * 5. Etage * BETZENBERG * Bad mit Fenster, Balkon * RENOVIERT * frisch RENOVI","price_cold":561,"price_warm":855,"qm":68,"price_per_qm":8.25,"rooms":"3","floor":"5","street":"Kantstra\xdfe 70,","city":"Betzen, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle 1 Zimmerwohnung mit Balkon","price_cold":390,"price_warm":490,"qm":37.55,"price_per_qm":10.39,"rooms":"1","floor":"4","street":"Barbarossastr. 3,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Gro\xdfe & Helle 2Z-Wohnung mit Balkon, 67655 KL \u2013 Bezugsfertig","price_cold":850,"price_warm":1240,"qm":80,"price_per_qm":10.62,"rooms":"2","floor":"2","street":"Humboldtstra\xdfe 3,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Exklusive Wohnung in zentraler Lage - energetische Sanierung in 2024","price_cold":1000,"price_warm":1150,"qm":75,"price_per_qm":13.33,"rooms":"2","floor":"3","street":"Tannenstra\xdfe 9,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Exklusive Penthouse - Wohnung mit gehobener Innenausstattung mit EBK in Kaiserslautern","price_cold":2340,"price_warm":2742,"qm":160,"price_per_qm":14.62,"rooms":"4","floor":"","street":"Zollamtstra\xdfe 9,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 1-Zimmer-Wohnung in direkter N\xe4he der Universit\xe4t Kaiserslautern!","price_cold":230,"price_warm":330,"qm":20,"price_per_qm":11.5,"rooms":"1","floor":"1","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Exklusive Wohnung in bester Lage von KL","price_cold":1850,"price_warm":2350,"qm":150,"price_per_qm":12.33,"rooms":"4","floor":"0","street":"Leiningerstra\xdfe 5,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgige Wohnung in zentraler Lage","price_cold":1100,"price_warm":1300,"qm":119,"price_per_qm":9.24,"rooms":"4","floor":"0","street":"Wilhelmstra\xdfe 6a,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6nes Appartment nahe Fachhochschule","price_cold":350,"price_warm":440,"qm":20,"price_per_qm":17.5,"rooms":"1","floor":"3","street":"Forellenstra\xdfe 27,","city":"Innenstadt West/Kotten, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"Large rental apartment, with balcony in the city center Kaiserslautern (housing approved)","price_cold":1250,"price_warm":1600,"qm":126,"price_per_qm":9.92,"rooms":"4","floor":"1","street":"Riesenstra\xdfe 12,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"City-Wohnung","price_cold":640,"price_warm":840,"qm":80,"price_per_qm":8,"rooms":"3","floor":"1","street":"Blumenstra\xdfe 2,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Freundliche und gepflegte 1-Zimmer-DG-Wohnung in Kaiserslautern","price_cold":290,"price_warm":390,"qm":32,"price_per_qm":9.06,"rooms":"1","floor":"5","street":"Wiesenstra\xdfe 34,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Gepflegte Dachgeschosswohnung f\xfcr Studenten, i. d. N\xe4he des Stadtparks!","price_cold":400,"price_warm":550,"qm":25,"price_per_qm":16,"rooms":"2","floor":"","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Wohnen und Arbeiten, gro\xdfz\xfcgige sechs Zimmer Wohnung in Kaiserslautern, Innenstadt","price_cold":1150,"price_warm":1750,"qm":175,"price_per_qm":6.57,"rooms":"6","floor":"1","street":"Glockenstra\xdfe 83,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle 3 ZKB mit Balkon + Keller ab 01.07.2025","price_cold":995,"price_warm":1150,"qm":82,"price_per_qm":12.13,"rooms":"3","floor":"1","street":"Pariser Str. 272,","city":"Kaiserslautern-West, 67663 Kaiserslautern","latitude":49.4394196,"longlitude":7.7327542},{"title":"Beautiful bright apartment very close to the city center 112qm\xb2","price_cold":1170,"price_warm":1420,"qm":112,"price_per_qm":10.45,"rooms":"3","floor":"2","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Stilvolle, sanierte 4-Zimmer Altbau-Wohnung mit Balkon, Einbauk\xfcche N\xe4he Stadtpark, frisch renoviert","price_cold":1697,"price_warm":1999,"qm":118,"price_per_qm":14.38,"rooms":"4","floor":"1","street":"Friedrich-Karl-Stra\xdfe 1,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Exquisite Wohnung in der City","price_cold":1445,"price_warm":1575,"qm":95,"price_per_qm":15.21,"rooms":"3","floor":"3","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Kolping-Platz, 4 ZKB, EBK, Balkon","price_cold":950,"price_warm":0,"qm":89,"price_per_qm":10.67,"rooms":"4","floor":"1","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Volkspark, 3 ZKB, Stellplatz","price_cold":750,"price_warm":0,"qm":71,"price_per_qm":10.56,"rooms":"3","floor":"3","street":"","city":"Gr\xfcbent\xe4lchen/Volkspark, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Freundliche, helle 2-Zimmer Wohnung in d. Uni- Wohnstadt","price_cold":650,"price_warm":850,"qm":65,"price_per_qm":10,"rooms":"2","floor":"1","street":"Kurt-Schumacher-Stra\xdfe 68,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Barrierefreie Seniorenwohnung","price_cold":1495.23,"price_warm":1650.23,"qm":130.02,"price_per_qm":11.5,"rooms":"3","floor":"4","street":"Pirmasenserstra\xdfe 80,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Neu sanierte Wohnung inkl. Einbauk\xfcche (Erstnutzung)","price_cold":1140,"price_warm":1300,"qm":85,"price_per_qm":13.41,"rooms":"3","floor":"","street":"","city":"Erfenbach, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"M\xf6bliertes Wohnen f\xfcr Mitarbeiter der TU oder Studenten","price_cold":405,"price_warm":480,"qm":20,"price_per_qm":20.25,"rooms":"1","floor":"3","street":"Wilhelm-Raabe-Stra\xdfe 14,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Beste Wohngegend, L\xe4mmchesberg, Uni N\xe4he,Stadtrand, Waldrand, Gro\xdfe, luxuri\xf6se Wohnung,","price_cold":1690,"price_warm":1980,"qm":158,"price_per_qm":10.7,"rooms":"5","floor":"2","street":"Auf der Vogelweide 10,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL-City - sch\xf6ne 3 Zimmerwohnung mit Balkon","price_cold":720,"price_warm":840,"qm":80,"price_per_qm":9,"rooms":"3","floor":"","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - B\xe4nnjerr\xfcck - 3 Zimmer, K\xfcche, Bad, Balkon kleiner Wohneinheit, neu renoviert m. PKW-Stellplatz","price_cold":850,"price_warm":1084,"qm":88,"price_per_qm":9.66,"rooms":"3","floor":"1","street":"","city":"B\xe4nnjerr\xfcck Karl-Pfaff-Siedlung, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL-City: Renovierte 3-Zimmer-Wohnung in der Fu\xdfg\xe4ngerzone von Kaiserslautern","price_cold":900,"price_warm":985,"qm":73.1,"price_per_qm":12.31,"rooms":"3","floor":"2","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Erstbezug nach Renovierung - 3-Zimmer-Wohnung im Herzen von Kaiserslautern","price_cold":700,"price_warm":820,"qm":65,"price_per_qm":10.77,"rooms":"3","floor":"1","street":"","city":"Innenstadt West/Kotten, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"Altbauwohnung 3 ZKB wundersch\xf6n saniert in Kaiserslautern","price_cold":650,"price_warm":770,"qm":70,"price_per_qm":9.29,"rooms":"3","floor":"2","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Hochwertige, voll m\xf6blierte 2-Zimmer-Wohnung in Kaiserslautern (Zweitbezug)","price_cold":1100,"price_warm":0,"qm":69,"price_per_qm":15.94,"rooms":"2","floor":"3","street":"Karl-Marx-Stra\xdfe 20A,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"3 Zimmer Wohnung, Ideal f\xfcr Kinderloses Paar","price_cold":650,"price_warm":750,"qm":84,"price_per_qm":7.74,"rooms":"3","floor":"2","street":"Adolph-Kolping-Platz 1,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Nachmieter Gesucht f\xfcr ein sehr sch\xf6nes Einzelzimmer","price_cold":250,"price_warm":345,"qm":32,"price_per_qm":7.81,"rooms":"1","floor":"3","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 3 ZKB Wohnung zu vermieten","price_cold":710,"price_warm":940,"qm":75,"price_per_qm":9.47,"rooms":"3","floor":"3","street":"Spittelstra\xdfe 5,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"GRO\xdfZ\xdcGIGE UND KOMPLETT RENOVIERTE 5ZK2B-WOHNUNG IN BEVORZUGTER WOHNLAGE!","price_cold":1250,"price_warm":1490,"qm":116,"price_per_qm":10.78,"rooms":"5","floor":"3","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Maisonette - 107qm - zentrale Innenstadtlage KL","price_cold":880,"price_warm":1180,"qm":107,"price_per_qm":8.22,"rooms":"4","floor":"1","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Mall, 2 ZKB, Einbauk\xfcche, Stellplatz, \\"Altbau\\"","price_cold":750,"price_warm":0,"qm":76,"price_per_qm":9.87,"rooms":"2","floor":"2","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL \u2013 Am Westpfalzklinikum: Erstbezug/Neubau \u2013 2-Zimmer-Wohnung mit EBK, Balkon u. TG-Stellplatz","price_cold":720,"price_warm":890,"qm":44.76,"price_per_qm":16.09,"rooms":"2","floor":"","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgige 3-Zimmer Wohnung mit Balkon (Maisonette)","price_cold":910,"price_warm":1145,"qm":105,"price_per_qm":8.67,"rooms":"3","floor":"3","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Morlautern, 1 ZKB, Tageslichtbad, EBK \\"M\xd6BLIERT\\"","price_cold":230,"price_warm":350,"qm":32,"price_per_qm":7.19,"rooms":"1","floor":"1","street":"","city":"Morlautern, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Volkspark, 3ZKB, moderne EBK, Stellplatz/Garage","price_cold":790,"price_warm":0,"qm":76,"price_per_qm":10.39,"rooms":"3","floor":"1","street":"","city":"Gr\xfcbent\xe4lchen/Volkspark, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL \u2013 Wohnen am Pfaffgel\xe4nde - Energieeffizientes Wohnen in Cityn\xe4he mit bester Infrastruktur","price_cold":1250,"price_warm":1480,"qm":90.92,"price_per_qm":13.75,"rooms":"3","floor":"4","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 3-Zimmer-Wohnung mit Balkon und Garage in KL-B\xe4nnjerr\xfcck","price_cold":600,"price_warm":955,"qm":79.5,"price_per_qm":7.55,"rooms":"3","floor":"2","street":"","city":"B\xe4nnjerr\xfcck Karl-Pfaff-Siedlung, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL- Innenstadt - 1 ZKB, EBK, Tageslichtbad","price_cold":750,"price_warm":850,"qm":35,"price_per_qm":21.43,"rooms":"1","floor":"3","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Fackelstra\xdfe, 2 ZKB, Einbauk\xfcche","price_cold":450,"price_warm":0,"qm":48,"price_per_qm":9.38,"rooms":"2","floor":"5","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"4-Zimmer-Wohnung in zentraler Lage von Kaiserslautern","price_cold":750,"price_warm":0,"qm":80,"price_per_qm":9.38,"rooms":"4","floor":"3","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"116.02 Sch\xf6ne 1 ZKB Slevogtstra\xdfe 1 in Kaiserslauternen","price_cold":350,"price_warm":480,"qm":21,"price_per_qm":16.67,"rooms":"1","floor":"1","street":"Slevogtstr. 1,","city":"Kaiserslautern-West, 67659 Kaiserslautern","latitude":49.4445303,"longlitude":7.7443292},{"title":"Helle 3-Raum-Wohnung mit gehobener Innenausstattung mit EBK in Kaiserslautern","price_cold":1230,"price_warm":1480,"qm":111,"price_per_qm":11.08,"rooms":"3","floor":"2","street":"Fliegerstrasse 31,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Blechhammer, 5ZKB, gro\xdfe Terrasse mit Garten *M\xd6BLIERT*","price_cold":1190,"price_warm":1410,"qm":115,"price_per_qm":10.35,"rooms":"5","floor":"","street":"","city":"Kaiserslautern-West, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Bahnhof, 1 Zimmer Appartement *saniert*","price_cold":420,"price_warm":550,"qm":22,"price_per_qm":19.09,"rooms":"1","floor":"3","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"4-Zimmer-Wohnung in Kaiserslautern","price_cold":719,"price_warm":0,"qm":68.48,"price_per_qm":10.5,"rooms":"4","floor":"2","street":"An der Emilsruhe 10,","city":"Gr\xfcbent\xe4lchen/Volkspark, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Wiesenplatz, 3 ZKB, EBK, Badezimmer mit Duschwanne","price_cold":520,"price_warm":0,"qm":58,"price_per_qm":8.97,"rooms":"3","floor":"","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - City/N\xe4he Mall, 2 ZKB, Einbauk\xfcche","price_cold":590,"price_warm":780,"qm":53,"price_per_qm":11.13,"rooms":"2","floor":"2","street":"","city":"Innenstadt West/Kotten, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"++++ Attraktive 3 Z/K/B Kaiserslautern Unigebiet+++","price_cold":550,"price_warm":0,"qm":70,"price_per_qm":7.86,"rooms":"3","floor":"","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"++++ Attraktive 4 Z/K/B Kaiserslautern S\xfcd-West +++","price_cold":1050,"price_warm":0,"qm":110,"price_per_qm":9.55,"rooms":"4","floor":"","street":"","city":"B\xe4nnjerr\xfcck Karl-Pfaff-Siedlung, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Innenstadt, 4ZKB Maisonette-Wohnung, EBK, G\xe4ste-WC, begehbarer Kleiderschrank, *SANIERT*","price_cold":1500,"price_warm":0,"qm":126,"price_per_qm":11.9,"rooms":"4","floor":"2","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Moderne 3-Zimmer Wohnung in ruhiger Lage mit Balkon","price_cold":990,"price_warm":1240,"qm":93,"price_per_qm":10.65,"rooms":"3","floor":"2","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Fliegerstra\xdfe, 3 ZKB, Garten, Garage","price_cold":1300,"price_warm":1430,"qm":86,"price_per_qm":15.12,"rooms":"3","floor":"","street":"","city":"Innenstadt Nord Kaiserberg, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Freundliche, helle 3-Zimmer Wohnung im Unigebiet","price_cold":800,"price_warm":1020,"qm":81,"price_per_qm":9.88,"rooms":"3","floor":"3","street":"Kurt-Schumacher-Stra\xdfe 68,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"POCHERT IMMOBILIEN - H\xfcbsches, helles Studenten-Apartment in Kaiserslautern","price_cold":280,"price_warm":430,"qm":22,"price_per_qm":12.73,"rooms":"1","floor":"","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"M\xf6blierte Appartments mit Terrasse n\xe4he Altstadt","price_cold":510,"price_warm":580,"qm":20,"price_per_qm":25.5,"rooms":"1","floor":"2","street":"Mannheimerstr 82,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"zentral gelegene 3-Zimmer Wohnung","price_cold":650,"price_warm":0,"qm":86,"price_per_qm":7.56,"rooms":"3","floor":"3","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"3-Zimmer-Erdgeschosswohnung in KL-Ost","price_cold":430,"price_warm":520,"qm":66,"price_per_qm":6.52,"rooms":"3","floor":"0","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Neubau mit hochwertiger Einbauk\xfcche und Balkon: exklusive 2-Zimmer-Wohnung in Kaiserslautern","price_cold":975,"price_warm":1150,"qm":61,"price_per_qm":15.98,"rooms":"2","floor":"2","street":"Industriestra\xdfe 6,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Attraktive Zwei-Raum-Wohnung in der Innenstadt Kaiserslauterns","price_cold":1000,"price_warm":1300,"qm":83.53,"price_per_qm":11.97,"rooms":"2","floor":"1","street":"Eisenbahnstra\xdfe 12,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Stadtpark/Bahnhof, 2,5 ZKB, Einbauk\xfcche, Badezimmer mit Dusche","price_cold":650,"price_warm":860,"qm":58,"price_per_qm":11.21,"rooms":"2","floor":"0","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"3 ZKB, KL N\xe4he Klinikum zu vermieten","price_cold":907,"price_warm":1112,"qm":90.61,"price_per_qm":10.01,"rooms":"3","floor":"3","street":"Wilhelm-Kittelberger-Stra\xdfe 12,","city":"Innenstadt West/Kotten, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Rathaus, 3 ZKB, Stellplatz, Tageslichtbad","price_cold":750,"price_warm":900,"qm":70,"price_per_qm":10.71,"rooms":"3","floor":"1","street":"","city":"Innenstadt Nord Kaiserberg, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 3-Zimmer-Wohnung mit Balkon in Kaiserslautern","price_cold":650,"price_warm":900,"qm":76,"price_per_qm":8.55,"rooms":"3","floor":"3","street":"Fr\xfchlingstra\xdfe 3,","city":"Innenstadt Ost, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"2 ZKB in einem Hochhaus im Zentrum Kaiserslauterns","price_cold":650,"price_warm":0,"qm":50.5,"price_per_qm":12.87,"rooms":"2","floor":"","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL- N\xe4he Volkspark, 7 ZKB, Kaminzimmer, Balkon, Einbauk\xfcche, Ankleide","price_cold":2000,"price_warm":2330,"qm":200,"price_per_qm":10,"rooms":"7","floor":"2","street":"","city":"Gr\xfcbent\xe4lchen/Volkspark, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Moderne 4-Zimmer-Wohnung mit Einbauk\xfcche und Balkon","price_cold":1550,"price_warm":1900,"qm":127,"price_per_qm":12.2,"rooms":"4","floor":"1","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Klinikum, 2 ZKB, Einbauk\xfcche, Tageslichtbad","price_cold":800,"price_warm":950,"qm":64,"price_per_qm":12.5,"rooms":"2","floor":"","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 3-Zimmer-Maisonette-Wohnung in Kaiserslautern mit Einbauk\xfcche und Balkon","price_cold":1530,"price_warm":1680,"qm":110,"price_per_qm":13.91,"rooms":"3","floor":"3","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Teilm\xf6bliertes Apartment n\xe4he Uni","price_cold":320,"price_warm":0,"qm":21,"price_per_qm":15.24,"rooms":"1","floor":"1","street":"Balbierstr. 6,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle 3 Zimmerwohnung mit Aufzug und Einbauk\xfcche","price_cold":895,"price_warm":1265,"qm":82,"price_per_qm":10.91,"rooms":"3","floor":"9","street":"Rousseaustr. 6,","city":"Betzen, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgiges Duplex zur Miete in Kaiserslautern","price_cold":1100,"price_warm":0,"qm":186,"price_per_qm":5.91,"rooms":"7","floor":"","street":"","city":"Kaiserslautern-West, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Innenstadt, 2 ZKB, moderne EBK *Top Lage*","price_cold":690,"price_warm":820,"qm":65,"price_per_qm":10.62,"rooms":"2","floor":"3","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"3-Zimmer Wohnung in Kaiserslautern","price_cold":669,"price_warm":908,"qm":62.16,"price_per_qm":10.76,"rooms":"3","floor":"2","street":"An der Emilsruhe 19,","city":"Gr\xfcbent\xe4lchen/Volkspark, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Altstadt, 4 ZKB, neue Einbauk\xfcche, neues Bad, 2 Balkone, Parkplatz","price_cold":950,"price_warm":0,"qm":110,"price_per_qm":8.64,"rooms":"4","floor":"1","street":"","city":"Innenstadt Nord Kaiserberg, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 2-Zimmer-Wohnung in KL-Innenstadt","price_cold":730,"price_warm":850,"qm":65,"price_per_qm":11.23,"rooms":"2","floor":"1","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Nachmieter gesucht! Gut geschnittene Wohnung mit zwei Balkonen und Einbauk\xfcche.","price_cold":790,"price_warm":1010,"qm":66.4,"price_per_qm":11.9,"rooms":"2","floor":"2","street":"Kurt-Schumacher-Strasse 6,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"DHH Neubau Effizienzhaus","price_cold":1550,"price_warm":1700,"qm":115,"price_per_qm":13.48,"rooms":"3","floor":"","street":"Turnerstr. 75c,","city":"Innenstadt West/Kotten, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 3-Zimmer-Wohnung mit Einbauk\xfcche (N\xe4he Uni)","price_cold":1200,"price_warm":1480,"qm":126,"price_per_qm":9.52,"rooms":"3","floor":"1","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL-Opelkreisel, 4 ZKB mit Balkon zu vermieten","price_cold":603,"price_warm":903,"qm":86.03,"price_per_qm":7.01,"rooms":"4","floor":"7","street":"Opelkreisel 10,","city":"Kaiserslautern-West, 67663 Kaiserslautern","latitude":49.4439339,"longlitude":7.7079346},{"title":"KL - N\xe4he Kaiserbrunnen, 3 ZKB, Einbauk\xfcche, Balkon, Tageslichtbad","price_cold":790,"price_warm":0,"qm":90,"price_per_qm":8.78,"rooms":"3","floor":"1","street":"","city":"Innenstadt Ost, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - City, Maisonette-Wohnung, 5 ZKB, XXL-Terrasse, EBK, Balkon, Garage *Erstbezug nach Sanierung*","price_cold":1800,"price_warm":2190,"qm":234,"price_per_qm":7.69,"rooms":"5","floor":"2","street":"","city":"Innenstadt West/Kotten, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL- City, 2 ZKB, neue Einbauk\xfcche, Tageslichtbad, Stellplatz","price_cold":790,"price_warm":0,"qm":64,"price_per_qm":12.34,"rooms":"2","floor":"3","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Nord, Au\xdfergew\xf6hnliche 3 ZKB, XXL Balkon, Garage, 2 B\xe4der, Einbauk\xfcche","price_cold":1750,"price_warm":2050,"qm":118,"price_per_qm":14.83,"rooms":"3","floor":"","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Innenstadt, 4 ZKB, 2 B\xe4der, Balkon, Einbauk\xfcche, Stellplatz","price_cold":1190,"price_warm":1460,"qm":138,"price_per_qm":8.62,"rooms":"4","floor":"1","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Kolping-Platz, 3 ZKB, Einbauk\xfcche, Balkon","price_cold":1190,"price_warm":0,"qm":104,"price_per_qm":11.44,"rooms":"3","floor":"2","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sanierte drei Zimmer, K\xfcche, Bad und Balkon Wohnung zu vermieten","price_cold":870,"price_warm":1120,"qm":74,"price_per_qm":11.76,"rooms":"3","floor":"1","street":"Hartmannstra\xdfe 23,","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Hornbach, 2 ZKB, Einbauk\xfcche, 2 Balkone, Tageslichtbad \'\'RENOVIERT\'\'","price_cold":590,"price_warm":790,"qm":56,"price_per_qm":10.54,"rooms":"2","floor":"4","street":"","city":"Innenstadt Ost, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - L\xe4mmchesberg \\"TOP Lage\\", 1 ZKB Wohnung","price_cold":1250,"price_warm":1390,"qm":35,"price_per_qm":35.71,"rooms":"2","floor":"1","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Renovierte 4 Zimmer-Dachgeschosswohnung mit Balkon und Garage in KL-Innenstadt","price_cold":1050,"price_warm":1150,"qm":73,"price_per_qm":14.38,"rooms":"4","floor":"3","street":"","city":"Innenstadt Ost, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - City, 5 ZKB, Tiefgaragenstellplatz, moderne EBK, *SANIERT*","price_cold":1300,"price_warm":0,"qm":98,"price_per_qm":13.27,"rooms":"5","floor":"3","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne zwei-Zimmer-Wohnung","price_cold":550,"price_warm":670,"qm":53,"price_per_qm":10.38,"rooms":"2","floor":"1","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL- N\xe4he Klinikum, 4 ZKB, Tageslichtbad, Balkon, moderne EBK","price_cold":1510,"price_warm":1770,"qm":100,"price_per_qm":15.1,"rooms":"4","floor":"5","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Kolpingplatz, 4 ZKB, neue EBK, neues Badezimmer, Stellplatz *Erstbezug nach Renovierung*","price_cold":1050,"price_warm":0,"qm":97,"price_per_qm":10.82,"rooms":"4","floor":"2","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - City, 5 ZKB, 2 B\xe4der, neue Einbauk\xfcche, Stellplatz","price_cold":1190,"price_warm":1470,"qm":130,"price_per_qm":9.15,"rooms":"5","floor":"4","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - L\xe4mmchesberg \\"TOP Lage\\", 2 ZKB Wohnung, Tageslichtbad, Terrasse","price_cold":1510,"price_warm":0,"qm":63,"price_per_qm":23.97,"rooms":"2","floor":"","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Bahnhof, Au\xdfergew\xf6hnliche Altbauwohnung \\"TOP Ausstattung\\" mit Aufzug, Balkon, EBK","price_cold":1450,"price_warm":0,"qm":138,"price_per_qm":10.51,"rooms":"3","floor":"2","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Saniertes 1 Zimmer Apartment mit Stellplatz","price_cold":490,"price_warm":625,"qm":37,"price_per_qm":13.24,"rooms":"1","floor":"2","street":"Haspelstra\xdfe 7,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL- City, n\xe4he Klinikum, 1 ZKB, EBK, *Voll m\xf6bliert*","price_cold":990,"price_warm":1205,"qm":25,"price_per_qm":39.6,"rooms":"1","floor":"3","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Klinikum, 4 ZKB, neue EBK, Tageslichtbad, *ERSTBEZUG NACH RENOVIERUNG*","price_cold":840,"price_warm":1090,"qm":70,"price_per_qm":12,"rooms":"4","floor":"2","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Renovierte 3-Zimmer-Wohnung in KL-N\xe4he Uni/Fraunhofer","price_cold":788,"price_warm":1047,"qm":98.43,"price_per_qm":8.01,"rooms":"3","floor":"0","street":"Konrad-Adenauer-Stra\xdfe 7,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"4 ZKB, KL-Musikerviertel","price_cold":512,"price_warm":707,"qm":78.74,"price_per_qm":6.5,"rooms":"4","floor":"1","street":"Mozartstra\xdfe 32,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"1 Zi.-App. in KL-B\xe4nnjerr\xfcck ab sofort zu vermieten","price_cold":315,"price_warm":414,"qm":26.36,"price_per_qm":11.95,"rooms":"1","floor":"3","street":"Leipziger Stra\xdfe 150,","city":"B\xe4nnjerr\xfcck Karl-Pfaff-Siedlung, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Residenz am Stadtpark","price_cold":2800,"price_warm":3160,"qm":260,"price_per_qm":10.77,"rooms":"5","floor":"0","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Frisch sanierte und gut geschnittene Wohnung mit zwei Balkonen. Auch f\xfcr eine 2er WG geeignet!","price_cold":790,"price_warm":1060,"qm":68,"price_per_qm":11.62,"rooms":"2","floor":"3","street":"Kurt-Schumacher-Strasse 2,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"POCHERT IMMOBILIEN - Komplett m\xf6blierte Wohnung","price_cold":650,"price_warm":780,"qm":48,"price_per_qm":13.54,"rooms":"2","floor":"","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - Ost, 1 Zimmer Appartement mit Aufzug, Pantryk\xfcche, Tageslichtbad","price_cold":350,"price_warm":0,"qm":25,"price_per_qm":14,"rooms":"1","floor":"3","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL -N\xe4he PRE-Park, Appartement mit Pantryk\xfcche, Balkon, Stellplatz, Tageslichtbad \\"Aufzug\\"","price_cold":450,"price_warm":0,"qm":40,"price_per_qm":11.25,"rooms":"1","floor":"2","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"KOMPLETT RENOVIERTE 4ZKB-WOHNUNG IN ZENTRALER INNENSTADTLAGE!","price_cold":1000,"price_warm":0,"qm":94,"price_per_qm":10.64,"rooms":"4","floor":"1","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"ELEGANTE UND HERRSCHAFTLICHE WOHNUNG IN JUGENDSTILHAUS IN BESTER CITYLAGE!","price_cold":1000,"price_warm":0,"qm":89,"price_per_qm":11.24,"rooms":"3","floor":"4","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"GRO\xdfZ\xdcGIGE LOFT-WOHNUNG IN ZENTRALER INNENSTADTLAGE!","price_cold":1650,"price_warm":0,"qm":191,"price_per_qm":8.64,"rooms":"4","floor":"2","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Studentenwohnungen in UNI N\xe4he","price_cold":248,"price_warm":348,"qm":22,"price_per_qm":11.27,"rooms":"1","floor":"","street":"Kurt Schumacher Stra\xdfe 32 - 34,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Stylische, m\xf6blierte Studentenapartments - Staytoo Apartments","price_cold":439,"price_warm":539,"qm":20,"price_per_qm":21.95,"rooms":"1","floor":"5","street":"Trippstadter Stra\xdfe 115,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Stilvolle Micro-Apartments - Staytoo Apartments | Ihr All-In-Wohlf\xfchlpaket","price_cold":889,"price_warm":1089,"qm":42,"price_per_qm":21.17,"rooms":"1","floor":"","street":"Trippstadterstra\xdfe 115,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle 3-Zimmer-Wohnung mit 100,55m\xb2 in bester Lage N\xe4he Stadtpark","price_cold":998,"price_warm":1168,"qm":100,"price_per_qm":9.98,"rooms":"3","floor":"2","street":"Wackenm\xfchlstr. 2,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Erstbezug nach Sanierung mit Terrasse: Attraktive 3-Raum-Erdgeschosswohnung","price_cold":850,"price_warm":1100,"qm":111,"price_per_qm":7.66,"rooms":"3","floor":"","street":"Buchenheckenstra\xdfe 12,","city":"Dansenberg, 67661 Kaiserslautern","latitude":49.4070431,"longlitude":7.7260482},{"title":"Freundliche 2,5-Zimmer-Wohnung mit Balkon und EBK in Kaiserslautern","price_cold":690,"price_warm":690,"qm":62,"price_per_qm":11.13,"rooms":"2,5","floor":"3","street":"","city":"B\xe4nnjerr\xfcck Karl-Pfaff-Siedlung, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"2-Zimmer Wohnung in Kaiserslautern-M\xf6lschbach mit freiem W-LAN","price_cold":680,"price_warm":860,"qm":74,"price_per_qm":9.19,"rooms":"2","floor":"","street":"","city":"M\xf6lschbach, 67661 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sonnige Altstadt-Wohnung mit Balkon!","price_cold":790,"price_warm":1010,"qm":80,"price_per_qm":9.88,"rooms":"3","floor":"2","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 2-Zimmer-Wohnung mit Balkon in Kaiserslautern-West, Uni-Wohngebiet","price_cold":410,"price_warm":580,"qm":47,"price_per_qm":8.72,"rooms":"2","floor":"2","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"700.0 \u20AC - 30.0 m\xb2 - 2.0 Zi.","price_cold":700,"price_warm":0,"qm":30,"price_per_qm":23.33,"rooms":"2","floor":"","street":"Wackenm\xfchlstra\xdfe 16,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 2-Zimmerwohnung in Stadtlage von Kaiserslautern","price_cold":1360,"price_warm":1500,"qm":79,"price_per_qm":17.22,"rooms":"2","floor":"4","street":"Augustastra\xdfe 8,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Geschmackvoll m\xf6blierte, kleine 2-Zimmer-EG-Whg in Kaiserslautern-Stadtmitte","price_cold":595,"price_warm":770,"qm":30,"price_per_qm":19.83,"rooms":"2","floor":"1","street":"Kanalstr. 22,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Neuwertige 3-Raum-Wohnung mit Einbauk\xfcche in Kaiserslautern","price_cold":750,"price_warm":900,"qm":65,"price_per_qm":11.54,"rooms":"3","floor":"2","street":"Gottfried-Kinkel-Stra\xdfe 4,","city":"Innenstadt West/Kotten, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"2ZKB-Wohnung im Zentrum / Altstadt Kaiserslautern","price_cold":735,"price_warm":870,"qm":62,"price_per_qm":11.85,"rooms":"2","floor":"","street":"","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"22m\xb2 Appartement in KL \u2013 ideal f\xfcr Studenten der Fachhochschule","price_cold":240,"price_warm":312,"qm":22,"price_per_qm":10.91,"rooms":"1","floor":"2","street":"Alex-M\xfcller-Sra\xdfe 97, App. 118,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Osterberg 13, 67659 Kaiserslautern","price_cold":899,"price_warm":1200,"qm":95,"price_per_qm":9.46,"rooms":"2,5","floor":"0","street":"","city":"Erlenbach, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"zentrale Stadtwohnung m\xf6bliert","price_cold":1350,"price_warm":1800,"qm":92,"price_per_qm":14.67,"rooms":"3","floor":"1","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Erstbezug - Luxus Neubauprojekt - Barrierefrei - Volkspark","price_cold":1040,"price_warm":1220,"qm":66,"price_per_qm":15.76,"rooms":"2","floor":"1","street":"Daniel-H\xe4berle-Stra\xdfe 16,","city":"Gr\xfcbent\xe4lchen/Volkspark, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Luxuri\xf6s\u2004Wohnen an den Forschungsinstituten","price_cold":1290,"price_warm":1370,"qm":100,"price_per_qm":12.9,"rooms":"3","floor":"2","street":"Ludwig-Thoma-Str. 21,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Housing approved Repr\xe4sentativ living at Stadtpark","price_cold":1350,"price_warm":1570,"qm":84,"price_per_qm":16.07,"rooms":"3","floor":"1","street":"","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sanierte Wohnung im Zentrum \u2013 flexibel nutzbar!","price_cold":1600,"price_warm":2050,"qm":160,"price_per_qm":10,"rooms":"3","floor":"","street":"Rosenstrasse 40/42,","city":"Innenstadt S\xfcdwest, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"21m\xb2 Appartement zum Wohlf\xfchlen in Kaiserslautern","price_cold":230,"price_warm":304,"qm":21,"price_per_qm":10.95,"rooms":"1","floor":"1","street":"Gersweilerweg 3, App. G038,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Kernsanierte offene 3 ZKB-Wohnung direkt am Stadt-Park","price_cold":875,"price_warm":975,"qm":71,"price_per_qm":12.32,"rooms":"3","floor":"0","street":"Parkstra\xdfe 45,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"22m\xb2 Appartement zum Wohlf\xfchlen in Kaiserslautern","price_cold":230,"price_warm":306,"qm":22,"price_per_qm":10.45,"rooms":"1","floor":"1","street":"Haspelstra\xdfe 10, App. H036,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"24m\xb2 Studenten Appartement in Fachhochschuln\xe4he in KL","price_cold":250,"price_warm":332,"qm":24,"price_per_qm":10.42,"rooms":"1","floor":"0","street":"Haspelstra\xdfe 10 H001,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Leben in der City von Kaiserslautern \u2013 Schickes 30m\xb2 Appartement","price_cold":300,"price_warm":397,"qm":30,"price_per_qm":10,"rooms":"1","floor":"1","street":"Gersweilerweg 7, App. G047,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Fullfurniture - App. Temporary or permanent to rent","price_cold":1250,"price_warm":1400,"qm":40,"price_per_qm":31.25,"rooms":"2","floor":"3","street":"Albrechtstr. 6,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"2 Luxury apartment with terrace and fireplace / 2 Luxus-Wohnung in Bestlage mit Terrasse und Kamin","price_cold":1390,"price_warm":1580,"qm":74,"price_per_qm":18.78,"rooms":"2","floor":"3","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"helle und ger\xe4umige 2 ZKB-Wohnung","price_cold":565,"price_warm":666,"qm":56,"price_per_qm":10.09,"rooms":"2","floor":"4","street":"Hellmuth Hartert Str. 44,","city":"Innenstadt West/Kotten, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle 1 Zimmer Wohnung in zentraler Lage","price_cold":360,"price_warm":440,"qm":30,"price_per_qm":12,"rooms":"1","floor":"2","street":"Balbierstra\xdfe 6,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"* Familien WILLKOMMEN * BALKON * LEBHAFTES Hochhaus * RENOVIERT * 6. OG * BETZENBERG *","price_cold":580,"price_warm":937,"qm":82,"price_per_qm":7.07,"rooms":"3","floor":"6","street":"St.-Quentin-Ring 7,","city":"Betzen, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Kaiserslautern 2 ZKB Altbauwohnung mit EBK incl. Ger\xe4te, Parkett, Fliesen, Balkon N\xe4he Fu\xdfg\xe4ngerzone","price_cold":590,"price_warm":755,"qm":61,"price_per_qm":9.67,"rooms":"2","floor":"1","street":"Badstr. 9,","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Leben in der City von Kaiserslautern \u2013 Schickes 27m\xb2 Appartement","price_cold":280,"price_warm":371,"qm":27,"price_per_qm":10.37,"rooms":"1","floor":"3","street":"Ludwigstra\xdfe 65, App. H102,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"N\xe4he Klinikum! N\xe4he Stadt! Viel Platz f\xfcr Ihre Familie!","price_cold":1200,"price_warm":1500,"qm":149,"price_per_qm":8.05,"rooms":"4","floor":"1","street":"Waldstra\xdfe 27,","city":"Innenstadt West/Kotten, 67659 Kaiserslautern","latitude":"","longlitude":""},{"title":"Mittendrin - 2 ZKB - in ged\xe4mmten Mehrfamilienhaus","price_cold":540,"price_warm":680,"qm":54,"price_per_qm":10,"rooms":"2","floor":"2","street":"Staub\xf6rnchenstr. 6,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"25m\xb2 Studenten Appartement in Fachhochschuln\xe4he in KL","price_cold":250,"price_warm":333,"qm":25,"price_per_qm":10,"rooms":"1","floor":"2","street":"Haspelstra\xdfe 10, App. H062,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"* Ideal f\xfcr 1-2 PERSONEN * Vinylboden * modernes Dusch-Bad mit Fenster * gro\xdfe Wohnk\xfcche * KL WEST *","price_cold":511,"price_warm":751,"qm":54,"price_per_qm":9.46,"rooms":"2","floor":"2","street":"Feuerbachstra\xdfe 76,","city":"Kaiserslautern-West, 67659 Kaiserslautern","latitude":49.4431695,"longlitude":7.7392639},{"title":"26m\xb2 Studenten Appartement in Fachhochschuln\xe4he in KL","price_cold":270,"price_warm":353,"qm":26,"price_per_qm":10.38,"rooms":"1","floor":"1","street":"Haspelstra\xdfe 10, App. H038,","city":"Innenstadt Nord Kaiserberg, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Modern Wohnen im SULLIVAN Parkside","price_cold":985,"price_warm":1240,"qm":65.37,"price_per_qm":15.07,"rooms":"2","floor":"2","street":"George-Sullivan-Ring 32,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5242664,"longlitude":8.5353502},{"title":"\xd6hmdstra\xdfe 8, 68169 Mannheim","price_cold":1000,"price_warm":1300,"qm":72,"price_per_qm":13.89,"rooms":"3","floor":"","street":"\xd6hmdstra\xdfe 8,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5051274,"longlitude":8.4675234},{"title":"Wohnen und Arbeiten in exzellenter Lage von Mannheim-Oststadt direkt am Wasserturm","price_cold":2950,"price_warm":3550,"qm":188,"price_per_qm":15.69,"rooms":"6","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Ansprechende 3-Zimmer-Wohnung mit Balkon in Mannheim","price_cold":770,"price_warm":925,"qm":80,"price_per_qm":9.62,"rooms":"3","floor":"4","street":"Tauberstr 4,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4972259,"longlitude":8.4855182},{"title":"Wer zuerst kommt\u2026 sehr sch\xf6ne Wohnung mit gro\xdfem Balkon und Ofen","price_cold":684,"price_warm":884,"qm":75,"price_per_qm":9.12,"rooms":"2,5","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Ansprechende 3-Zimmer-Dachgeschosswohnung in Mannheim","price_cold":850,"price_warm":950,"qm":85,"price_per_qm":10,"rooms":"3","floor":"2","street":"Gewerbstr 3,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5120481,"longlitude":8.5150252},{"title":"Frisch sanierte 2-Zimmer-Wohnung in Mannheim-Sandhofen \u2013 ab 15.09. bezugsfrei","price_cold":650,"price_warm":820,"qm":43,"price_per_qm":15.12,"rooms":"2","floor":"0","street":"Hintergasse 14,","city":"Sandhofen, 68307 Mannheim","latitude":49.5436385,"longlitude":8.4441191},{"title":"Charmante Wohnung mit einzigartigem und luftigem Loft-Charakter","price_cold":1300,"price_warm":1500,"qm":117,"price_per_qm":11.11,"rooms":"3","floor":"","street":"Friedrichstra\xdfe 74,","city":"Neckarau, 68199 Mannheim","latitude":49.4531513,"longlitude":8.4847697},{"title":"Sch\xf6ne & gepflegte 2-Zimmer-Wohnung in den beliebten Mannheimer Quadraten","price_cold":600,"price_warm":780,"qm":46,"price_per_qm":13.04,"rooms":"2","floor":"","street":"I7 27,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4929809,"longlitude":8.4632642},{"title":"Gro\xdfe, ruhige 3 Zimmerwohnung direkt am Neckar und an den Neckarwiesen","price_cold":890,"price_warm":1190,"qm":82,"price_per_qm":10.85,"rooms":"3,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Erstbezug nach Kernsanierung - 3 ZKB Wohnung in Bestlage von MA -Sandhofen","price_cold":1100,"price_warm":1300,"qm":80,"price_per_qm":13.75,"rooms":"3","floor":"1","street":"","city":"Sandhofen, 68307 Mannheim","latitude":"","longlitude":""},{"title":"Stilvolles Altbau-DG-Loft mit Aufzug und Klimaanlage im Herzen der Mannheimer City","price_cold":1600,"price_warm":1890,"qm":115,"price_per_qm":13.91,"rooms":"3","floor":"3","street":"L 8 15a,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Wundersch\xf6ne 1 ZKB-Whg. mit Balkon zu vermieten","price_cold":470,"price_warm":620,"qm":42.9,"price_per_qm":10.96,"rooms":"1","floor":"2","street":"","city":"Rheinau, 68219 Mannheim","latitude":"","longlitude":""},{"title":"Stilvolle 1-Raum-Wohnung mit EBK in Mannheim","price_cold":510,"price_warm":610,"qm":31,"price_per_qm":16.45,"rooms":"1","floor":"","street":"Perreystra\xdfe 26,","city":"Rheinau, 68219 Mannheim","latitude":49.414794,"longlitude":8.5274784},{"title":"Sanierte Wohnung in Seniorenresidenz, mit zwei Zimmern und Einbauk\xfcche in Mannheim","price_cold":450,"price_warm":560,"qm":34,"price_per_qm":13.24,"rooms":"2","floor":"3","street":"Seckenheimer Hauptstrasse 106,","city":"Seckenheim, 68239 Mannheim","latitude":49.4676575,"longlitude":8.5621661},{"title":"Sch\xf6ne 3-Zimmer-Wohnung im Dachgeschoss!","price_cold":930.75,"price_warm":1132.75,"qm":78.28,"price_per_qm":11.89,"rooms":"3","floor":"","street":"Pfalzplatz 3,","city":"Lindenhof, 68163 Mannheim","latitude":49.4669756,"longlitude":8.472843},{"title":"S\xfc\xdfes, m\xf6bliertes 1-Zimmer Apartment in MA-Neuhermsheim","price_cold":750,"price_warm":750,"qm":22,"price_per_qm":34.09,"rooms":"1","floor":"1","street":"","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":"","longlitude":""},{"title":"3-Zimmer-Wohnung mit Terrasse","price_cold":845,"price_warm":1102,"qm":74.58,"price_per_qm":11.33,"rooms":"3","floor":"0","street":"","city":"K\xe4fertal, 68305 Mannheim","latitude":"","longlitude":""},{"title":"3-ZKBB, Erstbezug nach Sanierung, 150m zu den Rheinterassen","price_cold":890,"price_warm":1060,"qm":75,"price_per_qm":11.87,"rooms":"3","floor":"3","street":"Rheindammstra\xdfe 23,","city":"Lindenhof, 68163 Mannheim","latitude":49.4755765,"longlitude":8.4664458},{"title":"Gem\xfctliche 2-Zimmerwohnung mit Einbauk\xfcche f\xfcr Einzelperson","price_cold":710,"price_warm":880,"qm":70,"price_per_qm":10.14,"rooms":"2","floor":"2","street":"Friedrichstra\xdfe 131,","city":"Neckarau, 68199 Mannheim","latitude":49.4527848,"longlitude":8.4825278},{"title":"Helle sanierte Altbauwohnung - Nachmieter gesucht","price_cold":850,"price_warm":1027,"qm":61,"price_per_qm":13.93,"rooms":"2","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"2-Zimmer-Wohnung mit Einbauk\xfcche","price_cold":850,"price_warm":970,"qm":55,"price_per_qm":15.45,"rooms":"2","floor":"1","street":"Mittelstra\xdfe 46,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.498792,"longlitude":8.4680536},{"title":"Sehr gut angebundenes und ruhiges Studentenappartement","price_cold":370,"price_warm":545,"qm":28,"price_per_qm":13.21,"rooms":"1","floor":"2","street":"Neckarauerstr. 197,","city":"Neckarau, 68163 Mannheim","latitude":49.4654459,"longlitude":8.4863304},{"title":"Exklusive 3-Raum-Wohnung mit Balkon und EBK in Mannheim","price_cold":1100,"price_warm":1430,"qm":90,"price_per_qm":12.22,"rooms":"3","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"1-Raum-Wohnung mit Traumhafter Lage","price_cold":560,"price_warm":640,"qm":23,"price_per_qm":24.35,"rooms":"1","floor":"","street":"S 3 8,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"++ Helle & gepflegte 4 ZKB-Wohnung (94m\xb2 Wfl.) im 1.OG mitten in den MA-Quadraten zu vermieten! ++","price_cold":1175,"price_warm":1425,"qm":94,"price_per_qm":12.5,"rooms":"4","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"3 Zimmer Wohnung in Mannheim-Wohlgelegen N\xe4he Klinikum","price_cold":1300,"price_warm":1500,"qm":57,"price_per_qm":22.81,"rooms":"3","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Stilvolle 1-Zimmer-Wohnung in Mannheim","price_cold":490,"price_warm":610,"qm":33,"price_per_qm":14.85,"rooms":"1","floor":"0","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Moderne 2 Zimmer, EBK, Bad, Balkon","price_cold":599,"price_warm":719,"qm":43,"price_per_qm":13.93,"rooms":"2","floor":"2","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Erstbezug nach Renovierung einer 2-Zimmer-Wohnung in Stadtn\xe4he","price_cold":700,"price_warm":925,"qm":58.85,"price_per_qm":11.89,"rooms":"2","floor":"4","street":"Diesterwegstra\xdfe 4,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.4983809,"longlitude":8.4652461},{"title":"Zentral und doch ruhig gelegene 4 Zimmer Wohnung in bester Lage Mannheims","price_cold":1500,"price_warm":1800,"qm":120,"price_per_qm":12.5,"rooms":"4","floor":"2","street":"Otto-Beck-Stra\xdfe 26,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4811488,"longlitude":8.4846752},{"title":"2-Zimmer-Wohnung mit Balkon im Carl-Benz Seniorenzentrum, Mannheim-Wallstadt","price_cold":900,"price_warm":1100,"qm":58,"price_per_qm":15.52,"rooms":"2","floor":"2","street":"","city":"Wallstadt, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Mit Blick auf Mannheim: Gro\xdfe und helle 2 Zimmer zu vermieten!","price_cold":649,"price_warm":928,"qm":64.82,"price_per_qm":10.01,"rooms":"2","floor":"12","street":"Geraer Ring 10,","city":"Vogelstang, 68309 Mannheim","latitude":49.5110286,"longlitude":8.5398119},{"title":"Mitten in Mannheim: Frisch renovierte 4-Zimmer-Wohnung","price_cold":1225.8,"price_warm":1643.8,"qm":111.43,"price_per_qm":11,"rooms":"4","floor":"3","street":"Neckarpromenade 25,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4945814,"longlitude":8.4776041},{"title":"Sch\xf6ne 4-Zimmer-Wohnung in Vogelstang Zentrum !","price_cold":1045,"price_warm":1484,"qm":101.46,"price_per_qm":10.3,"rooms":"4","floor":"5","street":"Geraer Ring 10,","city":"Vogelstang, 68309 Mannheim","latitude":49.5110286,"longlitude":8.5398119},{"title":"* 1,5 ZKB * 3. OG * kein Fahrstuhl *","price_cold":600,"price_warm":800,"qm":44,"price_per_qm":13.64,"rooms":"1,5","floor":"3","street":"S 1 11,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Home-Office","price_cold":2190,"price_warm":2590,"qm":146,"price_per_qm":15,"rooms":"4","floor":"5","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6nes 1 Zimmer Apartment 24qm im DG, in Mannheim zu vermieten","price_cold":440,"price_warm":680,"qm":22,"price_per_qm":20,"rooms":"1","floor":"","street":"Halmhuberstr. 10-14,","city":"Rheinau, 68219 Mannheim","latitude":49.417295,"longlitude":8.5256265},{"title":"Helle Maisonette mit Balkon (max. 2 Personen)","price_cold":1200,"price_warm":1522,"qm":100,"price_per_qm":12,"rooms":"3","floor":"2","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Urbaner Wohntraum mit Weitblick \u2013 3 helle Zimmer im Franklin-Viertel","price_cold":1150,"price_warm":1400,"qm":75.5,"price_per_qm":15.23,"rooms":"3","floor":"2","street":"Thomas-Jefferson-Stra\xdfe 14,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5183623,"longlitude":8.526878},{"title":"Helle 3-Zimmer Maisonette mit 2 Dachterrassen und 2 B\xe4dern","price_cold":1350,"price_warm":1620,"qm":87,"price_per_qm":15.52,"rooms":"3","floor":"3","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Helle, gepflegte 1 ZKB mit Balkon in MA-Rheinau","price_cold":450,"price_warm":580,"qm":38,"price_per_qm":11.84,"rooms":"1","floor":"2","street":"","city":"Rheinau, 68219 Mannheim","latitude":"","longlitude":""},{"title":"Moderne 3-Raum-Wohnung in Mannheim","price_cold":1392,"price_warm":1692,"qm":100,"price_per_qm":13.92,"rooms":"3","floor":"2","street":"Jungbuschstra\xdfe x,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4905549,"longlitude":8.4664952},{"title":"Geschmackvolle 2-Raum-Wohnung in Mannheim","price_cold":580,"price_warm":730,"qm":40,"price_per_qm":14.5,"rooms":"2","floor":"1","street":"","city":"Sandhofen, 68307 Mannheim","latitude":"","longlitude":""},{"title":"Renovierte Altbauwohnung in Neckarstadt/Ost zu vermieten","price_cold":1380,"price_warm":1680,"qm":90,"price_per_qm":15.33,"rooms":"3,5","floor":"","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Studentenwohnheim Nachmieter gesucht","price_cold":460,"price_warm":460,"qm":25,"price_per_qm":18.4,"rooms":"1","floor":"","street":"Speyererstra\u1E9Ee 57,","city":"Neckarau, 68199 Mannheim","latitude":49.4653268,"longlitude":8.4774923},{"title":"Gem\xfctliche 2 Zimmer Wohnung zu vermieten","price_cold":700,"price_warm":900,"qm":46,"price_per_qm":15.22,"rooms":"2","floor":"1","street":"Logauweg 16,","city":"Sch\xf6nau, 68307 Mannheim","latitude":49.540368,"longlitude":8.4722534},{"title":"Unbefristete Wohnung ab 01.07","price_cold":300,"price_warm":440,"qm":25,"price_per_qm":12,"rooms":"1","floor":"","street":"L2 5,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4845123,"longlitude":8.4652793},{"title":"Geschmackvolle, m\xf6bilierte 3-Zimmer-Souterrain-Wohnung mit privatem Gartenanteil","price_cold":1050,"price_warm":1300,"qm":80,"price_per_qm":13.12,"rooms":"3","floor":"","street":"","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":"","longlitude":""},{"title":"1 ZKB - Wohnung MA-K\xe4fertal / hell und zentral","price_cold":390,"price_warm":505,"qm":30,"price_per_qm":13,"rooms":"1","floor":"1","street":"Weinheimer Stra\xdfe 22,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5073674,"longlitude":8.5135676},{"title":"Stilvolle, ger\xe4umige und vollst\xe4ndig renovierte DG-Wohnung mit EBK und Klimaanlage","price_cold":870,"price_warm":1030,"qm":65,"price_per_qm":13.38,"rooms":"2","floor":"4","street":"Kleinfeldstr. 19,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4762438,"longlitude":8.4811316},{"title":"Moderne 2 Zimmerwohnung mit Einbauk\xfcche n\xe4he MMT Campus und UMM in der Alten Brauerei","price_cold":1270,"price_warm":1650,"qm":87.92,"price_per_qm":14.44,"rooms":"2","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Moderne 3-Zimmer-Wohnung mit gehobener Innenausstattung mit Balkon und Einbauk\xfcche in MA-K\xe4fertal","price_cold":1250,"price_warm":1600,"qm":84,"price_per_qm":14.88,"rooms":"3","floor":"2","street":"Thomas-Jefferson 74,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5215959,"longlitude":8.5315946},{"title":"gem\xfctliche 2 Zimmer Wohnung auf dem Lindenhof","price_cold":520,"price_warm":740,"qm":34,"price_per_qm":15.29,"rooms":"2","floor":"4","street":"","city":"Lindenhof, 68163 Mannheim","latitude":"","longlitude":""},{"title":"Attraktive City-Wohnung in Mannheimer Quadraten (Gegen\xfcber Q6/Q7 Einkaufszentrum)","price_cold":800,"price_warm":990,"qm":53,"price_per_qm":15.09,"rooms":"2","floor":"3","street":"R 6 15,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Stilvolle 2 Zimmerwohnung mit Balkon in begehrter Lage Mannheim-Oststadt","price_cold":1440,"price_warm":1830,"qm":113,"price_per_qm":12.74,"rooms":"2","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Wundersch\xf6ne Studio Wohnung in der Oststadt!","price_cold":590,"price_warm":590,"qm":38,"price_per_qm":15.53,"rooms":"1","floor":"1","street":"Sophienstra\xdfe 16,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4825136,"longlitude":8.4826134},{"title":"Gem\xfctliche, vollm\xf6blierte 1-Zimmer-Souterrain-Wohnung in Mannheim","price_cold":600,"price_warm":700,"qm":30,"price_per_qm":20,"rooms":"1","floor":"","street":"Seckenheimer Landstr. 43,","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":49.4778198,"longlitude":8.5109775},{"title":"Gem\xfctliches m\xf6bliertes Studio im Zentrum von Mannheim \u2013 ab Juli frei","price_cold":350,"price_warm":350,"qm":20,"price_per_qm":17.5,"rooms":"1","floor":"","street":"L2, 5 217,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4843248,"longlitude":8.4647867},{"title":"Stilvolle 2-Zimmer-Wohnung mit gehobener Innenausstattung mit Balkon und EBK in Mannheim-Franklin","price_cold":799,"price_warm":1010,"qm":60,"price_per_qm":13.32,"rooms":"2","floor":"1","street":"Franklin-D.-Roosevelt-Stra\xdfe 100,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5204623,"longlitude":8.5269292},{"title":"1-Raum-Apartment mit Einbauk\xfcche voll m\xf6bliert in Mannheim","price_cold":530,"price_warm":660,"qm":24,"price_per_qm":22.08,"rooms":"1","floor":"4","street":"Birkenauer Str. 51,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5153452,"longlitude":8.5289212},{"title":"Helle und gepflegte 2-Raum-Wohnung mit Balkon und EBK in Mannheim","price_cold":590,"price_warm":720,"qm":56,"price_per_qm":10.54,"rooms":"2","floor":"4","street":"Lortzingstra\xdfe 39,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.4998632,"longlitude":8.4704382},{"title":"NEU: Charmante 3-Zimmer-Wohnung in der beliebten Neckarstadt-Ost!","price_cold":750,"price_warm":980,"qm":76,"price_per_qm":9.87,"rooms":"3","floor":"4","street":"Grillparzerstra\xdfe 1,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4975978,"longlitude":8.4786277},{"title":"Gem\xfctliche 2-Zimmer-Wohnung in Mannheim mit Balkon und EBK!","price_cold":745,"price_warm":945,"qm":60,"price_per_qm":12.42,"rooms":"2","floor":"","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"*Luxuri\xf6se 4 ZKB Wohnung mit hochwertiger Einbauk\xfcche*","price_cold":1500,"price_warm":1950,"qm":148,"price_per_qm":10.14,"rooms":"4","floor":"1","street":"Waldhofstrasse 30,","city":"Neckarstadt-Ost/Wohlgelegen, 68169 Mannheim","latitude":49.4994827,"longlitude":8.4718871},{"title":"2-Zimmer-Wohnung in Mannheim \u2013 Helles Zuhause mit Balkon","price_cold":850,"price_warm":1100,"qm":60,"price_per_qm":14.17,"rooms":"2","floor":"","street":"Seckenheimer Landstra\xdfe 133,","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":49.4777772,"longlitude":8.5168371},{"title":"3 Zimmer-Terrassenwohnung mit eigenem Garten und Stellplatz","price_cold":1120,"price_warm":1370,"qm":80,"price_per_qm":14,"rooms":"3","floor":"0","street":"Schulstra\xdfe 70,","city":"Neckarau, 68199 Mannheim","latitude":49.4586903,"longlitude":8.4906309},{"title":"Erstbezug nach Sanierung: Charmante, lichtdurchflutete Dachgeschosswohnung in Mannheim-K\xe4fertal","price_cold":985,"price_warm":1225,"qm":70.35,"price_per_qm":14,"rooms":"3","floor":"3","street":"Rollb\xfchlstra\xdfe 71,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5072151,"longlitude":8.5088047},{"title":"Stilvolle 1,5-Zimmer-Wohnung direkt bei Uni Mannheim","price_cold":450,"price_warm":600,"qm":24,"price_per_qm":18.75,"rooms":"1,5","floor":"","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"MA-City N\xe4he Universit\xe4t: Ideale Stadtwohnung mit Dachterrasse","price_cold":1090,"price_warm":1340,"qm":105,"price_per_qm":10.38,"rooms":"2","floor":"5","street":"R1 14a,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4890552,"longlitude":8.4683715},{"title":"2 ZKD Mannheim-Innenstadt N\xe4he Fu\xdfg\xe4ngerzone 55m\xb2 neu ausgebaut Dachterrass 720,- +NK","price_cold":720,"price_warm":860,"qm":55,"price_per_qm":13.09,"rooms":"2","floor":"5","street":"N 4 21,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Stilvoll wohnen im Quadrat \u2013 Charmante 4-Zimmerwohnung in der Innenstadt!","price_cold":1350,"price_warm":1720,"qm":118,"price_per_qm":11.44,"rooms":"4","floor":"","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 2-Zimmer-Wohnung mit Balkon","price_cold":680,"price_warm":890,"qm":61.08,"price_per_qm":11.13,"rooms":"2","floor":"4","street":"","city":"K\xe4fertal, 68305 Mannheim","latitude":"","longlitude":""},{"title":"***Charmante Dachgescho\xdfwohnung im Jugendstilhaus***","price_cold":600,"price_warm":700,"qm":60,"price_per_qm":10,"rooms":"3","floor":"3","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"*Gem\xfctliche Wohnung \xfcber den D\xe4chern der Stadt, MA-Oststadt*","price_cold":540,"price_warm":690,"qm":40,"price_per_qm":13.5,"rooms":"1","floor":"5","street":"Collinistrasse 18,","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":49.4901269,"longlitude":8.4773249},{"title":"Zentrale gelegene 2,5-Zimmer-Wohnung (EG) in Mannheim zu vermieten","price_cold":950,"price_warm":1050,"qm":60,"price_per_qm":15.83,"rooms":"2,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Sehr gepflegte 2,5-Zimmerwohnung mit Dachloggia & TG-Stellplatz!","price_cold":880,"price_warm":1200,"qm":64,"price_per_qm":13.75,"rooms":"2,5","floor":"5","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Exklusive Penthousewohnung 141m\xb2, mit Einbauk\xfcche, in Waldrandlage von Franklin!","price_cold":1990,"price_warm":0,"qm":141,"price_per_qm":14.11,"rooms":"4","floor":"2","street":"","city":"K\xe4fertal, 68305 Mannheim","latitude":"","longlitude":""},{"title":"MA-City - gepflegte 2 ZKD/Balkon Wohnung","price_cold":600,"price_warm":860,"qm":59,"price_per_qm":10.17,"rooms":"2","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"++Modern und Schick++ XL 3-Zi-Wohnung in zentraler Lage mit zwei Terrassen!","price_cold":1714,"price_warm":2074,"qm":112.85,"price_per_qm":15.19,"rooms":"3","floor":"4","street":"Weidenstr. 15,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4756202,"longlitude":8.4864105},{"title":"Modernisierte 3-Zimmer-Wohnung mit Balkon im 2. OG in zentraler Lage!","price_cold":745.72,"price_warm":1166.72,"qm":73.11,"price_per_qm":10.2,"rooms":"3","floor":"2","street":"Parkring 29,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4862438,"longlitude":8.4552443},{"title":"Familienfreundliche 4-Zimmer-Wohnung in Mannheim - Einzug nach Renovierung!","price_cold":1133,"price_warm":1523,"qm":103.01,"price_per_qm":11,"rooms":"4","floor":"21","street":"Neckarpromenade 9,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4953393,"longlitude":8.4750756},{"title":"*Umzugsbonus* 3-Zimmer-Penthousewohnung: Mieten und auf Ihrer neuen Dachterrasse fr\xfchst\xfccken!","price_cold":1500,"price_warm":1930,"qm":109.46,"price_per_qm":13.7,"rooms":"3","floor":"3","street":"George-Sullivan-Ring 48,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5235578,"longlitude":8.5354994},{"title":"Mannheim City n\xe4he Uni: Ideale Stadtwohnung am Park mit Garage","price_cold":1300,"price_warm":1450,"qm":104,"price_per_qm":12.5,"rooms":"3","floor":"1","street":"B2 13,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4860101,"longlitude":8.4625553},{"title":"Gem\xfctliche 1 ZKB Dachgeschosswohnung in Mannheim-Feudenheim","price_cold":450,"price_warm":560,"qm":37,"price_per_qm":12.16,"rooms":"1","floor":"3","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Spinelli, Wundersch\xf6ne 3- Zimmer Wohnung mit Blick ins gr\xfcne","price_cold":1090,"price_warm":1370,"qm":64.74,"price_per_qm":16.84,"rooms":"3","floor":"4","street":"Leonie-Ossowski-Promenade 15,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5031062,"longlitude":8.5189432},{"title":"ZENTRAL MIT GUTER AUSSTATTUNG","price_cold":850,"price_warm":1100,"qm":76,"price_per_qm":11.18,"rooms":"3","floor":"1","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"2-Zimmer-Wohnung in Mannheim, Waldhof","price_cold":770,"price_warm":770,"qm":64,"price_per_qm":12.03,"rooms":"2","floor":"","street":"Marburger Str 6A,","city":"Waldhof, 68305 Mannheim","latitude":49.5269143,"longlitude":8.4888228},{"title":"Schwetzinger Stra\xdfe: Schicke 1 ZKB mit Loggia","price_cold":550,"price_warm":690,"qm":53,"price_per_qm":10.38,"rooms":"1","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Campus68 Your place to be! Studentenapartments mit Freizeitaktivit\xe4ten und Mensa!","price_cold":935,"price_warm":935,"qm":15,"price_per_qm":62.33,"rooms":"1","floor":"","street":"K\xe4the-Kollwitz-Stra\xdfe 15,","city":"Neckarstadt-Ost/Wohlgelegen, 68169 Mannheim","latitude":49.5063236,"longlitude":8.4730109},{"title":"Frei ab 01.07.25 - Erstbezug nach Sanierung - Schicke 2-Zimmerwohnung mit Balkon in MA-Neckarau","price_cold":670,"price_warm":790,"qm":55,"price_per_qm":12.18,"rooms":"2","floor":"1","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Helle 2-Zimmer-Wohnung in Mannheim-Seckenheim \u2013 ruhige Lage, gute Anbindung","price_cold":600,"price_warm":750,"qm":50,"price_per_qm":12,"rooms":"2","floor":"0","street":"","city":"Seckenheim, 68239 Mannheim","latitude":"","longlitude":""},{"title":"Helle 2-ZKBB in ruhiger Gegend","price_cold":820,"price_warm":1020,"qm":65,"price_per_qm":12.62,"rooms":"2","floor":"3","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Attraktive Seniorenwohnung in Mannheim","price_cold":1049,"price_warm":1256.2,"qm":59.2,"price_per_qm":17.72,"rooms":"2","floor":"4","street":"D\xfcrerstra\xdfe 34,","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":49.4784098,"longlitude":8.5099907},{"title":"Attraktive, gepflegte 2-Zimmer-Wohnung in guter Lage in Mannheim-Neckarau","price_cold":670,"price_warm":810,"qm":59.18,"price_per_qm":11.32,"rooms":"2","floor":"4","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"1 ZKB Wohnung mit Balkon / Mannheim Neuhermsheim","price_cold":530,"price_warm":650,"qm":33.44,"price_per_qm":15.85,"rooms":"1","floor":"1","street":"Gerd-Dehof-Platz 1-2,","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":49.4656755,"longlitude":8.5090507},{"title":"2-ZW, 54qm, EG, Loggia, 2xTG, Einbauk\xfcche in Niederfeld Mannheim","price_cold":770,"price_warm":980,"qm":54,"price_per_qm":14.26,"rooms":"2","floor":"1","street":"Hans-Sachs-Ring 123,","city":"Neckarau, 68199 Mannheim","latitude":49.4556906,"longlitude":8.4746608},{"title":"Charmante, helle Altbauwohnung in sehr guter zentraler Lage","price_cold":760,"price_warm":890,"qm":69,"price_per_qm":11.01,"rooms":"2,5","floor":"3","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Freundliche helle 3-Zimmer Wohnung im 3. OG eines gepflegten Mehrfamilienhauses.","price_cold":880,"price_warm":1080,"qm":80,"price_per_qm":11,"rooms":"3","floor":"3","street":"Potsdamer Weg 12,","city":"Vogelstang, 68309 Mannheim","latitude":49.5087733,"longlitude":8.5312468},{"title":"2 ZKB in der Innenstadt nur an PERSONEN MIT WBS -2Personen zu vermieten","price_cold":760.21,"price_warm":1204.21,"qm":85.15,"price_per_qm":8.93,"rooms":"2","floor":"1","street":"H 4, 9,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne helle 2 ZKB Wohnung mit Wohnberechtigungsschein f\xfcr 2 Personen zu vermieten","price_cold":464.22,"price_warm":735.22,"qm":66.22,"price_per_qm":7.01,"rooms":"2","floor":"6","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Neu sanierte, gro\xdfz\xfcgige 4-Zimmerwohnung mit 2 Balkons im 2.OG","price_cold":1200,"price_warm":0,"qm":104,"price_per_qm":11.54,"rooms":"4","floor":"2","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Ma-Neckarstadt, 1,5 Zimmer, 42 qm\xb2, neu renoviert, Einbauk\xfcche, Waschmaschine, ab sofort verf\xfcgbar","price_cold":550,"price_warm":700,"qm":42,"price_per_qm":13.1,"rooms":"1,5","floor":"1","street":"Fr\xf6hlichstr. 29,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5019934,"longlitude":8.4636667},{"title":"Gem\xfctliche 2 Zimmer Wohnung mit neuer Einbauk\xfcche","price_cold":780,"price_warm":890,"qm":49,"price_per_qm":15.92,"rooms":"2","floor":"1","street":"D\xe4nischer Tisch 2a,","city":"Rheinau, 68219 Mannheim","latitude":49.4362898,"longlitude":8.5230476},{"title":"Modernisierte und WG taugliche 3-Zimmer-Dachgeschosswohnung in Mannheim-Rheinau","price_cold":900,"price_warm":1350,"qm":114,"price_per_qm":7.89,"rooms":"3","floor":"4","street":"Relaisstra\xdfe 13,","city":"Rheinau, 68219 Mannheim","latitude":49.4376408,"longlitude":8.524348},{"title":"1 Zimmer N\xe4he Universit\xe4t-MA im Studentenwohnpark","price_cold":300,"price_warm":470,"qm":21,"price_per_qm":14.29,"rooms":"1","floor":"3","street":"B5 3-4,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4871102,"longlitude":8.4604844},{"title":"Gelegenheit ! modernes Apartment im Studentenwohnpark Mannheim zu vermieten","price_cold":500,"price_warm":675,"qm":27,"price_per_qm":18.52,"rooms":"1","floor":"1","street":"B5 3-4,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4871102,"longlitude":8.4604844},{"title":"Freundliche 4,5-Zimmer Neubau Wohnung mit gehobener Innenausstattung mit Balkon und EBK in Mannheim","price_cold":1600,"price_warm":1850,"qm":145,"price_per_qm":11.03,"rooms":"4,5","floor":"1","street":"Seckenheimer Hauptstra\xdfe 173,","city":"Seckenheim, 68239 Mannheim","latitude":49.4694756,"longlitude":8.5582101},{"title":"Gro\xdfz\xfcgige 3-Zimmer-Wohnung in ruhiger Lage von Mannheim-Sandhofen","price_cold":650,"price_warm":950,"qm":75,"price_per_qm":8.67,"rooms":"3","floor":"2","street":"","city":"Sandhofen, 68307 Mannheim","latitude":"","longlitude":""},{"title":"+++ Erstbezug nach Kernsanierung: Luxuri\xf6se 3,5 ZKB Souterrainwohnung mit EBK, Bar und Garage +++","price_cold":1200,"price_warm":1500,"qm":83,"price_per_qm":14.46,"rooms":"3","floor":"","street":"","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":"","longlitude":""},{"title":"## MA-Neckarstadt-OST ## ALTBAU ## hochwertig kernsanierte 2 ZKB mit 2 Balkonen ##","price_cold":870,"price_warm":1040,"qm":60,"price_per_qm":14.5,"rooms":"2","floor":"2","street":"K\xe4fertaler Str. 57,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4950858,"longlitude":8.4807365},{"title":"Wunderbare Altbauwohnung befristet bis 31.10.2026 zu vermieten","price_cold":1100,"price_warm":1350,"qm":85,"price_per_qm":12.94,"rooms":"3","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"++ Hochwertig kernsanierte 2 ZKB ++ MA-Schwetzingerstadt ++","price_cold":840,"price_warm":840,"qm":63,"price_per_qm":13.33,"rooms":"2","floor":"2","street":"Schwetzingerstra\xdfe 55,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4793339,"longlitude":8.476647},{"title":"++ Direkt bezugsfertig: 3-Zi.-Whg. mit riesigem Balkon & Einbauk\xfcche zum Erstbezug ++","price_cold":1834.5,"price_warm":2140.25,"qm":122.3,"price_per_qm":15,"rooms":"3","floor":"","street":"Heinrich-Wittkamp-Stra\xdfe 17b,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.502039,"longlitude":8.4936349},{"title":"++ Stilvoll wohnen - neue 2-Zi-Whg. mit EBK und Balkon im Wohnquartier Field 4 ++","price_cold":1315.44,"price_warm":1511.19,"qm":78.3,"price_per_qm":16.8,"rooms":"2","floor":"3","street":"Heinrich-Wittkamp-Str. 19,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.502039,"longlitude":8.4936349},{"title":"DREI DACHTERRASSEN INKLUSIVE: Modernes 4-Zi.-Penthouse mit stilvoller EBK und modernem Bad","price_cold":2366.65,"price_warm":2780.4,"qm":161.7,"price_per_qm":14.64,"rooms":"4","floor":"5","street":"Heinrich-Wittkamp-Stra\xdfe 15,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.502039,"longlitude":8.4936349},{"title":"Lichtdurchflutete 3-Zimmer-Neubauwohnung mit Terrasse und EBK im Wohnquartier FIELD 4","price_cold":1143.21,"price_warm":1322.96,"qm":71.9,"price_per_qm":15.9,"rooms":"2","floor":"3","street":"Heinrich-Wittkamp-Stra\xdfe 11,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.502039,"longlitude":8.4936349},{"title":"Attraktive 2-Zimmer-Wohnung mit Balkon und EBK im Neubauquartier FIELD 4","price_cold":966.12,"price_warm":1111.62,"qm":58.5,"price_per_qm":16.51,"rooms":"2","floor":"3","street":"Heinrich-Wittkamp-Stra\xdfe 9,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.5019327,"longlitude":8.4931599},{"title":"Stilvolle, neuwertige 1-Zimmer-Wohnung mit Einbauk\xfcche in Mannheim","price_cold":595,"price_warm":695,"qm":23,"price_per_qm":25.87,"rooms":"1","floor":"5","street":"L7 6a,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4825977,"longlitude":8.4668735},{"title":"sch\xf6ne, helle Dachgeschosswohnung mit Stellplatz","price_cold":535.37,"price_warm":796.37,"qm":65.21,"price_per_qm":8.21,"rooms":"2","floor":"4","street":"Max-Winterhalter-Ring 3,","city":"Sch\xf6nau, 68307 Mannheim","latitude":49.5497362,"longlitude":8.4805097},{"title":"helle 3 ZKB in beliebter Lage","price_cold":527,"price_warm":755,"qm":62,"price_per_qm":8.5,"rooms":"3","floor":"1","street":"Kattowitzer Zeile 73,","city":"Sch\xf6nau, 68307 Mannheim","latitude":49.5441681,"longlitude":8.4738466},{"title":"Attraktive 2-Zimmer-Souterrain-Wohnung mit Terasse und EBK in Mannheim","price_cold":660,"price_warm":760,"qm":68,"price_per_qm":9.71,"rooms":"2","floor":"","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Helle 3 ZKB Wohnung im 4.OG ohne Aufzug zu vermieten !","price_cold":649.71,"price_warm":951.71,"qm":72.19,"price_per_qm":9,"rooms":"3","floor":"4","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"4 Zimmer Altbau Wohnung in Bestlage","price_cold":1340,"price_warm":1590,"qm":105,"price_per_qm":12.76,"rooms":"4","floor":"1","street":"L 14 1,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4958869,"longlitude":8.4542228},{"title":"4-Zimmer-Wohnung mit Balkon","price_cold":1200,"price_warm":1520,"qm":105,"price_per_qm":11.43,"rooms":"4","floor":"3","street":"R 7 36,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Exklusive, gepflegte 3-Zimmer-Wohnung mit Balkon und EBK in Mannheim","price_cold":1100,"price_warm":1280,"qm":75,"price_per_qm":14.67,"rooms":"3","floor":"5","street":"Joseph-Haydn-Str. 9,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4780773,"longlitude":8.484401},{"title":"M\xf6blierte Einzimmerwohnung mit Balkon in Mannheim-Rheinau","price_cold":500,"price_warm":650,"qm":50,"price_per_qm":10,"rooms":"1","floor":"1","street":"","city":"Rheinau, 68219 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 3 Zimmer Dachgeschosswohnung im Herzen von Mannheim","price_cold":879,"price_warm":1219,"qm":92.79,"price_per_qm":9.47,"rooms":"3","floor":"3","street":"Webereistr. 24-26,","city":"Sandhofen, 68307 Mannheim","latitude":49.5396676,"longlitude":8.4517528},{"title":"Renovierte, gro\xdfz\xfcgige Wohnung mit Balkon","price_cold":800,"price_warm":995,"qm":63,"price_per_qm":12.7,"rooms":"2","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"3 Zimmerwohnung Vogelstang mit EBK","price_cold":1100,"price_warm":1300,"qm":89,"price_per_qm":12.36,"rooms":"3","floor":"3","street":"Suhler Weg 19,","city":"Vogelstang, 68309 Mannheim","latitude":49.51385,"longlitude":8.5436963},{"title":"Stilvolle, voll ausgestattete Wohnung zur Zwischenmiete (Juli\u2013Januar)","price_cold":1180,"price_warm":1180,"qm":46,"price_per_qm":25.65,"rooms":"1","floor":"","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Erstbezug nach Sanierung! Moderne Wohnung mit Balkon","price_cold":570,"price_warm":720,"qm":48,"price_per_qm":11.88,"rooms":"1","floor":"","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"3 Zimmer Wohnung in MA-Schwetzingerstadt","price_cold":820,"price_warm":1070,"qm":80,"price_per_qm":10.25,"rooms":"3","floor":"2","street":"Kopernikusstr. 50,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4790504,"longlitude":8.4791453},{"title":"Erstbezug: M\xf6blierte Zimmer 3er-WG mit Pauschalmiete - N\xe4he Universit\xe4t Mannheim","price_cold":700,"price_warm":700,"qm":23,"price_per_qm":30.43,"rooms":"1","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Wohnen am Wasser","price_cold":1600,"price_warm":1900,"qm":98,"price_per_qm":16.33,"rooms":"3","floor":"0","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"sch\xf6ne 3Zimmer DG-Wohnung","price_cold":700,"price_warm":950,"qm":63.2,"price_per_qm":11.08,"rooms":"3","floor":"3","street":"Belfortstr. 59,","city":"Neckarau, 68199 Mannheim","latitude":49.4472964,"longlitude":8.4938651},{"title":"Exklusive 3-Raum-Wohnung mit Balkon und Einbauk\xfcche in Mannheim","price_cold":850,"price_warm":1050,"qm":70,"price_per_qm":12.14,"rooms":"3","floor":"2","street":"Mannheimer Stra\xdfe 88,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5064969,"longlitude":8.5090152},{"title":"Jenaer Weg 5, 3. OG Nr. 32 in einer Seniorenwohnlage (nur mit Wohnberechtigungsschein 2 Personen)","price_cold":446.46,"price_warm":668.46,"qm":53,"price_per_qm":8.42,"rooms":"2","floor":"3","street":"Jenaer Weg 5,","city":"Vogelstang, 68309 Mannheim","latitude":49.5122175,"longlitude":8.5409654},{"title":"3 ZKB mit Balkon in der Innenstadt","price_cold":860,"price_warm":1040,"qm":82,"price_per_qm":10.49,"rooms":"3","floor":"5","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Maisonettenwohnung mit gro\xdfer Terrasse in K\xe4fertal","price_cold":1100,"price_warm":1450,"qm":95,"price_per_qm":11.58,"rooms":"3","floor":"1","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Gepflegte und ger\xe4umige 1 Zimmer Wohnung f\xfcr Single oder Studenten","price_cold":460,"price_warm":620,"qm":36,"price_per_qm":12.78,"rooms":"1","floor":"1","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Nr. 1 Modernisierte 1 ZKB-Wohnung","price_cold":510,"price_warm":0,"qm":39.22,"price_per_qm":13,"rooms":"1","floor":"","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Nr. 2 / Moderne, Rollstuhl gerechte 1 ZKB-Wohnung","price_cold":675,"price_warm":0,"qm":53.17,"price_per_qm":12.7,"rooms":"1","floor":"","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Erstbezug nach Sanierung mit Balkon und Einbauk\xfcche: Exklusive 2-Raum-Hochparterre-Wohnung","price_cold":750,"price_warm":900,"qm":35,"price_per_qm":21.43,"rooms":"2","floor":"0","street":"Kurzgewannstra\xdfe 3,","city":"Neckarau, 68199 Mannheim","latitude":49.4632257,"longlitude":8.4895031},{"title":"Stadtzentrum - mitten im Herzen und dennoch ruhig","price_cold":720,"price_warm":820,"qm":42,"price_per_qm":17.14,"rooms":"1","floor":"2","street":"S6 15,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4881506,"longlitude":8.4746248},{"title":"Erstbezug nach Sanierung: freundliche 3-Zimmer-Wohnung mit Balkon in Mannheim","price_cold":850,"price_warm":1050,"qm":72,"price_per_qm":11.81,"rooms":"3","floor":"2","street":"Karlstra\xdfe 103,","city":"Sandhofen, 68307 Mannheim","latitude":49.5474271,"longlitude":8.4502853},{"title":"Vollm\xf6bliertes 1-Zimmerapartment in Mannheim-Schwetzingerstadt","price_cold":520,"price_warm":640,"qm":23,"price_per_qm":22.61,"rooms":"1","floor":"5","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Modernisiertes und teilm\xf6bliertes 1-Zimmerapartment in unmittelbarer N\xe4he zur Universit\xe4t Mannheim","price_cold":430,"price_warm":500,"qm":21,"price_per_qm":20.48,"rooms":"1","floor":"5","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"2 ZKB mit Balkon n\xe4he Fressgasse","price_cold":985,"price_warm":1235,"qm":66,"price_per_qm":14.92,"rooms":"2","floor":"4","street":"R7 38,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4864552,"longlitude":8.4746505},{"title":"Renovierte und teilm\xf6blierte 1-Zimmerwohnung","price_cold":520,"price_warm":600,"qm":23,"price_per_qm":22.61,"rooms":"1","floor":"","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Eklusive 2,5-Zimmer-Wohnung mit hochwertiger Einbauk\xfcche und Balkon in Mannheim","price_cold":1350,"price_warm":1580,"qm":86,"price_per_qm":15.7,"rooms":"2","floor":"3","street":"Ida-Dehmel-Ring 76,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5041702,"longlitude":8.5260856},{"title":"Mannheim-Feudenheim, 2-ZKB mit Balkon in bevorzugter Wohnlage","price_cold":573,"price_warm":0,"qm":63,"price_per_qm":9.1,"rooms":"2","floor":"2","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Sanierte teilm\xf6blierte 2-Zimmerwohnung mit gro\xdfem Studio, Balkon und EBK","price_cold":1190,"price_warm":1340,"qm":95,"price_per_qm":12.53,"rooms":"3","floor":"2","street":"","city":"Sandhofen, 68307 Mannheim","latitude":"","longlitude":""},{"title":"***M\xd6BLIERTE STUDENTENWOHNUNG SUCHT NACHMIETER***","price_cold":550,"price_warm":670,"qm":35,"price_per_qm":15.71,"rooms":"1","floor":"4","street":"Akademiestr. ?,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4908546,"longlitude":8.4604266},{"title":"M\xf6bliertes Apartment im Vita Home mit Rooftop Dachterrasse","price_cold":730,"price_warm":850,"qm":32,"price_per_qm":22.81,"rooms":"1","floor":"3","street":"Carl-Benz-Stra\xdfe 128,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4981675,"longlitude":8.4879242},{"title":"Schickes, vollm\xf6bliertes Penthouse mit direktem Blick auf das Mannheimer Schloss","price_cold":989,"price_warm":1189,"qm":48,"price_per_qm":20.6,"rooms":"2","floor":"5","street":"L 2 14,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4958869,"longlitude":8.4542228},{"title":"Stilvolle 2-Zimmer-Wohnung in Mannheim-Sandhofen","price_cold":650,"price_warm":850,"qm":50,"price_per_qm":13,"rooms":"2","floor":"1","street":"","city":"Sandhofen, 68307 Mannheim","latitude":"","longlitude":""},{"title":"Komplett renovierte 2 Zimmer Wohnung Mannheim Schwetzinger Vorstadt! Erstbezug nach Sanierung","price_cold":850,"price_warm":0,"qm":64.5,"price_per_qm":13.18,"rooms":"2","floor":"4","street":"Rheinh\xe4user Stra\xdfe 118,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4743161,"longlitude":8.483553},{"title":"Hochwertige sanierte 4-Zimmer-Wohnung mit Balkon in Mannheim","price_cold":1440,"price_warm":1700,"qm":125,"price_per_qm":11.52,"rooms":"4","floor":"1","street":"K4 20,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.493083,"longlitude":8.4667906},{"title":"Stilvolle 2 Raum- Souterrain Wohnung im Seckenheim","price_cold":700,"price_warm":850,"qm":54,"price_per_qm":12.96,"rooms":"2","floor":"1","street":"Wolfacher Stra\xdfe 17,","city":"Seckenheim, 68239 Mannheim","latitude":49.4611026,"longlitude":8.5609904},{"title":"Geschmackvolle, modernisierte 1-Zimmer-Erdgeschosswohnung mit geh. Innenausstattung mit EBK","price_cold":520,"price_warm":690,"qm":36,"price_per_qm":14.44,"rooms":"1","floor":"1","street":"Am Oberen Luisenpark 2,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4842089,"longlitude":8.4876083},{"title":"Exklusive, neuwertige 3,5-Zimmer-Wohnung mit Loggia und EBK in MA-Niederfeld","price_cold":2150,"price_warm":2540,"qm":146,"price_per_qm":14.73,"rooms":"3,5","floor":"1","street":"Wolframstr. 9,","city":"Neckarau, 68199 Mannheim","latitude":49.4543766,"longlitude":8.4788269},{"title":"GEM\xdcTLICHE 2-ZIMMERWOHNUNG IN BELIEBTER LAGE DER NECKARSTADT - IDEAL F\xdcR SINGLES UND PAARE","price_cold":660,"price_warm":820,"qm":55,"price_per_qm":12,"rooms":"2","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Wohntraum auf zwei Ebenen - stilvolles Apartment mit Stellplatz und Vollm\xf6blierung","price_cold":550,"price_warm":720,"qm":27,"price_per_qm":20.37,"rooms":"1","floor":"4","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"WG Neugr\xfcndung/shared flat mit\u2757\uFE0FBlick auf die Uni\u2757\uFE0Fin Mannheim \uD83C\uDFE0Erstbezug nach Sanierung","price_cold":445,"price_warm":535,"qm":23,"price_per_qm":19.35,"rooms":"1","floor":"1","street":"Rheinvorlandstra\xdfe 10,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4847295,"longlitude":8.4560671},{"title":"\uD83C\uDFE0NEU Zimmer frei in 4erWG NEUgr\xfcndung/Room availabe in shared flat mit\u2757\uFE0FBlick auf die Uni\u2757\uFE0FMannheim","price_cold":460,"price_warm":550,"qm":33,"price_per_qm":13.94,"rooms":"1","floor":"9","street":"Rheinvorlandstra\xdfe 10,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4847295,"longlitude":8.4560671},{"title":"Freies WG-Zimmer in attraktiver 3er WG/shared flat \uD83C\uDFE0in den Mannheimern Quadraten nahe Uni und Hbf!","price_cold":485,"price_warm":562,"qm":16,"price_per_qm":30.31,"rooms":"1","floor":"1","street":"L14 5-6,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4818759,"longlitude":8.471095},{"title":"Juwel im Jungbusch - teilm\xf6bliertes Loft im Kulturdenkmal Kaufmannsm\xfchle","price_cold":1950,"price_warm":2350,"qm":120,"price_per_qm":16.25,"rooms":"3","floor":"4","street":"Hafenstra\xdfe 29,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.495623,"longlitude":8.4570369},{"title":"\xdcber den D\xe4chern von Mannheim: gem\xfctliche 1 Zimmerwohnung mit TG Stellplatz","price_cold":430,"price_warm":695,"qm":23,"price_per_qm":18.7,"rooms":"1","floor":"5","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte Altbauwohnung mit gro\xdfer Wohnk\xfcche in renoviertem Altbau!","price_cold":1020,"price_warm":1140,"qm":75,"price_per_qm":13.6,"rooms":"2,7","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte 2,5 ZKB mit Parkettb\xf6den und Wohnk\xfcche in stilvollem Altbau!","price_cold":1050,"price_warm":1200,"qm":80,"price_per_qm":13.12,"rooms":"2,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Helle drei Zimmer Wohnung in Neckarstadt-Ost","price_cold":680,"price_warm":950,"qm":72,"price_per_qm":9.44,"rooms":"3","floor":"0","street":"Uhlandstr. xx,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4961805,"longlitude":8.4819991},{"title":"184 m\xb2 - 6.0 Zi., Maisonette mit gro\xdfem Garten","price_cold":2620,"price_warm":3045,"qm":184,"price_per_qm":14.24,"rooms":"6","floor":"1","street":"Lucas-Cranach-Stra\xdfe 28,","city":"Neuostheim/Neuhermsheim, 68165 Mannheim","latitude":49.4801654,"longlitude":8.5135169},{"title":"Modern & hochwertig m\xf6blierte Kernsanierte 1-Zimmer Wohnung in zentraler Lage","price_cold":595,"price_warm":665,"qm":35,"price_per_qm":17,"rooms":"1","floor":"","street":"Hochst\xe4ttstra\xdfe 1,","city":"Seckenheim, 68239 Mannheim","latitude":49.4518514,"longlitude":8.5373115},{"title":"M\xf6bliertes Apartment in den Mannheimer Quadraten","price_cold":390,"price_warm":520,"qm":10,"price_per_qm":39,"rooms":"1","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Stilvolle 3-Raum-Wohnung mit gro\xdfer Dachterrasse","price_cold":1250,"price_warm":1580,"qm":113,"price_per_qm":11.06,"rooms":"3","floor":"1","street":"Krokusweg 8,","city":"Waldhof, 68305 Mannheim","latitude":49.5249914,"longlitude":8.5001646},{"title":"Helle 1-Zimmer-Wohnung mit separater K\xfcche und Balkon ins Gr\xfcne","price_cold":367.36,"price_warm":537.36,"qm":45.92,"price_per_qm":8,"rooms":"1","floor":"2","street":"Gertrud-B\xe4umer-Stra\xdfe 51,","city":"Neckarstadt-Ost/Wohlgelegen, 68169 Mannheim","latitude":49.5102028,"longlitude":8.4743},{"title":"MA-Lindenhof ## Bestlage ## 2 ZKB mit 2 Balkonen","price_cold":830,"price_warm":990,"qm":57,"price_per_qm":14.56,"rooms":"2","floor":"2","street":"Gontardstra\xdfe 15,","city":"Lindenhof, 68163 Mannheim","latitude":49.4763157,"longlitude":8.467207},{"title":"4-Zimmer Wohnung - Dachgeschoss der besonderen Art mit Loggia","price_cold":1579.5,"price_warm":1851.8,"qm":117,"price_per_qm":13.5,"rooms":"4","floor":"3","street":"Robert-Funari-Str. 36,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5145414,"longlitude":8.5264971},{"title":"zentral gelegene Wohnung zu vermieten","price_cold":484.38,"price_warm":706.38,"qm":59.8,"price_per_qm":8.1,"rooms":"2","floor":"2","street":"Schafweide 63,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4943022,"longlitude":8.4814799},{"title":"Helle 1ZKB Wohnung am Waldrand zu vermieten!","price_cold":520,"price_warm":700,"qm":49,"price_per_qm":10.61,"rooms":"1","floor":"3","street":"Strahlenburgstr. 29,","city":"Rheinau, 68219 Mannheim","latitude":49.4445888,"longlitude":8.5329861},{"title":"saniertes Apartment mit EBK in zentraler Lage direkt am Neckar","price_cold":700,"price_warm":870,"qm":51,"price_per_qm":13.73,"rooms":"2","floor":"1","street":"Neckarpromenade 38,","city":"Neckarstadt-Ost/Wohlgelegen, 68159 Mannheim","latitude":49.4937369,"longlitude":8.478683},{"title":"Saniertes Wohnen in Wallstadt: 3-Zimmer-Wohnung im Dachgeschoss zu vermieten!","price_cold":720,"price_warm":900,"qm":74,"price_per_qm":9.73,"rooms":"3","floor":"2","street":"","city":"Wallstadt, 68259 Mannheim","latitude":"","longlitude":""},{"title":"NEU: Modernisierte Altbauwohnung mit K\xfcche und Tageslichtbad!","price_cold":670,"price_warm":870,"qm":52,"price_per_qm":12.88,"rooms":"2","floor":"3","street":"Holzstra\xdfe 9,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4948179,"longlitude":8.4639674},{"title":"Exklusive 4-Raum-Wohnung mit Balkon und Einbauk\xfcche in Mannheim","price_cold":1300,"price_warm":1700,"qm":104,"price_per_qm":12.5,"rooms":"4","floor":"11","street":"Feldbergstr. 58,","city":"Neckarau, 68163 Mannheim","latitude":49.4585283,"longlitude":8.4748422},{"title":"Apartment vollm\xf6bliert mit Balkon - ab 01.07.2025","price_cold":380,"price_warm":510,"qm":22,"price_per_qm":17.27,"rooms":"1","floor":"0","street":"Halmhuberstra\xdfe 2-8,","city":"Rheinau, 68219 Mannheim","latitude":49.417295,"longlitude":8.5256265},{"title":"Moderne 2 Zimmer Maisonette Wohnung in Seckenheim","price_cold":1050,"price_warm":1250,"qm":78,"price_per_qm":13.46,"rooms":"2","floor":"2","street":"Seckenheimer Hauptstr. 119,","city":"Seckenheim, 68239 Mannheim","latitude":49.4667296,"longlitude":8.5633777},{"title":"Helles, 1-Zimmer-Apartment mit Wintergarten in Mannheim-Lindenhof \u2013 zentral gelegen","price_cold":390,"price_warm":490,"qm":21.44,"price_per_qm":18.19,"rooms":"1","floor":"2","street":"Carl-Metz-Stra\xdfe 2,","city":"Lindenhof, 68163 Mannheim","latitude":49.4766909,"longlitude":8.4686792},{"title":"Sch\xf6nes Studenten 1-Zimmer Apartment in Mannheim-Lindenhof - zentral gelegen","price_cold":360,"price_warm":480,"qm":24.26,"price_per_qm":14.84,"rooms":"1","floor":"2","street":"Meerfeldstra\xdfe 11,","city":"Lindenhof, 68163 Mannheim","latitude":49.4764862,"longlitude":8.4683421},{"title":"***In der Fu\xdfg\xe4ngerzone***","price_cold":1200,"price_warm":1600,"qm":100,"price_per_qm":12,"rooms":"3","floor":"3","street":"O6, 4,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4858463,"longlitude":8.4706484},{"title":"2 Zimmer Wohnung M Quadrate / Balkon / Blick Wasserturm","price_cold":1000,"price_warm":1200,"qm":65,"price_per_qm":15.38,"rooms":"2","floor":"4","street":"M7 12,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4829137,"longlitude":8.4712872},{"title":"Helle 2-Zimmer-Wohnung (sanierter Altbau) in Mannheim","price_cold":720,"price_warm":850,"qm":55,"price_per_qm":13.09,"rooms":"2","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"EXKLUSIVER LUXUS GANZ OBEN TOP 14.OG EINE DER H\xd6CHSTEN PENTHOUSE PREMIUM SKY HOME TOWER MANNHEIM","price_cold":990,"price_warm":1285,"qm":40,"price_per_qm":24.75,"rooms":"2","floor":"","street":"George-Washington-Str. 239-241,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5193921,"longlitude":8.5309954},{"title":"Seniorengerechtes Wohnen 2-Zimmer-Wohnung im Neubauprojekt \\"Wohnen am See\\"","price_cold":1176.12,"price_warm":1372.14,"qm":65.34,"price_per_qm":18,"rooms":"2,5","floor":"3","street":"Stengelhofstra\xdfe 33,","city":"Rheinau, 68219 Mannheim","latitude":49.4356831,"longlitude":8.5222795},{"title":"3,5-Zimmerwohnung mit 74 qm, Parkblick, Loggia - Neues Wohnen, nur f\xfcr Menschen ab 50","price_cold":1247,"price_warm":1507,"qm":74,"price_per_qm":16.85,"rooms":"3,5","floor":"1","street":"Leonie-Ossowski-Promenade 1,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5034586,"longlitude":8.5162837},{"title":"M\xd6BELIERT: Moderne helle 2-Zimmer-WG mit Balkon in Mannheim","price_cold":420,"price_warm":505,"qm":10,"price_per_qm":42,"rooms":"2","floor":"2","street":"Karlsruher Stra\xdfe 34,","city":"Rheinau, 68219 Mannheim","latitude":49.4307706,"longlitude":8.527249},{"title":"frisch renoviert - 1 Zimmer Appartement zum Wohlf\xfchlen","price_cold":500,"price_warm":650,"qm":20,"price_per_qm":25,"rooms":"1","floor":"5","street":"Heinrich-Lanz-Stra\xdfe 23-27,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4793215,"longlitude":8.4727198},{"title":"gem\xfctliche 1-Zimmer Wohnung in Mannheim Rheinau","price_cold":475,"price_warm":650,"qm":38.2,"price_per_qm":12.43,"rooms":"1","floor":"1","street":"Am Geheugraben 58,","city":"Rheinau, 68219 Mannheim","latitude":49.4386523,"longlitude":8.5195358},{"title":"Tauschwohnung: Dachgeschoss in freistehendem Einfamilienhaus +Balkon","price_cold":650,"price_warm":730,"qm":65,"price_per_qm":10,"rooms":"2","floor":"2","street":"Offenburger Stra\xdfe 93 93,","city":"Seckenheim, 68239 Mannheim","latitude":49.4634575,"longlitude":8.563432},{"title":"Ansprechende und gepflegte 4-Zimmer-Loft-Wohnung in Mannheim","price_cold":1500,"price_warm":1750,"qm":144,"price_per_qm":10.42,"rooms":"4","floor":"","street":"John-Deere-Strasse 77,","city":"Lindenhof, 68163 Mannheim","latitude":49.4729866,"longlitude":8.4776653},{"title":"MA-City - gepflegte 2 ZKB-Wohnung","price_cold":520,"price_warm":720,"qm":57,"price_per_qm":9.12,"rooms":"2","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Neubau Erstbezug 3-Zimmer Wohnung im Innenhof mit Balkon und Einbauk\xfcche Energieklasse A","price_cold":1690,"price_warm":1950,"qm":105,"price_per_qm":16.1,"rooms":"3","floor":"3","street":"I 7 10,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Sanierte 2-Zimmer Wohnung mit gro\xdfer K\xfcche","price_cold":580,"price_warm":650,"qm":41,"price_per_qm":14.15,"rooms":"2","floor":"1","street":"Apenrader Weg 1,","city":"Sch\xf6nau, 68307 Mannheim","latitude":49.5447775,"longlitude":8.4797153},{"title":"kernsanierte Einzimmerwohnung im Herzen von Mannheim","price_cold":650,"price_warm":800,"qm":35,"price_per_qm":18.57,"rooms":"1","floor":"3","street":"P 6 10,","city":"Schwetzingerstadt/Oststadt, 69161 Mannheim","latitude":49.4815281,"longlitude":8.4894105},{"title":"TOLLE DG-WOHNUNG MIT BR\xdcCKENLOGGIA IM FRANKLIN-QUARTIER MANNHEIM","price_cold":1176,"price_warm":1566,"qm":90,"price_per_qm":13.07,"rooms":"3","floor":"3","street":"Franklin-D.-Roosevelt-Stra\xdfe 5,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5209556,"longlitude":8.5259562},{"title":"Ideale 1-Zimmer-Wohnung f\xfcr Student:innen im Jungbusch am Neckarkanal","price_cold":375,"price_warm":515,"qm":23,"price_per_qm":16.3,"rooms":"1","floor":"3","street":"Hafenstr. 48-52,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4981903,"longlitude":8.4578613},{"title":"Ruhig gelegene 1 ZKB in Waldparkn\xe4he","price_cold":410,"price_warm":510,"qm":39,"price_per_qm":10.51,"rooms":"1","floor":"4","street":"","city":"Lindenhof, 68163 Mannheim","latitude":"","longlitude":""},{"title":"Gepflegtes 1-Zimmer-Apartment","price_cold":380,"price_warm":500,"qm":22,"price_per_qm":17.27,"rooms":"1","floor":"5","street":"","city":"Lindenhof, 68163 Mannheim","latitude":"","longlitude":""},{"title":"Charmante 3-Zimmer-Wohnung mit gr\xfcnem Innenhofblick in zentraler Lage","price_cold":600.13,"price_warm":871.13,"qm":74.09,"price_per_qm":8.1,"rooms":"3","floor":"1","street":"K\xe4fertaler Str. 44,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4944917,"longlitude":8.4823318},{"title":"**Ab 1.10! Komplett m\xf6bliertes Apartment+PKW-Stellplatz - Zentrumsnah**","price_cold":520,"price_warm":650,"qm":30,"price_per_qm":17.33,"rooms":"1","floor":"0","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"M\xd6BLIERT und ZUM WOHLF\xdcHLEN! Traumblick auf Luisenpark mit zwei Balkonen","price_cold":1630,"price_warm":1800,"qm":80,"price_per_qm":20.38,"rooms":"2","floor":"3","street":"Renzstra\xdfe 1,","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":49.4887437,"longlitude":8.4796489},{"title":"Moderne 2 ZKB Wohnung mit Luxusterrasse in Mannheimer Bestlage","price_cold":900,"price_warm":1050,"qm":71,"price_per_qm":12.68,"rooms":"2","floor":"0","street":"Augartenstra\xdfe 74,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4770993,"longlitude":8.4822148},{"title":"Moderne frisch renovierte 2 ZKB Wohnung","price_cold":990,"price_warm":1100,"qm":73,"price_per_qm":13.56,"rooms":"2","floor":"2","street":"Wilhelm-Wundt-Str 7,","city":"Neckarau, 68199 Mannheim","latitude":49.4481375,"longlitude":8.4948567},{"title":"Gro\xdfz\xfcgige 3-Zimmer-Wohnung mit Balkon in Wallstadt","price_cold":770,"price_warm":970,"qm":96,"price_per_qm":8.02,"rooms":"3","floor":"1","street":"","city":"Wallstadt, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Single-Wohnung MA-Neckarau, 1 ZKB","price_cold":352,"price_warm":0,"qm":37,"price_per_qm":9.51,"rooms":"1","floor":"","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Zentral gelegene 1-Zimmer Wohnung mit Balkon Mannheim-Jungbusch","price_cold":500,"price_warm":635,"qm":32,"price_per_qm":15.62,"rooms":"1","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Sehr hochwertige 3-Zimmer-Wohnung mit Loggia in Top Lage am Lindenhof, ca. 78,64m\xb2 im 6. OG (Haus B)","price_cold":1250,"price_warm":1569,"qm":78.64,"price_per_qm":15.9,"rooms":"3","floor":"6","street":"Gl\xfccksteinallee 33,","city":"Lindenhof, 68163 Mannheim","latitude":49.4761196,"longlitude":8.4718661},{"title":"Moderne, kernsanierte 2,5 Zimmerwohnung mit gro\xdfer Wohnk\xfcche!","price_cold":770,"price_warm":890,"qm":62,"price_per_qm":12.42,"rooms":"2","floor":"4","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Kernsanierte Altbauwohnung in ruhigem Hinterhaus in der Neckarstadt!","price_cold":850,"price_warm":970,"qm":60,"price_per_qm":14.17,"rooms":"2","floor":"2","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Gepflegte 3 Zimmer Wohnung - ab 01.07. !!","price_cold":670,"price_warm":780,"qm":60,"price_per_qm":11.17,"rooms":"3","floor":"3","street":"Apenrader Weg 10,","city":"Sch\xf6nau, 68307 Mannheim","latitude":49.5453553,"longlitude":8.4800962},{"title":"Sch\xf6ne 2-Zimmer Wohnung in Sch\xf6nau","price_cold":500,"price_warm":580,"qm":41,"price_per_qm":12.2,"rooms":"2","floor":"1","street":"Apenrader Weg 5,","city":"Sch\xf6nau, 68307 Mannheim","latitude":49.5450771,"longlitude":8.4797104},{"title":"M\xf6blierte 2ZKB Wohnung in Mannheim Neckarstadt West Langstrasse zu vermieten","price_cold":800,"price_warm":910,"qm":54,"price_per_qm":14.81,"rooms":"2","floor":"3","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"3,5-Zi-Whg. mit Balkon in MA-Vogelstang","price_cold":830,"price_warm":1060,"qm":79,"price_per_qm":10.51,"rooms":"3","floor":"1","street":"","city":"Vogelstang, 68309 Mannheim","latitude":"","longlitude":""},{"title":"gem\xfctliche Einzimmerwohnung mit Blick auf den Neckar","price_cold":490,"price_warm":640,"qm":35,"price_per_qm":14,"rooms":"1","floor":"6","street":"Collinistra\xdfe 5,","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":49.4907987,"longlitude":8.4776778},{"title":"1-Zimmer Apartment | m\xf6bliert","price_cold":300,"price_warm":440,"qm":18.92,"price_per_qm":15.86,"rooms":"1","floor":"3","street":"Halmhuberstra\xdfe 2-8,","city":"Rheinau, 68219 Mannheim","latitude":49.417295,"longlitude":8.5256265},{"title":"Gem\xfctliche 1-ZKB in der Neckarstadt-West!","price_cold":340,"price_warm":500,"qm":25.15,"price_per_qm":13.52,"rooms":"1","floor":"0","street":"Laurentiusstr. 19-21,","city":"Neckarstadt-West, 68167 Mannheim","latitude":49.4984445,"longlitude":8.4712403},{"title":"Helle 2 ZKB Wohnung in Mannheim! WE13","price_cold":725,"price_warm":915,"qm":58,"price_per_qm":12.5,"rooms":"2","floor":"3","street":"Spiegelfabrik 1,","city":"Waldhof, 68305 Mannheim","latitude":49.5203406,"longlitude":8.4777617},{"title":"H\xfcbsche 3-Zimmer-Dachgeschosswohnung mit Balkon, Stellpl., Aufzug","price_cold":985,"price_warm":1300,"qm":86.29,"price_per_qm":11.41,"rooms":"3","floor":"","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 2 Zimmer Wohnung - f\xfcr Singles und Paare","price_cold":681,"price_warm":1001,"qm":64.82,"price_per_qm":10.51,"rooms":"2","floor":"9","street":"Freiberger Ring 3,","city":"Vogelstang, 68309 Mannheim","latitude":49.5093699,"longlitude":8.5387913},{"title":"1-Zimmer Apartment | m\xf6bliert | ab sofort","price_cold":350,"price_warm":480,"qm":18.92,"price_per_qm":18.5,"rooms":"1","floor":"2","street":"Halmhuberstra\xdfe 2-8,","city":"Rheinau, 68219 Mannheim","latitude":49.417295,"longlitude":8.5256265},{"title":"Traumhaftes WG-Zimmer in Mannheimer Innenstadt *Frisch Saniert","price_cold":520,"price_warm":585,"qm":25,"price_per_qm":20.8,"rooms":"1","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"gem\xfctliche, helle Dachgeschoss-Wohnung in ruhiger Lage","price_cold":662.32,"price_warm":949.32,"qm":77.92,"price_per_qm":8.5,"rooms":"3","floor":"5","street":"Roteichenring 10,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.5060117,"longlitude":8.4923461},{"title":"Moderne 3-Zimmer-Wohnung mit zwei Balkonen in Top-Lage der Mannheimer Oststadt *Pauschalmiete*","price_cold":1300,"price_warm":1750,"qm":84,"price_per_qm":15.48,"rooms":"3","floor":"","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Gemeinschaftswohnung | 1 Zimmer | Gemeinschaftsk\xfcche | Gemeinschaftsbad | ca. 35 qm","price_cold":550,"price_warm":750,"qm":35,"price_per_qm":15.71,"rooms":"1","floor":"1","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"*** Studenten aufgepasst: WG taugliche 3,5 ZKB Wohnung mit Einbauk\xfcche in UNI N\xe4he ***","price_cold":950,"price_warm":1100,"qm":90,"price_per_qm":10.56,"rooms":"3","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"3 Zimmer Wohnung mit 2 Balkonen und Einbauk\xfcche","price_cold":1200,"price_warm":1500,"qm":94.89,"price_per_qm":12.65,"rooms":"3","floor":"4","street":"","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 2-Zimmer-Wohnung in zentraler Lage von Mannheim Neckarstadt","price_cold":720,"price_warm":860,"qm":59.7,"price_per_qm":12.06,"rooms":"2","floor":"1","street":"K\xe4fertalerstra\xdfe 30,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4949063,"longlitude":8.4808284},{"title":"Renovierte 3 ZKB mit Balkon in MA-Waldhof","price_cold":655,"price_warm":850,"qm":58,"price_per_qm":11.29,"rooms":"3","floor":"2","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Attraktiv M\xf6bliertes WG-Zimmer (Innenstadt)","price_cold":330,"price_warm":400,"qm":15,"price_per_qm":22,"rooms":"1","floor":"1","street":"U5 16,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.490884,"longlitude":8.4745238},{"title":"Teilm\xf6bliertes WG Zimmer in Frauen WG","price_cold":390,"price_warm":460,"qm":18,"price_per_qm":21.67,"rooms":"1","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"M\xf6bliertes WG Zimmer zentral in der Mannheimer Innenstadt","price_cold":430,"price_warm":500,"qm":19,"price_per_qm":22.63,"rooms":"1","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgiges WG-Zimmer zu vermieten","price_cold":460,"price_warm":550,"qm":22,"price_per_qm":20.91,"rooms":"1","floor":"3","street":"Rheinvorlandstra\xdfe 10,","city":"Innenstadt/Jungbusch, 68167 Mannheim","latitude":49.4847295,"longlitude":8.4560671},{"title":"1-Zimmer-Appartements f\xfcr Student:innen im Jungbusch am Neckarkanal","price_cold":375,"price_warm":515,"qm":21,"price_per_qm":17.86,"rooms":"1","floor":"1","street":"Hafenstr. 48-52,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4981903,"longlitude":8.4578613},{"title":"Gem\xfctliche Neubauwohnung am ehemaligen BUGA- Gel\xe4nde in Mannheim","price_cold":1327,"price_warm":1680,"qm":88.4,"price_per_qm":15.01,"rooms":"4","floor":"9","street":"Leonie-Ossowski-Promenade 11,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.503258,"longlitude":8.5182207},{"title":"Neubauwohnung mit Weitblick am ehemaligen BUGA- Gel\xe4nde in MA","price_cold":1332,"price_warm":1716,"qm":88.7,"price_per_qm":15.02,"rooms":"4","floor":"8","street":"Leonie-Ossowski-Promenade 11,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.503258,"longlitude":8.5182207},{"title":"Moderne 3- Zimmer- Wohnungen im Herzen der Quadrate","price_cold":1501,"price_warm":1791,"qm":102.1,"price_per_qm":14.7,"rooms":"3","floor":"2","street":"T 5 5,","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":"","longlitude":""},{"title":"2-Zi-Wohnung, gro\xdfe K\xfcche u. Loggia im Gr\xfcnen","price_cold":680,"price_warm":870,"qm":62,"price_per_qm":10.97,"rooms":"2","floor":"2","street":"Potsdamer Weg 7,","city":"Vogelstang, 68309 Mannheim","latitude":49.5089844,"longlitude":8.5326598},{"title":"Gem\xfctliche Wohnung mit Balkon und Garage in guter Gegend","price_cold":625,"price_warm":785,"qm":65,"price_per_qm":9.62,"rooms":"2","floor":"","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Moderne sonnige Maisonette-Wohnung im Loft-Stil in Mannheim-Seckenheim - Erstbezug - 303961","price_cold":890,"price_warm":1170,"qm":70,"price_per_qm":12.71,"rooms":"3","floor":"1","street":"","city":"Seckenheim, 68239 Mannheim","latitude":"","longlitude":""},{"title":"++Modern und Schick++ Junge 3-Zi-Wohnung mit 2 Balkonen in zentraler Lage!","price_cold":1285,"price_warm":1560,"qm":86,"price_per_qm":14.94,"rooms":"3","floor":"3","street":"Weidenstr. 15,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4756202,"longlitude":8.4864105},{"title":"Charmante Dachgeschossperle: 4-Zimmer-Wohnung in MA-Wallstadt mit neuer EBK (ohne Balkon)","price_cold":1350,"price_warm":1650,"qm":129,"price_per_qm":10.47,"rooms":"4","floor":"2","street":"","city":"Wallstadt, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Zentral & ruhig: Altbauwohnung im Jungbusch","price_cold":690,"price_warm":865,"qm":51,"price_per_qm":13.53,"rooms":"2","floor":"3","street":"Jungbuschstra\xdfe 25,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4938002,"longlitude":8.4578347},{"title":"helle, neuwertige Wohnung im Main-Kinzig-Quartier","price_cold":984.34,"price_warm":1360.34,"qm":70.31,"price_per_qm":14,"rooms":"2","floor":"2","street":"Kinzigstr. 12,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4987759,"longlitude":8.4818634},{"title":"Gro\xdfz\xfcgige 3 Zimmerwohnung mit Balkon in Wallstadt zu vermieten","price_cold":875,"price_warm":1165,"qm":91,"price_per_qm":9.62,"rooms":"3","floor":"1","street":"","city":"Wallstadt, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Helle 1 ZKB in der Schwetzingerstadt sucht netten Nachmieter","price_cold":510,"price_warm":660,"qm":41,"price_per_qm":12.44,"rooms":"1","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Relaisstra\xdfe: Appartement mit Einbauk\xfcche und Duschbad","price_cold":420,"price_warm":0,"qm":23,"price_per_qm":18.26,"rooms":"1","floor":"2","street":"","city":"Rheinau, 68219 Mannheim","latitude":"","longlitude":""},{"title":"F\xfcr max.3 Personen!!! Frisch renoviert! 4 ZKB, XXL Balkon","price_cold":1100,"price_warm":1550,"qm":114,"price_per_qm":9.65,"rooms":"4","floor":"1","street":"","city":"Sandhofen, 68307 Mannheim","latitude":"","longlitude":""},{"title":"Relaisstra\xdfe: Gro\xdfz\xfcgige 3 ZKB mit Wohnk\xfcche und Tageslichtbad","price_cold":870,"price_warm":0,"qm":97,"price_per_qm":8.97,"rooms":"3","floor":"4","street":"","city":"Rheinau, 68219 Mannheim","latitude":"","longlitude":""},{"title":"Sorglos-Studentenwohnung direkt an der Uni! All-Inclusive!","price_cold":595,"price_warm":795,"qm":42,"price_per_qm":14.17,"rooms":"1","floor":"","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Sorglos-Studentenwohnung mit Balkon - direkt an der Uni! All-Inclusive!","price_cold":425,"price_warm":625,"qm":28,"price_per_qm":15.18,"rooms":"1","floor":"4","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Frisch sanierte 2 Zimmer Wohnung mit gehobener Ausstattung!","price_cold":740,"price_warm":890,"qm":48,"price_per_qm":15.42,"rooms":"2","floor":"3","street":"Alte Frankfurter Str. 12,","city":"Waldhof, 68305 Mannheim","latitude":49.5247932,"longlitude":8.4856066},{"title":"Aufw\xe4ndig sanierte Altbauwohnung mit Wohnk\xfcche und herrlichem Blick!","price_cold":950,"price_warm":960,"qm":70,"price_per_qm":13.57,"rooms":"2,5","floor":"","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"2 Zimmer Wohnung in der Seniorenresidenz Thomas Carree","price_cold":920,"price_warm":1100,"qm":65,"price_per_qm":14.15,"rooms":"2","floor":"2","street":"","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":"","longlitude":""},{"title":"Moderne, familiengerechte 5-Zimmer-Wohnung mit Balkon","price_cold":1459.62,"price_warm":1956.62,"qm":108.12,"price_per_qm":13.5,"rooms":"5","floor":"1","street":"George-Washington-Str. 249,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5199035,"longlitude":8.5315589},{"title":"Kernsanierte 2 Zimmerwohnung mit Wohnk\xfcche in ruhigem R\xfcckgeb\xe4ude im Jungbusch!","price_cold":700,"price_warm":800,"qm":53,"price_per_qm":13.21,"rooms":"2","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Zwei Zimmer Wohnung mit Balkon u.Stellplatz","price_cold":900,"price_warm":1100,"qm":59,"price_per_qm":15.25,"rooms":"2","floor":"3","street":"Relaisstrasse 234,","city":"Rheinau, 68219 Mannheim","latitude":49.4383234,"longlitude":8.5236172},{"title":"Stilvolle Altbauwohnung mit Charme in der Neckarstadt-Ost \u2013 ca. 104 m\xb2 Wohnfl\xe4che, 5 Zimmer, hohe De","price_cold":1400,"price_warm":1600,"qm":104,"price_per_qm":13.46,"rooms":"5","floor":"","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"3-Zimmer-Dachgeschosswohnung mit Balkon und Stellplatz in ruhiger Lage","price_cold":720,"price_warm":920,"qm":75,"price_per_qm":9.6,"rooms":"3","floor":"2","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"3-ZKB-Wohnung mit Einbauk\xfcche und zwei Balkonen","price_cold":1000,"price_warm":1150,"qm":65.95,"price_per_qm":15.16,"rooms":"3","floor":"2","street":"Hohwiesenstra\xdfe 1,","city":"Neckarstadt-Ost/Wohlgelegen, 68169 Mannheim","latitude":49.5020212,"longlitude":8.470862},{"title":"Schicke 2 Zimmer Wohnung ab sofort verf\xfcgbar!","price_cold":540,"price_warm":670,"qm":47,"price_per_qm":11.49,"rooms":"2","floor":"3","street":"Waldstr. 40c,","city":"Waldhof, 68305 Mannheim","latitude":49.5288642,"longlitude":8.4878151},{"title":"Gepflegt und charmant! 2 Zimmer Wohnung mit offener K\xfcche in Waldhof!","price_cold":570,"price_warm":700,"qm":46,"price_per_qm":12.39,"rooms":"2","floor":"3","street":"Waldstr. 40c,","city":"Waldhof, 68305 Mannheim","latitude":49.5288642,"longlitude":8.4878151},{"title":"Liebevoll sanierte Altbauwohnung mit gro\xdfer Wohnk\xfcche in sehr sch\xf6nem Neubau!!","price_cold":730,"price_warm":800,"qm":45,"price_per_qm":16.22,"rooms":"2,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Zwischen Cityflair und Natur - Ihr neues Zuhause am Unteren Luisenpark","price_cold":1890,"price_warm":2340,"qm":138,"price_per_qm":13.7,"rooms":"3,5","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"*Helle und gem\xfctliche 1 ZKB Wohnung mit Balkon, MA-Lindenhof*","price_cold":450,"price_warm":520,"qm":20,"price_per_qm":22.5,"rooms":"1","floor":"2","street":"Meerfeldstrasse 45,","city":"Lindenhof, 68163 Mannheim","latitude":49.4738574,"longlitude":8.4691816},{"title":"Sch\xf6ne Zentrale 2 ZKB Wohnung in Mannheim","price_cold":765,"price_warm":925,"qm":53,"price_per_qm":14.43,"rooms":"2","floor":"2","street":"Rheinh\xe4user Stra\xdfe 27,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4786076,"longlitude":8.479201},{"title":"Helle und gem\xfctliche Wohnung mit EBK in top Lage","price_cold":660,"price_warm":900,"qm":48,"price_per_qm":13.75,"rooms":"2","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne m\xf6blierte 1Zimmer Wohnung, 19qm, im EG in zentraler Lage in Mannheim zu vermieten.","price_cold":490,"price_warm":640,"qm":19,"price_per_qm":25.79,"rooms":"1","floor":"","street":"L13 13,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4813367,"longlitude":8.4694465},{"title":"Ruhig gelegene 2 Zimmer Wohnung","price_cold":511.19,"price_warm":814.19,"qm":60.14,"price_per_qm":8.5,"rooms":"2","floor":"0","street":"Am Brunnengarten 10,","city":"Neckarstadt-Ost/Wohlgelegen, 68169 Mannheim","latitude":49.5057537,"longlitude":8.4844014},{"title":"Wohnen nahe des Herzogenriedparks","price_cold":668.95,"price_warm":1049.95,"qm":78.7,"price_per_qm":8.5,"rooms":"3","floor":"0","street":"Am Brunnengarten 15,","city":"Neckarstadt-Ost/Wohlgelegen, 68169 Mannheim","latitude":49.5050375,"longlitude":8.4845084},{"title":"Ein Zimmer Studenten-WG in zentraler Lage","price_cold":480,"price_warm":620,"qm":41,"price_per_qm":11.71,"rooms":"1","floor":"2","street":"H1, 1-2,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.489991,"longlitude":8.468095},{"title":"Sch\xf6ne 1-Zimmer-Wohnung mit Einbauk\xfcche \u2013 Ideal f\xfcr Singles oder Pendler","price_cold":600,"price_warm":750,"qm":40,"price_per_qm":15,"rooms":"1","floor":"3","street":"Kussmaulstra\xdfe 10,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4962331,"longlitude":8.4885788},{"title":"Attraktive 2-Zimmer-Wohnung mit Balkon in Mannheim","price_cold":620,"price_warm":800,"qm":52,"price_per_qm":11.92,"rooms":"2","floor":"5","street":"Langstra\xdfe 46,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.4980342,"longlitude":8.4679525},{"title":"2,5 ZKB-Mais.-Wohnung in einem gepflegten MFH in Mannheim-Neckarau","price_cold":700,"price_warm":900,"qm":80,"price_per_qm":8.75,"rooms":"2,5","floor":"1","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgige 3 ZKB-Dachgescho\xdfwohnung in MA-Neckarau.","price_cold":925,"price_warm":1200,"qm":102.7,"price_per_qm":9.01,"rooms":"3","floor":"2","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Helle 1 ZKB Wohnung in Mannheim-Lindenhof!","price_cold":680,"price_warm":910,"qm":45,"price_per_qm":15.11,"rooms":"1","floor":"4","street":"Meerlachstra\xdfe 4,","city":"Lindenhof, 68163 Mannheim","latitude":49.473352,"longlitude":8.4676881},{"title":"WG GEEIGNET! Ger\xe4umige 4 ZKB Wohnung in Mannheim!","price_cold":1450,"price_warm":1700,"qm":105,"price_per_qm":13.81,"rooms":"4","floor":"2","street":"Stamitzstra\xdfe 7,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4987737,"longlitude":8.4737763},{"title":"MANNHEIM! Helle 2 ZKB Wohnung in Manhheim","price_cold":900,"price_warm":1100,"qm":62,"price_per_qm":14.52,"rooms":"2","floor":"1","street":"Friedrich-Ebert-Stra\xdfe 28,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.5025876,"longlitude":8.4969246},{"title":"MANNHEIM! Ruhige 1 ZKB Wohnung in Mannheim","price_cold":462.5,"price_warm":682.5,"qm":37,"price_per_qm":12.5,"rooms":"1","floor":"1","street":"Spiegelfabrik 1,","city":"Waldhof, 68305 Mannheim","latitude":49.5203406,"longlitude":8.4777617},{"title":"DG-Wohnung | 2. OG | eingerichtet & ausgestattet","price_cold":1000,"price_warm":1100,"qm":50,"price_per_qm":20,"rooms":"2","floor":"2","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Charmantes 1-Zimmer-Apartment in Mannheim \u2013 Zentral & Gem\xfctlich","price_cold":500,"price_warm":655,"qm":26,"price_per_qm":19.23,"rooms":"1","floor":"6","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgig geschnittene 4 Zimmerwohnung mit 2 Balkonen in Mannheim zu vermieten, WE 75","price_cold":1032,"price_warm":1347,"qm":86,"price_per_qm":12,"rooms":"4","floor":"1","street":"Hanauer Stra\xdfe 38,","city":"Waldhof, 68305 Mannheim","latitude":49.5274478,"longlitude":8.4885429},{"title":"Hochwertige 2-Zimmer-Wohnung mit Balkon","price_cold":930,"price_warm":1090,"qm":53.46,"price_per_qm":17.4,"rooms":"2","floor":"1","street":"Thomas-Jefferson-Stra\xdfe 20,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5186918,"longlitude":8.5271996},{"title":"2 Zimmer 1.OG, zentrale Lage in MA-Seckenheim","price_cold":944,"price_warm":0,"qm":68.8,"price_per_qm":13.72,"rooms":"2","floor":"","street":"","city":"Seckenheim, 68239 Mannheim","latitude":"","longlitude":""},{"title":"Helle 3,5-Zimmer-Wohnung in familienfreundlicher Umgebung","price_cold":750,"price_warm":1020,"qm":75.28,"price_per_qm":9.96,"rooms":"3","floor":"","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Gem\xfctliche 1-Zimmer-Erdgeschosswohnung mit Wohlf\xfchlcharakter","price_cold":480,"price_warm":550,"qm":23,"price_per_qm":20.87,"rooms":"1","floor":"0","street":"Alte Frankfurter Str. 12,","city":"Waldhof, 68305 Mannheim","latitude":49.5247932,"longlitude":8.4856066},{"title":"Sch\xf6nes, gro\xdfes 1-Zimmer Apartment *m\xf6biliert* in Mannheim-Lindenhof - zentral gelegen","price_cold":530,"price_warm":645,"qm":29.22,"price_per_qm":18.14,"rooms":"1","floor":"6","street":"Meerfeldstra\xdfe 11,","city":"Lindenhof, 68163 Mannheim","latitude":49.4764862,"longlitude":8.4683421},{"title":"ATIK: Helle 5-Zimmer-Whg direkt am Marktplatz, ideal f\xfcr WG-Nutzung, nur wenige Minuten von der Uni","price_cold":2500,"price_warm":2940,"qm":217,"price_per_qm":11.52,"rooms":"5","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"1-Zimmer City Apartment vollm\xf6bliert mit Balkon","price_cold":640,"price_warm":820,"qm":36,"price_per_qm":17.78,"rooms":"1","floor":"5","street":"E3 15,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4887915,"longlitude":8.4641043},{"title":"Erstbezug nach Sanierung - 2ZKB Wohnung Mannheim Lindenhof","price_cold":1050,"price_warm":1270,"qm":70,"price_per_qm":15,"rooms":"2","floor":"4","street":"Emil-Heckel-Str. 12,","city":"Lindenhof, 68163 Mannheim","latitude":49.4701423,"longlitude":8.4691617},{"title":"Helle 3-Zimmer-Wohnung in ruhiger Lage","price_cold":900,"price_warm":1080,"qm":90,"price_per_qm":10,"rooms":"3","floor":"2","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"FRANKLIN LIVING: Moderne 3-Zimmer-Wohnung mit Balkon und Wohlf\xfchlcharakter","price_cold":1557,"price_warm":1737,"qm":95,"price_per_qm":16.39,"rooms":"3","floor":"","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Helle 3-Zimmer-Wohnung mit Balkon \u2013 Wohnen in Franklin-Village","price_cold":1539,"price_warm":1719,"qm":95,"price_per_qm":16.2,"rooms":"3","floor":"1","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"WG Zimmer N\xe4he Marktplatz Mannheim","price_cold":360,"price_warm":0,"qm":13,"price_per_qm":27.69,"rooms":"1","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Wohnen in Mannheim-K\xe4fertal - Moderne und lichtdurchflutete 4-Zimmer-Wohnung","price_cold":1325,"price_warm":1782,"qm":103.14,"price_per_qm":12.85,"rooms":"4","floor":"0","street":"","city":"K\xe4fertal, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Wohnen in Mannheim-K\xe4fertal - Moderne 2-Zimmer-Wohnung mit Balkon","price_cold":755,"price_warm":1013,"qm":47.75,"price_per_qm":15.81,"rooms":"2","floor":"2","street":"","city":"K\xe4fertal, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Mannheim-K\xe4fertal - Au\xdfergew\xf6hnlich wohnen mit toller Ausstattung","price_cold":1350,"price_warm":1836,"qm":108,"price_per_qm":12.5,"rooms":"3","floor":"3","street":"","city":"K\xe4fertal, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Beliebte Lage! Helle und sanierte Wohnung","price_cold":648,"price_warm":818,"qm":54,"price_per_qm":12,"rooms":"2","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"M\xf6bliertes Cityapartment mit traumhaften Blick \xfcber die Stadt","price_cold":780,"price_warm":0,"qm":60,"price_per_qm":13,"rooms":"1","floor":"5","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Ruhige 2-ZBK Wohnung in Neuhermsheim","price_cold":570,"price_warm":840,"qm":61,"price_per_qm":9.34,"rooms":"2","floor":"1","street":"","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":"","longlitude":""},{"title":"**Schicke 2 Zimmer Wohnung mit Einbauk\xfcche + PKW-Stellplatz/MA-Quadrate**","price_cold":730,"price_warm":880,"qm":53,"price_per_qm":13.77,"rooms":"2","floor":"0","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Saniertes 1-Zimmer Apartment","price_cold":620,"price_warm":730,"qm":40,"price_per_qm":15.5,"rooms":"1","floor":"4","street":"Draisstra\xdfe 13,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5000227,"longlitude":8.4627785},{"title":"Wohnung f\xfcr Liebhaber im Jungbusch ohne Aufzug - passend f\xfcr WG\xb4s","price_cold":1238.9,"price_warm":1604.9,"qm":117.99,"price_per_qm":10.5,"rooms":"5","floor":"4","street":"Beilstr. 15,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4945027,"longlitude":8.4594392},{"title":"Gro\xdfz\xfcgige und helle Wohnung mit Balkon in den Quadraten","price_cold":1000,"price_warm":1300,"qm":100.14,"price_per_qm":9.99,"rooms":"3","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"**AB SOFORT!! 3er WG geeiget! 3 ZKB mit Einbauk\xfcche + G\xe4ste WC - MA-Schwetzinger Vorstadt**","price_cold":850,"price_warm":1000,"qm":75,"price_per_qm":11.33,"rooms":"3","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"2-ZKB im Herzen der Quadrate","price_cold":600,"price_warm":800,"qm":55.9,"price_per_qm":10.73,"rooms":"2","floor":"4","street":"N 3, 12,","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":"","longlitude":""},{"title":"3 ZKB Dachgeschosswohnung in Mannheim-Wallstadt im direkten Ortskern","price_cold":1030,"price_warm":0,"qm":105.68,"price_per_qm":9.75,"rooms":"3","floor":"","street":"Mosbacher Stra\xdfe. 25,","city":"Wallstadt, 68259 Mannheim","latitude":49.4964886,"longlitude":8.5486816},{"title":"Helle 2-ZKB Maisonette - Terrasse/Einbauk\xfcche","price_cold":780,"price_warm":980,"qm":69,"price_per_qm":11.3,"rooms":"2","floor":"3","street":"","city":"Seckenheim, 68239 Mannheim","latitude":"","longlitude":""},{"title":"Stylische Studiowohnung mit gro\xdfem Wohn-Kochbereich in renoviertem Altbau!","price_cold":680,"price_warm":760,"qm":44,"price_per_qm":15.45,"rooms":"1,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Stylische Altbauwohnung mit Wohnk\xfcche in kernsaniertem Mehrfamilienhaus!","price_cold":700,"price_warm":770,"qm":44,"price_per_qm":15.91,"rooms":"1,5","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Helle, gro\xdfz\xfcgige 4 ZKB Dachgeschosswohnung in beliebter Lage","price_cold":950,"price_warm":1150,"qm":98,"price_per_qm":9.69,"rooms":"4","floor":"5","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Helle 2 Zimmer, K\xfcche, Bad, Wohnung mit kleinem Balkon","price_cold":950,"price_warm":1120,"qm":68.2,"price_per_qm":13.93,"rooms":"2","floor":"","street":"Wallonenstra\xdfe 20,","city":"Friedrichsfeld, 68229 Mannheim","latitude":49.4380409,"longlitude":8.575053},{"title":"Kernsaniertes 1 Zimmer Apartment Erstbezug","price_cold":620,"price_warm":790,"qm":31,"price_per_qm":20,"rooms":"1","floor":"5","street":"Neckarauer Stra\xdfe 197,","city":"Neckarau, 68199 Mannheim","latitude":49.4654459,"longlitude":8.4863304},{"title":"(VE 495) M\xf6bliertes Apartment in MA-Quadrate direkt an der Uni - L2,5-10 f\xfcr Studenten","price_cold":470,"price_warm":580,"qm":17,"price_per_qm":27.65,"rooms":"1","floor":"4","street":"L 2 5-10,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"(VE 484) Sofort bezugsfertiges, m\xf6biliertes App. f\xfcr Studenten mit Balkon in MA- Rheinau","price_cold":520,"price_warm":630,"qm":29,"price_per_qm":17.93,"rooms":"1","floor":"2","street":"Perreystra\xdfe 24-26,","city":"Rheinau, 68219 Mannheim","latitude":49.4165937,"longlitude":8.5278995},{"title":"Sehr helle, sanierte Altbauwohnung mit gro\xdfer Wohnk\xfcche!","price_cold":1070,"price_warm":1210,"qm":75,"price_per_qm":14.27,"rooms":"3,5","floor":"4","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Sehr sch\xf6n sanierte Etagenwohnung mit Balkon und Wohnk\xfcche!","price_cold":1250,"price_warm":1400,"qm":115,"price_per_qm":10.87,"rooms":"4","floor":"3","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Frisch renoviertes Apartment f\xfcr Singles in Mannheim-Vogelstang wartet auf Sie!","price_cold":490,"price_warm":685,"qm":39.32,"price_per_qm":12.46,"rooms":"1","floor":"4","street":"Freiberger Ring 3,","city":"Vogelstang, 68309 Mannheim","latitude":49.5093699,"longlitude":8.5387913},{"title":"WG-Zimmer in frisch renovierter Wohnung zu vermieten","price_cold":435,"price_warm":525,"qm":14,"price_per_qm":31.07,"rooms":"1","floor":"4","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Renovierte 3-ZKB mit Balkon und Stellplatz!","price_cold":1100,"price_warm":1430,"qm":93.57,"price_per_qm":11.76,"rooms":"3","floor":"","street":"Dornheimer Ring 3-7,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5171998,"longlitude":8.5146332},{"title":"Zwei m\xf6blierte WG-Zimmer in Mannheim \u2013 Zentrale Lage nahe Universit\xe4t","price_cold":450,"price_warm":520,"qm":22,"price_per_qm":20.45,"rooms":"1","floor":"0","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"3-FH | Zentrale-, Gepflegte-, Ruhige 2-ZKB | 1.OG. | ca. 70 qm | K\xfcche | Balkon | G_Garten | Garage","price_cold":995,"price_warm":1200,"qm":70,"price_per_qm":14.21,"rooms":"2","floor":"1","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgige 4 Zimmer Wohnung mit sonnigem Balkon!","price_cold":1055,"price_warm":1325,"qm":91.8,"price_per_qm":11.49,"rooms":"4","floor":"","street":"","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":"","longlitude":""},{"title":"3-Zimmer Oststadtwohnung mit Dachterrasse und tollem Ausblick in Bestlage","price_cold":1550,"price_warm":2010,"qm":113.04,"price_per_qm":13.71,"rooms":"3","floor":"3","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"*** Teilm\xf6blierte 2 ZKB Wohnung mit EBK nahe Uni \u2013 sofort verf\xfcgbar ***","price_cold":680,"price_warm":870,"qm":44.37,"price_per_qm":15.33,"rooms":"2","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"*** UNI N\xe4he: WG-taugliche 2 ZKB EG-Wohnung mit stylischer Einbauk\xfcche, gro\xdfem Balkon und Garage ***","price_cold":1100,"price_warm":1400,"qm":83.02,"price_per_qm":13.25,"rooms":"2","floor":"","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Wohnen im Trendviertel Franklin \u2013 3-Zimmer-Wohnung mit Charme & Qualit\xe4t","price_cold":1180,"price_warm":1420,"qm":75,"price_per_qm":15.73,"rooms":"3","floor":"1","street":"Thomas-Jefferson-Stra\xdfe 18,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5186918,"longlitude":8.5271996},{"title":"Gem\xfctliche 3 Zimmerwohnung mit Loggia und separater K\xfcche","price_cold":1200,"price_warm":1490,"qm":80,"price_per_qm":15,"rooms":"3","floor":"2","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte 3 ZKB mit Balkon, Industrieparkett und Wohnk\xfcche in stilvollem Altbau!","price_cold":1150,"price_warm":1300,"qm":85,"price_per_qm":13.53,"rooms":"3","floor":"2","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Charmante 4 ZKB mit G\xe4ste-WC und Wohnk\xfcche in stilvollem Altbau!","price_cold":1200,"price_warm":1360,"qm":95,"price_per_qm":12.63,"rooms":"4,5","floor":"2","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"sch\xf6ne 3 Zimmer Wohnung im Herzen Mannheims","price_cold":1300,"price_warm":1550,"qm":90.7,"price_per_qm":14.33,"rooms":"3","floor":"3","street":"Seckenheimerstra\xdfe 87,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4767664,"longlitude":8.4894077},{"title":"Komplett sanierte 3-Zimmerwohnung in MA-K\xe4fertal-S\xfcd","price_cold":870,"price_warm":1070,"qm":84.27,"price_per_qm":10.32,"rooms":"3","floor":"2","street":"Pfeilstra\xdfe 8,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5066155,"longlitude":8.5075814},{"title":"2 Monat mietfrei! Helles m\xf6bliertes WG-Zimmer f\xfcr Studenten + Azubis mit Internet","price_cold":530,"price_warm":635,"qm":28,"price_per_qm":18.93,"rooms":"1","floor":"3","street":"Birkenauer Str. 49,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5149808,"longlitude":8.5286457},{"title":"Liebevoll sanierte Altbauwohnung mit Balkon in der Belle Etage!","price_cold":1400,"price_warm":1600,"qm":100,"price_per_qm":14,"rooms":"4,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Kernsanierte Altbauwohnung mit Dielenb\xf6den, G\xe4ste-WC in herrschaftlichem Altbau!","price_cold":1250,"price_warm":1450,"qm":100,"price_per_qm":12.5,"rooms":"4","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte 3,5 ZKB Altbauwohnung mit sep. WC und gro\xdfer K\xfcche in herrschaftlichem Altbau!","price_cold":1150,"price_warm":1310,"qm":85,"price_per_qm":13.53,"rooms":"3","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Souterrain Charmante 3-Zimmer Wohnung mit Einbauk\xfcche und Terrasse","price_cold":800,"price_warm":1000,"qm":70,"price_per_qm":11.43,"rooms":"3","floor":"1","street":"Sandrain 22,","city":"Rheinau, 68219 Mannheim","latitude":49.4459252,"longlitude":8.5185381},{"title":"\\"MA-Wallstadt\\" gem\xfctliche 2 Zimmer-Dachgeschoss-Wohnung mit Balkon zu vermieten www.imm-kraemer.de","price_cold":725,"price_warm":925,"qm":72,"price_per_qm":10.07,"rooms":"2","floor":"3","street":"","city":"Wallstadt, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfe und helle Wohnung mit zwei Balkonen","price_cold":1150,"price_warm":1450,"qm":92,"price_per_qm":12.5,"rooms":"3","floor":"","street":"","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":"","longlitude":""},{"title":"++Modern und Schick++ Junge 2-Zi-Wohnung mit XXL-Terrasse in zentraler Lage!","price_cold":994.46,"price_warm":1209.46,"qm":67.3,"price_per_qm":14.78,"rooms":"2","floor":"1","street":"Weidenstr. 13,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4756202,"longlitude":8.4864105},{"title":"Gro\xdfz\xfcgige, komplett sanierte Etagenwohnung in saniertem Altbau mit herrlichem Hof!","price_cold":920,"price_warm":1040,"qm":65,"price_per_qm":14.15,"rooms":"2","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Liebevoll sanierte Altbauwohnung mit Dielenb\xf6den, Tageslichtbad und Balkon!","price_cold":1350,"price_warm":1500,"qm":95,"price_per_qm":14.21,"rooms":"3,5","floor":"3","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Liebevoll sanierte Etagenwohnung mit gro\xdfer Wohnk\xfcche mit herrlichem Blick!","price_cold":870,"price_warm":1020,"qm":70,"price_per_qm":12.43,"rooms":"2,5","floor":"3","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Kernsanierte 4 Zimmerwohnung mit Wohnk\xfcche in ruhigem R\xfcckgeb\xe4ude im Jungbusch!","price_cold":1200,"price_warm":1350,"qm":90,"price_per_qm":13.33,"rooms":"4","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte 4,5 ZKB Altbauwohnung mit sep. WC und gro\xdfer K\xfcche in herrschaftlichem Altbau!","price_cold":1400,"price_warm":1600,"qm":110,"price_per_qm":12.73,"rooms":"4,5","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Sanierte Altbauwohnung mit Dielenb\xf6den in herrschaftlichem Altbau!","price_cold":1200,"price_warm":1350,"qm":95,"price_per_qm":12.63,"rooms":"3,5","floor":"3","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Herrliche Maissonettewohnung mit gro\xdfem Wohn-Essbereich mit tollem Blick \xfcber die Stadt!","price_cold":1250,"price_warm":1400,"qm":90,"price_per_qm":13.89,"rooms":"3,5","floor":"4","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Liebevoll sanierte Altbauwohnung mit gro\xdfer Wohnk\xfcche in renoviertem Altbau!","price_cold":750,"price_warm":830,"qm":50,"price_per_qm":15,"rooms":"2","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Sanierte 2 ZKB mit Tageslichtbad und Wohnk\xfcche in stilvollem Altbau!","price_cold":800,"price_warm":920,"qm":57,"price_per_qm":14.04,"rooms":"2","floor":"4","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte Altbauwohnung im 2. OG mit Dielenb\xf6den und Tageslichtbad!","price_cold":820,"price_warm":940,"qm":55,"price_per_qm":14.91,"rooms":"2","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Sehr sch\xf6n sanierte Wohnung mit Parkettb\xf6den und Wohnk\xfcche in stilvollem Altbau!","price_cold":1240,"price_warm":1420,"qm":105,"price_per_qm":11.81,"rooms":"4,5","floor":"3","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Liebevoll sanierte Altbauwohnung mit gro\xdfer Wohnk\xfcche und zwei Balkonen!","price_cold":1350,"price_warm":1490,"qm":95,"price_per_qm":14.21,"rooms":"3,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"DG-Wohnung 1,5 Zimmer in Mannheim-Neckarau","price_cold":450,"price_warm":550,"qm":34,"price_per_qm":13.24,"rooms":"1,5","floor":"3","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte Altbauwohnung mit Dielenb\xf6den und Tageslichtbad in herrschaftlichem Altbau!","price_cold":1250,"price_warm":1430,"qm":100,"price_per_qm":12.5,"rooms":"3,5","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Gro\xdfz\xfcgige, komplett sanierte Etagenwohnung in der \\"Belle Etage\\"!","price_cold":1280,"price_warm":1400,"qm":110,"price_per_qm":11.64,"rooms":"4","floor":"4","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Herrliche, moderne Maisonettewohnung mit riesiger Dachterrasse!","price_cold":1500,"price_warm":1650,"qm":125,"price_per_qm":12,"rooms":"3,5","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Urban Living f\xfcr Paare \u2013 Hochwertige Wohnung im Herzen Mannheims","price_cold":1350,"price_warm":1700,"qm":110,"price_per_qm":12.27,"rooms":"3","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Studenten aufgepasst! Helle, WG-taugliche Wohnung sofort frei","price_cold":980,"price_warm":1200,"qm":105,"price_per_qm":9.33,"rooms":"3","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Sehr sch\xf6ne und helle Altbauwohnung mit gro\xdfer Wohnk\xfcche inkl. EBK in renoviertem Altbau!","price_cold":1050,"price_warm":1070,"qm":77,"price_per_qm":13.64,"rooms":"3","floor":"4","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"1 ZKBB SINGLE App. in Laufn\xe4he zum Klinikum - saniert - Balkon - m\xf6bliert -","price_cold":620,"price_warm":755,"qm":22,"price_per_qm":28.18,"rooms":"1","floor":"3","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Liebevoll sanierte Altbauwohnung mit gro\xdfer Wohnk\xfcche!","price_cold":950,"price_warm":1090,"qm":72,"price_per_qm":13.19,"rooms":"2,5","floor":"2","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Neuwertige Dreizimmerwohnung im HOMERUN-Quartier","price_cold":1450,"price_warm":1870,"qm":87.9,"price_per_qm":16.5,"rooms":"3","floor":"3","street":"Pappelallee 15,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.5043428,"longlitude":8.4914982},{"title":"3-Zimmer-Wohnung mit sonniger Loggia","price_cold":1186,"price_warm":1632,"qm":90.5,"price_per_qm":13.1,"rooms":"3","floor":"2","street":"Franklin-D.-Roosevelt-Stra\xdfe 23,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5214884,"longlitude":8.5270582},{"title":"Renovierte Wohnung direkt am HBF mit Fahrstuhl","price_cold":900,"price_warm":1080,"qm":63,"price_per_qm":14.29,"rooms":"2","floor":"8","street":"","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Studenten aufgepasst! Top Wohnung in begehrter Lage mit Fahrstuhl","price_cold":650,"price_warm":860,"qm":43,"price_per_qm":15.12,"rooms":"1","floor":"5","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Idyllisches, helles und sehr gro\xdfz\xfcgiges Wohnen","price_cold":1450,"price_warm":0,"qm":140,"price_per_qm":10.36,"rooms":"3","floor":"","street":"","city":"Wallstadt, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 2-Zimmer-Wohnung in Vogelstang Zentrum","price_cold":690,"price_warm":970,"qm":64.82,"price_per_qm":10.64,"rooms":"2","floor":"21","street":"Geraer Ring 10,","city":"Vogelstang, 68309 Mannheim","latitude":49.5110286,"longlitude":8.5398119},{"title":"Helle 1 Zimmerwohnung im Herzen von MA Almenhof","price_cold":340,"price_warm":490,"qm":21.5,"price_per_qm":15.81,"rooms":"1","floor":"1","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Helle und gem\xfctliche 3,5 Zimmer Wohnung","price_cold":900,"price_warm":1150,"qm":86,"price_per_qm":10.47,"rooms":"4","floor":"2","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Helle 2-Zimmer-Wohnung mit durchdachtem Grundriss","price_cold":750,"price_warm":1020,"qm":71,"price_per_qm":10.56,"rooms":"2","floor":"4","street":"","city":"Rheinau, 68219 Mannheim","latitude":"","longlitude":""},{"title":"Mitten in Mannheim mit bester Versorgung","price_cold":996.93,"price_warm":1360.93,"qm":99,"price_per_qm":10.07,"rooms":"3","floor":"2","street":"T 2, 1,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.500593,"longlitude":8.4494498},{"title":"Sehr sch\xf6n sanierte Etagenwohnung mit Wohnk\xfcche und G\xe4ste WC!","price_cold":1250,"price_warm":1430,"qm":115,"price_per_qm":10.87,"rooms":"4,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Zwei Zimmer K\xfcche Bad mit Balkon zu vermieten","price_cold":670,"price_warm":920,"qm":61,"price_per_qm":10.98,"rooms":"2","floor":"1","street":"Potsdamer Weg 20,","city":"Vogelstang, 68309 Mannheim","latitude":49.5091276,"longlitude":8.5317511},{"title":"Sehr sch\xf6n sanierte Wohnung mit Balkon, Dielenb\xf6den und Wohnk\xfcche in stilvollem Altbau!","price_cold":1050,"price_warm":1200,"qm":85,"price_per_qm":12.35,"rooms":"2,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 3 ZKB-Wohnung in zentraler Lage in MA-Schwetzinger Vorstadt","price_cold":785,"price_warm":1140,"qm":87.67,"price_per_qm":8.95,"rooms":"3","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte Altbauwohnung im 1. OG mit Dielenb\xf6den!","price_cold":850,"price_warm":950,"qm":62,"price_per_qm":13.71,"rooms":"2","floor":"2","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Kernsanierte 3 ZKBB Wohnung in Mannheim Neuhermsheim zur Miete","price_cold":1350,"price_warm":1460,"qm":82,"price_per_qm":16.46,"rooms":"3","floor":"1","street":"Landsknechtweg 26b,","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":49.466536,"longlitude":8.4999718},{"title":"Helle 2 -Zimmer- Wohnung im Zentrum von Mannheim","price_cold":635,"price_warm":795,"qm":64,"price_per_qm":9.92,"rooms":"2","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"MA-City Bestlage: Ideale Studentenwohnung N\xe4he Uni","price_cold":980,"price_warm":1180,"qm":80,"price_per_qm":12.25,"rooms":"3","floor":"1","street":"P 6 6-7,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Sanierte 1ZKB mit Balkon in Mannheim !","price_cold":470,"price_warm":630,"qm":33,"price_per_qm":14.24,"rooms":"1","floor":"2","street":"U5 15,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4910304,"longlitude":8.4744018},{"title":"2 ZKB Feudenheim 60m\xb2 in 3 FH sehr gro\xdfer Balkon 690,- +NK","price_cold":690,"price_warm":780,"qm":60,"price_per_qm":11.5,"rooms":"2","floor":"1","street":"Wallstadter Str 69,","city":"Feudenheim, 68259 Mannheim","latitude":49.4884668,"longlitude":8.5433492},{"title":"zentraler geht`s nicht! -Tolle gro\xdfe Wohnung sucht eine Familie","price_cold":1350,"price_warm":1800,"qm":121.4,"price_per_qm":11.12,"rooms":"4","floor":"3","street":"T 2, 1,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.500593,"longlitude":8.4494498},{"title":"Neckarblick! Komplett sanierte 3,5 ZKB mit original Dielenb\xf6den und Wohnk\xfcche in stilvollem Altbau!","price_cold":1180,"price_warm":1360,"qm":105,"price_per_qm":11.24,"rooms":"3,5","floor":"3","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Sehenswerte, sanierte Altbauwohnung im 3.OG!","price_cold":800,"price_warm":900,"qm":55,"price_per_qm":14.55,"rooms":"2","floor":"","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"MA - NECKARSTADT OST // 2-3 ZKB, WC + ca. 24,80 qm Terrasse mit Aufzug & Fitness Studio","price_cold":1450,"price_warm":1780,"qm":115.03,"price_per_qm":12.61,"rooms":"3","floor":"3","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Luxus-Penthouse im Baudenkmal an der Christuskirche","price_cold":3100,"price_warm":3695,"qm":174,"price_per_qm":17.82,"rooms":"5","floor":"4","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"*Gem\xfctliche 1 ZKB Souterrain Wohnung in zentraler Lage, Mannheim Neckarstadt Ost*","price_cold":460,"price_warm":550,"qm":27,"price_per_qm":17.04,"rooms":"1","floor":"0","street":"Schafweide 81,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4939497,"longlitude":8.4833285},{"title":"Mannheim - Gro\xdfz\xfcgige R\xe4ume in der Innenstadt","price_cold":1950,"price_warm":2300,"qm":140,"price_per_qm":13.93,"rooms":"5","floor":"1","street":"R7 38,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4864552,"longlitude":8.4746505},{"title":"Teilm\xf6bliertes Zimmer in Wohngemeinschaft - Perfekt f\xfcr Studenten!","price_cold":360,"price_warm":430,"qm":18,"price_per_qm":20,"rooms":"1","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Neckarblick! Liebevoll sanierte Etagenwohnung mit tollem Neckarblick und Balkon!","price_cold":850,"price_warm":990,"qm":65,"price_per_qm":13.08,"rooms":"2,5","floor":"2","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Sehenswerte, sanierte Altbauwohnung mit Balkon (S\xfcden) im 3.OG!","price_cold":950,"price_warm":1020,"qm":70,"price_per_qm":13.57,"rooms":"2","floor":"","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte 3 ZKB mit original Dielenb\xf6den und Wohnk\xfcche in stilvollem Altbau!","price_cold":1250,"price_warm":1400,"qm":95,"price_per_qm":13.16,"rooms":"3,5","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Komplett sanierte Altbauwohnung im 2. OG mit Dielenb\xf6den und S\xfcdbalkon!","price_cold":950,"price_warm":1070,"qm":65,"price_per_qm":14.62,"rooms":"2","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Sehr sch\xf6n sanierte Studiowohnung mit Diele und Wohnk\xfcche!","price_cold":820,"price_warm":940,"qm":55,"price_per_qm":14.91,"rooms":"2","floor":"","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"sanierte, helle Wohnung f\xfcr Familien | WBS f\xfcr mindestens 4 Personen erforderlich","price_cold":1059.02,"price_warm":1521.02,"qm":124.59,"price_per_qm":8.5,"rooms":"4","floor":"4","street":"K\xe4fertaler Str. 56,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4943941,"longlitude":8.4835676},{"title":"WG Zimmer in Wohnung zu vermieten","price_cold":450,"price_warm":550,"qm":20,"price_per_qm":22.5,"rooms":"1","floor":"4","street":"Alphornstra\xdfe 5,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.4980669,"longlitude":8.4666543},{"title":"Moderne 2- Zimmer- Wohnungen im Herzen der Quadrate","price_cold":1155,"price_warm":1441,"qm":76,"price_per_qm":15.2,"rooms":"2","floor":"1","street":"T 5 3,","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":"","longlitude":""},{"title":"*Sch\xf6ne 2 ZKB Wohnung in zentraler Lage, MA Neckarstadt*","price_cold":760,"price_warm":940,"qm":58,"price_per_qm":13.1,"rooms":"2","floor":"2","street":"Waldhofstrasse 30,","city":"Neckarstadt-Ost/Wohlgelegen, 68169 Mannheim","latitude":49.4994827,"longlitude":8.4718871},{"title":"*Ger\xe4umige 3 ZKB Wohnung in zentraler Lage*","price_cold":960,"price_warm":1150,"qm":78,"price_per_qm":12.31,"rooms":"3","floor":"4","street":"Schafweide 79,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4937817,"longlitude":8.4831691},{"title":"Chice, kernsanierte Altbauwohnung in herrschaftlichem saniertem Wohnhaus!","price_cold":980,"price_warm":1120,"qm":70,"price_per_qm":14,"rooms":"2","floor":"1","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Mannheim-K\xe4fertal - 2-Zimmer-Wohnung mit Balkon","price_cold":715,"price_warm":895,"qm":61,"price_per_qm":11.72,"rooms":"2","floor":"1","street":"","city":"K\xe4fertal, 68305 Mannheim","latitude":"","longlitude":""},{"title":"1 ZKD Lindenhof 35m\xb2 Stilaltbau N\xe4he Waldpark 395,- +NK","price_cold":395,"price_warm":495,"qm":35,"price_per_qm":11.29,"rooms":"1","floor":"0","street":"Emil-Heckel-Str 14,","city":"Lindenhof, 68163 Mannheim","latitude":49.4701812,"longlitude":8.4693271},{"title":"Exklusives Penthouse mit Weitblick - Ihr neues Zuhause im HOMERUN-Quartier","price_cold":2500,"price_warm":3240,"qm":163.1,"price_per_qm":15.33,"rooms":"4","floor":"4","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Stilvolles 1 Zimmer-Apartment im HOMERUN-Quartier - Ideal f\xfcr Pendler!","price_cold":600,"price_warm":820,"qm":28.7,"price_per_qm":20.91,"rooms":"1","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Kleine aber charmante 3-Zimmerwohnung in Mannheim-K\xe4fertal","price_cold":850,"price_warm":950,"qm":65,"price_per_qm":13.08,"rooms":"3","floor":"2","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Tolle 1 Zimmer Wohnung, 23QM in Mannheim n\xe4he Innenstadt zu vermieten","price_cold":450,"price_warm":730,"qm":23,"price_per_qm":19.57,"rooms":"1","floor":"","street":"D7 23-25,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4897483,"longlitude":8.4595618},{"title":"Sch\xf6ne 1Zimmer Wohnung, 21qm eines MFH, mit K\xfcche in bester Lage von Mannheim.","price_cold":450,"price_warm":620,"qm":21,"price_per_qm":21.43,"rooms":"1","floor":"","street":"L13 13,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4813367,"longlitude":8.4694465},{"title":"Sch\xf6nes 1 Zimmer Apartment 29qm mit Balkon in Mannheim Rheinau zu vermieten.","price_cold":376.55,"price_warm":646.55,"qm":29,"price_per_qm":12.98,"rooms":"1","floor":"","street":"Halmhuberstr. 2-8,","city":"Rheinau, 68219 Mannheim","latitude":49.417295,"longlitude":8.5256265},{"title":"Liebevoll sanierte Altbauwohnung mit zwei Balkonen in renoviertem Altbau!","price_cold":1250,"price_warm":1500,"qm":95,"price_per_qm":13.16,"rooms":"3","floor":"1","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Gem\xfctliches WG-Zimmer in der Oststadt","price_cold":400,"price_warm":550,"qm":18,"price_per_qm":22.22,"rooms":"1","floor":"4","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Hobbyraum im Herzen von Mannheim \u2013 Ideal f\xfcr Freizeit und Projekte","price_cold":500,"price_warm":0,"qm":45,"price_per_qm":11.11,"rooms":"2","floor":"4","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Voll m\xf6bliertes WG Zimmer f\xfcr Young Profissionals mit Internet","price_cold":580,"price_warm":730,"qm":22.6,"price_per_qm":25.66,"rooms":"1","floor":"3","street":"Birkenauerstra\xdfe 49,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5149808,"longlitude":8.5286457},{"title":"2 Monat mietfrei! Tolles m\xf6bliertes Apartment mit Internet inklusive- f\xfcr Studenten + Azubis","price_cold":500,"price_warm":605,"qm":23.96,"price_per_qm":20.87,"rooms":"1","floor":"2","street":"Birkenauer Str. 49,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5149808,"longlitude":8.5286457},{"title":"Luxuri\xf6se 2-ZKB-Wohnung mit gro\xdfer Terrasse & Fitnessraum & Aufzug !!!","price_cold":1100,"price_warm":1330,"qm":70,"price_per_qm":15.71,"rooms":"2","floor":"4","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Helle, hochwertige Erdgeschosswohnung *direkt vom Vermieter*","price_cold":1040,"price_warm":1240,"qm":67,"price_per_qm":15.52,"rooms":"2","floor":"0","street":"Thomas-Jefferson-Stra\xdfe 14,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5183623,"longlitude":8.526878},{"title":"Gro\xdfz\xfcgige, komplett sanierte Etagenwohnung mit Bad mit Wanne und G\xe4ste-WC!!","price_cold":1500,"price_warm":1700,"qm":120,"price_per_qm":12.5,"rooms":"4","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"sch\xf6ne 3 ZKB Altbau Wohnung im 4 OG ohne Aufzug zu vermieten!","price_cold":593.53,"price_warm":862.53,"qm":61,"price_per_qm":9.73,"rooms":"3","floor":"4","street":"Jean-Becker-Str. 2,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.4982363,"longlitude":8.4700607},{"title":"\\"Auf zu neuen Ufern\\" - Exklusiv Wohnen mit einzigartigem Blick","price_cold":1300,"price_warm":1730,"qm":81.62,"price_per_qm":15.93,"rooms":"2","floor":"1","street":"Gerwigstra\xdfe 13,","city":"Waldhof, 68305 Mannheim","latitude":49.5178414,"longlitude":8.4727885},{"title":"Klimaneutral und mit Charme im Dachgeschoss","price_cold":1268.33,"price_warm":1700.33,"qm":93.95,"price_per_qm":13.5,"rooms":"3","floor":"4","street":"George-Washington-Stra\xdfe 253,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5195613,"longlitude":8.5319278},{"title":"Cooles Loft mit Dachterrasse im Herzen des Jungbuschs!","price_cold":1800,"price_warm":2100,"qm":160,"price_per_qm":11.25,"rooms":"2,5","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Spannendes Loft im Herzen des Jungbuschs wenige Meter vom C-Hub!","price_cold":1300,"price_warm":1480,"qm":110,"price_per_qm":11.82,"rooms":"2,5","floor":"2","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Gepflegte 2-Zimmer-Wohnung am Mannheimer Wasserturm","price_cold":860,"price_warm":1100,"qm":75.86,"price_per_qm":11.34,"rooms":"2","floor":"6","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Gepflegtes Apartment in unmittelbarer Unin\xe4he!","price_cold":400,"price_warm":500,"qm":18,"price_per_qm":22.22,"rooms":"1","floor":"3","street":"L 2 5-6,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Teilm\xf6bliertes 1-Zimmer-Appartement, in guter und zentraler Stadtlage von Mannheim","price_cold":470,"price_warm":640,"qm":32,"price_per_qm":14.69,"rooms":"1","floor":"3","street":"Seckenheimerstra\xdfe 90,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4777806,"longlitude":8.4829737},{"title":"Sch\xf6ne 1-Zimmer-Wohnung mit Balkon in Mannheim","price_cold":385,"price_warm":440,"qm":42,"price_per_qm":9.17,"rooms":"1","floor":"1","street":"Vorderer Sporw\xf6rth 32,","city":"Rheinau, 68219 Mannheim","latitude":49.4407907,"longlitude":8.5152215},{"title":"Zweitbezug nach Sanierung: sch\xf6ne 1-Zimmer-DG-Wohnung in Mannheim","price_cold":360,"price_warm":440,"qm":29,"price_per_qm":12.41,"rooms":"1","floor":"3","street":"Schwingstr. 36,","city":"Neckarau, 68199 Mannheim","latitude":49.4508012,"longlitude":8.4897851},{"title":"Neubau-Erstbezug im Hofhaus in zentraler, aber ruhiger Lage, mit Einbauk\xfcche (befristet auf 2 Jahre)","price_cold":860,"price_warm":960,"qm":54.5,"price_per_qm":15.78,"rooms":"2","floor":"1","street":"Relaisstra\xdfe 48,","city":"Rheinau, 68219 Mannheim","latitude":49.4383761,"longlitude":8.5235927},{"title":"Ger\xe4umige 4 Zimmerwohnung ohne K\xfcche, ohne Balkon","price_cold":976,"price_warm":1151,"qm":92,"price_per_qm":10.61,"rooms":"4","floor":"3","street":"Lange R\xf6tterstr 61,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4972311,"longlitude":8.4845634},{"title":"Heinrich-Lanz-Stra\xdfe 2, 68165 Mannheim","price_cold":810,"price_warm":1090,"qm":58,"price_per_qm":13.97,"rooms":"1,5","floor":"4","street":"Heinrich-Lanz-Stra\xdfe 2,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4792437,"longlitude":8.472176},{"title":"Ger\xe4umige 2-Zimmer-Wohnung am Mannheimer Marktplatz","price_cold":880,"price_warm":1080,"qm":71,"price_per_qm":12.39,"rooms":"2,5","floor":"1","street":"G2 24,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4896989,"longlitude":8.4663734},{"title":"Exklusive 2-ZKB Altbauwohnung mit gehobener Innenausstattung in Mannheim","price_cold":790,"price_warm":940,"qm":50,"price_per_qm":15.8,"rooms":"2","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Wohnung zu Vermieten \u2013 Augustaanlage Mannheim, im Herzen der Stadt","price_cold":700,"price_warm":810,"qm":35,"price_per_qm":20,"rooms":"1,5","floor":"2","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"N\xe4he Wasserturm; 500m zum HBF; komplett renoviert","price_cold":570,"price_warm":670,"qm":38,"price_per_qm":15,"rooms":"1","floor":"2","street":"Rheinh\xe4userstr. 10,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4802892,"longlitude":8.4766701},{"title":"Attraktive 3,5-Zimmer-Wohnung mit EBK in Mannheim","price_cold":970,"price_warm":1070,"qm":85,"price_per_qm":11.41,"rooms":"3,5","floor":"4","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Erstbezug nach Kernsanierung \u2013 Traumhafte Maisonette-Dachgeschosswohnung mit Blick ins Gr\xfcne!","price_cold":1080,"price_warm":1230,"qm":70,"price_per_qm":15.43,"rooms":"3","floor":"2","street":"Feldstra\xdfe 22,","city":"Feudenheim, 68259 Mannheim","latitude":49.4887832,"longlitude":8.5386361},{"title":"Wundersch\xf6ne teilm\xf6blierte 3-Raum-Wohnung mit EBK, TG und Balkon in Neckarstadt-Ost.","price_cold":1300,"price_warm":1600,"qm":84.17,"price_per_qm":15.44,"rooms":"3","floor":"3","street":"Carl-Benz-Stra\xdfe 41,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4995797,"longlitude":8.4785903},{"title":"Studenten-Apartment Juli - 30.September","price_cold":380,"price_warm":380,"qm":20,"price_per_qm":19,"rooms":"1","floor":"0","street":"Ulmenweg 55,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.5070214,"longlitude":8.4913952},{"title":"N\xe4he Wasserturm; 500m zum HBF; mit Loggia","price_cold":725,"price_warm":875,"qm":59,"price_per_qm":12.29,"rooms":"2","floor":"4","street":"Rheinh\xe4userstr. 10,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4802892,"longlitude":8.4766701},{"title":"Wundersch\xf6ne, renovierte 2 Zimmer Wohnung mit Balkon in MA-Neckarstadt-Ost - NUR f\xfcr Juli und August","price_cold":790,"price_warm":950,"qm":60,"price_per_qm":13.17,"rooms":"2","floor":"2","street":"Spelzenstra\xdfe 18,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4988921,"longlitude":8.474824},{"title":"M\xf6blierte , vollst\xe4ndig renovierte 1-Zimmer-Wohnung mit Einbauk\xfcche in Mannheim","price_cold":600,"price_warm":800,"qm":35,"price_per_qm":17.14,"rooms":"1","floor":"2","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Frisch renoviertes Apartment","price_cold":530,"price_warm":650,"qm":29,"price_per_qm":18.28,"rooms":"1","floor":"1","street":"D 7, 23-25,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Top sanierte u. m\xf6bilierte 1-Zimmer-Wohnung im Jungbusch","price_cold":500,"price_warm":600,"qm":21,"price_per_qm":23.81,"rooms":"1","floor":"3","street":"Akademiestr. 4,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4919654,"longlitude":8.4578787},{"title":"Erstbezug nach Sanierung \u2013 Voll M\xf6bliert, nahe Roche & Mercedes","price_cold":670,"price_warm":795,"qm":40,"price_per_qm":16.75,"rooms":"1","floor":"0","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Stilvolle 2-Zimmer-Wohnung mit Balkon und Einbauk\xfcche in Mannheim","price_cold":740,"price_warm":940,"qm":65,"price_per_qm":11.38,"rooms":"2","floor":"2","street":"Rheingoldstra\xdfe 102,","city":"Neckarau, 68199 Mannheim","latitude":49.4534438,"longlitude":8.4800078},{"title":"Wundersch\xf6ne Zentrale 2-Zimmerwohnung mit Balkon","price_cold":520,"price_warm":670,"qm":40,"price_per_qm":13,"rooms":"2","floor":"2","street":"Birnbaumstra\xdfe 12,","city":"Sandhofen, 68307 Mannheim","latitude":49.544088,"longlitude":8.4507705},{"title":"M\xf6blierte 3-Zimmer-Wohnung mit EBK in Mannheim","price_cold":1200,"price_warm":1350,"qm":93,"price_per_qm":12.9,"rooms":"3","floor":"0","street":"Am Klumbengarten 20,","city":"Seckenheim, 68239 Mannheim","latitude":49.4594089,"longlitude":8.5611113},{"title":"Erstbezug nach Sanierung mit Einbauk\xfcche: ansprechende 2,5-Zimmer-Wohnung in Mannheim","price_cold":850,"price_warm":980,"qm":51,"price_per_qm":16.67,"rooms":"2,5","floor":"","street":"Katharinenstra\xdfe 41a,","city":"Neckarau, 68199 Mannheim","latitude":49.456105,"longlitude":8.4907123},{"title":"Gut geschnittene 3-Zimmer-Wohnung in Mannheim","price_cold":650,"price_warm":780,"qm":52.7,"price_per_qm":12.33,"rooms":"3","floor":"3","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Helle 2-Zimmer- Wohnung in Mannheim Neckarau","price_cold":630,"price_warm":830,"qm":57,"price_per_qm":11.05,"rooms":"2","floor":"4","street":"Neckarauer Stra\xdfe 209,","city":"Neckarau, 68199 Mannheim","latitude":49.4661135,"longlitude":8.4857948},{"title":"Sanierte 3 Zimmer Wohnung in Mannheim Neckarau","price_cold":825,"price_warm":1000,"qm":66,"price_per_qm":12.5,"rooms":"3","floor":"2","street":"Rheintalbahnstra\xdfe 37,","city":"Neckarau, 68199 Mannheim","latitude":49.4619308,"longlitude":8.4909676},{"title":"stilvolle 1 Zimmer Wohnung","price_cold":480,"price_warm":600,"qm":22,"price_per_qm":21.82,"rooms":"1","floor":"4","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"1100 \u20AC - 84 m\xb2 - 3.0 Zi.","price_cold":1100,"price_warm":1250,"qm":84,"price_per_qm":13.1,"rooms":"3","floor":"","street":"Lange R\xf6tterstra\xdfe 98,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4967739,"longlitude":8.4853372},{"title":"Freundliche, neuwertige 3-Zimmer-Wohnung mit gehobener Innenausstattung zur Miete in Mannheim","price_cold":1100,"price_warm":1300,"qm":87,"price_per_qm":12.64,"rooms":"3","floor":"1","street":"Obere Riedstra\xdfe 50,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5136345,"longlitude":8.5103439},{"title":"Casterfeldstra\xdfe 219, 68219 Mannheim","price_cold":650,"price_warm":795,"qm":45,"price_per_qm":14.44,"rooms":"2","floor":"4","street":"","city":"Rheinau, 68219 Mannheim","latitude":"","longlitude":""},{"title":"Geschmackvolle 2-Zimmer-Souterrain-Wohnung mit Balkon in Mannheim","price_cold":720,"price_warm":870,"qm":65,"price_per_qm":11.08,"rooms":"2","floor":"1","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"Frisch Sanierte 1-Zimmer-Wohnung mit Balkon in Mannheim - Lindenhof !","price_cold":520,"price_warm":650,"qm":44,"price_per_qm":11.82,"rooms":"1","floor":"4","street":"Rampenweg 1,","city":"Lindenhof, 68163 Mannheim","latitude":49.470356,"longlitude":8.4836671},{"title":"Nachmieter/-in gesucht ! :)","price_cold":540,"price_warm":730,"qm":45,"price_per_qm":12,"rooms":"1,5","floor":"","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Beautiful modern 2-room apartment for rent","price_cold":895,"price_warm":1055,"qm":55,"price_per_qm":16.27,"rooms":"2","floor":"3","street":"Thomas-Jefferson-Stra\xdfe 20,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5186918,"longlitude":8.5271996},{"title":"M\xf6blierte 1-Zimmer-Dachgeschosswohnung mit Balkon und Einbauk\xfcche in Mannheim","price_cold":450,"price_warm":570,"qm":17,"price_per_qm":26.47,"rooms":"1","floor":"5","street":"Lortzingstra\xdfe 21,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.4988799,"longlitude":8.4693606},{"title":"Hafenstra\xdfe 31, 68159 Mannheim","price_cold":950,"price_warm":1100,"qm":54,"price_per_qm":17.59,"rooms":"2","floor":"","street":"Hafenstra\xdfe 31,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4960431,"longlitude":8.4571154},{"title":"2-Zi-Wohnung, EBK, Balkon, Keller in Villa, MA-Neckarau 850,- + NK, Frei ab 1.7.2025","price_cold":850,"price_warm":980,"qm":61,"price_per_qm":13.93,"rooms":"2","floor":"2","street":"Luisenstra\xdfe 7,","city":"Neckarau, 68199 Mannheim","latitude":49.4541236,"longlitude":8.4919009},{"title":"Attraktive 3-Zimmer-Wohnung mit Balkon und EBK in Mannheim / auf Wunsch mit Garage !!","price_cold":940,"price_warm":1240,"qm":78,"price_per_qm":12.05,"rooms":"3","floor":"3","street":"S 1 -,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4958869,"longlitude":8.4542228},{"title":"3 Zimmer EG in Mannheim","price_cold":950,"price_warm":1050,"qm":72,"price_per_qm":13.19,"rooms":"3","floor":"0","street":"Wingertstra\xdfe 68,","city":"Neckarau, 68199 Mannheim","latitude":49.4592288,"longlitude":8.488863},{"title":"Sch\xf6ne 3,5-Zimmer-Wohnung mit Balkon in ruhiger Lage in Mannheim-Vogelstang","price_cold":850,"price_warm":1100,"qm":80,"price_per_qm":10.62,"rooms":"3,5","floor":"3","street":"Th\xfcringer Stra\xdfe 140,","city":"Vogelstang, 68309 Mannheim","latitude":49.5124536,"longlitude":8.5371761},{"title":"Gro\xdfz\xfcgige 2-Etagen-Wohnung mit gehobener Ausstattung, 2 B\xe4der, Einbauk\xfcche, Klimaanlage im Gastzim.","price_cold":1400,"price_warm":1650,"qm":110,"price_per_qm":12.73,"rooms":"4","floor":"2","street":"","city":"Sandhofen, 68307 Mannheim","latitude":"","longlitude":""},{"title":"Voll m\xf6bliertes Design-Studio mit Blick auf das Herschelbad","price_cold":1000,"price_warm":1200,"qm":30,"price_per_qm":33.33,"rooms":"1,5","floor":"2","street":"U 4 8,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"TOP m\xf6blierte EG-Wohnung in Mannheim mit sch\xf6nen Garten & Gartenhaus - neue Einbauk\xfcche!","price_cold":950,"price_warm":1200,"qm":61,"price_per_qm":15.57,"rooms":"2","floor":"0","street":"","city":"Rheinau, 68219 Mannheim","latitude":"","longlitude":""},{"title":"3 Zi. Wohnung mit gro\xdfer Dachterrasse nahe Univers. Klinikum","price_cold":1400,"price_warm":1630,"qm":120,"price_per_qm":11.67,"rooms":"3","floor":"3","street":"Eichendorffstr. 29,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4956175,"longlitude":8.4821521},{"title":"Ruhige 3-Zimmer-Wohnung in 2-FH","price_cold":650,"price_warm":900,"qm":75,"price_per_qm":8.67,"rooms":"3","floor":"1","street":"","city":"Lindenhof, 68163 Mannheim","latitude":"","longlitude":""},{"title":"Geschmackvolle 2-Zimmer-Erdgeschosswohnung mit Balkon m\xf6bliert in Mannheim","price_cold":814,"price_warm":964,"qm":74,"price_per_qm":11,"rooms":"2","floor":"0","street":"Lortzingstra\xdfe 41,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.4999752,"longlitude":8.4706502},{"title":"Attraktive teilrenovierte 4-Zimmer-Maisonette-Wohnung mit Balkon in Mannheim","price_cold":1400,"price_warm":1500,"qm":140,"price_per_qm":10,"rooms":"4","floor":"3","street":"Kleine Adlerstra\xdfe 3,","city":"Neckarau, 68199 Mannheim","latitude":49.4592658,"longlitude":8.492322},{"title":"Erstbezug nach Sanierung! Exklusive 2-Zimmer-Wohnung mit Freisitz","price_cold":1050,"price_warm":1160,"qm":90,"price_per_qm":11.67,"rooms":"2","floor":"0","street":"Gartenfeldstra\xdfe 32,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5029424,"longlitude":8.4675605},{"title":"Sanierte 3-Zimmer-Wohnung mit Balkon und Aufzug","price_cold":1250,"price_warm":1485,"qm":94.29,"price_per_qm":13.26,"rooms":"3","floor":"1","street":"Rheinaustra\xdfe 17,","city":"Lindenhof, 68163 Mannheim","latitude":49.4742566,"longlitude":8.4672317},{"title":"Helle 3-Zimmer-Wohnung mit EBK & Balkon","price_cold":1050,"price_warm":1290,"qm":80,"price_per_qm":13.12,"rooms":"3","floor":"3","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Renovierte 3ZKB DG-Wohnung in ruhiger Lage Mannheim-Mallau ab 01.07.2025 zu vermieten.","price_cold":530,"price_warm":730,"qm":62,"price_per_qm":8.55,"rooms":"3","floor":"2","street":"","city":"Rheinau, 68219 Mannheim","latitude":"","longlitude":""},{"title":"Ab 01.08.25: 1-Zimmer Wohnung in ruhigem Hinterhaus im Herzen des Jungbuschs","price_cold":660,"price_warm":775,"qm":26,"price_per_qm":25.38,"rooms":"1","floor":"2","street":"B\xf6ckstra\xdfe 6,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4946573,"longlitude":8.4592811},{"title":"Sch\xf6ne 3-Zimmer-Wohnung mit gehobener Innenausstattung mit Balkon in Mannheim","price_cold":850,"price_warm":990,"qm":80,"price_per_qm":10.62,"rooms":"3","floor":"2","street":"Relaisstr. 211 211,","city":"Rheinau, 68219 Mannheim","latitude":49.4383761,"longlitude":8.5235927},{"title":"TOP Lage-Neckarstadt Ost/ 2 Zimmerwohnung mit Balkon","price_cold":700,"price_warm":820,"qm":61,"price_per_qm":11.48,"rooms":"2","floor":"3","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Helle und gut gelegene 2-Zimmer-Wohnung mit Balkon, Einbauk\xfcche und Klimaanlage in Wohlgelegen","price_cold":820,"price_warm":1020,"qm":60,"price_per_qm":13.67,"rooms":"2","floor":"5","street":"Nebeniusstra\xdfe 12,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4980259,"longlitude":8.4911446},{"title":"WG geeignet!!! U 6-Quadrat, 5 ZKB, 2 Balkone im historischen Kulturdenkmal","price_cold":1660,"price_warm":1940,"qm":130,"price_per_qm":12.77,"rooms":"5","floor":"2","street":"U 6 17,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne, ger\xe4umige drei Zimmer Wohnung in Mannheim, Sandhofen","price_cold":1150,"price_warm":1450,"qm":106,"price_per_qm":10.85,"rooms":"3","floor":"1","street":"Kranichweg 5,","city":"Sandhofen, 68307 Mannheim","latitude":49.5406288,"longlitude":8.4546767},{"title":"Helle und ruhige 2-Zimmer-Wohnung mit Balkon","price_cold":620,"price_warm":800,"qm":62,"price_per_qm":10,"rooms":"2","floor":"1","street":"Hardenburgstr. 1,","city":"Rheinau, 68219 Mannheim","latitude":49.4461141,"longlitude":8.5203315},{"title":"MA-Quadrate - frei ab sofort: frisch sanierte 1-Zimmer-Wohnung ca. 20m\xb2 in gepflegtem MFH","price_cold":650,"price_warm":750,"qm":20,"price_per_qm":32.5,"rooms":"1","floor":"2","street":"S 3 11,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 3-Zimmer-Dachgeschosswohnung in Mannheim","price_cold":850,"price_warm":1050,"qm":90,"price_per_qm":9.44,"rooms":"3","floor":"2","street":"","city":"Seckenheim, 68239 Mannheim","latitude":"","longlitude":""},{"title":"***K_QUADRATE_KFW55_129QM_LOFTWOHNUNG_4ZKB_BALKON***","price_cold":1490,"price_warm":1740,"qm":129,"price_per_qm":11.55,"rooms":"4","floor":"1","street":"K3 8,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4929393,"longlitude":8.4685098},{"title":"Sanierte 3-Raum-Wohnung mit Balkon in zentraler Lage","price_cold":990,"price_warm":1220,"qm":78.2,"price_per_qm":12.66,"rooms":"3","floor":"2","street":"M 6 13+14,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Ideal f\xfcr Singles oder Pendler Stilvolle 1-Zimmer-Wohnung in Mannheim","price_cold":550,"price_warm":700,"qm":30,"price_per_qm":18.33,"rooms":"1","floor":"","street":"Rheinh\xe4user 52,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4780631,"longlitude":8.4793524},{"title":"Erstbezug nach Sanierung mit Balkon: exklusive 2,5-Zimmer-Wohnung in Mannheim-Wallstadt","price_cold":950,"price_warm":1200,"qm":75,"price_per_qm":12.67,"rooms":"2,5","floor":"2","street":"","city":"Wallstadt, 65229 Mannheim","latitude":"","longlitude":""},{"title":"4-Zimmer-Wohnung mit Fu\xdfbodenheizung und Garage","price_cold":730,"price_warm":1050,"qm":88,"price_per_qm":8.3,"rooms":"4","floor":"3","street":"Fr\xf6hlichstra\xdfe 35,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5022972,"longlitude":8.4641036},{"title":"Helle, ruhige, neu renovierte 1-Zimmer-Wohnung - Erstbezug - MA-Niederfeld","price_cold":425,"price_warm":575,"qm":26,"price_per_qm":16.35,"rooms":"1","floor":"1","street":"Feldbergstra\xdfe 73,","city":"Neckarau, 68163 Mannheim","latitude":49.4591804,"longlitude":8.4732799},{"title":"Geschmackvolle 2-Zimmer-Wohnung mit gehobener Innenausstattung mit Balkon und EBK in Mannheim","price_cold":980,"price_warm":1200,"qm":64,"price_per_qm":15.31,"rooms":"2","floor":"1","street":"Wilhelmstra\xdfe 4,","city":"Feudenheim, 68259 Mannheim","latitude":49.4863162,"longlitude":8.5249612},{"title":"Moderne 3-Zimmer-EG Wohnung mit Balkon ins Gr\xfcne \u2013 Neubaugebiet Mannheim-Sch\xf6nau, N\xe4he Wald","price_cold":1250,"price_warm":1400,"qm":80,"price_per_qm":15.62,"rooms":"3","floor":"0","street":"","city":"Sch\xf6nau, 68307 Mannheim","latitude":"","longlitude":""},{"title":"2-ZKB-EG-Wohnung in den Mannheimer E-Quadraten zu vermieten","price_cold":860,"price_warm":1040,"qm":67,"price_per_qm":12.84,"rooms":"2","floor":"","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Hardenburgstra\xdfe 20, 68219 Mannheim","price_cold":830,"price_warm":1030,"qm":65,"price_per_qm":12.77,"rooms":"2","floor":"3","street":"Hardenburgstra\xdfe 20,","city":"Rheinau, 68219 Mannheim","latitude":49.4461619,"longlitude":8.5209319},{"title":"Sch\xf6ne 2-Zimmer-Wohnung mit Balkon in Mannheim - Schwetzingerstadt","price_cold":730,"price_warm":930,"qm":66.1,"price_per_qm":11.04,"rooms":"2","floor":"5","street":"Rheinh\xe4user Str. 99,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4746308,"longlitude":8.4836953},{"title":"Neu sanierte 3-Zimmer-Wohnung mit Balkon in Mannheim-Almenhof","price_cold":840,"price_warm":1040,"qm":77,"price_per_qm":10.91,"rooms":"3","floor":"2","street":"M\xf6nchw\xf6rthstra\xdfe 68,","city":"Neckarau, 68199 Mannheim","latitude":49.4631024,"longlitude":8.4873648},{"title":"Moderne 1-Zi.-Wohnung mit EBK und TG-Stellpl. in Mannheim Neckarstadt - ab 15.09., 36qm, warm 820\u20AC","price_cold":720,"price_warm":820,"qm":36,"price_per_qm":20,"rooms":"1","floor":"","street":"K\xe4fertaler Stra\xdfe 189,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4975691,"longlitude":8.4924866},{"title":"Geschmackvolle 1-Raum-Erdgeschosswohnung mit geh. Innenausstattung mit Balkon und EBK in Mannheim","price_cold":1050,"price_warm":1200,"qm":67,"price_per_qm":15.67,"rooms":"1","floor":"1","street":"Otto- Beck Strasse 34,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4819948,"longlitude":8.4857892},{"title":"2ZKB Maisonettenwohnung mit Balkon in der Innenstadt","price_cold":1200,"price_warm":1400,"qm":67,"price_per_qm":17.91,"rooms":"2,5","floor":"0","street":"K4 23,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.49283,"longlitude":8.4665388},{"title":"Erstbezug nach Renovierung MA-Sandhofen","price_cold":1100,"price_warm":1300,"qm":95,"price_per_qm":11.58,"rooms":"3","floor":"2","street":"","city":"Sandhofen, 68307 Mannheim","latitude":"","longlitude":""},{"title":"Zentrale 2 Zimmer- Maisonettewohnung mit Balkon und Tiefgaragenstellplatz","price_cold":990,"price_warm":1180,"qm":70,"price_per_qm":14.14,"rooms":"2","floor":"3","street":"Mannheimer Stra\xdfe 33-35,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5101086,"longlitude":8.5162892},{"title":"2 ZKB in Mannheim Neckarstadt-Ost/Wohlgelegen","price_cold":530,"price_warm":710,"qm":67,"price_per_qm":7.91,"rooms":"2","floor":"3","street":"Eisenlohrstra\xdfe 10,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.5000356,"longlitude":8.4950846},{"title":"2 ZKB mit Balkon in Waldhof-Ost","price_cold":716.3,"price_warm":916.3,"qm":79.15,"price_per_qm":9.05,"rooms":"2","floor":"4","street":"Kasseler Stra\xdfe 17,","city":"Waldhof, 68305 Mannheim","latitude":49.5240608,"longlitude":8.4949942},{"title":"Gro\xdfz\xfcgige 1-Zimmer-Wohnung inkl. eigenem Parkplatz","price_cold":650,"price_warm":850,"qm":44,"price_per_qm":14.77,"rooms":"1","floor":"2","street":"R4 21,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4880124,"longlitude":8.4707243},{"title":"Helle Altbau-2-ZKB mit saniertem Bad und Eichenparkett","price_cold":675,"price_warm":855,"qm":58,"price_per_qm":11.64,"rooms":"2","floor":"","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Attraktive 2-Zimmer-Wohnung in Mannheim","price_cold":650,"price_warm":750,"qm":60,"price_per_qm":10.83,"rooms":"2","floor":"5","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Einzelappartement im Zentrum von Mannheim","price_cold":365,"price_warm":475,"qm":23,"price_per_qm":15.87,"rooms":"1","floor":"","street":"Akademiestra\xdfe 6,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4920548,"longlitude":8.4576437},{"title":"Stilvoll sanierte 2-Zimmer-Dachgeschosswohnung im Jugendstielhaus","price_cold":540,"price_warm":790,"qm":50.8,"price_per_qm":10.63,"rooms":"2","floor":"2","street":"Pumpwerkstra\xdfe 48,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.503637,"longlitude":8.4646085},{"title":"Elegante, lichtdurchflutete 1/1,5-ZKB-Wohnung \u2013 voll oder teilm\xf6bliert Mannheim Feudenheim","price_cold":850,"price_warm":1050,"qm":46,"price_per_qm":18.48,"rooms":"1,5","floor":"3","street":"Talstra\xdfe 35,","city":"Feudenheim, 68259 Mannheim","latitude":49.4895013,"longlitude":8.5299564},{"title":"AB SOFORT BEZUGSFREI 1 ZKB Zentral Stilvoll und m\xf6bliert mit Einbauk\xfcche \u2013 renoviert","price_cold":618,"price_warm":798,"qm":33,"price_per_qm":18.73,"rooms":"1","floor":"3","street":"Galileistra\xdfe 29,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4781682,"longlitude":8.4765923},{"title":"Sanierte 3-Zimmer-Genossenschaftswohnung mit Loggia","price_cold":835.05,"price_warm":1070.05,"qm":87.44,"price_per_qm":9.55,"rooms":"3","floor":"1","street":"Rheinauer Ring 27,","city":"Rheinau, 68219 Mannheim","latitude":49.4381799,"longlitude":8.5261118},{"title":"Wohnen am Neckar","price_cold":647.1,"price_warm":837.1,"qm":71.5,"price_per_qm":9.05,"rooms":"2","floor":"1","street":"Dammstra\xdfe 22,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.4973661,"longlitude":8.4676051},{"title":"Freundliche, vollst\xe4ndig renovierte 3-Zimmer-Wohnung mit gehobener Innenausstattung in Mannheim","price_cold":1130,"price_warm":1280,"qm":0,"price_per_qm":0,"rooms":"3","floor":"2","street":"Neckarvorlandstra\xdfe 17,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4953415,"longlitude":8.4644068},{"title":"Vollm\xf6bliertes Apartment mit Balkon in zentraler Lage \u2013 Mannheim, Neckarstadt-West","price_cold":660,"price_warm":900,"qm":45,"price_per_qm":14.67,"rooms":"1,5","floor":"3","street":"Riedfeldstra\xdfe 33,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5002238,"longlitude":8.4681999},{"title":"Charmante 2-Zimmer-Wohnung in der Neckarstadt","price_cold":500,"price_warm":600,"qm":52,"price_per_qm":9.62,"rooms":"2","floor":"2","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"2-Zimmer-Wohnung EBK und Balkon Neubau","price_cold":940,"price_warm":1120,"qm":58,"price_per_qm":16.21,"rooms":"2","floor":"3","street":"Ida-Dehmel-Ring 85,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5055665,"longlitude":8.5262336},{"title":"+ Kleeblatt Immobilien + MA-Almenhof: 1 Zi.-App., teilm\xf6bl., Pantryk\xfcche, TL-Bad","price_cold":350,"price_warm":550,"qm":29,"price_per_qm":12.07,"rooms":"1","floor":"0","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Blick auf den Luisenpark: Gro\xdfz\xfcgige 5-Zimmer-Wohnetage mit Aufzug in Mannheim-Oststadt","price_cold":2100,"price_warm":2500,"qm":201,"price_per_qm":10.45,"rooms":"5","floor":"4","street":"Renzstra\xdfe 7,","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":49.4891713,"longlitude":8.4799969},{"title":"Frisch sanierte 2-Zimmer-Wohnung in ruhiger Lage \u2013 Mannheim","price_cold":435,"price_warm":515,"qm":41.4,"price_per_qm":10.51,"rooms":"2","floor":"3","street":"Vorderer Sporw\xf6rth 34,","city":"Rheinau, 68305 Mannheim","latitude":49.4406956,"longlitude":8.5150977},{"title":"Frisch sanierte 3-Zimmer-Wohnung mit offener K\xfcche & Balkon in ruhiger Lage \u2013 Mannheim","price_cold":610,"price_warm":720,"qm":58,"price_per_qm":10.52,"rooms":"3","floor":"0","street":"Vorderer Sporw\xf6rth 34,","city":"Rheinau, 68305 Mannheim","latitude":49.4406956,"longlitude":8.5150977},{"title":"Sonnige 3-Zimmer-Dachgeschosswohnung mit Balkon in zentraler Top-Lage \u2013 Mannheim Schwetzingerstadt","price_cold":700,"price_warm":920,"qm":78,"price_per_qm":8.97,"rooms":"3","floor":"5","street":"Rheinh\xe4user Stra\xdfe 90,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4761043,"longlitude":8.4817424},{"title":"Suche Nachmieter: Zentrale 2-Zi.-Whg. im Szeneviertel Jungbusch (Mannheim)","price_cold":1000,"price_warm":1200,"qm":68,"price_per_qm":14.71,"rooms":"2","floor":"","street":"Werftstra\xdfe 9,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4950875,"longlitude":8.4602804},{"title":"Hinterhaus Loft / 1,5 Zimmer mit gro\xdfz\xfcgigem Koch-/Essbereich.","price_cold":1050,"price_warm":1200,"qm":55,"price_per_qm":19.09,"rooms":"1","floor":"0","street":"U3 18,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4920417,"longlitude":8.4730558},{"title":"Kernsanierte EG-Wohnung in Mannheim","price_cold":600,"price_warm":750,"qm":50,"price_per_qm":12,"rooms":"1","floor":"","street":"Lerchenstra\xdfe 3,","city":"Waldhof, 68305 Mannheim","latitude":49.5160478,"longlitude":8.4783098},{"title":"Helle Wohung in hervorragender Lage","price_cold":610,"price_warm":670,"qm":41,"price_per_qm":14.88,"rooms":"1","floor":"4","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne g\xfcnstige helle 1 Zimmer App in Uni n\xe4he (App.03)","price_cold":480,"price_warm":600,"qm":23,"price_per_qm":20.87,"rooms":"1","floor":"","street":"Hafenstra\xdfe 30-32,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4924637,"longlitude":8.4569951},{"title":"1-Zimmer-Wohnung in zentraler Lage","price_cold":210,"price_warm":360,"qm":23.4,"price_per_qm":8.97,"rooms":"1","floor":"0","street":"Schwetzinger Str. 62,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4790549,"longlitude":8.4765244},{"title":"M\xf6blierte 2-Zimmer-Wohnung mit Loggia und Einbauk\xfcche in Mannheim","price_cold":950,"price_warm":1170,"qm":48.45,"price_per_qm":19.61,"rooms":"2","floor":"3","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"2-Zimmer-Wohnung in Mannheim Schwetzinger/Oststadt","price_cold":900,"price_warm":1070,"qm":84,"price_per_qm":10.71,"rooms":"2","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 3 Zimmerwohnung in den Quadraten","price_cold":800,"price_warm":1060,"qm":71,"price_per_qm":11.27,"rooms":"3","floor":"4","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"**Tolle 2 Zimmerwohnung im Stadtquartier Q 6 Q 7**","price_cold":1285,"price_warm":1595,"qm":77.59,"price_per_qm":16.56,"rooms":"2","floor":"6","street":"Q 6, 1,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.500593,"longlitude":8.4494498},{"title":"Attraktive 2-Zimmer-Wohnung im EG - Neckarstadt Ost","price_cold":585,"price_warm":765,"qm":59.6,"price_per_qm":9.82,"rooms":"2","floor":"1","street":"Spelzenstra\xdfe 6,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4989921,"longlitude":8.4730311},{"title":"MA-Niederfeld - Helle, ruhige, neu renovierte 2-Zimmer-Wohnung mit Balkon - Erstbezug","price_cold":890,"price_warm":1140,"qm":55,"price_per_qm":16.18,"rooms":"2","floor":"2","street":"Feldbergstra\xdfe 75,","city":"Neckarau, 68163 Mannheim","latitude":49.4598252,"longlitude":8.4762391},{"title":"Gro\xdfe helle 1-Zimmer-Wohnung mit Balkon","price_cold":620,"price_warm":720,"qm":56,"price_per_qm":11.07,"rooms":"1","floor":"4","street":"Kirchenstra\xdfe 3,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4924843,"longlitude":8.4585104},{"title":"++ ERSTBEZUG NACH SANIERUNG: Frisch saniertes 1-Zimmer-Apartment mit eigenem Terrassenanteil ++","price_cold":720,"price_warm":820,"qm":43.6,"price_per_qm":16.51,"rooms":"1","floor":"","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Stilvolle, sanierte 2,5-Zimmer-Wohnung mit Einbauk\xfcche in Mannheim","price_cold":1200,"price_warm":1400,"qm":77,"price_per_qm":15.58,"rooms":"2,5","floor":"2","street":"Waldparkstra\xdfe 25a,","city":"Lindenhof, 68163 Mannheim","latitude":49.4715159,"longlitude":8.4673381},{"title":"Geschmackvolle , sanierte 3-Zimmer-Wohnung mit Einbauk\xfcche und Balkon in Mannheim","price_cold":775,"price_warm":1000,"qm":63,"price_per_qm":12.3,"rooms":"3","floor":"1","street":"Schwalben Stra\xdfe 4,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5112788,"longlitude":8.5125158},{"title":"Urbanes Wohnen - mitten in Mannheim\xb2","price_cold":1150,"price_warm":1300,"qm":70,"price_per_qm":16.43,"rooms":"2","floor":"2","street":"Q2 xx,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.488274,"longlitude":8.4684184},{"title":"***TEILM\xd6BILIERTE 1 Zi-Wohnung n\xe4he Klinikum***","price_cold":490,"price_warm":580,"qm":26,"price_per_qm":18.85,"rooms":"1","floor":"4","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Modernes 1 Zimmer Apartment in Laufn\xe4he zur Uni Mannheim (Quadrate) zur Untermiete","price_cold":600,"price_warm":690,"qm":34,"price_per_qm":17.65,"rooms":"1","floor":"","street":"","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Stilvolle, vollst\xe4ndig renovierte 2-Zimmer-Wohnung mit EBK in Mannheim","price_cold":1150,"price_warm":1150,"qm":45,"price_per_qm":25.56,"rooms":"2","floor":"1","street":"Dompfaffweg 5,","city":"Sandhofen, 68307 Mannheim","latitude":49.5500079,"longlitude":8.4536642},{"title":"2-Zimmer-Dachgeschosswohnung zu vermieten - Ideal f\xfcr Studenten","price_cold":500,"price_warm":600,"qm":48,"price_per_qm":10.42,"rooms":"2","floor":"4","street":"T 2 22,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4958869,"longlitude":8.4542228},{"title":"Wohnung mit Dachterrasse in beliebter Lage - Neckarstadt-Ost","price_cold":1150,"price_warm":1400,"qm":95,"price_per_qm":12.11,"rooms":"2","floor":"5","street":"Lange R\xf6tterstra\xdfe 94,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4968437,"longlitude":8.4850304},{"title":"Erstbezug nach Renovierung - Helles 3 Zimmer Loft mit Einbauk\xfcche in der Neckarstadt-Ost","price_cold":1490,"price_warm":1690,"qm":118,"price_per_qm":12.63,"rooms":"3","floor":"2","street":"Melchiorstr. 2,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.4977319,"longlitude":8.4774262},{"title":"\uD83C\uDFD8\uFE0FFrisch sanierte WG Zimmer in den Mannheimer Quadraten / n\xe4he Uni","price_cold":509,"price_warm":579,"qm":31.83,"price_per_qm":15.99,"rooms":"1","floor":"3","street":"C 8 8,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4958869,"longlitude":8.4542228},{"title":"Sch\xf6ne 3ZKB nur f\xfcr STUDENTEN N\xe4he Uni Mannheim","price_cold":1050,"price_warm":1250,"qm":60,"price_per_qm":17.5,"rooms":"3","floor":"2","street":"Jungbuschstr. xx,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4908806,"longlitude":8.4656713},{"title":"Charmante, lichtdurchflutete Wohnung im Herzen des Lindenhofs","price_cold":925,"price_warm":1165,"qm":63,"price_per_qm":14.68,"rooms":"2","floor":"1","street":"","city":"Lindenhof, 68163 Mannheim","latitude":"","longlitude":""},{"title":"urgem\xfctliche, teilm\xf6biliert 2-Z-Whn Wohnung in Waldn\xe4he, Ma-Pfingstb.","price_cold":445,"price_warm":515,"qm":47,"price_per_qm":9.47,"rooms":"2","floor":"2","street":"Herrensand 35,","city":"Rheinau, 68219 Mannheim","latitude":49.4451201,"longlitude":8.5334314},{"title":"Stilvoll sanierte Altbauwohnung in den Quadraten","price_cold":890,"price_warm":1090,"qm":67,"price_per_qm":13.28,"rooms":"2,5","floor":"3","street":"K4 7,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4931886,"longlitude":8.467596},{"title":"2-Zimmer + K\xfcche + Bad + WC Wohnung mit Balkon in Mannheim-Innenstadt","price_cold":679,"price_warm":909,"qm":65,"price_per_qm":10.45,"rooms":"2","floor":"3","street":"M7 15,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4825107,"longlitude":8.4721258},{"title":"Sch\xf6ne 1-Zimmer-Wohnung in Mannheim Rheinau","price_cold":350,"price_warm":400,"qm":38,"price_per_qm":9.21,"rooms":"1","floor":"0","street":"Vorderer Sporw\xf6rth 32,","city":"Rheinau, 68219 Mannheim","latitude":49.4407907,"longlitude":8.5152215},{"title":"Gepflegte 2-ZKB Wohnung mit Balkon zu vermieten!","price_cold":577,"price_warm":757,"qm":61.3,"price_per_qm":9.41,"rooms":"2","floor":"4","street":"B\xfcrgermeister-Fuchs-Str. 87,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5040078,"longlitude":8.4677212},{"title":"Sehr sch\xf6ne 1-Zimmer-Studenten-Wohnung in zentraler Lage von Mannheim","price_cold":340,"price_warm":440,"qm":22.15,"price_per_qm":15.35,"rooms":"1","floor":"3","street":"D6, 5,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4893034,"longlitude":8.461592},{"title":"Erstbezug nach Sanierung mit Freisitz: Sch\xf6ne 2-Raum-EG-Wohnung.","price_cold":850,"price_warm":1050,"qm":66.9,"price_per_qm":12.71,"rooms":"2","floor":"0","street":"Waldhornstra\xdfe 6,","city":"Neckarau, 68199 Mannheim","latitude":49.4516189,"longlitude":8.494566},{"title":"2-ZKB mit Loggia und gro\xdfz\xfcgigem Schlafzimmer","price_cold":1280,"price_warm":1540,"qm":73.52,"price_per_qm":17.41,"rooms":"2","floor":"1","street":"Geschwister-Gr\xfcnbaum-Stra\xdfe 17,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.504667,"longlitude":8.5166293},{"title":"Helle 2-Zimmer-Wohnung in Mannheim-Gartenstadt","price_cold":608.7,"price_warm":803.7,"qm":67.26,"price_per_qm":9.05,"rooms":"2","floor":"3","street":"Sylter Weg 4,","city":"Waldhof, 68305 Mannheim","latitude":49.5294263,"longlitude":8.4885036},{"title":"Vollst\xe4ndig m\xf6bilierte & moderne 2-Zi-Wohnung mit Balkon und TG-Stellplatz in Mannheim (Im Rott)","price_cold":1100,"price_warm":1300,"qm":71,"price_per_qm":15.49,"rooms":"2","floor":"4","street":"Therese-Blase-Stra\xdfe 3,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5044587,"longlitude":8.5267197},{"title":"Renovierte Wohnung mit gemeinsamer K\xfcche - Nahe Uni, Klinikum + Innenstadt","price_cold":580,"price_warm":660,"qm":25,"price_per_qm":23.2,"rooms":"1","floor":"1","street":"Friedrich Engelhorn Stra\xdfe 7-9,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.5006202,"longlitude":8.4959994},{"title":"Sch\xf6ne 3-Zimmer-Wohnung in Mannheim Franklin","price_cold":1000,"price_warm":1200,"qm":80.2,"price_per_qm":12.47,"rooms":"3,5","floor":"3","street":"Thomas-Jefferson-Stra\xdfe 32 H,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5199869,"longlitude":8.5288828},{"title":"M\xf6bliertes Apartment direkt am Luisenpark auch ideal f\xfcr Pendler","price_cold":890,"price_warm":1090,"qm":48,"price_per_qm":18.54,"rooms":"2","floor":"2","street":"Am oberen Luisenpark 19,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4824319,"longlitude":8.4922318},{"title":"3,5 ZKB DG-Wohnung mit Wintergarten zu vermieten!","price_cold":1029,"price_warm":1404,"qm":93.47,"price_per_qm":11.01,"rooms":"3,5","floor":"5","street":"D\xe4nischer Tisch 41,","city":"Rheinau, 68219 Mannheim","latitude":49.4344354,"longlitude":8.5253786},{"title":"M\xf6blierte Wohnung ! Wohnen auf Zeit","price_cold":1450,"price_warm":1700,"qm":109,"price_per_qm":13.3,"rooms":"3","floor":"","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"WG-geeignete 2-Zimmer-Wohnung mit S\xfcdbalkon und moderner Einbauk\xfcche in MA-Rheinau","price_cold":650,"price_warm":890,"qm":57,"price_per_qm":11.4,"rooms":"2","floor":"4","street":"Relaisstra\xdfe 62,","city":"Rheinau, 68219 Mannheim","latitude":49.4347458,"longlitude":8.5260021},{"title":"Gro\xdfz\xfcgige 4-Zimmer-Wohnung mit Balkon und Bad en Suite","price_cold":1830,"price_warm":2220,"qm":109.66,"price_per_qm":16.69,"rooms":"4","floor":"2","street":"V\xf6lklinger Stra\xdfe 34,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5049204,"longlitude":8.5178885},{"title":"Helle und Ger\xe4umige 6-Zimmer-Wohnung in Mannheim","price_cold":1600,"price_warm":2080,"qm":190.22,"price_per_qm":8.41,"rooms":"6","floor":"","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Nettes 1-ZKB Apartment in guter Lage mit Stellplatz","price_cold":360,"price_warm":480,"qm":26,"price_per_qm":13.85,"rooms":"1","floor":"1","street":"Alex-M\xfcller-Stra\xdfe 95,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.4547429,"longlitude":7.7722369},{"title":"Wohnung (50 m\xb2) in Kaiserslautern-Morlautern","price_cold":550,"price_warm":0,"qm":50,"price_per_qm":11,"rooms":"1","floor":"","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"2 ZKB Wohnung in Kaiserslautern inkl. Stellplatz und Balkon","price_cold":650,"price_warm":0,"qm":52,"price_per_qm":12.5,"rooms":"2","floor":"7","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3 Zimmerwohnung Nachmieter gesucht","price_cold":800,"price_warm":700,"qm":70,"price_per_qm":11.43,"rooms":"3","floor":"3","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3ZKB 85m\xb2 Mietwohnung KL-Stadt","price_cold":700,"price_warm":850,"qm":85,"price_per_qm":8.24,"rooms":"3,5","floor":"2","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3-Zimmer Wohnung in bester Lage mit Garagenstellplatz","price_cold":970,"price_warm":0,"qm":87,"price_per_qm":11.15,"rooms":"3","floor":"2","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Vollm\xf6blierte Wohnung in Homburg (Saarland) \u2013 Warmmiete 650 \u20AC \u2013","price_cold":0,"price_warm":0,"qm":0,"price_per_qm":0,"rooms":"2","floor":"0","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Wohnung zu vermieten","price_cold":826,"price_warm":826,"qm":65,"price_per_qm":12.71,"rooms":"3","floor":"1","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Moderne 1,5 Zimmer Maisonettewohnung mit Einbauk\xfcche","price_cold":470,"price_warm":590,"qm":59,"price_per_qm":7.97,"rooms":"1,5","floor":"2","street":"Spitalstra\xdfe 9,","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":49.4448069,"longlitude":7.7635004},{"title":"STATE OF THE ART PENTHOUSE","price_cold":2550,"price_warm":0,"qm":132,"price_per_qm":19.32,"rooms":"4","floor":"","street":"Bremerstr. 10a,","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":49.4339763,"longlitude":7.7704548},{"title":"NICE MODERN K\'TOWN APARTMENT","price_cold":2280,"price_warm":0,"qm":102,"price_per_qm":22.35,"rooms":"3","floor":"","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Nachmieter f\xfcr Einzelzimmer (Arbeitsvertrag muss vorhanden)","price_cold":345,"price_warm":345,"qm":32,"price_per_qm":10.78,"rooms":"1","floor":"3","street":"Pirmasenser Stra\xdfe 45,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4395404,"longlitude":7.7649353},{"title":"Suche Nachmieter","price_cold":705,"price_warm":705,"qm":50.6,"price_per_qm":13.93,"rooms":"2","floor":"7","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3,5 ZKB KL-Dansenberg komplett renoviert zu vermieten","price_cold":1100,"price_warm":0,"qm":105,"price_per_qm":10.48,"rooms":"3","floor":"2","street":"","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3-Zimmer-Wohnung mit EBK *** von Privat ***","price_cold":760,"price_warm":940,"qm":80,"price_per_qm":9.5,"rooms":"3","floor":"1","street":"Gasstra\xdfe,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4429436,"longlitude":7.7747977},{"title":"Nachmieter gesucht 4ZKB","price_cold":1315,"price_warm":1315,"qm":108,"price_per_qm":12.18,"rooms":"4","floor":"1","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6nes 2 Zimmer Appartement nahe TU","price_cold":395,"price_warm":0,"qm":38,"price_per_qm":10.39,"rooms":"2","floor":"","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3-Zimmer Wohnung Kaiserslautern Siegelbach","price_cold":450,"price_warm":0,"qm":85,"price_per_qm":5.29,"rooms":"3","floor":"","street":"","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"1-Zimmer Appartement N\xe4he Uni Kaiserslautern","price_cold":320,"price_warm":400,"qm":22,"price_per_qm":14.55,"rooms":"1","floor":"1","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3 ZKB Wohnung mit gro\xdfem Balkon ab dem 15.08.2025","price_cold":660,"price_warm":880,"qm":94,"price_per_qm":7.02,"rooms":"3","floor":"0","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Einliegerwohnung","price_cold":700,"price_warm":0,"qm":76,"price_per_qm":9.21,"rooms":"2","floor":"0","street":"Weilerbacherstr,","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":49.4353265,"longlitude":7.658652},{"title":"Einzelapartment","price_cold":430,"price_warm":0,"qm":19,"price_per_qm":22.63,"rooms":"1","floor":"1","street":"Ziegelstrasse 59,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4401769,"longlitude":7.7619749},{"title":"3ZKB ab dem 15.09.2025 n\xe4he Krankenhaus - max. 3 Personen","price_cold":650,"price_warm":0,"qm":61,"price_per_qm":10.66,"rooms":"3","floor":"","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 1 Zimmer Wohnung mit Balkon in Kaiserslautern","price_cold":330,"price_warm":450,"qm":37,"price_per_qm":8.92,"rooms":"1","floor":"1","street":"Am Landgraben 6,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.4484207,"longlitude":7.7791661},{"title":"Neubau: moderne 2 Zimmer Wohnung mit Einbauk\xfcche, Terrasse und Stellplatz","price_cold":900,"price_warm":1050,"qm":75.3,"price_per_qm":11.95,"rooms":"2","floor":"1","street":"Kreuzhofstra\xdfe 16,","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":49.4684174,"longlitude":7.736341},{"title":"Erstbezug: Stilvolle Neubauwohnung mit gro\xdfer Terrasse und Einbauk\xfcche","price_cold":1200,"price_warm":1400,"qm":95,"price_per_qm":12.63,"rooms":"2,5","floor":"1","street":"Kreuzhofstra\xdfe 16,","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":49.4684174,"longlitude":7.736341},{"title":"Kaiserslautern City 1 Zimmer Wohnung EBK Balkon ab 01.07","price_cold":450,"price_warm":570,"qm":37,"price_per_qm":12.16,"rooms":"1","floor":"4","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Alternative Near U.S. Air Base \u2013 Stylish, All-Inclusive Fla","price_cold":1200,"price_warm":0,"qm":50,"price_per_qm":24,"rooms":"2","floor":"","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Wohnung 3zkb Terrasse Garten 80qm Barriere frei einsiedlerhof","price_cold":0,"price_warm":1000,"qm":85,"price_per_qm":0,"rooms":"3","floor":"0","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"2 Zimmer in sch\xf6ner 3er-WG Nachmieterin gesucht","price_cold":395,"price_warm":395,"qm":115,"price_per_qm":3.43,"rooms":"5","floor":"1","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Barrierefreie Neubauwohnung - Volkspark - Erstbezug","price_cold":1095,"price_warm":0,"qm":66,"price_per_qm":16.59,"rooms":"2","floor":"1","street":"Daniel-H\xe4berlestr. 16,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.444256,"longlitude":7.7907435},{"title":"Exklusive Penthouse-Wohnung","price_cold":1790,"price_warm":0,"qm":114.33,"price_per_qm":15.66,"rooms":"3","floor":"","street":"Mainzer Stra\xdfe 124 a,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.456033,"longlitude":7.7970479},{"title":"Sch\xf6ne 3-Zimmer-Wohnung mit Balkon \u2013 WG-geeignet","price_cold":700,"price_warm":900,"qm":69,"price_per_qm":10.14,"rooms":"3","floor":"1","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Traumhaft sch\xf6ne 2 Zimmer Wohnung in idealer Lage","price_cold":1100,"price_warm":1100,"qm":55,"price_per_qm":20,"rooms":"2","floor":"1","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Kleines 1 Zimmer-Duschbad-Apartment im Zentrum","price_cold":290,"price_warm":0,"qm":22,"price_per_qm":13.18,"rooms":"1","floor":"2","street":"Richard-Wagner-Stra\xdfe,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4405986,"longlitude":7.7664906},{"title":"F\xfcr Studenten oder Pendler - 1 Zimmer Appartment in Uni N\xe4he","price_cold":410,"price_warm":0,"qm":25,"price_per_qm":16.4,"rooms":"1","floor":"0","street":"Buchenlochstra\xdfe 60,","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":49.4306624,"longlitude":7.7586648},{"title":"Gem\xfctliche 1-Zimmer-Wohnung mit Garten in Hohenecken","price_cold":400,"price_warm":0,"qm":0,"price_per_qm":0,"rooms":"","floor":"","street":"","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"sanierte Altbauwohnung, ruhige Lage, f\xfcr WG geeignet","price_cold":810,"price_warm":0,"qm":89,"price_per_qm":9.1,"rooms":"4","floor":"2","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle und ruhige 1-zimmer-wohnung N\xe4he Universit\xe4t","price_cold":500,"price_warm":500,"qm":25,"price_per_qm":20,"rooms":"1","floor":"4","street":"Wilhelm Raabe Stra\xdfe 26,","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":49.4308288,"longlitude":7.7541096},{"title":"1 Zimmer Apartment in Altstadt-Kaiserslautern","price_cold":0,"price_warm":0,"qm":24,"price_per_qm":0,"rooms":"1","floor":"","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Wir bieten Ihnen das perfekte Single Apartment","price_cold":700,"price_warm":700,"qm":57.3,"price_per_qm":12.22,"rooms":"1","floor":"","street":"Mainzerstrasse 85,","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":49.453328,"longlitude":7.7882828},{"title":"Voll m\xf6blierte Wohnung - WG geeignet - ruhige Lage","price_cold":1150,"price_warm":0,"qm":100,"price_per_qm":11.5,"rooms":"5","floor":"1","street":"Im Fl\xfcrchen 1,","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":49.4782288,"longlitude":7.7654483},{"title":"Wohnung Kaiserslautern","price_cold":1060,"price_warm":1060,"qm":76,"price_per_qm":13.95,"rooms":"2","floor":"5","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3 Zimmer Wohnung 67655 Kaiserslautern","price_cold":850,"price_warm":1000,"qm":85,"price_per_qm":10,"rooms":"3","floor":"4","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Freshly renovated 3 room Apartment for Rent - Kaiserslautern","price_cold":0,"price_warm":2000,"qm":86,"price_per_qm":0,"rooms":"3","floor":"1","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Freshly renovated Apartment for Rent - Kaiserslautern","price_cold":0,"price_warm":2350,"qm":128,"price_per_qm":0,"rooms":"4","floor":"2","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Einzelzimmerapartement","price_cold":539,"price_warm":539,"qm":19,"price_per_qm":28.37,"rooms":"1","floor":"","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"2ZKB Wohnung","price_cold":680,"price_warm":680,"qm":54,"price_per_qm":12.59,"rooms":"2","floor":"4","street":"Rudolf-Breitscheidstr.,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4378735,"longlitude":7.766124},{"title":"Moderne 3-Zimmer-Wohnung mit EBK in Kaiserslautern (N\xe4he Uni)","price_cold":1200,"price_warm":1480,"qm":126,"price_per_qm":9.52,"rooms":"3","floor":"2","street":"Pfaffenbergstra\xdfe,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4334969,"longlitude":7.7615128},{"title":"Wohnung 47m\xb2","price_cold":600,"price_warm":600,"qm":47,"price_per_qm":12.77,"rooms":"1,5","floor":"4","street":"","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle 75qm Dachgeschosswohnung - Kaiserslautern Hohenecken","price_cold":1000,"price_warm":1250,"qm":75,"price_per_qm":13.33,"rooms":"3","floor":"3","street":"","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Renovierte Wohnung N\xe4he Mall K-in Lautern f\xfcr Single oder Paare","price_cold":430,"price_warm":0,"qm":43,"price_per_qm":10,"rooms":"2","floor":"","street":"Pfr\xfcndnerstr.,","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":49.4448816,"longlitude":7.7619535},{"title":"cozy modern city apartment for rent *fully furnished*","price_cold":1700,"price_warm":2200,"qm":100,"price_per_qm":17,"rooms":"4","floor":"0","street":"","city":"67657 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"2-Zimmer Wohnung in EG ( nicht Barrierefrei) ab 01.08.25","price_cold":700,"price_warm":0,"qm":64,"price_per_qm":10.94,"rooms":"2","floor":"0","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Zwei-Zimmer-Appartement","price_cold":390,"price_warm":0,"qm":36,"price_per_qm":10.83,"rooms":"2","floor":"","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"2-Zimmer-Wohnung mit Balkon in Mannheim-Neckarstadt zu vermieten","price_cold":1200,"price_warm":1200,"qm":60,"price_per_qm":20,"rooms":"2","floor":"2","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"TOP! 4 ZKB n\xe4he Stadtzentrum","price_cold":900,"price_warm":1150,"qm":68,"price_per_qm":13.24,"rooms":"4","floor":"1","street":"B\xfcrgermeister-Fuchs-Stra\xdfe 63,","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":49.5029186,"longlitude":8.4660977},{"title":"Helle 2 Zimmer Wohnung mit gro\xdfem Garten und Balkon","price_cold":950,"price_warm":0,"qm":61,"price_per_qm":15.57,"rooms":"2","floor":"1","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne gem\xfctliche Dachgeschoss Wohnung im ruhiger Lage am Park","price_cold":950,"price_warm":950,"qm":85,"price_per_qm":11.18,"rooms":"3","floor":"2","street":"","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Nachmieter f\xfcr 5 ZKB Wohnung gesucht","price_cold":1690,"price_warm":1690,"qm":114,"price_per_qm":14.82,"rooms":"5,5","floor":"1","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"1 Zimmer Kuche Bad Balkon","price_cold":700,"price_warm":700,"qm":35,"price_per_qm":20,"rooms":"1","floor":"1","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Helle und ger\xe4umige Wohnung in Mannheim zu Vermieten","price_cold":1050,"price_warm":1300,"qm":96.09,"price_per_qm":10.93,"rooms":"3","floor":"","street":"Mannheim, M2, 7,","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":49.4849361,"longlitude":8.466886},{"title":"nur 3 Monate Wohnung Zwischenmiete 01.06 bis 30.09","price_cold":560,"price_warm":560,"qm":55,"price_per_qm":10.18,"rooms":"1","floor":"4","street":"","city":"68165 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"4 Zimmer Wohnung in Mannheim Innenstadt Wg geeignet","price_cold":0,"price_warm":1400,"qm":86,"price_per_qm":0,"rooms":"4","floor":"3","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Studentenapartment voll m\xf6bliert","price_cold":560,"price_warm":0,"qm":26,"price_per_qm":21.54,"rooms":"1","floor":"5","street":"Neckarauerstrasse 45,","city":"68165 Baden-W\xfcrttemberg - Mannheim","latitude":49.4570518,"longlitude":8.4931787},{"title":"Gem\xfctliche 1ZKB 50qm mit Garten in MA-Waldhof","price_cold":620,"price_warm":720,"qm":50,"price_per_qm":12.4,"rooms":"1","floor":"0","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"1 Zimmerwohnung","price_cold":530,"price_warm":530,"qm":26,"price_per_qm":20.38,"rooms":"1","floor":"2","street":"","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Altengerechte Wohnung in Konzepthaus Senioren","price_cold":660,"price_warm":660,"qm":34,"price_per_qm":19.41,"rooms":"2","floor":"2","street":"Seckenheimer Hauptstrasse 106,","city":"68239 Baden-W\xfcrttemberg - Mannheim","latitude":49.4676575,"longlitude":8.5621661},{"title":"1,5 zimmer wohnung nach zumieten ab 01.08.2025","price_cold":685,"price_warm":635,"qm":50,"price_per_qm":13.7,"rooms":"1,5","floor":"1","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"4 ZKB Erdgeschoss Wohnung mit Garten","price_cold":1650,"price_warm":1650,"qm":82,"price_per_qm":20.12,"rooms":"4","floor":"0","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Erdgeschosswohnung mit Einbauk\xfcche/Terrasse 68259 Mannheim","price_cold":775,"price_warm":0,"qm":42,"price_per_qm":18.45,"rooms":"2","floor":"0","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Wohnung in Mannheim Mittelstrasse","price_cold":970,"price_warm":0,"qm":55,"price_per_qm":17.64,"rooms":"2","floor":"","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Biete eine helle gro\xdfz\xfcgige 4 Zimmerwohnung neu Kernsaniert!","price_cold":1500,"price_warm":0,"qm":110,"price_per_qm":13.64,"rooms":"4","floor":"3","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"!! Wohnung zu Vermieten !!","price_cold":580,"price_warm":780,"qm":52.57,"price_per_qm":11.03,"rooms":"1","floor":"0","street":"Humboldtstra\xdfe 3,","city":"68165 Baden-W\xfcrttemberg - Mannheim","latitude":49.4996943,"longlitude":8.4668197},{"title":"AB SOFORT f\xfcr 3 Monate Untermiete, EZ Wohnung in Mannheim","price_cold":590,"price_warm":590,"qm":29,"price_per_qm":20.34,"rooms":"1","floor":"5","street":"","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Zimmer in einer Frauen Wohngemeinschaft zu vermieten","price_cold":450,"price_warm":450,"qm":30,"price_per_qm":15,"rooms":"1","floor":"","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Einzimmerwohnung Mannheim Neckarau","price_cold":500,"price_warm":0,"qm":32,"price_per_qm":15.62,"rooms":"1","floor":"1","street":"Neckarauer Stra\xdfe 201,","city":"68199 Baden-W\xfcrttemberg - Mannheim","latitude":49.4657464,"longlitude":8.486079},{"title":"Nachmieter gesucht","price_cold":510,"price_warm":510,"qm":28,"price_per_qm":18.21,"rooms":"1","floor":"","street":"","city":"68199 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"M\xf6bilierte Wohnung in Mannheim-Innenstadt (4Monate)","price_cold":775,"price_warm":0,"qm":28,"price_per_qm":27.68,"rooms":"1","floor":"","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"WG-Zimmer in 3er WG zur Miete in Mannheim/Feudenheim","price_cold":600,"price_warm":600,"qm":20,"price_per_qm":30,"rooms":"3","floor":"1","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Maisonette Wohnung 3 1/2 Zimmer","price_cold":1030,"price_warm":1030,"qm":84,"price_per_qm":12.26,"rooms":"4","floor":"","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Nachmieter f\xfcr 3 Zimmer Wohnung Mannheim","price_cold":0,"price_warm":1100,"qm":74,"price_per_qm":0,"rooms":"3","floor":"2","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Helle 2-Zimmer Wohnung* Neubau*mit EBK","price_cold":925,"price_warm":1090,"qm":46,"price_per_qm":20.11,"rooms":"2","floor":"7","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"2 ZKB + Balkon Wohnung 60qm mit Neckarblick in der Dammstr. MA","price_cold":1100,"price_warm":1100,"qm":60,"price_per_qm":18.33,"rooms":"2","floor":"3","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"1.5 ZKB Wohnung in Mannheim","price_cold":660,"price_warm":660,"qm":37,"price_per_qm":17.84,"rooms":"1,5","floor":"3","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"3 ZKBB Mannheim-Feudenheim, Feldrandlage","price_cold":1120,"price_warm":0,"qm":85.7,"price_per_qm":13.07,"rooms":"3","floor":"","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Wohnung Innenstadt Mannheim","price_cold":800,"price_warm":0,"qm":78,"price_per_qm":10.26,"rooms":"3","floor":"2","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Moderne 1-Zimmer-Wohnung in Mannheim-Rheinau \u2013 Vollm\xf6bliert","price_cold":650,"price_warm":650,"qm":22,"price_per_qm":29.55,"rooms":"1","floor":"1","street":"Halmhuberstr. 10-14,","city":"68219 Baden-W\xfcrttemberg - Mannheim","latitude":49.4172087,"longlitude":8.5268797},{"title":"2-Zimmer-Wohnung zur Untervermietung in Ludwigshafen-Friesenheim","price_cold":970,"price_warm":970,"qm":60,"price_per_qm":16.17,"rooms":"2","floor":"2","street":"","city":"68165 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"M\xf6blierte 2-Zimmer Wohnung im Herzen von Mannheim Feudenheim","price_cold":1050,"price_warm":1050,"qm":49,"price_per_qm":21.43,"rooms":"2","floor":"2","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Helle 2 Zimmer Wohnung Mannheim Wallstadt ab 01.07.2025","price_cold":750,"price_warm":750,"qm":60,"price_per_qm":12.5,"rooms":"2","floor":"0","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 2-Zimmer-Wohnung in Mannheim-Zentrum \u2013 Nachmieter gesucht","price_cold":880,"price_warm":880,"qm":50,"price_per_qm":17.6,"rooms":"1","floor":"1","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"M\xf6blierte Mietwohnung in Zentraler Lage","price_cold":910,"price_warm":910,"qm":70,"price_per_qm":13,"rooms":"3","floor":"4","street":"T3,","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":49.4832445,"longlitude":8.4645749},{"title":"*Wohnung* 2 ZKB in Mannheim ab 15.08.2025 zur Miete","price_cold":880,"price_warm":880,"qm":56,"price_per_qm":15.71,"rooms":"2","floor":"3","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Wohnung 4,5 Zimmer","price_cold":1400,"price_warm":1650,"qm":92,"price_per_qm":15.22,"rooms":"4,5","floor":"3","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Einzimmerwohnung, m\xf6bliert & saniert , Mannheim Neckarau,","price_cold":650,"price_warm":650,"qm":25,"price_per_qm":26,"rooms":"1","floor":"","street":"","city":"68239 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Erstbezug nach Renovierung. 1,5 Zimmer Wohnung in MA-Neckarau","price_cold":870,"price_warm":1100,"qm":62,"price_per_qm":14.03,"rooms":"1,5","floor":"2","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"1 Zimmer in der WG wird ab sofort vermietet","price_cold":500,"price_warm":500,"qm":9,"price_per_qm":55.56,"rooms":"1","floor":"3","street":"Beilstra\xdfe 28,","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":49.494824,"longlitude":8.4599441},{"title":"Wundersch\xf6ne teilm\xf6blierte 3 Zimmer Wohnung inkl EBK, TG, Balkon","price_cold":1400,"price_warm":1700,"qm":84,"price_per_qm":16.67,"rooms":"3","floor":"3","street":"","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Apartment vollm\xf6bliert mit Balkon in Rheinau S\xfcd- ab 01.07.2025","price_cold":510,"price_warm":510,"qm":22,"price_per_qm":23.18,"rooms":"1","floor":"","street":"","city":"68219 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6ne 1-Zimmer-Wohnung in Mannheim-Waldhof \u2013 frei ab 1. Juli","price_cold":900,"price_warm":900,"qm":40,"price_per_qm":22.5,"rooms":"1","floor":"","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"M\xf6blierte Souterrain Wohnung in Mannheim Seckenheim","price_cold":1350,"price_warm":1350,"qm":93,"price_per_qm":14.52,"rooms":"3","floor":"0","street":"Am Klumbengarten,","city":"68239 Baden-W\xfcrttemberg - Mannheim","latitude":49.459692,"longlitude":8.5617856},{"title":"2-Zimmer, 2 Balkone mitten in Mannheim","price_cold":895,"price_warm":1085,"qm":60,"price_per_qm":14.92,"rooms":"2","floor":"3","street":"Collinistra\xdfe 4,","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":49.4905435,"longlitude":8.4761187},{"title":"2 -Zimmer Wohnung 48m Mannheim","price_cold":950,"price_warm":750,"qm":48,"price_per_qm":19.79,"rooms":"2","floor":"1","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"MA-Feudenheim, Hauptstr.15, 2ZKB,Balk., Wohnfl.:63,6 qm ab 1.8.25","price_cold":540,"price_warm":0,"qm":63.6,"price_per_qm":8.49,"rooms":"2","floor":"","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Helle 2-Zi. Wohnung, sehr zentral in Mannheim Q7, am EKZ Quartier","price_cold":495,"price_warm":650,"qm":37,"price_per_qm":13.38,"rooms":"2","floor":"4","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Nachmieter gesucht 3 Zimmer Wohnung","price_cold":1000,"price_warm":1400,"qm":80,"price_per_qm":12.5,"rooms":"3","floor":"7","street":"Brandenburgerstra\xdfe,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.5133065,"longlitude":8.5331521},{"title":"Kernsanierte 3- Zimmer Wohnung Feldrandlage","price_cold":1150,"price_warm":1150,"qm":70,"price_per_qm":16.43,"rooms":"3","floor":"2","street":"Feldstr. 22,","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":49.4887832,"longlitude":8.5386361},{"title":"Wg Zimmer in Kernsanierter Wohnung-MA","price_cold":480,"price_warm":515,"qm":130,"price_per_qm":3.69,"rooms":"5","floor":"3","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Nachmieter*in gesucht, sanierte Wohnung in Mannheim (Rheinau)","price_cold":790,"price_warm":790,"qm":45,"price_per_qm":17.56,"rooms":"2","floor":"4","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"3 ZKB+Balkon in ruhiger Wohnanlage, 1.OG","price_cold":850,"price_warm":1100,"qm":69,"price_per_qm":12.32,"rooms":"3","floor":"1","street":"","city":"68219 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Sehr sch\xf6ne 2 ZKB Mannheim-Feudenheim","price_cold":870,"price_warm":870,"qm":65,"price_per_qm":13.38,"rooms":"2","floor":"","street":"","city":"68259 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"2 Zimmerwohnung Mannheim, Neckarstadt","price_cold":1150,"price_warm":0,"qm":0,"price_per_qm":0,"rooms":"","floor":"","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Individuelle Maisonette-Wohnung zu vermieten ab 01.08.2025","price_cold":730,"price_warm":890,"qm":90,"price_per_qm":8.11,"rooms":"4","floor":"3","street":"","city":"68199 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"57 J. DEUTSCHER SUCHT 1-2 ZKB","price_cold":800,"price_warm":0,"qm":50,"price_per_qm":16,"rooms":"2","floor":"","street":"","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Wohnung DG","price_cold":1000,"price_warm":1250,"qm":110,"price_per_qm":9.09,"rooms":"5","floor":"3","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Neuhofer Stra\xdfe 21, 68219 Mannheim","price_cold":700,"price_warm":700,"qm":58,"price_per_qm":12.07,"rooms":"2","floor":"","street":"Neuhofer Stra\xdfe 21,","city":"Rheinau, 68219 Mannheim","latitude":49.4350875,"longlitude":8.5247601},{"title":"Sch\xf6ne 2,5-Zimmer-Dachgeschosswohnung in Mannheim","price_cold":660,"price_warm":810,"qm":70,"price_per_qm":9.43,"rooms":"2,5","floor":"4","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"Charmante 2-Zimmer-DG-Wohnung mit Balkon in Mannheim","price_cold":590,"price_warm":724,"qm":50,"price_per_qm":11.8,"rooms":"2","floor":"3","street":"","city":"Waldhof, 68305 Mannheim","latitude":"","longlitude":""},{"title":"Unterm\xfchlaustra\xdfe 90, 68169 Mannheim","price_cold":700,"price_warm":700,"qm":45,"price_per_qm":15.56,"rooms":"2","floor":"","street":"Unterm\xfchlaustra\xdfe 90,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5071618,"longlitude":8.465705},{"title":"Sanierte 2-Raum-Dachgeschosswohnung in Mannheim","price_cold":430,"price_warm":550,"qm":38,"price_per_qm":11.32,"rooms":"2","floor":"5","street":"Schwetzinger Stra\xdfe 23,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4809008,"longlitude":8.4747429},{"title":"Sch\xf6ne 2-Zimmer-Wohnung mit EBK in Mannheim","price_cold":750,"price_warm":1050,"qm":75,"price_per_qm":10,"rooms":"2","floor":"2","street":"Ebernburgstra\xdfe 14,","city":"Rheinau, 68219 Mannheim","latitude":49.4438722,"longlitude":8.5173232},{"title":"Apartment Untermiete bis 30. September","price_cold":400,"price_warm":480,"qm":34,"price_per_qm":11.76,"rooms":"1","floor":"","street":"Augartenstra\xdfe 112,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4744465,"longlitude":8.4856996},{"title":"1 Zimmer Wohnung in Jugendstilhaus","price_cold":380,"price_warm":540,"qm":34,"price_per_qm":11.18,"rooms":"1","floor":"","street":"","city":"Neckarstadt-West, 68169 Mannheim","latitude":"","longlitude":""},{"title":"Modernes, vollst\xe4ndig renoviertes + m\xf6bliertes 1-Zi.-Apartment (Dachgeschoss) im Herzen Mannheims","price_cold":520,"price_warm":620,"qm":17.5,"price_per_qm":29.71,"rooms":"1","floor":"5","street":"R6 8,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4877168,"longlitude":8.4724831},{"title":"M\xf6bliertes Appartement in ruhiger Villenlage MA-Niederfeld","price_cold":445,"price_warm":595,"qm":25,"price_per_qm":17.8,"rooms":"1","floor":"0","street":"","city":"Neckarau, 68199 Mannheim","latitude":"","longlitude":""},{"title":"In den Quadraten VON PRIVAT","price_cold":490,"price_warm":720,"qm":48,"price_per_qm":10.21,"rooms":"1","floor":"1","street":"S6 17,","city":"Innenstadt/Jungbusch, 69161 Mannheim","latitude":49.4880364,"longlitude":8.4749394},{"title":"Erstbezug nach Sanierung mit EBK: Geschmackvolle 1-Raum-Wohnung in Mannheim","price_cold":520,"price_warm":670,"qm":26,"price_per_qm":20,"rooms":"1,5","floor":"","street":"Heinrich-Lanz-Stra\xdfe 23,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4802808,"longlitude":8.4741008},{"title":"Top, hell, ruhig und doch zentral !","price_cold":1250,"price_warm":1500,"qm":100.15,"price_per_qm":12.48,"rooms":"3","floor":"2","street":"","city":"Neuostheim/Neuhermsheim, 68163 Mannheim","latitude":"","longlitude":""},{"title":"* 2 ZKB * Innenstadt * WG-geeignet * zwei Balkone *","price_cold":850,"price_warm":1000,"qm":66,"price_per_qm":12.88,"rooms":"2","floor":"1","street":"G2 17,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4900701,"longlitude":8.4662301},{"title":"Vollm\xf6bliert und saniert in 2024: Geschmackvolle 1-Raum-Wohnung in Mannheim / Jungbusch","price_cold":475,"price_warm":574,"qm":14,"price_per_qm":33.93,"rooms":"1","floor":"1","street":"Akademiestra\xdfe 12A,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.492358,"longlitude":8.4573634},{"title":"Studentenapartment zu vermieten ab 15. Juli 2025","price_cold":600,"price_warm":700,"qm":21,"price_per_qm":28.57,"rooms":"1","floor":"3","street":"L 10 13,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Helle, freundliche, auf Wunsch m\xf6blierte Wohnung mit zwei Balkonen in Neckarstadt-Ost","price_cold":970,"price_warm":1150,"qm":76,"price_per_qm":12.76,"rooms":"2","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Mannheim Lindenhof - 3,5 ZKB Wohnung / Aufzug / EBK / 2 Balkone","price_cold":1080,"price_warm":1300,"qm":90,"price_per_qm":12,"rooms":"3,5","floor":"4","street":"Paul-Wittsack-Str. 15,","city":"Lindenhof, 68163 Mannheim","latitude":49.4701532,"longlitude":8.4829962},{"title":"Niederfeld - Helle, ruhige, neu renovierte 2-Zimmer-Wohnung mit Balkon, Stellplatz - Erstbezug","price_cold":790,"price_warm":1040,"qm":55,"price_per_qm":14.36,"rooms":"2","floor":"2","street":"Feldbergstra\xdfe 75,","city":"Neckarau, 68163 Mannheim","latitude":49.4598252,"longlitude":8.4762391},{"title":"Vollst\xe4ndig renovierte Wohnung mit zwei Zimmern und EBK in Kaiserslautern","price_cold":950,"price_warm":0,"qm":69,"price_per_qm":13.77,"rooms":"2","floor":"3","street":"An der Galappm\xfchle 8,","city":"Morlautern, 67659 Kaiserslautern","latitude":49.4586673,"longlitude":7.751873},{"title":"Sch\xf6ne und gepflegte 2,5-Zimmer-Hochparterre-Wohnung mit Balkon und Einbauk\xfcche in Kaiserslautern","price_cold":720,"price_warm":820,"qm":80,"price_per_qm":9,"rooms":"2,5","floor":"","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"MODERNISIERT: 4Z-Maisonette mit 2 Balkonen und zus\xe4tzlicher Nutzfl\xe4che im DG","price_cold":1412,"price_warm":1680,"qm":169,"price_per_qm":8.36,"rooms":"4","floor":"4","street":"Rudolf-Breitscheid-Stra\xdfe 66,","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"1 Zimmer Wohnung ab 01.07.2025 oder 01.08.2025 Kaierslautern","price_cold":0,"price_warm":0,"qm":0,"price_per_qm":0,"rooms":"","floor":"","street":"Kurt Schumacher Str. 66,","city":"","latitude":"","longlitude":""},{"title":"KL Fu\xdfg\xe4ngerzone neu renoviert 2 ZKB Einbauk\xfcche","price_cold":0,"price_warm":0,"qm":0,"price_per_qm":0,"rooms":"","floor":"","street":"Fackelstra\xdfe 2,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"3-Zimmer-Wohnung in Kaiserslautern!","price_cold":669,"price_warm":0,"qm":0,"price_per_qm":0,"rooms":"","floor":"","street":"An der Emilsruhe 21,","city":"Gr\xfcbent\xe4lchen/Volkspark, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"2 ZKB Wohnung","price_cold":530,"price_warm":0,"qm":40,"price_per_qm":13.25,"rooms":"2","floor":"1","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"1-Zimmer-Apartment mit Balkon-N\xe4he Uni ab 01.07.2025","price_cold":515,"price_warm":515,"qm":21,"price_per_qm":24.52,"rooms":"1","floor":"","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Helles, modern m\xf6bliertes renoviertes Apartment in KL-Hohenecken","price_cold":450,"price_warm":0,"qm":25.6,"price_per_qm":17.58,"rooms":"1","floor":"","street":"","city":"67661 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"3 ZKB n\xe4he Gartenschau, provisionsfrei zu vermieten","price_cold":750,"price_warm":1000,"qm":80,"price_per_qm":9.38,"rooms":"3","floor":"2","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"MODERNISIERT: 4Z-Maisonette mit 2 Balkonen + Nutzfl\xe4che DG","price_cold":0,"price_warm":1680,"qm":169,"price_per_qm":0,"rooms":"4","floor":"4","street":"Rudolf-Breitscheid-Stra\xdfe,","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":49.4378735,"longlitude":7.766124},{"title":"Gro\xdfz\xfcgige 2-Zimmerwohnung mit Balkon im G\xfcnen","price_cold":820,"price_warm":0,"qm":75,"price_per_qm":10.93,"rooms":"2","floor":"1","street":"","city":"68307 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Zwei Zimmer Wohnung Neckarstadt Ost. Bitte Beschreibung gut lesen","price_cold":485,"price_warm":485,"qm":52,"price_per_qm":9.33,"rooms":"2","floor":"1","street":"","city":"68167 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"17 qm Studio, 1 Zi Bad K\xfcchenzeile, Balkon, Mannheim Neckarstadt","price_cold":570,"price_warm":570,"qm":17,"price_per_qm":33.53,"rooms":"1","floor":"5","street":"Lortzingstrasse 21,","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":49.4988799,"longlitude":8.4693606},{"title":"Nachmieter ab Juli in Neckarau West gesucht","price_cold":810,"price_warm":810,"qm":70,"price_per_qm":11.57,"rooms":"3","floor":"4","street":"","city":"68199 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"M\xf6bliertes Zimmer mit Balkon in 4er-Frauen-WG","price_cold":580,"price_warm":0,"qm":19,"price_per_qm":30.53,"rooms":"1","floor":"3","street":"Rheinvorlandstra\xdfe 10,","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":49.4847295,"longlitude":8.4560671},{"title":"3ZKB, gro\xdfer Balkon, Tageslichtbad, gro\xdfe Wohnk\xfcche auch als WG n","price_cold":1000,"price_warm":1300,"qm":94,"price_per_qm":10.64,"rooms":"3","floor":"2","street":"","city":"68163 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Neu m\xf6blierte 1-Zimmer Wohnung direkt im Zentrum","price_cold":700,"price_warm":860,"qm":19,"price_per_qm":36.84,"rooms":"1","floor":"2","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"3 Zimmer Wohnung in Mannhelm","price_cold":1210,"price_warm":1210,"qm":89,"price_per_qm":13.6,"rooms":"3","floor":"2","street":"Pfl\xfcgersgrundstra\xdfe 12,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.4992379,"longlitude":8.4688443},{"title":"Modernisierte 2-Zimmer-Wohnung im Zentrum von Mannheim-Sandhofen","price_cold":850,"price_warm":1000,"qm":58,"price_per_qm":14.66,"rooms":"2","floor":"3","street":"Domstiftstra\xdfe 2,","city":"68307 Baden-W\xfcrttemberg - Mannheim","latitude":49.542729,"longlitude":8.449177},{"title":"Wohnung mieten","price_cold":850,"price_warm":850,"qm":55,"price_per_qm":15.45,"rooms":"1","floor":"","street":"","city":"68307 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"3 ZKB mit S\xfcdbalkon n\xe4he Volkspark","price_cold":620,"price_warm":735,"qm":80,"price_per_qm":7.75,"rooms":"3","floor":"3","street":"","city":"Gr\xfcbent\xe4lchen/Volkspark, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Stilvolle, ger\xe4umige Wohnung mit Balkon und Einbauk\xfcche in Kaiserslautern","price_cold":700,"price_warm":900,"qm":74,"price_per_qm":9.46,"rooms":"2","floor":"1","street":"Theodor-Heuss-Stra\xdfe 7,","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Freundliche 3-Zimmer-Wohnung mit gehobener Innenausstattung mit Balkon in Kaiserslautern","price_cold":750,"price_warm":970,"qm":90,"price_per_qm":8.33,"rooms":"3","floor":"3","street":"Herzog von Weimar Stra\xdfe 7,","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Industriestra\xdfe 6, 67655 Kaiserslautern","price_cold":1600,"price_warm":2090,"qm":98,"price_per_qm":16.33,"rooms":"3","floor":"2","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Exklusive 3-Zimmer-Wohnung mit Einbauk\xfcche in Kaiserslautern","price_cold":1100,"price_warm":1280,"qm":88,"price_per_qm":12.5,"rooms":"3","floor":"3","street":"Bl\xfccherstra\xdfe 21,","city":"Innenstadt S\xfcdwest, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6n geschnittene 3-Zimmer-Wohnung mit Balkon","price_cold":690,"price_warm":990,"qm":75.94,"price_per_qm":9.09,"rooms":"3","floor":"3","street":"","city":"Innenstadt Ost, 67657 Kaiserslautern","latitude":"","longlitude":""},{"title":"Ansprechende und modernisierte 2-Zimmer-Wohnung mit Balkon und Einbauk\xfcche in Kaiserslautern","price_cold":538,"price_warm":683,"qm":54,"price_per_qm":9.96,"rooms":"2","floor":"","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - L\xe4mmchesberg, 2 ZKB, Einbauk\xfcche, Terrasse, Kamin \'\'SANIERT\'\'","price_cold":1450,"price_warm":1640,"qm":62,"price_per_qm":23.39,"rooms":"2","floor":"2","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"Ein besonderes Angebot!","price_cold":589,"price_warm":1005,"qm":74.9,"price_per_qm":7.86,"rooms":"3","floor":"2","street":"Weilerbacher Stra\xdfe 84,","city":"Einsiedlerhof, 67661 Kaiserslautern","latitude":49.4363997,"longlitude":7.65743},{"title":"KL-Am Waldschl\xf6sschen: Barrierefreie 2-Zimmer-Wohnung im EG, mit Terrasse und Gartenanteil","price_cold":850,"price_warm":1067,"qm":67.1,"price_per_qm":12.67,"rooms":"2","floor":"","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL-Am Waldschl\xf6sschen: M\xf6blierte, neuwertige 2-Zimmer-Wohnung mit Einbauk\xfcche in gefragter Lage","price_cold":750,"price_warm":875,"qm":60.39,"price_per_qm":12.42,"rooms":"2","floor":"","street":"","city":"L\xe4mmchesberg-Universit\xe4tswohnstadt, 67663 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL - N\xe4he Messplatz, 2 ZKB, Tageslichtbad \'\'ERSTBEZUG NACH RENOVIERUNG\'\'","price_cold":580,"price_warm":0,"qm":53,"price_per_qm":10.94,"rooms":"2","floor":"2","street":"","city":"Innenstadt Ost, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"KL\u2013 Pfaffgel\xe4nde - Hochwertig ausgestattete 3-Zimmer-Penthouse-Whg. m. Dachterrasse u. TG-Stellplatz","price_cold":1950,"price_warm":0,"qm":131.98,"price_per_qm":14.77,"rooms":"3","floor":"5","street":"","city":"Innenstadt West/Kotten, 67655 Kaiserslautern","latitude":"","longlitude":""},{"title":"Sch\xf6ne 1ZKBB Wohnung in der Neckarstadt-West!","price_cold":330,"price_warm":490,"qm":23.97,"price_per_qm":13.77,"rooms":"1","floor":"1","street":"Laurentiusstr. 19-21,","city":"Neckarstadt-West, 68167 Mannheim","latitude":49.4983679,"longlitude":8.4711834},{"title":"Freundliche 2-Zimmer-Wohnung mit Balkon und Einbauk\xfcche in Mannheim","price_cold":490,"price_warm":740,"qm":64,"price_per_qm":7.66,"rooms":"2","floor":"","street":"Rheinh\xe4user Stra\xdfe 67,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4766529,"longlitude":8.4816009},{"title":"Exklusive 1-Raum-Wohnung mit Balkon und Einbauk\xfcche in Mannheim","price_cold":620,"price_warm":770,"qm":35,"price_per_qm":17.71,"rooms":"1","floor":"3","street":"Augustaanlage 38,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4802065,"longlitude":8.4845835},{"title":"Stabhalterstra\xdfe 1a, 68307 Mannheim","price_cold":1100,"price_warm":1300,"qm":118,"price_per_qm":9.32,"rooms":"4","floor":"1","street":"Stabhalterstra\xdfe 1a,","city":"Sandhofen, 68307 Mannheim","latitude":49.5596659,"longlitude":8.447345},{"title":"Wundersch\xf6ne helle m\xf6blierte grosse Wohnung in toller zentraler Lage N\xe4he Waldpark","price_cold":1550,"price_warm":1950,"qm":105,"price_per_qm":14.76,"rooms":"3","floor":"1","street":"","city":"Neckarau, 68163 Mannheim","latitude":"","longlitude":""},{"title":"Erstbezug nach Sanierung: freundliche 2-Zimmer-Wohnung mit EBK und Balkon in Mannheim","price_cold":950,"price_warm":1120,"qm":59,"price_per_qm":16.1,"rooms":"2","floor":"1","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"Ida-Dehmel-Ring 85, 68309 Mannheim","price_cold":1750,"price_warm":1950,"qm":85,"price_per_qm":20.59,"rooms":"3","floor":"","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Sch\xf6nes, renoviertes 1-Zimmer-Apartment in den Quadraten // N\xe4he Universit\xe4t","price_cold":420,"price_warm":590,"qm":21,"price_per_qm":20,"rooms":"1","floor":"5","street":"D 7 23,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"Charmante, gepflegte und lichtdurchflutete Mietwohnung in Mannheim","price_cold":1800,"price_warm":2050,"qm":170,"price_per_qm":10.59,"rooms":"3","floor":"2","street":"Alphornstr. 47,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.500822,"longlitude":8.4697657},{"title":"3-Zimmer-Wohnung in MA Schwetzingerstadt - WG-geeignet","price_cold":1050,"price_warm":1050,"qm":66,"price_per_qm":15.91,"rooms":"3","floor":"3","street":"Gau\xdfstra\xdfe 2,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4755128,"longlitude":8.4797312},{"title":"Vollm\xf6blierte 3-Zimmer-Wohnung in Toplage","price_cold":1200,"price_warm":1490,"qm":80,"price_per_qm":15,"rooms":"3","floor":"2","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Helle und gro\xdfe 2 ZKBB in ruhiger Lage mit Blick ins Gr\xfcne","price_cold":800,"price_warm":1020,"qm":78,"price_per_qm":10.26,"rooms":"2","floor":"1","street":"","city":"Schwetzingerstadt/Oststadt, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Direkt am sch\xf6nen Luisenpark - 1,5 ZKB mit Parkbalkon, EBK und TG-Stellplatz!","price_cold":720,"price_warm":1010,"qm":57,"price_per_qm":12.63,"rooms":"1,5","floor":"2","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Ansprechende 3-Zimmer-EG-Wohnung in Mannheim","price_cold":700,"price_warm":940,"qm":80,"price_per_qm":8.75,"rooms":"3","floor":"1","street":"Stockhornstra\xdfe 9-11,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.5015112,"longlitude":8.4620529},{"title":"All inclusive-Schicke voll m\xf6blierte 2 Zimmer Wohnung in den Quadraten","price_cold":750,"price_warm":0,"qm":38,"price_per_qm":19.74,"rooms":"2","floor":"3","street":"G7 24,","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":49.4927905,"longlitude":8.460354},{"title":"Geschmackvolle 2-Zimmer-Wohnung mit gehobener Innenausstattung mit Balkon in Mannheim","price_cold":721,"price_warm":877,"qm":65,"price_per_qm":11.09,"rooms":"2","floor":"1","street":"Therese-Blase-Stra\xdfe 11,","city":"K\xe4fertal, 68309 Mannheim","latitude":49.5042098,"longlitude":8.5270132},{"title":"1,5-Zimmer-Wohnung mit Balkon und EBK in Mannheim-Neckarstadt","price_cold":520,"price_warm":620,"qm":30,"price_per_qm":17.33,"rooms":"1,5","floor":"1","street":"Zehntstra\xdfe 8,","city":"Neckarstadt-West, 68169 Mannheim","latitude":49.4995348,"longlitude":8.465264},{"title":"Stilvolle, gepflegte 2-Zimmer-DG-Wohnung in Mannheim","price_cold":585,"price_warm":710,"qm":49,"price_per_qm":11.94,"rooms":"2","floor":"4","street":"Stolzeneckstrasse 19,","city":"Rheinau, 68219 Mannheim","latitude":49.4463468,"longlitude":8.5214282},{"title":"Perfekt f\xfcr Single, Rentner oder Student - Neu renovierte 1-Zimmer Wohnung mit kleinem Balkon","price_cold":430,"price_warm":585,"qm":33,"price_per_qm":13.03,"rooms":"1","floor":"1","street":"Karlsruher Stra\xdfe 34,","city":"Rheinau, 68219 Mannheim","latitude":49.4307706,"longlitude":8.527249},{"title":"Frisch renovierte und bezugsfreie 2-Zimmer-Gartengescho\xdf-Wohnung mit sch\xf6ner Terrasse.","price_cold":800,"price_warm":950,"qm":52,"price_per_qm":15.38,"rooms":"2","floor":"","street":"","city":"Feudenheim, 68259 Mannheim","latitude":"","longlitude":""},{"title":"m\xf6blierte, gepflegte 1-Zimmer-Terrassenwohnung mit Einbauk\xfcche in Mannheim-Oststadt","price_cold":970,"price_warm":1245,"qm":48,"price_per_qm":20.21,"rooms":"1","floor":"","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Modernisierte 3-Zimmer-Wohnung in Top-Lage \u2013 mit Balkon, Einbauk\xfcche & Tiefgaragenstellplatz","price_cold":1100,"price_warm":1350,"qm":77,"price_per_qm":14.29,"rooms":"3","floor":"3","street":"","city":"K\xe4fertal, 68309 Mannheim","latitude":"","longlitude":""},{"title":"Traumhafte Penthouse-Maisonette Wohnung in bester Lage","price_cold":3199,"price_warm":3649,"qm":17400,"price_per_qm":0.18,"rooms":"4,5","floor":"5","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"2 Zimmer Apartment - N\xe4he Rheinpromenade -","price_cold":950,"price_warm":1120,"qm":73,"price_per_qm":13.01,"rooms":"2","floor":"4","street":"","city":"Lindenhof, 68163 Mannheim","latitude":"","longlitude":""},{"title":"**Charmante Wohnung mit 2 Balkonen inkl. Einbauk\xfcche **","price_cold":900,"price_warm":1080,"qm":66,"price_per_qm":13.64,"rooms":"2","floor":"4","street":"","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":"","longlitude":""},{"title":"SPITZENLAGE in Mannheim Oststadt","price_cold":990,"price_warm":1150,"qm":49,"price_per_qm":20.2,"rooms":"2","floor":"","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"3-Zimmer Dachgeschosswohnung mit Marktplatzblick","price_cold":1200,"price_warm":1500,"qm":103,"price_per_qm":11.65,"rooms":"3","floor":"5","street":"Q 1 11,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":"","longlitude":""},{"title":"Helle, freundliche Dachgeschosswohnung (74m\xb2; 3 ZKB) nahe Herzogenriedpark","price_cold":630,"price_warm":761,"qm":74,"price_per_qm":8.51,"rooms":"3","floor":"4","street":"Robinienstrasse 33,","city":"Neckarstadt-Ost/Wohlgelegen, 68167 Mannheim","latitude":49.5073976,"longlitude":8.4943735},{"title":"3-Zimmer-Wohnung mit Balkon in Mannheim","price_cold":840,"price_warm":940,"qm":87,"price_per_qm":9.66,"rooms":"3","floor":"3","street":"U5 4,","city":"Innenstadt/Jungbusch, 68161 Mannheim","latitude":49.4903377,"longlitude":8.4733308},{"title":"Sch\xf6ne m\xf6blierte 1 Zimmer Wohnung in ruhigen Mehrfamilienhaus in guter Lage in Mannheim","price_cold":470,"price_warm":690,"qm":25,"price_per_qm":18.8,"rooms":"1","floor":"","street":"Halmhuberstr. 10-14,","city":"Rheinau, 68219 Mannheim","latitude":49.417295,"longlitude":8.5256265},{"title":"Erstbezug: Geschmackvoll m\xf6bliertes Apartment mit Sonnenterrasse in Bestlage - MA-Oststadt!","price_cold":1000,"price_warm":1120,"qm":47,"price_per_qm":21.28,"rooms":"1","floor":"","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Erstbezug: Modernes Apartment mit EBK in Bestlage der Mannheimer Oststadt!","price_cold":780,"price_warm":885,"qm":41,"price_per_qm":19.02,"rooms":"1","floor":"","street":"","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":"","longlitude":""},{"title":"Brandenburger Str. 44, 11. OG Nr. 60 mit Badewanne - Wohnen mit Ausblick Richtung K\xe4fertal","price_cold":749.84,"price_warm":1080.84,"qm":78.93,"price_per_qm":9.5,"rooms":"3","floor":"11","street":"Brandenburger Str. 44,","city":"Vogelstang, 68309 Mannheim","latitude":49.5142537,"longlitude":8.5370935},{"title":"Sch\xf6ne, gut geschnittene 2-Zimmer-Wohnung ab sofort zu vermieten","price_cold":445.5,"price_warm":605.5,"qm":55,"price_per_qm":8.1,"rooms":"2","floor":"3","street":"Marburger Str. 48,","city":"Waldhof, 68305 Mannheim","latitude":49.5255892,"longlitude":8.4914822},{"title":"Sehr sch\xf6ne und helle 3-Zimmer-Wohnung mit Balkon im 3.OG zu vermieten","price_cold":547.97,"price_warm":758.97,"qm":67.65,"price_per_qm":8.1,"rooms":"3","floor":"3","street":"Schwalbacher Str. 39,","city":"Waldhof, 68305 Mannheim","latitude":49.5223331,"longlitude":8.4984142},{"title":"Helle und gut geschnittene Wohnung im 1.OG zu vermieten","price_cold":610.77,"price_warm":872.77,"qm":71.02,"price_per_qm":8.6,"rooms":"3","floor":"1","street":"Marburger Str. 26,","city":"Waldhof, 68305 Mannheim","latitude":49.5264255,"longlitude":8.4910511},{"title":"sanierte 3-Raum-Wohnung mit zwei Balkonen inkl. K\xfcche in Top Lage","price_cold":1080,"price_warm":1320,"qm":80,"price_per_qm":13.5,"rooms":"3","floor":"1","street":"Stresemannstra\xdfe 23,","city":"Schwetzingerstadt/Oststadt, 68165 Mannheim","latitude":49.4862127,"longlitude":8.4792278},{"title":"Sch\xf6ne 5 Zimmer Wohnung in saniertem Altbau","price_cold":1900,"price_warm":2220,"qm":160,"price_per_qm":11.88,"rooms":"5","floor":"3","street":"","city":"Innenstadt/Jungbusch, 68159 Mannheim","latitude":"","longlitude":""},{"title":"M\xf6bliertes lichtdurchflutetes Gartengeschoss mit gr\xfcner Aussicht in Mannheim Lindenhof /Niederfeld","price_cold":1450,"price_warm":1800,"qm":98,"price_per_qm":14.8,"rooms":"2","floor":"1","street":"","city":"Neckarau, 68163 Mannheim","latitude":"","longlitude":""},{"title":"new renovated flat in a quiet side street in KL-Erfenbach","price_cold":1300,"price_warm":0,"qm":85,"price_per_qm":15.29,"rooms":"3","floor":"","street":"","city":"67659 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Vermietung 3 Zimmerwohnung Kaiserslautern","price_cold":580,"price_warm":720,"qm":75,"price_per_qm":7.73,"rooms":"3","floor":"4","street":"","city":"67655 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Ein Zimmer Apartment uni N\xe4he","price_cold":510,"price_warm":560,"qm":29,"price_per_qm":17.59,"rooms":"1","floor":"1","street":"","city":"67663 Rheinland-Pfalz - Kaiserslautern","latitude":"","longlitude":""},{"title":"Helle 2 Zi. - Neubau Wohnung mit gro\xdfer Terrasse","price_cold":1130,"price_warm":1300,"qm":57,"price_per_qm":19.82,"rooms":"2","floor":"5","street":"Thomas-Jefferson-Str. 38,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.5183952,"longlitude":8.5261162},{"title":"WG Zimmer in den Mannheimer Quadraten","price_cold":465,"price_warm":465,"qm":12,"price_per_qm":38.75,"rooms":"1","floor":"","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"2,5 ZKB Maisonette Wohnung in belebter Lage in der Neckarstadt","price_cold":1120,"price_warm":1120,"qm":69,"price_per_qm":16.23,"rooms":"2,5","floor":"4","street":"G7 29,","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":49.4921768,"longlitude":8.4601561},{"title":"60m Apartment Erdgeschoss 2 Zimmer EBK","price_cold":950,"price_warm":1021,"qm":60,"price_per_qm":15.83,"rooms":"2","floor":"0","street":"Hubenstr.,","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":49.526212,"longlitude":8.4804103},{"title":"Sch\xf6ne 3ZiWhg in ruhigem Haus mit Bilck ibs Gr\xfcne","price_cold":350,"price_warm":600,"qm":73,"price_per_qm":4.79,"rooms":"3","floor":"2","street":"Bismarckstrasse 75,","city":"68239 Baden-W\xfcrttemberg - Mannheim","latitude":49.4811851,"longlitude":8.4714336},{"title":"3 Zimmer Wohnung","price_cold":1450,"price_warm":1450,"qm":106,"price_per_qm":13.68,"rooms":"3","floor":"1","street":"Kranichweg 5,","city":"68307 Baden-W\xfcrttemberg - Mannheim","latitude":49.5406288,"longlitude":8.4546767},{"title":"3 ZKB in Mannheim ab 01.07. zu vermieten","price_cold":790,"price_warm":990,"qm":80,"price_per_qm":9.88,"rooms":"3","floor":"1","street":"","city":"68305 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Moderne 2-Zimmer-Wohnung in Franklin City, Mannheim mit EBK und Balkon","price_cold":1090,"price_warm":1090,"qm":53.5,"price_per_qm":20.37,"rooms":"2","floor":"1","street":"Thomas-Jefferson-Str. 20,","city":"68309 Baden-W\xfcrttemberg - Mannheim","latitude":49.5186918,"longlitude":8.5271996},{"title":"4er WG im Herzen von Mannheim - Jungbusch","price_cold":570,"price_warm":570,"qm":80,"price_per_qm":7.12,"rooms":"4","floor":"3","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"M\xf6bliertes Zimmer mit Balkon in 4er-Frauen-WG \u2013 N\xe4he Universit\xe4t","price_cold":580,"price_warm":0,"qm":18,"price_per_qm":32.22,"rooms":"1","floor":"3","street":"","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Zwei Zimmerwohnung, teil m\xf6bliert","price_cold":950,"price_warm":950,"qm":45,"price_per_qm":21.11,"rooms":"2","floor":"2","street":"Rastenburgerstra\xdfe 62,","city":"68307 Baden-W\xfcrttemberg - Mannheim","latitude":49.5508442,"longlitude":8.4727854},{"title":"Nachmieter*in gesucht f\xfcr wg- Zimmer in Mannheim","price_cold":535,"price_warm":535,"qm":60,"price_per_qm":8.92,"rooms":"2","floor":"4","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"M\xf6blierte Wohnung ab 5.07 in MA-Feudenheim zu vermieten","price_cold":1500,"price_warm":1500,"qm":68,"price_per_qm":22.06,"rooms":"2","floor":"2","street":"","city":"68163 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"TOP Lage , m\xf6bliertes Appartement","price_cold":570,"price_warm":670,"qm":26,"price_per_qm":21.92,"rooms":"1","floor":"","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Almenhof 2 ZKB mit Balkon im EG \u2013 lebendige Hausgemeinschaft","price_cold":1000,"price_warm":1000,"qm":60,"price_per_qm":16.67,"rooms":"2","floor":"0","street":"","city":"68199 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Nachmieter gesucht f\xfcr 2-Zimmer -Wohnung in Mannheim","price_cold":1100,"price_warm":0,"qm":0,"price_per_qm":0,"rooms":"","floor":"","street":"","city":"68169 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Ab 01.08: 2-ZKB im Herzen Mannheims","price_cold":680,"price_warm":680,"qm":56,"price_per_qm":12.14,"rooms":"2,5","floor":"1","street":"E7,","city":"68159 Baden-W\xfcrttemberg - Mannheim","latitude":49.4832445,"longlitude":8.4645749},{"title":"mobilierte 1 Zimmer Wohnung ab September zu mieten","price_cold":500,"price_warm":500,"qm":28,"price_per_qm":17.86,"rooms":"1","floor":"4","street":"","city":"68199 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""},{"title":"Wohnung 1,5 Zimmer","price_cold":775,"price_warm":775,"qm":42,"price_per_qm":18.45,"rooms":"1,5","floor":"2","street":"","city":"68161 Baden-W\xfcrttemberg - Mannheim","latitude":"","longlitude":""}]');
 
-},{}],"8vOp5":[function(require,module,exports,__globalThis) {
+},{}],"8GVbN":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("db78b7d8a4793cb0").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _Zoom.default;
+    }
+});
+var _Zoom = _interopRequireDefault(require("29d1486dabfed0af"));
+
+},{"db78b7d8a4793cb0":"1P3rZ","29d1486dabfed0af":"gdLoU"}],"gdLoU":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("7efb7428cb4e5bd4").default;
+var _interopRequireWildcard = require("6d40a3fab99298a9").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var React = _interopRequireWildcard(require("5989e31cb0887b43"));
+var _propTypes = _interopRequireDefault(require("de1a9843c9610e1e"));
+var _reactTransitionGroup = require("2059b8426fc4f97b");
+var _elementAcceptingRef = _interopRequireDefault(require("7d76661d04d1ae6e"));
+var _getReactElementRef = _interopRequireDefault(require("5fd1f166f6dc37e5"));
+var _zeroStyled = require("93b0f0721dfb65b2");
+var _utils = require("df7602f18676ff0b");
+var _useForkRef = _interopRequireDefault(require("fdfe6a6d3a566036"));
+var _jsxRuntime = require("65d88252b251a2c3");
+const styles = {
+    entering: {
+        transform: 'none'
+    },
+    entered: {
+        transform: 'none'
+    }
+};
+/**
+ * The Zoom transition can be used for the floating variant of the
+ * [Button](/material-ui/react-button/#floating-action-buttons) component.
+ * It uses [react-transition-group](https://github.com/reactjs/react-transition-group) internally.
+ */ const Zoom = /*#__PURE__*/ React.forwardRef(function Zoom(props, ref) {
+    const theme = (0, _zeroStyled.useTheme)();
+    const defaultTimeout = {
+        enter: theme.transitions.duration.enteringScreen,
+        exit: theme.transitions.duration.leavingScreen
+    };
+    const { addEndListener, appear = true, children, easing, in: inProp, onEnter, onEntered, onEntering, onExit, onExited, onExiting, style, timeout = defaultTimeout, // eslint-disable-next-line react/prop-types
+    TransitionComponent = _reactTransitionGroup.Transition, ...other } = props;
+    const nodeRef = React.useRef(null);
+    const handleRef = (0, _useForkRef.default)(nodeRef, (0, _getReactElementRef.default)(children), ref);
+    const normalizedTransitionCallback = (callback)=>(maybeIsAppearing)=>{
+            if (callback) {
+                const node = nodeRef.current;
+                // onEnterXxx and onExitXxx callbacks have a different arguments.length value.
+                if (maybeIsAppearing === undefined) callback(node);
+                else callback(node, maybeIsAppearing);
+            }
+        };
+    const handleEntering = normalizedTransitionCallback(onEntering);
+    const handleEnter = normalizedTransitionCallback((node, isAppearing)=>{
+        (0, _utils.reflow)(node); // So the animation always start from the start.
+        const transitionProps = (0, _utils.getTransitionProps)({
+            style,
+            timeout,
+            easing
+        }, {
+            mode: 'enter'
+        });
+        node.style.webkitTransition = theme.transitions.create('transform', transitionProps);
+        node.style.transition = theme.transitions.create('transform', transitionProps);
+        if (onEnter) onEnter(node, isAppearing);
+    });
+    const handleEntered = normalizedTransitionCallback(onEntered);
+    const handleExiting = normalizedTransitionCallback(onExiting);
+    const handleExit = normalizedTransitionCallback((node)=>{
+        const transitionProps = (0, _utils.getTransitionProps)({
+            style,
+            timeout,
+            easing
+        }, {
+            mode: 'exit'
+        });
+        node.style.webkitTransition = theme.transitions.create('transform', transitionProps);
+        node.style.transition = theme.transitions.create('transform', transitionProps);
+        if (onExit) onExit(node);
+    });
+    const handleExited = normalizedTransitionCallback(onExited);
+    const handleAddEndListener = (next)=>{
+        if (addEndListener) // Old call signature before `react-transition-group` implemented `nodeRef`
+        addEndListener(nodeRef.current, next);
+    };
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(TransitionComponent, {
+        appear: appear,
+        in: inProp,
+        nodeRef: nodeRef,
+        onEnter: handleEnter,
+        onEntered: handleEntered,
+        onEntering: handleEntering,
+        onExit: handleExit,
+        onExited: handleExited,
+        onExiting: handleExiting,
+        addEndListener: handleAddEndListener,
+        timeout: timeout,
+        ...other,
+        children: (state, { ownerState, ...restChildProps })=>{
+            return /*#__PURE__*/ React.cloneElement(children, {
+                style: {
+                    transform: 'scale(0)',
+                    visibility: state === 'exited' && !inProp ? 'hidden' : undefined,
+                    ...styles[state],
+                    ...style,
+                    ...children.props.style
+                },
+                ref: handleRef,
+                ...restChildProps
+            });
+        }
+    });
+});
+Zoom.propTypes = {
+    // ┌────────────────────────────── Warning ──────────────────────────────┐
+    // │ These PropTypes are generated from the TypeScript type definitions. │
+    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
+    // └─────────────────────────────────────────────────────────────────────┘
+    /**
+   * Add a custom transition end trigger. Called with the transitioning DOM
+   * node and a done callback. Allows for more fine grained transition end
+   * logic. Note: Timeouts are still used as a fallback if provided.
+   */ addEndListener: _propTypes.default.func,
+    /**
+   * Perform the enter transition when it first mounts if `in` is also `true`.
+   * Set this to `false` to disable this behavior.
+   * @default true
+   */ appear: _propTypes.default.bool,
+    /**
+   * A single child content element.
+   */ children: _elementAcceptingRef.default.isRequired,
+    /**
+   * The transition timing function.
+   * You may specify a single easing or a object containing enter and exit values.
+   */ easing: _propTypes.default.oneOfType([
+        _propTypes.default.shape({
+            enter: _propTypes.default.string,
+            exit: _propTypes.default.string
+        }),
+        _propTypes.default.string
+    ]),
+    /**
+   * If `true`, the component will transition in.
+   */ in: _propTypes.default.bool,
+    /**
+   * @ignore
+   */ onEnter: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onEntered: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onEntering: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onExit: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onExited: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onExiting: _propTypes.default.func,
+    /**
+   * @ignore
+   */ style: _propTypes.default.object,
+    /**
+   * The duration for the transition, in milliseconds.
+   * You may specify a single timeout for all transitions, or individually with an object.
+   * @default {
+   *   enter: theme.transitions.duration.enteringScreen,
+   *   exit: theme.transitions.duration.leavingScreen,
+   * }
+   */ timeout: _propTypes.default.oneOfType([
+        _propTypes.default.number,
+        _propTypes.default.shape({
+            appear: _propTypes.default.number,
+            enter: _propTypes.default.number,
+            exit: _propTypes.default.number
+        })
+    ])
+};
+var _default = exports.default = Zoom;
+
+},{"7efb7428cb4e5bd4":"1P3rZ","6d40a3fab99298a9":"6TFJp","5989e31cb0887b43":"jMk1U","de1a9843c9610e1e":"GNqOQ","2059b8426fc4f97b":"caYxp","7d76661d04d1ae6e":"2Ur26","5fd1f166f6dc37e5":"jsGSm","93b0f0721dfb65b2":"7wsk9","df7602f18676ff0b":"5vr4t","fdfe6a6d3a566036":"iEdsJ","65d88252b251a2c3":"05iiF"}],"caYxp":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CSSTransition", ()=>(0, _csstransitionDefault.default));
+parcelHelpers.export(exports, "ReplaceTransition", ()=>(0, _replaceTransitionDefault.default));
+parcelHelpers.export(exports, "SwitchTransition", ()=>(0, _switchTransitionDefault.default));
+parcelHelpers.export(exports, "TransitionGroup", ()=>(0, _transitionGroupDefault.default));
+parcelHelpers.export(exports, "Transition", ()=>(0, _transitionDefault.default));
+parcelHelpers.export(exports, "config", ()=>(0, _configDefault.default));
+var _csstransition = require("./CSSTransition");
+var _csstransitionDefault = parcelHelpers.interopDefault(_csstransition);
+var _replaceTransition = require("./ReplaceTransition");
+var _replaceTransitionDefault = parcelHelpers.interopDefault(_replaceTransition);
+var _switchTransition = require("./SwitchTransition");
+var _switchTransitionDefault = parcelHelpers.interopDefault(_switchTransition);
+var _transitionGroup = require("./TransitionGroup");
+var _transitionGroupDefault = parcelHelpers.interopDefault(_transitionGroup);
+var _transition = require("./Transition");
+var _transitionDefault = parcelHelpers.interopDefault(_transition);
+var _config = require("./config");
+var _configDefault = parcelHelpers.interopDefault(_config);
+
+},{"./CSSTransition":"4Vdor","./ReplaceTransition":"9urvk","./SwitchTransition":"89Ic3","./TransitionGroup":"63Owe","./Transition":"hAmWn","./config":"5BfDx","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"4Vdor":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _inheritsLoose = require("@babel/runtime/helpers/esm/inheritsLoose");
+var _inheritsLooseDefault = parcelHelpers.interopDefault(_inheritsLoose);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _addClass = require("dom-helpers/addClass");
+var _addClassDefault = parcelHelpers.interopDefault(_addClass);
+var _removeClass = require("dom-helpers/removeClass");
+var _removeClassDefault = parcelHelpers.interopDefault(_removeClass);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _transition = require("./Transition");
+var _transitionDefault = parcelHelpers.interopDefault(_transition);
+var _propTypes1 = require("./utils/PropTypes");
+var _reflow = require("./utils/reflow");
+var _addClass1 = function addClass(node, classes) {
+    return node && classes && classes.split(' ').forEach(function(c) {
+        return (0, _addClassDefault.default)(node, c);
+    });
+};
+var removeClass = function removeClass(node, classes) {
+    return node && classes && classes.split(' ').forEach(function(c) {
+        return (0, _removeClassDefault.default)(node, c);
+    });
+};
+/**
+ * A transition component inspired by the excellent
+ * [ng-animate](https://docs.angularjs.org/api/ngAnimate) library, you should
+ * use it if you're using CSS transitions or animations. It's built upon the
+ * [`Transition`](https://reactcommunity.org/react-transition-group/transition)
+ * component, so it inherits all of its props.
+ *
+ * `CSSTransition` applies a pair of class names during the `appear`, `enter`,
+ * and `exit` states of the transition. The first class is applied and then a
+ * second `*-active` class in order to activate the CSS transition. After the
+ * transition, matching `*-done` class names are applied to persist the
+ * transition state.
+ *
+ * ```jsx
+ * function App() {
+ *   const [inProp, setInProp] = useState(false);
+ *   return (
+ *     <div>
+ *       <CSSTransition in={inProp} timeout={200} classNames="my-node">
+ *         <div>
+ *           {"I'll receive my-node-* classes"}
+ *         </div>
+ *       </CSSTransition>
+ *       <button type="button" onClick={() => setInProp(true)}>
+ *         Click to Enter
+ *       </button>
+ *     </div>
+ *   );
+ * }
+ * ```
+ *
+ * When the `in` prop is set to `true`, the child component will first receive
+ * the class `example-enter`, then the `example-enter-active` will be added in
+ * the next tick. `CSSTransition` [forces a
+ * reflow](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
+ * between before adding the `example-enter-active`. This is an important trick
+ * because it allows us to transition between `example-enter` and
+ * `example-enter-active` even though they were added immediately one after
+ * another. Most notably, this is what makes it possible for us to animate
+ * _appearance_.
+ *
+ * ```css
+ * .my-node-enter {
+ *   opacity: 0;
+ * }
+ * .my-node-enter-active {
+ *   opacity: 1;
+ *   transition: opacity 200ms;
+ * }
+ * .my-node-exit {
+ *   opacity: 1;
+ * }
+ * .my-node-exit-active {
+ *   opacity: 0;
+ *   transition: opacity 200ms;
+ * }
+ * ```
+ *
+ * `*-active` classes represent which styles you want to animate **to**, so it's
+ * important to add `transition` declaration only to them, otherwise transitions
+ * might not behave as intended! This might not be obvious when the transitions
+ * are symmetrical, i.e. when `*-enter-active` is the same as `*-exit`, like in
+ * the example above (minus `transition`), but it becomes apparent in more
+ * complex transitions.
+ *
+ * **Note**: If you're using the
+ * [`appear`](http://reactcommunity.org/react-transition-group/transition#Transition-prop-appear)
+ * prop, make sure to define styles for `.appear-*` classes as well.
+ */ var CSSTransition = /*#__PURE__*/ function(_React$Component) {
+    (0, _inheritsLooseDefault.default)(CSSTransition, _React$Component);
+    function CSSTransition() {
+        var _this;
+        for(var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+        _this = _React$Component.call.apply(_React$Component, [
+            this
+        ].concat(args)) || this;
+        _this.appliedClasses = {
+            appear: {},
+            enter: {},
+            exit: {}
+        };
+        _this.onEnter = function(maybeNode, maybeAppearing) {
+            var _this$resolveArgument = _this.resolveArguments(maybeNode, maybeAppearing), node = _this$resolveArgument[0], appearing = _this$resolveArgument[1];
+            _this.removeClasses(node, 'exit');
+            _this.addClass(node, appearing ? 'appear' : 'enter', 'base');
+            if (_this.props.onEnter) _this.props.onEnter(maybeNode, maybeAppearing);
+        };
+        _this.onEntering = function(maybeNode, maybeAppearing) {
+            var _this$resolveArgument2 = _this.resolveArguments(maybeNode, maybeAppearing), node = _this$resolveArgument2[0], appearing = _this$resolveArgument2[1];
+            var type = appearing ? 'appear' : 'enter';
+            _this.addClass(node, type, 'active');
+            if (_this.props.onEntering) _this.props.onEntering(maybeNode, maybeAppearing);
+        };
+        _this.onEntered = function(maybeNode, maybeAppearing) {
+            var _this$resolveArgument3 = _this.resolveArguments(maybeNode, maybeAppearing), node = _this$resolveArgument3[0], appearing = _this$resolveArgument3[1];
+            var type = appearing ? 'appear' : 'enter';
+            _this.removeClasses(node, type);
+            _this.addClass(node, type, 'done');
+            if (_this.props.onEntered) _this.props.onEntered(maybeNode, maybeAppearing);
+        };
+        _this.onExit = function(maybeNode) {
+            var _this$resolveArgument4 = _this.resolveArguments(maybeNode), node = _this$resolveArgument4[0];
+            _this.removeClasses(node, 'appear');
+            _this.removeClasses(node, 'enter');
+            _this.addClass(node, 'exit', 'base');
+            if (_this.props.onExit) _this.props.onExit(maybeNode);
+        };
+        _this.onExiting = function(maybeNode) {
+            var _this$resolveArgument5 = _this.resolveArguments(maybeNode), node = _this$resolveArgument5[0];
+            _this.addClass(node, 'exit', 'active');
+            if (_this.props.onExiting) _this.props.onExiting(maybeNode);
+        };
+        _this.onExited = function(maybeNode) {
+            var _this$resolveArgument6 = _this.resolveArguments(maybeNode), node = _this$resolveArgument6[0];
+            _this.removeClasses(node, 'exit');
+            _this.addClass(node, 'exit', 'done');
+            if (_this.props.onExited) _this.props.onExited(maybeNode);
+        };
+        _this.resolveArguments = function(maybeNode, maybeAppearing) {
+            return _this.props.nodeRef ? [
+                _this.props.nodeRef.current,
+                maybeNode
+            ] // here `maybeNode` is actually `appearing`
+             : [
+                maybeNode,
+                maybeAppearing
+            ];
+        };
+        _this.getClassNames = function(type) {
+            var classNames = _this.props.classNames;
+            var isStringClassNames = typeof classNames === 'string';
+            var prefix = isStringClassNames && classNames ? classNames + "-" : '';
+            var baseClassName = isStringClassNames ? "" + prefix + type : classNames[type];
+            var activeClassName = isStringClassNames ? baseClassName + "-active" : classNames[type + "Active"];
+            var doneClassName = isStringClassNames ? baseClassName + "-done" : classNames[type + "Done"];
+            return {
+                baseClassName: baseClassName,
+                activeClassName: activeClassName,
+                doneClassName: doneClassName
+            };
+        };
+        return _this;
+    }
+    var _proto = CSSTransition.prototype;
+    _proto.addClass = function addClass(node, type, phase) {
+        var className = this.getClassNames(type)[phase + "ClassName"];
+        var _this$getClassNames = this.getClassNames('enter'), doneClassName = _this$getClassNames.doneClassName;
+        if (type === 'appear' && phase === 'done' && doneClassName) className += " " + doneClassName;
+         // This is to force a repaint,
+        // which is necessary in order to transition styles when adding a class name.
+        if (phase === 'active') {
+            if (node) (0, _reflow.forceReflow)(node);
+        }
+        if (className) {
+            this.appliedClasses[type][phase] = className;
+            _addClass1(node, className);
+        }
+    };
+    _proto.removeClasses = function removeClasses(node, type) {
+        var _this$appliedClasses$ = this.appliedClasses[type], baseClassName = _this$appliedClasses$.base, activeClassName = _this$appliedClasses$.active, doneClassName = _this$appliedClasses$.done;
+        this.appliedClasses[type] = {};
+        if (baseClassName) removeClass(node, baseClassName);
+        if (activeClassName) removeClass(node, activeClassName);
+        if (doneClassName) removeClass(node, doneClassName);
+    };
+    _proto.render = function render() {
+        var _this$props = this.props, _ = _this$props.classNames, props = (0, _objectWithoutPropertiesLooseDefault.default)(_this$props, [
+            "classNames"
+        ]);
+        return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _transitionDefault.default), (0, _extendsDefault.default)({}, props, {
+            onEnter: this.onEnter,
+            onEntered: this.onEntered,
+            onEntering: this.onEntering,
+            onExit: this.onExit,
+            onExiting: this.onExiting,
+            onExited: this.onExited
+        }));
+    };
+    return CSSTransition;
+}((0, _reactDefault.default).Component);
+CSSTransition.defaultProps = {
+    classNames: ''
+};
+CSSTransition.propTypes = (0, _extendsDefault.default)({}, (0, _transitionDefault.default).propTypes, {
+    /**
+   * The animation classNames applied to the component as it appears, enters,
+   * exits or has finished the transition. A single name can be provided, which
+   * will be suffixed for each stage, e.g. `classNames="fade"` applies:
+   *
+   * - `fade-appear`, `fade-appear-active`, `fade-appear-done`
+   * - `fade-enter`, `fade-enter-active`, `fade-enter-done`
+   * - `fade-exit`, `fade-exit-active`, `fade-exit-done`
+   *
+   * A few details to note about how these classes are applied:
+   *
+   * 1. They are _joined_ with the ones that are already defined on the child
+   *    component, so if you want to add some base styles, you can use
+   *    `className` without worrying that it will be overridden.
+   *
+   * 2. If the transition component mounts with `in={false}`, no classes are
+   *    applied yet. You might be expecting `*-exit-done`, but if you think
+   *    about it, a component cannot finish exiting if it hasn't entered yet.
+   *
+   * 2. `fade-appear-done` and `fade-enter-done` will _both_ be applied. This
+   *    allows you to define different behavior for when appearing is done and
+   *    when regular entering is done, using selectors like
+   *    `.fade-enter-done:not(.fade-appear-done)`. For example, you could apply
+   *    an epic entrance animation when element first appears in the DOM using
+   *    [Animate.css](https://daneden.github.io/animate.css/). Otherwise you can
+   *    simply use `fade-enter-done` for defining both cases.
+   *
+   * Each individual classNames can also be specified independently like:
+   *
+   * ```js
+   * classNames={{
+   *  appear: 'my-appear',
+   *  appearActive: 'my-active-appear',
+   *  appearDone: 'my-done-appear',
+   *  enter: 'my-enter',
+   *  enterActive: 'my-active-enter',
+   *  enterDone: 'my-done-enter',
+   *  exit: 'my-exit',
+   *  exitActive: 'my-active-exit',
+   *  exitDone: 'my-done-exit',
+   * }}
+   * ```
+   *
+   * If you want to set these classes using CSS Modules:
+   *
+   * ```js
+   * import styles from './styles.css';
+   * ```
+   *
+   * you might want to use camelCase in your CSS file, that way could simply
+   * spread them instead of listing them one by one:
+   *
+   * ```js
+   * classNames={{ ...styles }}
+   * ```
+   *
+   * @type {string | {
+   *  appear?: string,
+   *  appearActive?: string,
+   *  appearDone?: string,
+   *  enter?: string,
+   *  enterActive?: string,
+   *  enterDone?: string,
+   *  exit?: string,
+   *  exitActive?: string,
+   *  exitDone?: string,
+   * }}
+   */ classNames: (0, _propTypes1.classNamesShape),
+    /**
+   * A `<Transition>` callback fired immediately after the 'enter' or 'appear' class is
+   * applied.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool)
+   */ onEnter: (0, _propTypesDefault.default).func,
+    /**
+   * A `<Transition>` callback fired immediately after the 'enter-active' or
+   * 'appear-active' class is applied.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool)
+   */ onEntering: (0, _propTypesDefault.default).func,
+    /**
+   * A `<Transition>` callback fired immediately after the 'enter' or
+   * 'appear' classes are **removed** and the `done` class is added to the DOM node.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool)
+   */ onEntered: (0, _propTypesDefault.default).func,
+    /**
+   * A `<Transition>` callback fired immediately after the 'exit' class is
+   * applied.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed
+   *
+   * @type Function(node: HtmlElement)
+   */ onExit: (0, _propTypesDefault.default).func,
+    /**
+   * A `<Transition>` callback fired immediately after the 'exit-active' is applied.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed
+   *
+   * @type Function(node: HtmlElement)
+   */ onExiting: (0, _propTypesDefault.default).func,
+    /**
+   * A `<Transition>` callback fired immediately after the 'exit' classes
+   * are **removed** and the `exit-done` class is added to the DOM node.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed
+   *
+   * @type Function(node: HtmlElement)
+   */ onExited: (0, _propTypesDefault.default).func
+});
+exports.default = CSSTransition;
+
+},{"@babel/runtime/helpers/esm/extends":"20my9","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"fls88","@babel/runtime/helpers/esm/inheritsLoose":"jDIko","prop-types":"GNqOQ","dom-helpers/addClass":"bA1Q4","dom-helpers/removeClass":"lnzZZ","react":"jMk1U","./Transition":"hAmWn","./utils/PropTypes":"cWwSk","./utils/reflow":"962ni","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"fls88":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>_objectWithoutPropertiesLoose);
+function _objectWithoutPropertiesLoose(r, e) {
+    if (null == r) return {};
+    var t = {};
+    for(var n in r)if (({}).hasOwnProperty.call(r, n)) {
+        if (-1 !== e.indexOf(n)) continue;
+        t[n] = r[n];
+    }
+    return t;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"jDIko":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>_inheritsLoose);
+var _setPrototypeOfJs = require("./setPrototypeOf.js");
+var _setPrototypeOfJsDefault = parcelHelpers.interopDefault(_setPrototypeOfJs);
+function _inheritsLoose(t, o) {
+    t.prototype = Object.create(o.prototype), t.prototype.constructor = t, (0, _setPrototypeOfJsDefault.default)(t, o);
+}
+
+},{"./setPrototypeOf.js":"5Brd2","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"5Brd2":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>_setPrototypeOf);
+function _setPrototypeOf(t, e) {
+    return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function(t, e) {
+        return t.__proto__ = e, t;
+    }, _setPrototypeOf(t, e);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"bA1Q4":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>addClass);
+var _hasClass = require("./hasClass");
+var _hasClassDefault = parcelHelpers.interopDefault(_hasClass);
+function addClass(element, className) {
+    if (element.classList) element.classList.add(className);
+    else if (!(0, _hasClassDefault.default)(element, className)) {
+        if (typeof element.className === 'string') element.className = element.className + " " + className;
+        else element.setAttribute('class', (element.className && element.className.baseVal || '') + " " + className);
+    }
+}
+
+},{"./hasClass":"aIL32","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"aIL32":[function(require,module,exports,__globalThis) {
+/**
+ * Checks if a given element has a CSS class.
+ * 
+ * @param element the element
+ * @param className the CSS class name
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>hasClass);
+function hasClass(element, className) {
+    if (element.classList) return !!className && element.classList.contains(className);
+    return (" " + (element.className.baseVal || element.className) + " ").indexOf(" " + className + " ") !== -1;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"lnzZZ":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>removeClass);
+function replaceClassName(origClass, classToRemove) {
+    return origClass.replace(new RegExp("(^|\\s)" + classToRemove + "(?:\\s|$)", 'g'), '$1').replace(/\s+/g, ' ').replace(/^\s*|\s*$/g, '');
+}
+function removeClass(element, className) {
+    if (element.classList) element.classList.remove(className);
+    else if (typeof element.className === 'string') element.className = replaceClassName(element.className, className);
+    else element.setAttribute('class', replaceClassName(element.className && element.className.baseVal || '', className));
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"hAmWn":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "UNMOUNTED", ()=>UNMOUNTED);
+parcelHelpers.export(exports, "EXITED", ()=>EXITED);
+parcelHelpers.export(exports, "ENTERING", ()=>ENTERING);
+parcelHelpers.export(exports, "ENTERED", ()=>ENTERED);
+parcelHelpers.export(exports, "EXITING", ()=>EXITING);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _inheritsLoose = require("@babel/runtime/helpers/esm/inheritsLoose");
+var _inheritsLooseDefault = parcelHelpers.interopDefault(_inheritsLoose);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactDom = require("react-dom");
+var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _config = require("./config");
+var _configDefault = parcelHelpers.interopDefault(_config);
+var _propTypes1 = require("./utils/PropTypes");
+var _transitionGroupContext = require("./TransitionGroupContext");
+var _transitionGroupContextDefault = parcelHelpers.interopDefault(_transitionGroupContext);
+var _reflow = require("./utils/reflow");
+var UNMOUNTED = 'unmounted';
+var EXITED = 'exited';
+var ENTERING = 'entering';
+var ENTERED = 'entered';
+var EXITING = 'exiting';
+/**
+ * The Transition component lets you describe a transition from one component
+ * state to another _over time_ with a simple declarative API. Most commonly
+ * it's used to animate the mounting and unmounting of a component, but can also
+ * be used to describe in-place transition states as well.
+ *
+ * ---
+ *
+ * **Note**: `Transition` is a platform-agnostic base component. If you're using
+ * transitions in CSS, you'll probably want to use
+ * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
+ * instead. It inherits all the features of `Transition`, but contains
+ * additional features necessary to play nice with CSS transitions (hence the
+ * name of the component).
+ *
+ * ---
+ *
+ * By default the `Transition` component does not alter the behavior of the
+ * component it renders, it only tracks "enter" and "exit" states for the
+ * components. It's up to you to give meaning and effect to those states. For
+ * example we can add styles to a component when it enters or exits:
+ *
+ * ```jsx
+ * import { Transition } from 'react-transition-group';
+ *
+ * const duration = 300;
+ *
+ * const defaultStyle = {
+ *   transition: `opacity ${duration}ms ease-in-out`,
+ *   opacity: 0,
+ * }
+ *
+ * const transitionStyles = {
+ *   entering: { opacity: 1 },
+ *   entered:  { opacity: 1 },
+ *   exiting:  { opacity: 0 },
+ *   exited:  { opacity: 0 },
+ * };
+ *
+ * const Fade = ({ in: inProp }) => (
+ *   <Transition in={inProp} timeout={duration}>
+ *     {state => (
+ *       <div style={{
+ *         ...defaultStyle,
+ *         ...transitionStyles[state]
+ *       }}>
+ *         I'm a fade Transition!
+ *       </div>
+ *     )}
+ *   </Transition>
+ * );
+ * ```
+ *
+ * There are 4 main states a Transition can be in:
+ *  - `'entering'`
+ *  - `'entered'`
+ *  - `'exiting'`
+ *  - `'exited'`
+ *
+ * Transition state is toggled via the `in` prop. When `true` the component
+ * begins the "Enter" stage. During this stage, the component will shift from
+ * its current transition state, to `'entering'` for the duration of the
+ * transition and then to the `'entered'` stage once it's complete. Let's take
+ * the following example (we'll use the
+ * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
+ *
+ * ```jsx
+ * function App() {
+ *   const [inProp, setInProp] = useState(false);
+ *   return (
+ *     <div>
+ *       <Transition in={inProp} timeout={500}>
+ *         {state => (
+ *           // ...
+ *         )}
+ *       </Transition>
+ *       <button onClick={() => setInProp(true)}>
+ *         Click to Enter
+ *       </button>
+ *     </div>
+ *   );
+ * }
+ * ```
+ *
+ * When the button is clicked the component will shift to the `'entering'` state
+ * and stay there for 500ms (the value of `timeout`) before it finally switches
+ * to `'entered'`.
+ *
+ * When `in` is `false` the same thing happens except the state moves from
+ * `'exiting'` to `'exited'`.
+ */ var Transition = /*#__PURE__*/ function(_React$Component) {
+    (0, _inheritsLooseDefault.default)(Transition, _React$Component);
+    function Transition(props, context) {
+        var _this;
+        _this = _React$Component.call(this, props, context) || this;
+        var parentGroup = context; // In the context of a TransitionGroup all enters are really appears
+        var appear = parentGroup && !parentGroup.isMounting ? props.enter : props.appear;
+        var initialStatus;
+        _this.appearStatus = null;
+        if (props.in) {
+            if (appear) {
+                initialStatus = EXITED;
+                _this.appearStatus = ENTERING;
+            } else initialStatus = ENTERED;
+        } else if (props.unmountOnExit || props.mountOnEnter) initialStatus = UNMOUNTED;
+        else initialStatus = EXITED;
+        _this.state = {
+            status: initialStatus
+        };
+        _this.nextCallback = null;
+        return _this;
+    }
+    Transition.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
+        var nextIn = _ref.in;
+        if (nextIn && prevState.status === UNMOUNTED) return {
+            status: EXITED
+        };
+        return null;
+    } // getSnapshotBeforeUpdate(prevProps) {
+    ;
+    var _proto = Transition.prototype;
+    _proto.componentDidMount = function componentDidMount() {
+        this.updateStatus(true, this.appearStatus);
+    };
+    _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+        var nextStatus = null;
+        if (prevProps !== this.props) {
+            var status = this.state.status;
+            if (this.props.in) {
+                if (status !== ENTERING && status !== ENTERED) nextStatus = ENTERING;
+            } else if (status === ENTERING || status === ENTERED) nextStatus = EXITING;
+        }
+        this.updateStatus(false, nextStatus);
+    };
+    _proto.componentWillUnmount = function componentWillUnmount() {
+        this.cancelNextCallback();
+    };
+    _proto.getTimeouts = function getTimeouts() {
+        var timeout = this.props.timeout;
+        var exit, enter, appear;
+        exit = enter = appear = timeout;
+        if (timeout != null && typeof timeout !== 'number') {
+            exit = timeout.exit;
+            enter = timeout.enter; // TODO: remove fallback for next major
+            appear = timeout.appear !== undefined ? timeout.appear : enter;
+        }
+        return {
+            exit: exit,
+            enter: enter,
+            appear: appear
+        };
+    };
+    _proto.updateStatus = function updateStatus(mounting, nextStatus) {
+        if (mounting === void 0) mounting = false;
+        if (nextStatus !== null) {
+            // nextStatus will always be ENTERING or EXITING.
+            this.cancelNextCallback();
+            if (nextStatus === ENTERING) {
+                if (this.props.unmountOnExit || this.props.mountOnEnter) {
+                    var node = this.props.nodeRef ? this.props.nodeRef.current : (0, _reactDomDefault.default).findDOMNode(this); // https://github.com/reactjs/react-transition-group/pull/749
+                    // With unmountOnExit or mountOnEnter, the enter animation should happen at the transition between `exited` and `entering`.
+                    // To make the animation happen,  we have to separate each rendering and avoid being processed as batched.
+                    if (node) (0, _reflow.forceReflow)(node);
+                }
+                this.performEnter(mounting);
+            } else this.performExit();
+        } else if (this.props.unmountOnExit && this.state.status === EXITED) this.setState({
+            status: UNMOUNTED
+        });
+    };
+    _proto.performEnter = function performEnter(mounting) {
+        var _this2 = this;
+        var enter = this.props.enter;
+        var appearing = this.context ? this.context.isMounting : mounting;
+        var _ref2 = this.props.nodeRef ? [
+            appearing
+        ] : [
+            (0, _reactDomDefault.default).findDOMNode(this),
+            appearing
+        ], maybeNode = _ref2[0], maybeAppearing = _ref2[1];
+        var timeouts = this.getTimeouts();
+        var enterTimeout = appearing ? timeouts.appear : timeouts.enter; // no enter animation skip right to ENTERED
+        // if we are mounting and running this it means appear _must_ be set
+        if (!mounting && !enter || (0, _configDefault.default).disabled) {
+            this.safeSetState({
+                status: ENTERED
+            }, function() {
+                _this2.props.onEntered(maybeNode);
+            });
+            return;
+        }
+        this.props.onEnter(maybeNode, maybeAppearing);
+        this.safeSetState({
+            status: ENTERING
+        }, function() {
+            _this2.props.onEntering(maybeNode, maybeAppearing);
+            _this2.onTransitionEnd(enterTimeout, function() {
+                _this2.safeSetState({
+                    status: ENTERED
+                }, function() {
+                    _this2.props.onEntered(maybeNode, maybeAppearing);
+                });
+            });
+        });
+    };
+    _proto.performExit = function performExit() {
+        var _this3 = this;
+        var exit = this.props.exit;
+        var timeouts = this.getTimeouts();
+        var maybeNode = this.props.nodeRef ? undefined : (0, _reactDomDefault.default).findDOMNode(this); // no exit animation skip right to EXITED
+        if (!exit || (0, _configDefault.default).disabled) {
+            this.safeSetState({
+                status: EXITED
+            }, function() {
+                _this3.props.onExited(maybeNode);
+            });
+            return;
+        }
+        this.props.onExit(maybeNode);
+        this.safeSetState({
+            status: EXITING
+        }, function() {
+            _this3.props.onExiting(maybeNode);
+            _this3.onTransitionEnd(timeouts.exit, function() {
+                _this3.safeSetState({
+                    status: EXITED
+                }, function() {
+                    _this3.props.onExited(maybeNode);
+                });
+            });
+        });
+    };
+    _proto.cancelNextCallback = function cancelNextCallback() {
+        if (this.nextCallback !== null) {
+            this.nextCallback.cancel();
+            this.nextCallback = null;
+        }
+    };
+    _proto.safeSetState = function safeSetState(nextState, callback) {
+        // This shouldn't be necessary, but there are weird race conditions with
+        // setState callbacks and unmounting in testing, so always make sure that
+        // we can cancel any pending setState callbacks after we unmount.
+        callback = this.setNextCallback(callback);
+        this.setState(nextState, callback);
+    };
+    _proto.setNextCallback = function setNextCallback(callback) {
+        var _this4 = this;
+        var active = true;
+        this.nextCallback = function(event) {
+            if (active) {
+                active = false;
+                _this4.nextCallback = null;
+                callback(event);
+            }
+        };
+        this.nextCallback.cancel = function() {
+            active = false;
+        };
+        return this.nextCallback;
+    };
+    _proto.onTransitionEnd = function onTransitionEnd(timeout, handler) {
+        this.setNextCallback(handler);
+        var node = this.props.nodeRef ? this.props.nodeRef.current : (0, _reactDomDefault.default).findDOMNode(this);
+        var doesNotHaveTimeoutOrListener = timeout == null && !this.props.addEndListener;
+        if (!node || doesNotHaveTimeoutOrListener) {
+            setTimeout(this.nextCallback, 0);
+            return;
+        }
+        if (this.props.addEndListener) {
+            var _ref3 = this.props.nodeRef ? [
+                this.nextCallback
+            ] : [
+                node,
+                this.nextCallback
+            ], maybeNode = _ref3[0], maybeNextCallback = _ref3[1];
+            this.props.addEndListener(maybeNode, maybeNextCallback);
+        }
+        if (timeout != null) setTimeout(this.nextCallback, timeout);
+    };
+    _proto.render = function render() {
+        var status = this.state.status;
+        if (status === UNMOUNTED) return null;
+        var _this$props = this.props, children = _this$props.children, _in = _this$props.in, _mountOnEnter = _this$props.mountOnEnter, _unmountOnExit = _this$props.unmountOnExit, _appear = _this$props.appear, _enter = _this$props.enter, _exit = _this$props.exit, _timeout = _this$props.timeout, _addEndListener = _this$props.addEndListener, _onEnter = _this$props.onEnter, _onEntering = _this$props.onEntering, _onEntered = _this$props.onEntered, _onExit = _this$props.onExit, _onExiting = _this$props.onExiting, _onExited = _this$props.onExited, _nodeRef = _this$props.nodeRef, childProps = (0, _objectWithoutPropertiesLooseDefault.default)(_this$props, [
+            "children",
+            "in",
+            "mountOnEnter",
+            "unmountOnExit",
+            "appear",
+            "enter",
+            "exit",
+            "timeout",
+            "addEndListener",
+            "onEnter",
+            "onEntering",
+            "onEntered",
+            "onExit",
+            "onExiting",
+            "onExited",
+            "nodeRef"
+        ]);
+        return(/*#__PURE__*/ // allows for nested Transitions
+        (0, _reactDefault.default).createElement((0, _transitionGroupContextDefault.default).Provider, {
+            value: null
+        }, typeof children === 'function' ? children(status, childProps) : (0, _reactDefault.default).cloneElement((0, _reactDefault.default).Children.only(children), childProps)));
+    };
+    return Transition;
+}((0, _reactDefault.default).Component);
+Transition.contextType = (0, _transitionGroupContextDefault.default);
+Transition.propTypes = {
+    /**
+   * A React reference to DOM element that need to transition:
+   * https://stackoverflow.com/a/51127130/4671932
+   *
+   *   - When `nodeRef` prop is used, `node` is not passed to callback functions
+   *      (e.g. `onEnter`) because user already has direct access to the node.
+   *   - When changing `key` prop of `Transition` in a `TransitionGroup` a new
+   *     `nodeRef` need to be provided to `Transition` with changed `key` prop
+   *     (see
+   *     [test/CSSTransition-test.js](https://github.com/reactjs/react-transition-group/blob/13435f897b3ab71f6e19d724f145596f5910581c/test/CSSTransition-test.js#L362-L437)).
+   */ nodeRef: (0, _propTypesDefault.default).shape({
+        current: typeof Element === 'undefined' ? (0, _propTypesDefault.default).any : function(propValue, key, componentName, location, propFullName, secret) {
+            var value = propValue[key];
+            return (0, _propTypesDefault.default).instanceOf(value && 'ownerDocument' in value ? value.ownerDocument.defaultView.Element : Element)(propValue, key, componentName, location, propFullName, secret);
+        }
+    }),
+    /**
+   * A `function` child can be used instead of a React element. This function is
+   * called with the current transition status (`'entering'`, `'entered'`,
+   * `'exiting'`, `'exited'`), which can be used to apply context
+   * specific props to a component.
+   *
+   * ```jsx
+   * <Transition in={this.state.in} timeout={150}>
+   *   {state => (
+   *     <MyComponent className={`fade fade-${state}`} />
+   *   )}
+   * </Transition>
+   * ```
+   */ children: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).func.isRequired,
+        (0, _propTypesDefault.default).element.isRequired
+    ]).isRequired,
+    /**
+   * Show the component; triggers the enter or exit states
+   */ in: (0, _propTypesDefault.default).bool,
+    /**
+   * By default the child component is mounted immediately along with
+   * the parent `Transition` component. If you want to "lazy mount" the component on the
+   * first `in={true}` you can set `mountOnEnter`. After the first enter transition the component will stay
+   * mounted, even on "exited", unless you also specify `unmountOnExit`.
+   */ mountOnEnter: (0, _propTypesDefault.default).bool,
+    /**
+   * By default the child component stays mounted after it reaches the `'exited'` state.
+   * Set `unmountOnExit` if you'd prefer to unmount the component after it finishes exiting.
+   */ unmountOnExit: (0, _propTypesDefault.default).bool,
+    /**
+   * By default the child component does not perform the enter transition when
+   * it first mounts, regardless of the value of `in`. If you want this
+   * behavior, set both `appear` and `in` to `true`.
+   *
+   * > **Note**: there are no special appear states like `appearing`/`appeared`, this prop
+   * > only adds an additional enter transition. However, in the
+   * > `<CSSTransition>` component that first enter transition does result in
+   * > additional `.appear-*` classes, that way you can choose to style it
+   * > differently.
+   */ appear: (0, _propTypesDefault.default).bool,
+    /**
+   * Enable or disable enter transitions.
+   */ enter: (0, _propTypesDefault.default).bool,
+    /**
+   * Enable or disable exit transitions.
+   */ exit: (0, _propTypesDefault.default).bool,
+    /**
+   * The duration of the transition, in milliseconds.
+   * Required unless `addEndListener` is provided.
+   *
+   * You may specify a single timeout for all transitions:
+   *
+   * ```jsx
+   * timeout={500}
+   * ```
+   *
+   * or individually:
+   *
+   * ```jsx
+   * timeout={{
+   *  appear: 500,
+   *  enter: 300,
+   *  exit: 500,
+   * }}
+   * ```
+   *
+   * - `appear` defaults to the value of `enter`
+   * - `enter` defaults to `0`
+   * - `exit` defaults to `0`
+   *
+   * @type {number | { enter?: number, exit?: number, appear?: number }}
+   */ timeout: function timeout(props) {
+        var pt = (0, _propTypes1.timeoutsShape);
+        if (!props.addEndListener) pt = pt.isRequired;
+        for(var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)args[_key - 1] = arguments[_key];
+        return pt.apply(void 0, [
+            props
+        ].concat(args));
+    },
+    /**
+   * Add a custom transition end trigger. Called with the transitioning
+   * DOM node and a `done` callback. Allows for more fine grained transition end
+   * logic. Timeouts are still used as a fallback if provided.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   *
+   * ```jsx
+   * addEndListener={(node, done) => {
+   *   // use the css transitionend event to mark the finish of a transition
+   *   node.addEventListener('transitionend', done, false);
+   * }}
+   * ```
+   */ addEndListener: (0, _propTypesDefault.default).func,
+    /**
+   * Callback fired before the "entering" status is applied. An extra parameter
+   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool) -> void
+   */ onEnter: (0, _propTypesDefault.default).func,
+    /**
+   * Callback fired after the "entering" status is applied. An extra parameter
+   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool)
+   */ onEntering: (0, _propTypesDefault.default).func,
+    /**
+   * Callback fired after the "entered" status is applied. An extra parameter
+   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool) -> void
+   */ onEntered: (0, _propTypesDefault.default).func,
+    /**
+   * Callback fired before the "exiting" status is applied.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   *
+   * @type Function(node: HtmlElement) -> void
+   */ onExit: (0, _propTypesDefault.default).func,
+    /**
+   * Callback fired after the "exiting" status is applied.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   *
+   * @type Function(node: HtmlElement) -> void
+   */ onExiting: (0, _propTypesDefault.default).func,
+    /**
+   * Callback fired after the "exited" status is applied.
+   *
+   * **Note**: when `nodeRef` prop is passed, `node` is not passed
+   *
+   * @type Function(node: HtmlElement) -> void
+   */ onExited: (0, _propTypesDefault.default).func
+}; // Name the function so it is clearer in the documentation
+function noop() {}
+Transition.defaultProps = {
+    in: false,
+    mountOnEnter: false,
+    unmountOnExit: false,
+    appear: false,
+    enter: true,
+    exit: true,
+    onEnter: noop,
+    onEntering: noop,
+    onEntered: noop,
+    onExit: noop,
+    onExiting: noop,
+    onExited: noop
+};
+Transition.UNMOUNTED = UNMOUNTED;
+Transition.EXITED = EXITED;
+Transition.ENTERING = ENTERING;
+Transition.ENTERED = ENTERED;
+Transition.EXITING = EXITING;
+exports.default = Transition;
+
+},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"fls88","@babel/runtime/helpers/esm/inheritsLoose":"jDIko","prop-types":"GNqOQ","react":"jMk1U","react-dom":"i4X7T","./config":"5BfDx","./utils/PropTypes":"cWwSk","./TransitionGroupContext":"02D2e","./utils/reflow":"962ni","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"5BfDx":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    disabled: false
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"cWwSk":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "timeoutsShape", ()=>timeoutsShape);
+parcelHelpers.export(exports, "classNamesShape", ()=>classNamesShape);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var timeoutsShape = (0, _propTypesDefault.default).oneOfType([
+    (0, _propTypesDefault.default).number,
+    (0, _propTypesDefault.default).shape({
+        enter: (0, _propTypesDefault.default).number,
+        exit: (0, _propTypesDefault.default).number,
+        appear: (0, _propTypesDefault.default).number
+    }).isRequired
+]);
+var classNamesShape = (0, _propTypesDefault.default).oneOfType([
+    (0, _propTypesDefault.default).string,
+    (0, _propTypesDefault.default).shape({
+        enter: (0, _propTypesDefault.default).string,
+        exit: (0, _propTypesDefault.default).string,
+        active: (0, _propTypesDefault.default).string
+    }),
+    (0, _propTypesDefault.default).shape({
+        enter: (0, _propTypesDefault.default).string,
+        enterDone: (0, _propTypesDefault.default).string,
+        enterActive: (0, _propTypesDefault.default).string,
+        exit: (0, _propTypesDefault.default).string,
+        exitDone: (0, _propTypesDefault.default).string,
+        exitActive: (0, _propTypesDefault.default).string
+    })
+]);
+
+},{"prop-types":"GNqOQ","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"02D2e":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+exports.default = (0, _reactDefault.default).createContext(null);
+
+},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"962ni":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "forceReflow", ()=>forceReflow);
+var forceReflow = function forceReflow(node) {
+    return node.scrollTop;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"9urvk":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _inheritsLoose = require("@babel/runtime/helpers/esm/inheritsLoose");
+var _inheritsLooseDefault = parcelHelpers.interopDefault(_inheritsLoose);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactDom = require("react-dom");
+var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _transitionGroup = require("./TransitionGroup");
+var _transitionGroupDefault = parcelHelpers.interopDefault(_transitionGroup);
+/**
+ * The `<ReplaceTransition>` component is a specialized `Transition` component
+ * that animates between two children.
+ *
+ * ```jsx
+ * <ReplaceTransition in>
+ *   <Fade><div>I appear first</div></Fade>
+ *   <Fade><div>I replace the above</div></Fade>
+ * </ReplaceTransition>
+ * ```
+ */ var ReplaceTransition = /*#__PURE__*/ function(_React$Component) {
+    (0, _inheritsLooseDefault.default)(ReplaceTransition, _React$Component);
+    function ReplaceTransition() {
+        var _this;
+        for(var _len = arguments.length, _args = new Array(_len), _key = 0; _key < _len; _key++)_args[_key] = arguments[_key];
+        _this = _React$Component.call.apply(_React$Component, [
+            this
+        ].concat(_args)) || this;
+        _this.handleEnter = function() {
+            for(var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++)args[_key2] = arguments[_key2];
+            return _this.handleLifecycle('onEnter', 0, args);
+        };
+        _this.handleEntering = function() {
+            for(var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++)args[_key3] = arguments[_key3];
+            return _this.handleLifecycle('onEntering', 0, args);
+        };
+        _this.handleEntered = function() {
+            for(var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++)args[_key4] = arguments[_key4];
+            return _this.handleLifecycle('onEntered', 0, args);
+        };
+        _this.handleExit = function() {
+            for(var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++)args[_key5] = arguments[_key5];
+            return _this.handleLifecycle('onExit', 1, args);
+        };
+        _this.handleExiting = function() {
+            for(var _len6 = arguments.length, args = new Array(_len6), _key6 = 0; _key6 < _len6; _key6++)args[_key6] = arguments[_key6];
+            return _this.handleLifecycle('onExiting', 1, args);
+        };
+        _this.handleExited = function() {
+            for(var _len7 = arguments.length, args = new Array(_len7), _key7 = 0; _key7 < _len7; _key7++)args[_key7] = arguments[_key7];
+            return _this.handleLifecycle('onExited', 1, args);
+        };
+        return _this;
+    }
+    var _proto = ReplaceTransition.prototype;
+    _proto.handleLifecycle = function handleLifecycle(handler, idx, originalArgs) {
+        var _child$props;
+        var children = this.props.children;
+        var child = (0, _reactDefault.default).Children.toArray(children)[idx];
+        if (child.props[handler]) (_child$props = child.props)[handler].apply(_child$props, originalArgs);
+        if (this.props[handler]) {
+            var maybeNode = child.props.nodeRef ? undefined : (0, _reactDomDefault.default).findDOMNode(this);
+            this.props[handler](maybeNode);
+        }
+    };
+    _proto.render = function render() {
+        var _this$props = this.props, children = _this$props.children, inProp = _this$props.in, props = (0, _objectWithoutPropertiesLooseDefault.default)(_this$props, [
+            "children",
+            "in"
+        ]);
+        var _React$Children$toArr = (0, _reactDefault.default).Children.toArray(children), first = _React$Children$toArr[0], second = _React$Children$toArr[1];
+        delete props.onEnter;
+        delete props.onEntering;
+        delete props.onEntered;
+        delete props.onExit;
+        delete props.onExiting;
+        delete props.onExited;
+        return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _transitionGroupDefault.default), props, inProp ? (0, _reactDefault.default).cloneElement(first, {
+            key: 'first',
+            onEnter: this.handleEnter,
+            onEntering: this.handleEntering,
+            onEntered: this.handleEntered
+        }) : (0, _reactDefault.default).cloneElement(second, {
+            key: 'second',
+            onEnter: this.handleExit,
+            onEntering: this.handleExiting,
+            onEntered: this.handleExited
+        }));
+    };
+    return ReplaceTransition;
+}((0, _reactDefault.default).Component);
+ReplaceTransition.propTypes = {
+    in: (0, _propTypesDefault.default).bool.isRequired,
+    children: function children(props, propName) {
+        if ((0, _reactDefault.default).Children.count(props[propName]) !== 2) return new Error("\"" + propName + "\" must be exactly two transition components.");
+        return null;
+    }
+};
+exports.default = ReplaceTransition;
+
+},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"fls88","@babel/runtime/helpers/esm/inheritsLoose":"jDIko","prop-types":"GNqOQ","react":"jMk1U","react-dom":"i4X7T","./TransitionGroup":"63Owe","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"63Owe":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _assertThisInitialized = require("@babel/runtime/helpers/esm/assertThisInitialized");
+var _assertThisInitializedDefault = parcelHelpers.interopDefault(_assertThisInitialized);
+var _inheritsLoose = require("@babel/runtime/helpers/esm/inheritsLoose");
+var _inheritsLooseDefault = parcelHelpers.interopDefault(_inheritsLoose);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _transitionGroupContext = require("./TransitionGroupContext");
+var _transitionGroupContextDefault = parcelHelpers.interopDefault(_transitionGroupContext);
+var _childMapping = require("./utils/ChildMapping");
+var values = Object.values || function(obj) {
+    return Object.keys(obj).map(function(k) {
+        return obj[k];
+    });
+};
+var defaultProps = {
+    component: 'div',
+    childFactory: function childFactory(child) {
+        return child;
+    }
+};
+/**
+ * The `<TransitionGroup>` component manages a set of transition components
+ * (`<Transition>` and `<CSSTransition>`) in a list. Like with the transition
+ * components, `<TransitionGroup>` is a state machine for managing the mounting
+ * and unmounting of components over time.
+ *
+ * Consider the example below. As items are removed or added to the TodoList the
+ * `in` prop is toggled automatically by the `<TransitionGroup>`.
+ *
+ * Note that `<TransitionGroup>`  does not define any animation behavior!
+ * Exactly _how_ a list item animates is up to the individual transition
+ * component. This means you can mix and match animations across different list
+ * items.
+ */ var TransitionGroup = /*#__PURE__*/ function(_React$Component) {
+    (0, _inheritsLooseDefault.default)(TransitionGroup, _React$Component);
+    function TransitionGroup(props, context) {
+        var _this;
+        _this = _React$Component.call(this, props, context) || this;
+        var handleExited = _this.handleExited.bind((0, _assertThisInitializedDefault.default)(_this)); // Initial children should all be entering, dependent on appear
+        _this.state = {
+            contextValue: {
+                isMounting: true
+            },
+            handleExited: handleExited,
+            firstRender: true
+        };
+        return _this;
+    }
+    var _proto = TransitionGroup.prototype;
+    _proto.componentDidMount = function componentDidMount() {
+        this.mounted = true;
+        this.setState({
+            contextValue: {
+                isMounting: false
+            }
+        });
+    };
+    _proto.componentWillUnmount = function componentWillUnmount() {
+        this.mounted = false;
+    };
+    TransitionGroup.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps, _ref) {
+        var prevChildMapping = _ref.children, handleExited = _ref.handleExited, firstRender = _ref.firstRender;
+        return {
+            children: firstRender ? (0, _childMapping.getInitialChildMapping)(nextProps, handleExited) : (0, _childMapping.getNextChildMapping)(nextProps, prevChildMapping, handleExited),
+            firstRender: false
+        };
+    } // node is `undefined` when user provided `nodeRef` prop
+    ;
+    _proto.handleExited = function handleExited(child, node) {
+        var currentChildMapping = (0, _childMapping.getChildMapping)(this.props.children);
+        if (child.key in currentChildMapping) return;
+        if (child.props.onExited) child.props.onExited(node);
+        if (this.mounted) this.setState(function(state) {
+            var children = (0, _extendsDefault.default)({}, state.children);
+            delete children[child.key];
+            return {
+                children: children
+            };
+        });
+    };
+    _proto.render = function render() {
+        var _this$props = this.props, Component = _this$props.component, childFactory = _this$props.childFactory, props = (0, _objectWithoutPropertiesLooseDefault.default)(_this$props, [
+            "component",
+            "childFactory"
+        ]);
+        var contextValue = this.state.contextValue;
+        var children = values(this.state.children).map(childFactory);
+        delete props.appear;
+        delete props.enter;
+        delete props.exit;
+        if (Component === null) return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _transitionGroupContextDefault.default).Provider, {
+            value: contextValue
+        }, children);
+        return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _transitionGroupContextDefault.default).Provider, {
+            value: contextValue
+        }, /*#__PURE__*/ (0, _reactDefault.default).createElement(Component, props, children));
+    };
+    return TransitionGroup;
+}((0, _reactDefault.default).Component);
+TransitionGroup.propTypes = {
+    /**
+   * `<TransitionGroup>` renders a `<div>` by default. You can change this
+   * behavior by providing a `component` prop.
+   * If you use React v16+ and would like to avoid a wrapping `<div>` element
+   * you can pass in `component={null}`. This is useful if the wrapping div
+   * borks your css styles.
+   */ component: (0, _propTypesDefault.default).any,
+    /**
+   * A set of `<Transition>` components, that are toggled `in` and out as they
+   * leave. the `<TransitionGroup>` will inject specific transition props, so
+   * remember to spread them through if you are wrapping the `<Transition>` as
+   * with our `<Fade>` example.
+   *
+   * While this component is meant for multiple `Transition` or `CSSTransition`
+   * children, sometimes you may want to have a single transition child with
+   * content that you want to be transitioned out and in when you change it
+   * (e.g. routes, images etc.) In that case you can change the `key` prop of
+   * the transition child as you change its content, this will cause
+   * `TransitionGroup` to transition the child out and back in.
+   */ children: (0, _propTypesDefault.default).node,
+    /**
+   * A convenience prop that enables or disables appear animations
+   * for all children. Note that specifying this will override any defaults set
+   * on individual children Transitions.
+   */ appear: (0, _propTypesDefault.default).bool,
+    /**
+   * A convenience prop that enables or disables enter animations
+   * for all children. Note that specifying this will override any defaults set
+   * on individual children Transitions.
+   */ enter: (0, _propTypesDefault.default).bool,
+    /**
+   * A convenience prop that enables or disables exit animations
+   * for all children. Note that specifying this will override any defaults set
+   * on individual children Transitions.
+   */ exit: (0, _propTypesDefault.default).bool,
+    /**
+   * You may need to apply reactive updates to a child as it is exiting.
+   * This is generally done by using `cloneElement` however in the case of an exiting
+   * child the element has already been removed and not accessible to the consumer.
+   *
+   * If you do need to update a child as it leaves you can provide a `childFactory`
+   * to wrap every child, even the ones that are leaving.
+   *
+   * @type Function(child: ReactElement) -> ReactElement
+   */ childFactory: (0, _propTypesDefault.default).func
+};
+TransitionGroup.defaultProps = defaultProps;
+exports.default = TransitionGroup;
+
+},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"fls88","@babel/runtime/helpers/esm/extends":"20my9","@babel/runtime/helpers/esm/assertThisInitialized":"ihUmZ","@babel/runtime/helpers/esm/inheritsLoose":"jDIko","prop-types":"GNqOQ","react":"jMk1U","./TransitionGroupContext":"02D2e","./utils/ChildMapping":"eppFe","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"ihUmZ":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>_assertThisInitialized);
+function _assertThisInitialized(e) {
+    if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return e;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"eppFe":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * Given `this.props.children`, return an object mapping key to child.
+ *
+ * @param {*} children `this.props.children`
+ * @return {object} Mapping of key to child
+ */ parcelHelpers.export(exports, "getChildMapping", ()=>getChildMapping);
+/**
+ * When you're adding or removing children some may be added or removed in the
+ * same render pass. We want to show *both* since we want to simultaneously
+ * animate elements in and out. This function takes a previous set of keys
+ * and a new set of keys and merges them with its best guess of the correct
+ * ordering. In the future we may expose some of the utilities in
+ * ReactMultiChild to make this easy, but for now React itself does not
+ * directly have this concept of the union of prevChildren and nextChildren
+ * so we implement it here.
+ *
+ * @param {object} prev prev children as returned from
+ * `ReactTransitionChildMapping.getChildMapping()`.
+ * @param {object} next next children as returned from
+ * `ReactTransitionChildMapping.getChildMapping()`.
+ * @return {object} a key set that contains all keys in `prev` and all keys
+ * in `next` in a reasonable order.
+ */ parcelHelpers.export(exports, "mergeChildMappings", ()=>mergeChildMappings);
+parcelHelpers.export(exports, "getInitialChildMapping", ()=>getInitialChildMapping);
+parcelHelpers.export(exports, "getNextChildMapping", ()=>getNextChildMapping);
+var _react = require("react");
+function getChildMapping(children, mapFn) {
+    var mapper = function mapper(child) {
+        return mapFn && (0, _react.isValidElement)(child) ? mapFn(child) : child;
+    };
+    var result = Object.create(null);
+    if (children) (0, _react.Children).map(children, function(c) {
+        return c;
+    }).forEach(function(child) {
+        // run the map function here instead so that the key is the computed one
+        result[child.key] = mapper(child);
+    });
+    return result;
+}
+function mergeChildMappings(prev, next) {
+    prev = prev || {};
+    next = next || {};
+    function getValueForKey(key) {
+        return key in next ? next[key] : prev[key];
+    } // For each key of `next`, the list of keys to insert before that key in
+    // the combined list
+    var nextKeysPending = Object.create(null);
+    var pendingKeys = [];
+    for(var prevKey in prev){
+        if (prevKey in next) {
+            if (pendingKeys.length) {
+                nextKeysPending[prevKey] = pendingKeys;
+                pendingKeys = [];
+            }
+        } else pendingKeys.push(prevKey);
+    }
+    var i;
+    var childMapping = {};
+    for(var nextKey in next){
+        if (nextKeysPending[nextKey]) for(i = 0; i < nextKeysPending[nextKey].length; i++){
+            var pendingNextKey = nextKeysPending[nextKey][i];
+            childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
+        }
+        childMapping[nextKey] = getValueForKey(nextKey);
+    } // Finally, add the keys which didn't appear before any key in `next`
+    for(i = 0; i < pendingKeys.length; i++)childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
+    return childMapping;
+}
+function getProp(child, prop, props) {
+    return props[prop] != null ? props[prop] : child.props[prop];
+}
+function getInitialChildMapping(props, onExited) {
+    return getChildMapping(props.children, function(child) {
+        return (0, _react.cloneElement)(child, {
+            onExited: onExited.bind(null, child),
+            in: true,
+            appear: getProp(child, 'appear', props),
+            enter: getProp(child, 'enter', props),
+            exit: getProp(child, 'exit', props)
+        });
+    });
+}
+function getNextChildMapping(nextProps, prevChildMapping, onExited) {
+    var nextChildMapping = getChildMapping(nextProps.children);
+    var children = mergeChildMappings(prevChildMapping, nextChildMapping);
+    Object.keys(children).forEach(function(key) {
+        var child = children[key];
+        if (!(0, _react.isValidElement)(child)) return;
+        var hasPrev = key in prevChildMapping;
+        var hasNext = key in nextChildMapping;
+        var prevChild = prevChildMapping[key];
+        var isLeaving = (0, _react.isValidElement)(prevChild) && !prevChild.props.in; // item is new (entering)
+        if (hasNext && (!hasPrev || isLeaving)) // console.log('entering', key)
+        children[key] = (0, _react.cloneElement)(child, {
+            onExited: onExited.bind(null, child),
+            in: true,
+            exit: getProp(child, 'exit', nextProps),
+            enter: getProp(child, 'enter', nextProps)
+        });
+        else if (!hasNext && hasPrev && !isLeaving) // item is old (exiting)
+        // console.log('leaving', key)
+        children[key] = (0, _react.cloneElement)(child, {
+            in: false
+        });
+        else if (hasNext && hasPrev && (0, _react.isValidElement)(prevChild)) // item hasn't changed transition states
+        // copy over the last transition props;
+        // console.log('unchanged', key)
+        children[key] = (0, _react.cloneElement)(child, {
+            onExited: onExited.bind(null, child),
+            in: prevChild.props.in,
+            exit: getProp(child, 'exit', nextProps),
+            enter: getProp(child, 'enter', nextProps)
+        });
+    });
+    return children;
+}
+
+},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"89Ic3":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "modes", ()=>modes);
+var _inheritsLoose = require("@babel/runtime/helpers/esm/inheritsLoose");
+var _inheritsLooseDefault = parcelHelpers.interopDefault(_inheritsLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _transition = require("./Transition");
+var _transitionGroupContext = require("./TransitionGroupContext");
+var _transitionGroupContextDefault = parcelHelpers.interopDefault(_transitionGroupContext);
+var _leaveRenders, _enterRenders;
+function areChildrenDifferent(oldChildren, newChildren) {
+    if (oldChildren === newChildren) return false;
+    if ((0, _reactDefault.default).isValidElement(oldChildren) && (0, _reactDefault.default).isValidElement(newChildren) && oldChildren.key != null && oldChildren.key === newChildren.key) return false;
+    return true;
+}
+var modes = {
+    out: 'out-in',
+    in: 'in-out'
+};
+var callHook = function callHook(element, name, cb) {
+    return function() {
+        var _element$props;
+        element.props[name] && (_element$props = element.props)[name].apply(_element$props, arguments);
+        cb();
+    };
+};
+var leaveRenders = (_leaveRenders = {}, _leaveRenders[modes.out] = function(_ref) {
+    var current = _ref.current, changeState = _ref.changeState;
+    return (0, _reactDefault.default).cloneElement(current, {
+        in: false,
+        onExited: callHook(current, 'onExited', function() {
+            changeState((0, _transition.ENTERING), null);
+        })
+    });
+}, _leaveRenders[modes.in] = function(_ref2) {
+    var current = _ref2.current, changeState = _ref2.changeState, children = _ref2.children;
+    return [
+        current,
+        (0, _reactDefault.default).cloneElement(children, {
+            in: true,
+            onEntered: callHook(children, 'onEntered', function() {
+                changeState((0, _transition.ENTERING));
+            })
+        })
+    ];
+}, _leaveRenders);
+var enterRenders = (_enterRenders = {}, _enterRenders[modes.out] = function(_ref3) {
+    var children = _ref3.children, changeState = _ref3.changeState;
+    return (0, _reactDefault.default).cloneElement(children, {
+        in: true,
+        onEntered: callHook(children, 'onEntered', function() {
+            changeState((0, _transition.ENTERED), (0, _reactDefault.default).cloneElement(children, {
+                in: true
+            }));
+        })
+    });
+}, _enterRenders[modes.in] = function(_ref4) {
+    var current = _ref4.current, children = _ref4.children, changeState = _ref4.changeState;
+    return [
+        (0, _reactDefault.default).cloneElement(current, {
+            in: false,
+            onExited: callHook(current, 'onExited', function() {
+                changeState((0, _transition.ENTERED), (0, _reactDefault.default).cloneElement(children, {
+                    in: true
+                }));
+            })
+        }),
+        (0, _reactDefault.default).cloneElement(children, {
+            in: true
+        })
+    ];
+}, _enterRenders);
+/**
+ * A transition component inspired by the [vue transition modes](https://vuejs.org/v2/guide/transitions.html#Transition-Modes).
+ * You can use it when you want to control the render between state transitions.
+ * Based on the selected mode and the child's key which is the `Transition` or `CSSTransition` component, the `SwitchTransition` makes a consistent transition between them.
+ *
+ * If the `out-in` mode is selected, the `SwitchTransition` waits until the old child leaves and then inserts a new child.
+ * If the `in-out` mode is selected, the `SwitchTransition` inserts a new child first, waits for the new child to enter and then removes the old child.
+ *
+ * **Note**: If you want the animation to happen simultaneously
+ * (that is, to have the old child removed and a new child inserted **at the same time**),
+ * you should use
+ * [`TransitionGroup`](https://reactcommunity.org/react-transition-group/transition-group)
+ * instead.
+ *
+ * ```jsx
+ * function App() {
+ *  const [state, setState] = useState(false);
+ *  return (
+ *    <SwitchTransition>
+ *      <CSSTransition
+ *        key={state ? "Goodbye, world!" : "Hello, world!"}
+ *        addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+ *        classNames='fade'
+ *      >
+ *        <button onClick={() => setState(state => !state)}>
+ *          {state ? "Goodbye, world!" : "Hello, world!"}
+ *        </button>
+ *      </CSSTransition>
+ *    </SwitchTransition>
+ *  );
+ * }
+ * ```
+ *
+ * ```css
+ * .fade-enter{
+ *    opacity: 0;
+ * }
+ * .fade-exit{
+ *    opacity: 1;
+ * }
+ * .fade-enter-active{
+ *    opacity: 1;
+ * }
+ * .fade-exit-active{
+ *    opacity: 0;
+ * }
+ * .fade-enter-active,
+ * .fade-exit-active{
+ *    transition: opacity 500ms;
+ * }
+ * ```
+ */ var SwitchTransition = /*#__PURE__*/ function(_React$Component) {
+    (0, _inheritsLooseDefault.default)(SwitchTransition, _React$Component);
+    function SwitchTransition() {
+        var _this;
+        for(var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+        _this = _React$Component.call.apply(_React$Component, [
+            this
+        ].concat(args)) || this;
+        _this.state = {
+            status: (0, _transition.ENTERED),
+            current: null
+        };
+        _this.appeared = false;
+        _this.changeState = function(status, current) {
+            if (current === void 0) current = _this.state.current;
+            _this.setState({
+                status: status,
+                current: current
+            });
+        };
+        return _this;
+    }
+    var _proto = SwitchTransition.prototype;
+    _proto.componentDidMount = function componentDidMount() {
+        this.appeared = true;
+    };
+    SwitchTransition.getDerivedStateFromProps = function getDerivedStateFromProps(props, state) {
+        if (props.children == null) return {
+            current: null
+        };
+        if (state.status === (0, _transition.ENTERING) && props.mode === modes.in) return {
+            status: (0, _transition.ENTERING)
+        };
+        if (state.current && areChildrenDifferent(state.current, props.children)) return {
+            status: (0, _transition.EXITING)
+        };
+        return {
+            current: (0, _reactDefault.default).cloneElement(props.children, {
+                in: true
+            })
+        };
+    };
+    _proto.render = function render() {
+        var _this$props = this.props, children = _this$props.children, mode = _this$props.mode, _this$state = this.state, status = _this$state.status, current = _this$state.current;
+        var data = {
+            children: children,
+            current: current,
+            changeState: this.changeState,
+            status: status
+        };
+        var component;
+        switch(status){
+            case 0, _transition.ENTERING:
+                component = enterRenders[mode](data);
+                break;
+            case 0, _transition.EXITING:
+                component = leaveRenders[mode](data);
+                break;
+            case 0, _transition.ENTERED:
+                component = current;
+        }
+        return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _transitionGroupContextDefault.default).Provider, {
+            value: {
+                isMounting: !this.appeared
+            }
+        }, component);
+    };
+    return SwitchTransition;
+}((0, _reactDefault.default).Component);
+SwitchTransition.propTypes = {
+    /**
+   * Transition modes.
+   * `out-in`: Current element transitions out first, then when complete, the new element transitions in.
+   * `in-out`: New element transitions in first, then when complete, the current element transitions out.
+   *
+   * @type {'out-in'|'in-out'}
+   */ mode: (0, _propTypesDefault.default).oneOf([
+        modes.in,
+        modes.out
+    ]),
+    /**
+   * Any `Transition` or `CSSTransition` component.
+   */ children: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).element.isRequired
+    ])
+};
+SwitchTransition.defaultProps = {
+    mode: modes.out
+};
+exports.default = SwitchTransition;
+
+},{"@babel/runtime/helpers/esm/inheritsLoose":"jDIko","react":"jMk1U","prop-types":"GNqOQ","./Transition":"hAmWn","./TransitionGroupContext":"02D2e","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"2Ur26":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("7fc48d3f4c1a7848").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _elementAcceptingRef.default;
+    }
+});
+var _elementAcceptingRef = _interopRequireDefault(require("33b2c982f56ea448"));
+
+},{"7fc48d3f4c1a7848":"1P3rZ","33b2c982f56ea448":"k5OP7"}],"k5OP7":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("2e0404c999c8e2a").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _propTypes = _interopRequireDefault(require("2c3874f1da222af4"));
+var _chainPropTypes = _interopRequireDefault(require("dd4339d41498058b"));
+function isClassComponent(elementType) {
+    // elementType.prototype?.isReactComponent
+    const { prototype = {} } = elementType;
+    return Boolean(prototype.isReactComponent);
+}
+function acceptingRef(props, propName, componentName, location, propFullName) {
+    const element = props[propName];
+    const safePropName = propFullName || propName;
+    if (element == null || // When server-side rendering React doesn't warn either.
+    // This is not an accurate check for SSR.
+    // This is only in place for Emotion compat.
+    // TODO: Revisit once https://github.com/facebook/react/issues/20047 is resolved.
+    typeof window === 'undefined') return null;
+    let warningHint;
+    const elementType = element.type;
+    /**
+   * Blacklisting instead of whitelisting
+   *
+   * Blacklisting will miss some components, such as React.Fragment. Those will at least
+   * trigger a warning in React.
+   * We can't whitelist because there is no safe way to detect React.forwardRef
+   * or class components. "Safe" means there's no public API.
+   *
+   */ if (typeof elementType === 'function' && !isClassComponent(elementType)) warningHint = 'Did you accidentally use a plain function component for an element instead?';
+    if (warningHint !== undefined) return new Error(`Invalid ${location} \`${safePropName}\` supplied to \`${componentName}\`. ` + `Expected an element that can hold a ref. ${warningHint} ` + 'For more information see https://mui.com/r/caveat-with-refs-guide');
+    return null;
+}
+const elementAcceptingRef = (0, _chainPropTypes.default)(_propTypes.default.element, acceptingRef);
+elementAcceptingRef.isRequired = (0, _chainPropTypes.default)(_propTypes.default.element.isRequired, acceptingRef);
+var _default = exports.default = elementAcceptingRef;
+
+},{"2e0404c999c8e2a":"1P3rZ","2c3874f1da222af4":"GNqOQ","dd4339d41498058b":"kOKf5"}],"jsGSm":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("ba38391dd04895bb").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _getReactElementRef.default;
+    }
+});
+var _getReactElementRef = _interopRequireDefault(require("d5faa0be1bd4dc03"));
+
+},{"ba38391dd04895bb":"1P3rZ","d5faa0be1bd4dc03":"cFOIu"}],"cFOIu":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireWildcard = require("e26e8640d8955c2a").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = getReactElementRef;
+var React = _interopRequireWildcard(require("729ffe9102f7414d"));
+/**
+ * Returns the ref of a React element handling differences between React 19 and older versions.
+ * It will throw runtime error if the element is not a valid React element.
+ *
+ * @param element React.ReactElement
+ * @returns React.Ref<any> | null
+ */ function getReactElementRef(element) {
+    // 'ref' is passed as prop in React 19, whereas 'ref' is directly attached to children in older versions
+    if (parseInt(React.version, 10) >= 19) return element?.props?.ref || null;
+    // @ts-expect-error element.ref is not included in the ReactElement type
+    // https://github.com/DefinitelyTyped/DefinitelyTyped/discussions/70189
+    return element?.ref || null;
+}
+
+},{"e26e8640d8955c2a":"6TFJp","729ffe9102f7414d":"jMk1U"}],"7wsk9":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("407069ea89e26f09").default;
+var _interopRequireWildcard = require("31f2783b9a91bef7").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "css", {
+    enumerable: true,
+    get: function() {
+        return _system.css;
+    }
+});
+exports.globalCss = globalCss;
+exports.internal_createExtendSxProp = internal_createExtendSxProp;
+Object.defineProperty(exports, "keyframes", {
+    enumerable: true,
+    get: function() {
+        return _system.keyframes;
+    }
+});
+Object.defineProperty(exports, "styled", {
+    enumerable: true,
+    get: function() {
+        return _styled.default;
+    }
+});
+Object.defineProperty(exports, "useTheme", {
+    enumerable: true,
+    get: function() {
+        return _useTheme.default;
+    }
+});
+var React = _interopRequireWildcard(require("3e71abd26e55f26b"));
+var _styleFunctionSx = require("bfd0e1aeb380e6d1");
+var _useTheme = _interopRequireDefault(require("d299e6c723c421bf"));
+var _GlobalStyles = _interopRequireDefault(require("27d002377f60cb4e"));
+var _jsxRuntime = require("6713fc0ccce24c19");
+var _system = require("4a4d550ba1eacd52");
+var _styled = _interopRequireDefault(require("2ed34ee38246058d"));
+function globalCss(styles) {
+    return function GlobalStylesWrapper(props) {
+        return(/*#__PURE__*/ // Pigment CSS `globalCss` support callback with theme inside an object but `GlobalStyles` support theme as a callback value.
+        (0, _jsxRuntime.jsx)(_GlobalStyles.default, {
+            styles: typeof styles === 'function' ? (theme)=>styles({
+                    theme,
+                    ...props
+                }) : styles
+        }));
+    };
+}
+// eslint-disable-next-line @typescript-eslint/naming-convention
+function internal_createExtendSxProp() {
+    return _styleFunctionSx.extendSxProp;
+}
+
+},{"407069ea89e26f09":"1P3rZ","31f2783b9a91bef7":"6TFJp","3e71abd26e55f26b":"jMk1U","bfd0e1aeb380e6d1":"3qmy1","d299e6c723c421bf":"03DWO","27d002377f60cb4e":"eiQV8","6713fc0ccce24c19":"05iiF","4a4d550ba1eacd52":"1WaIj","2ed34ee38246058d":"gU1yq"}],"03DWO":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("61e03a0156e416a1").default;
+var _interopRequireWildcard = require("6ffa06d021160115").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = useTheme;
+var React = _interopRequireWildcard(require("8a40016487b63d87"));
+var _system = require("457df495ffa84322");
+var _defaultTheme = _interopRequireDefault(require("63ebbe502362c7c9"));
+var _identifier = _interopRequireDefault(require("81c53f68f8a78aa5"));
+function useTheme() {
+    const theme = (0, _system.useTheme)(_defaultTheme.default);
+    // TODO: uncomment once we enable eslint-plugin-react-compiler // eslint-disable-next-line react-compiler/react-compiler
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    React.useDebugValue(theme);
+    return theme[_identifier.default] || theme;
+}
+
+},{"61e03a0156e416a1":"1P3rZ","6ffa06d021160115":"6TFJp","8a40016487b63d87":"jMk1U","457df495ffa84322":"1WaIj","63ebbe502362c7c9":"dsVJp","81c53f68f8a78aa5":"6SSma"}],"dsVJp":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("c992951b753a9ab3").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _createTheme = _interopRequireDefault(require("e0a3c219f881eb2a"));
+const defaultTheme = (0, _createTheme.default)();
+var _default = exports.default = defaultTheme;
+
+},{"c992951b753a9ab3":"1P3rZ","e0a3c219f881eb2a":"a1TKj"}],"a1TKj":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("f53bf87bf42dedc").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = createTheme;
+var _createPalette = _interopRequireDefault(require("ce01a4e2b614fac5"));
+var _createThemeWithVars = _interopRequireDefault(require("9ef23b096d7a489b"));
+var _createThemeNoVars = _interopRequireDefault(require("22170ee3bd11250f"));
+// eslint-disable-next-line consistent-return
+function attachColorScheme(theme, scheme, colorScheme) {
+    if (!theme.colorSchemes) return undefined;
+    if (colorScheme) theme.colorSchemes[scheme] = {
+        ...colorScheme !== true && colorScheme,
+        palette: (0, _createPalette.default)({
+            ...colorScheme === true ? {} : colorScheme.palette,
+            mode: scheme
+        }) // cast type to skip module augmentation test
+    };
+}
+/**
+ * Generate a theme base on the options received.
+ * @param options Takes an incomplete theme object and adds the missing parts.
+ * @param args Deep merge the arguments with the about to be returned theme.
+ * @returns A complete, ready-to-use theme object.
+ */ function createTheme(options = {}, // cast type to skip module augmentation test
+...args) {
+    const { palette, cssVariables = false, colorSchemes: initialColorSchemes = !palette ? {
+        light: true
+    } : undefined, defaultColorScheme: initialDefaultColorScheme = palette?.mode, ...rest } = options;
+    const defaultColorSchemeInput = initialDefaultColorScheme || 'light';
+    const defaultScheme = initialColorSchemes?.[defaultColorSchemeInput];
+    const colorSchemesInput = {
+        ...initialColorSchemes,
+        ...palette ? {
+            [defaultColorSchemeInput]: {
+                ...typeof defaultScheme !== 'boolean' && defaultScheme,
+                palette
+            }
+        } : undefined
+    };
+    if (cssVariables === false) {
+        if (!('colorSchemes' in options)) // Behaves exactly as v5
+        return (0, _createThemeNoVars.default)(options, ...args);
+        let paletteOptions = palette;
+        if (!('palette' in options)) {
+            if (colorSchemesInput[defaultColorSchemeInput]) {
+                if (colorSchemesInput[defaultColorSchemeInput] !== true) paletteOptions = colorSchemesInput[defaultColorSchemeInput].palette;
+                else if (defaultColorSchemeInput === 'dark') // @ts-ignore to prevent the module augmentation test from failing
+                paletteOptions = {
+                    mode: 'dark'
+                };
+            }
+        }
+        const theme = (0, _createThemeNoVars.default)({
+            ...options,
+            palette: paletteOptions
+        }, ...args);
+        theme.defaultColorScheme = defaultColorSchemeInput;
+        theme.colorSchemes = colorSchemesInput;
+        if (theme.palette.mode === 'light') {
+            theme.colorSchemes.light = {
+                ...colorSchemesInput.light !== true && colorSchemesInput.light,
+                palette: theme.palette
+            };
+            attachColorScheme(theme, 'dark', colorSchemesInput.dark);
+        }
+        if (theme.palette.mode === 'dark') {
+            theme.colorSchemes.dark = {
+                ...colorSchemesInput.dark !== true && colorSchemesInput.dark,
+                palette: theme.palette
+            };
+            attachColorScheme(theme, 'light', colorSchemesInput.light);
+        }
+        return theme;
+    }
+    if (!palette && !('light' in colorSchemesInput) && defaultColorSchemeInput === 'light') colorSchemesInput.light = true;
+    return (0, _createThemeWithVars.default)({
+        ...rest,
+        colorSchemes: colorSchemesInput,
+        defaultColorScheme: defaultColorSchemeInput,
+        ...typeof cssVariables !== 'boolean' && cssVariables
+    }, ...args);
+}
+
+},{"f53bf87bf42dedc":"1P3rZ","ce01a4e2b614fac5":"6gFd1","9ef23b096d7a489b":"asCkD","22170ee3bd11250f":"dhKZY"}],"6gFd1":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("11300292bb3e3dc3").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.dark = void 0;
+exports.default = createPalette;
+exports.light = void 0;
+var _formatMuiErrorMessage = _interopRequireDefault(require("a2877fe4b287d6b0"));
+var _deepmerge = _interopRequireDefault(require("fa27818bbfce2f16"));
+var _colorManipulator = require("984635010f11e72f");
+var _common = _interopRequireDefault(require("2df4f74bc61cb41e"));
+var _grey = _interopRequireDefault(require("3b7e746b54059808"));
+var _purple = _interopRequireDefault(require("38df14157d06197c"));
+var _red = _interopRequireDefault(require("3b28d80ed8bb4b59"));
+var _orange = _interopRequireDefault(require("90db4edb20684717"));
+var _blue = _interopRequireDefault(require("9701b07c082fb52f"));
+var _lightBlue = _interopRequireDefault(require("ecf564fbe0fdcdd4"));
+var _green = _interopRequireDefault(require("827981c919ddbe32"));
+function getLight() {
+    return {
+        // The colors used to style the text.
+        text: {
+            // The most important text.
+            primary: 'rgba(0, 0, 0, 0.87)',
+            // Secondary text.
+            secondary: 'rgba(0, 0, 0, 0.6)',
+            // Disabled text have even lower visual prominence.
+            disabled: 'rgba(0, 0, 0, 0.38)'
+        },
+        // The color used to divide different elements.
+        divider: 'rgba(0, 0, 0, 0.12)',
+        // The background colors used to style the surfaces.
+        // Consistency between these values is important.
+        background: {
+            paper: _common.default.white,
+            default: _common.default.white
+        },
+        // The colors used to style the action elements.
+        action: {
+            // The color of an active action like an icon button.
+            active: 'rgba(0, 0, 0, 0.54)',
+            // The color of an hovered action.
+            hover: 'rgba(0, 0, 0, 0.04)',
+            hoverOpacity: 0.04,
+            // The color of a selected action.
+            selected: 'rgba(0, 0, 0, 0.08)',
+            selectedOpacity: 0.08,
+            // The color of a disabled action.
+            disabled: 'rgba(0, 0, 0, 0.26)',
+            // The background color of a disabled action.
+            disabledBackground: 'rgba(0, 0, 0, 0.12)',
+            disabledOpacity: 0.38,
+            focus: 'rgba(0, 0, 0, 0.12)',
+            focusOpacity: 0.12,
+            activatedOpacity: 0.12
+        }
+    };
+}
+const light = exports.light = getLight();
+function getDark() {
+    return {
+        text: {
+            primary: _common.default.white,
+            secondary: 'rgba(255, 255, 255, 0.7)',
+            disabled: 'rgba(255, 255, 255, 0.5)',
+            icon: 'rgba(255, 255, 255, 0.5)'
+        },
+        divider: 'rgba(255, 255, 255, 0.12)',
+        background: {
+            paper: '#121212',
+            default: '#121212'
+        },
+        action: {
+            active: _common.default.white,
+            hover: 'rgba(255, 255, 255, 0.08)',
+            hoverOpacity: 0.08,
+            selected: 'rgba(255, 255, 255, 0.16)',
+            selectedOpacity: 0.16,
+            disabled: 'rgba(255, 255, 255, 0.3)',
+            disabledBackground: 'rgba(255, 255, 255, 0.12)',
+            disabledOpacity: 0.38,
+            focus: 'rgba(255, 255, 255, 0.12)',
+            focusOpacity: 0.12,
+            activatedOpacity: 0.24
+        }
+    };
+}
+const dark = exports.dark = getDark();
+function addLightOrDark(intent, direction, shade, tonalOffset) {
+    const tonalOffsetLight = tonalOffset.light || tonalOffset;
+    const tonalOffsetDark = tonalOffset.dark || tonalOffset * 1.5;
+    if (!intent[direction]) {
+        if (intent.hasOwnProperty(shade)) intent[direction] = intent[shade];
+        else if (direction === 'light') intent.light = (0, _colorManipulator.lighten)(intent.main, tonalOffsetLight);
+        else if (direction === 'dark') intent.dark = (0, _colorManipulator.darken)(intent.main, tonalOffsetDark);
+    }
+}
+function getDefaultPrimary(mode = 'light') {
+    if (mode === 'dark') return {
+        main: _blue.default[200],
+        light: _blue.default[50],
+        dark: _blue.default[400]
+    };
+    return {
+        main: _blue.default[700],
+        light: _blue.default[400],
+        dark: _blue.default[800]
+    };
+}
+function getDefaultSecondary(mode = 'light') {
+    if (mode === 'dark') return {
+        main: _purple.default[200],
+        light: _purple.default[50],
+        dark: _purple.default[400]
+    };
+    return {
+        main: _purple.default[500],
+        light: _purple.default[300],
+        dark: _purple.default[700]
+    };
+}
+function getDefaultError(mode = 'light') {
+    if (mode === 'dark') return {
+        main: _red.default[500],
+        light: _red.default[300],
+        dark: _red.default[700]
+    };
+    return {
+        main: _red.default[700],
+        light: _red.default[400],
+        dark: _red.default[800]
+    };
+}
+function getDefaultInfo(mode = 'light') {
+    if (mode === 'dark') return {
+        main: _lightBlue.default[400],
+        light: _lightBlue.default[300],
+        dark: _lightBlue.default[700]
+    };
+    return {
+        main: _lightBlue.default[700],
+        light: _lightBlue.default[500],
+        dark: _lightBlue.default[900]
+    };
+}
+function getDefaultSuccess(mode = 'light') {
+    if (mode === 'dark') return {
+        main: _green.default[400],
+        light: _green.default[300],
+        dark: _green.default[700]
+    };
+    return {
+        main: _green.default[800],
+        light: _green.default[500],
+        dark: _green.default[900]
+    };
+}
+function getDefaultWarning(mode = 'light') {
+    if (mode === 'dark') return {
+        main: _orange.default[400],
+        light: _orange.default[300],
+        dark: _orange.default[700]
+    };
+    return {
+        main: '#ed6c02',
+        // closest to orange[800] that pass 3:1.
+        light: _orange.default[500],
+        dark: _orange.default[900]
+    };
+}
+function createPalette(palette) {
+    const { mode = 'light', contrastThreshold = 3, tonalOffset = 0.2, ...other } = palette;
+    const primary = palette.primary || getDefaultPrimary(mode);
+    const secondary = palette.secondary || getDefaultSecondary(mode);
+    const error = palette.error || getDefaultError(mode);
+    const info = palette.info || getDefaultInfo(mode);
+    const success = palette.success || getDefaultSuccess(mode);
+    const warning = palette.warning || getDefaultWarning(mode);
+    // Use the same logic as
+    // Bootstrap: https://github.com/twbs/bootstrap/blob/1d6e3710dd447de1a200f29e8fa521f8a0908f70/scss/_functions.scss#L59
+    // and material-components-web https://github.com/material-components/material-components-web/blob/ac46b8863c4dab9fc22c4c662dc6bd1b65dd652f/packages/mdc-theme/_functions.scss#L54
+    function getContrastText(background) {
+        const contrastText = (0, _colorManipulator.getContrastRatio)(background, dark.text.primary) >= contrastThreshold ? dark.text.primary : light.text.primary;
+        {
+            const contrast = (0, _colorManipulator.getContrastRatio)(background, contrastText);
+            if (contrast < 3) console.error([
+                `MUI: The contrast ratio of ${contrast}:1 for ${contrastText} on ${background}`,
+                'falls below the WCAG recommended absolute minimum contrast ratio of 3:1.',
+                'https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast'
+            ].join('\n'));
+        }
+        return contrastText;
+    }
+    const augmentColor = ({ color, name, mainShade = 500, lightShade = 300, darkShade = 700 })=>{
+        color = {
+            ...color
+        };
+        if (!color.main && color[mainShade]) color.main = color[mainShade];
+        if (!color.hasOwnProperty('main')) throw new Error(`MUI: The color${name ? ` (${name})` : ''} provided to augmentColor(color) is invalid.\n` + `The color object needs to have a \`main\` property or a \`${mainShade}\` property.`);
+        if (typeof color.main !== 'string') throw new Error(`MUI: The color${name ? ` (${name})` : ''} provided to augmentColor(color) is invalid.\n` + `\`color.main\` should be a string, but \`${JSON.stringify(color.main)}\` was provided instead.\n` + '\n' + 'Did you intend to use one of the following approaches?\n' + '\n' + 'import { green } from "@mui/material/colors";\n' + '\n' + 'const theme1 = createTheme({ palette: {\n' + '  primary: green,\n' + '} });\n' + '\n' + 'const theme2 = createTheme({ palette: {\n' + '  primary: { main: green[500] },\n' + '} });');
+        addLightOrDark(color, 'light', lightShade, tonalOffset);
+        addLightOrDark(color, 'dark', darkShade, tonalOffset);
+        if (!color.contrastText) color.contrastText = getContrastText(color.main);
+        return color;
+    };
+    let modeHydrated;
+    if (mode === 'light') modeHydrated = getLight();
+    else if (mode === 'dark') modeHydrated = getDark();
+    if (!modeHydrated) console.error(`MUI: The palette mode \`${mode}\` is not supported.`);
+    const paletteOutput = (0, _deepmerge.default)({
+        // A collection of common colors.
+        common: {
+            ..._common.default
+        },
+        // prevent mutable object.
+        // The palette mode, can be light or dark.
+        mode,
+        // The colors used to represent primary interface elements for a user.
+        primary: augmentColor({
+            color: primary,
+            name: 'primary'
+        }),
+        // The colors used to represent secondary interface elements for a user.
+        secondary: augmentColor({
+            color: secondary,
+            name: 'secondary',
+            mainShade: 'A400',
+            lightShade: 'A200',
+            darkShade: 'A700'
+        }),
+        // The colors used to represent interface elements that the user should be made aware of.
+        error: augmentColor({
+            color: error,
+            name: 'error'
+        }),
+        // The colors used to represent potentially dangerous actions or important messages.
+        warning: augmentColor({
+            color: warning,
+            name: 'warning'
+        }),
+        // The colors used to present information to the user that is neutral and not necessarily important.
+        info: augmentColor({
+            color: info,
+            name: 'info'
+        }),
+        // The colors used to indicate the successful completion of an action that user triggered.
+        success: augmentColor({
+            color: success,
+            name: 'success'
+        }),
+        // The grey colors.
+        grey: _grey.default,
+        // Used by `getContrastText()` to maximize the contrast between
+        // the background and the text.
+        contrastThreshold,
+        // Takes a background color and returns the text color that maximizes the contrast.
+        getContrastText,
+        // Generate a rich color object.
+        augmentColor,
+        // Used by the functions below to shift a color's luminance by approximately
+        // two indexes within its tonal palette.
+        // E.g., shift from Red 500 to Red 300 or Red 700.
+        tonalOffset,
+        // The light and dark mode object.
+        ...modeHydrated
+    }, other);
+    return paletteOutput;
+}
+
+},{"11300292bb3e3dc3":"1P3rZ","a2877fe4b287d6b0":"cXsuk","fa27818bbfce2f16":"bLPf1","984635010f11e72f":"b9Snp","2df4f74bc61cb41e":"d3A6z","3b7e746b54059808":"jfM6b","38df14157d06197c":"9z7Hc","3b28d80ed8bb4b59":"iHk0B","90db4edb20684717":"hArgZ","9701b07c082fb52f":"4oXdI","ecf564fbe0fdcdd4":"fad5T","827981c919ddbe32":"7ocW7"}],"asCkD":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireWildcard = require("d8808f819a1bf945").default;
+var _interopRequireDefault = require("bea5e0872ce0e7c").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.createGetCssVar = void 0;
+exports.default = createThemeWithVars;
+var _formatMuiErrorMessage = _interopRequireDefault(require("751b6f741077bdbc"));
+var _deepmerge = _interopRequireDefault(require("e7792937e505ac24"));
+var _system = require("9eb61503fd6adc33");
+var _spacing = require("59490245e8036a49");
+var _cssVars = require("2face3efcd065aaf");
+var _styleFunctionSx = _interopRequireWildcard(require("a25b28b771837a2a"));
+var _colorManipulator = require("6884cbd1e7c9be0a");
+var _createThemeNoVars = _interopRequireDefault(require("27733fa219b7fb30"));
+var _createColorScheme = _interopRequireWildcard(require("5e5614154b2981d1"));
+var _shouldSkipGeneratingVar = _interopRequireDefault(require("dbc865706904d0d5"));
+var _createGetSelector = _interopRequireDefault(require("2cca8165c721c3f"));
+var _stringifyTheme = require("4b7f097c78e64286");
+function assignNode(obj, keys) {
+    keys.forEach((k)=>{
+        if (!obj[k]) obj[k] = {};
+    });
+}
+function setColor(obj, key, defaultValue) {
+    if (!obj[key] && defaultValue) obj[key] = defaultValue;
+}
+function toRgb(color) {
+    if (typeof color !== 'string' || !color.startsWith('hsl')) return color;
+    return (0, _colorManipulator.hslToRgb)(color);
+}
+function setColorChannel(obj, key) {
+    if (!(`${key}Channel` in obj)) // custom channel token is not provided, generate one.
+    // if channel token can't be generated, show a warning.
+    obj[`${key}Channel`] = (0, _colorManipulator.private_safeColorChannel)(toRgb(obj[key]), `MUI: Can't create \`palette.${key}Channel\` because \`palette.${key}\` is not one of these formats: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla(), color().` + '\n' + `To suppress this warning, you need to explicitly provide the \`palette.${key}Channel\` as a string (in rgb format, for example "12 12 12") or undefined if you want to remove the channel token.`);
+}
+function getSpacingVal(spacingInput) {
+    if (typeof spacingInput === 'number') return `${spacingInput}px`;
+    if (typeof spacingInput === 'string' || typeof spacingInput === 'function' || Array.isArray(spacingInput)) return spacingInput;
+    return '8px';
+}
+const silent = (fn)=>{
+    try {
+        return fn();
+    } catch (error) {
+    // ignore error
+    }
+    return undefined;
+};
+const createGetCssVar = (cssVarPrefix = 'mui')=>(0, _system.unstable_createGetCssVar)(cssVarPrefix);
+exports.createGetCssVar = createGetCssVar;
+function attachColorScheme(colorSchemes, scheme, restTheme, colorScheme) {
+    if (!scheme) return undefined;
+    scheme = scheme === true ? {} : scheme;
+    const mode = colorScheme === 'dark' ? 'dark' : 'light';
+    if (!restTheme) {
+        colorSchemes[colorScheme] = (0, _createColorScheme.default)({
+            ...scheme,
+            palette: {
+                mode,
+                ...scheme?.palette
+            }
+        });
+        return undefined;
+    }
+    const { palette, ...muiTheme } = (0, _createThemeNoVars.default)({
+        ...restTheme,
+        palette: {
+            mode,
+            ...scheme?.palette
+        }
+    });
+    colorSchemes[colorScheme] = {
+        ...scheme,
+        palette,
+        opacity: {
+            ...(0, _createColorScheme.getOpacity)(mode),
+            ...scheme?.opacity
+        },
+        overlays: scheme?.overlays || (0, _createColorScheme.getOverlays)(mode)
+    };
+    return muiTheme;
+}
+/**
+ * A default `createThemeWithVars` comes with a single color scheme, either `light` or `dark` based on the `defaultColorScheme`.
+ * This is better suited for apps that only need a single color scheme.
+ *
+ * To enable built-in `light` and `dark` color schemes, either:
+ * 1. provide a `colorSchemeSelector` to define how the color schemes will change.
+ * 2. provide `colorSchemes.dark` will set `colorSchemeSelector: 'media'` by default.
+ */ function createThemeWithVars(options = {}, ...args) {
+    const { colorSchemes: colorSchemesInput = {
+        light: true
+    }, defaultColorScheme: defaultColorSchemeInput, disableCssColorScheme = false, cssVarPrefix = 'mui', shouldSkipGeneratingVar = _shouldSkipGeneratingVar.default, colorSchemeSelector: selector = colorSchemesInput.light && colorSchemesInput.dark ? 'media' : undefined, rootSelector = ':root', ...input } = options;
+    const firstColorScheme = Object.keys(colorSchemesInput)[0];
+    const defaultColorScheme = defaultColorSchemeInput || (colorSchemesInput.light && firstColorScheme !== 'light' ? 'light' : firstColorScheme);
+    const getCssVar = createGetCssVar(cssVarPrefix);
+    const { [defaultColorScheme]: defaultSchemeInput, light: builtInLight, dark: builtInDark, ...customColorSchemes } = colorSchemesInput;
+    const colorSchemes = {
+        ...customColorSchemes
+    };
+    let defaultScheme = defaultSchemeInput;
+    // For built-in light and dark color schemes, ensure that the value is valid if they are the default color scheme.
+    if (defaultColorScheme === 'dark' && !('dark' in colorSchemesInput) || defaultColorScheme === 'light' && !('light' in colorSchemesInput)) defaultScheme = true;
+    if (!defaultScheme) throw new Error(`MUI: The \`colorSchemes.${defaultColorScheme}\` option is either missing or invalid.`);
+    // Create the palette for the default color scheme, either `light`, `dark`, or custom color scheme.
+    const muiTheme = attachColorScheme(colorSchemes, defaultScheme, input, defaultColorScheme);
+    if (builtInLight && !colorSchemes.light) attachColorScheme(colorSchemes, builtInLight, undefined, 'light');
+    if (builtInDark && !colorSchemes.dark) attachColorScheme(colorSchemes, builtInDark, undefined, 'dark');
+    let theme = {
+        defaultColorScheme,
+        ...muiTheme,
+        cssVarPrefix,
+        colorSchemeSelector: selector,
+        rootSelector,
+        getCssVar,
+        colorSchemes,
+        font: {
+            ...(0, _cssVars.prepareTypographyVars)(muiTheme.typography),
+            ...muiTheme.font
+        },
+        spacing: getSpacingVal(input.spacing)
+    };
+    Object.keys(theme.colorSchemes).forEach((key)=>{
+        const palette = theme.colorSchemes[key].palette;
+        const setCssVarColor = (cssVar)=>{
+            const tokens = cssVar.split('-');
+            const color = tokens[1];
+            const colorToken = tokens[2];
+            return getCssVar(cssVar, palette[color][colorToken]);
+        };
+        // attach black & white channels to common node
+        if (palette.mode === 'light') {
+            setColor(palette.common, 'background', '#fff');
+            setColor(palette.common, 'onBackground', '#000');
+        }
+        if (palette.mode === 'dark') {
+            setColor(palette.common, 'background', '#000');
+            setColor(palette.common, 'onBackground', '#fff');
+        }
+        // assign component variables
+        assignNode(palette, [
+            'Alert',
+            'AppBar',
+            'Avatar',
+            'Button',
+            'Chip',
+            'FilledInput',
+            'LinearProgress',
+            'Skeleton',
+            'Slider',
+            'SnackbarContent',
+            'SpeedDialAction',
+            'StepConnector',
+            'StepContent',
+            'Switch',
+            'TableCell',
+            'Tooltip'
+        ]);
+        if (palette.mode === 'light') {
+            setColor(palette.Alert, 'errorColor', (0, _colorManipulator.private_safeDarken)(palette.error.light, 0.6));
+            setColor(palette.Alert, 'infoColor', (0, _colorManipulator.private_safeDarken)(palette.info.light, 0.6));
+            setColor(palette.Alert, 'successColor', (0, _colorManipulator.private_safeDarken)(palette.success.light, 0.6));
+            setColor(palette.Alert, 'warningColor', (0, _colorManipulator.private_safeDarken)(palette.warning.light, 0.6));
+            setColor(palette.Alert, 'errorFilledBg', setCssVarColor('palette-error-main'));
+            setColor(palette.Alert, 'infoFilledBg', setCssVarColor('palette-info-main'));
+            setColor(palette.Alert, 'successFilledBg', setCssVarColor('palette-success-main'));
+            setColor(palette.Alert, 'warningFilledBg', setCssVarColor('palette-warning-main'));
+            setColor(palette.Alert, 'errorFilledColor', silent(()=>palette.getContrastText(palette.error.main)));
+            setColor(palette.Alert, 'infoFilledColor', silent(()=>palette.getContrastText(palette.info.main)));
+            setColor(palette.Alert, 'successFilledColor', silent(()=>palette.getContrastText(palette.success.main)));
+            setColor(palette.Alert, 'warningFilledColor', silent(()=>palette.getContrastText(palette.warning.main)));
+            setColor(palette.Alert, 'errorStandardBg', (0, _colorManipulator.private_safeLighten)(palette.error.light, 0.9));
+            setColor(palette.Alert, 'infoStandardBg', (0, _colorManipulator.private_safeLighten)(palette.info.light, 0.9));
+            setColor(palette.Alert, 'successStandardBg', (0, _colorManipulator.private_safeLighten)(palette.success.light, 0.9));
+            setColor(palette.Alert, 'warningStandardBg', (0, _colorManipulator.private_safeLighten)(palette.warning.light, 0.9));
+            setColor(palette.Alert, 'errorIconColor', setCssVarColor('palette-error-main'));
+            setColor(palette.Alert, 'infoIconColor', setCssVarColor('palette-info-main'));
+            setColor(palette.Alert, 'successIconColor', setCssVarColor('palette-success-main'));
+            setColor(palette.Alert, 'warningIconColor', setCssVarColor('palette-warning-main'));
+            setColor(palette.AppBar, 'defaultBg', setCssVarColor('palette-grey-100'));
+            setColor(palette.Avatar, 'defaultBg', setCssVarColor('palette-grey-400'));
+            setColor(palette.Button, 'inheritContainedBg', setCssVarColor('palette-grey-300'));
+            setColor(palette.Button, 'inheritContainedHoverBg', setCssVarColor('palette-grey-A100'));
+            setColor(palette.Chip, 'defaultBorder', setCssVarColor('palette-grey-400'));
+            setColor(palette.Chip, 'defaultAvatarColor', setCssVarColor('palette-grey-700'));
+            setColor(palette.Chip, 'defaultIconColor', setCssVarColor('palette-grey-700'));
+            setColor(palette.FilledInput, 'bg', 'rgba(0, 0, 0, 0.06)');
+            setColor(palette.FilledInput, 'hoverBg', 'rgba(0, 0, 0, 0.09)');
+            setColor(palette.FilledInput, 'disabledBg', 'rgba(0, 0, 0, 0.12)');
+            setColor(palette.LinearProgress, 'primaryBg', (0, _colorManipulator.private_safeLighten)(palette.primary.main, 0.62));
+            setColor(palette.LinearProgress, 'secondaryBg', (0, _colorManipulator.private_safeLighten)(palette.secondary.main, 0.62));
+            setColor(palette.LinearProgress, 'errorBg', (0, _colorManipulator.private_safeLighten)(palette.error.main, 0.62));
+            setColor(palette.LinearProgress, 'infoBg', (0, _colorManipulator.private_safeLighten)(palette.info.main, 0.62));
+            setColor(palette.LinearProgress, 'successBg', (0, _colorManipulator.private_safeLighten)(palette.success.main, 0.62));
+            setColor(palette.LinearProgress, 'warningBg', (0, _colorManipulator.private_safeLighten)(palette.warning.main, 0.62));
+            setColor(palette.Skeleton, 'bg', `rgba(${setCssVarColor('palette-text-primaryChannel')} / 0.11)`);
+            setColor(palette.Slider, 'primaryTrack', (0, _colorManipulator.private_safeLighten)(palette.primary.main, 0.62));
+            setColor(palette.Slider, 'secondaryTrack', (0, _colorManipulator.private_safeLighten)(palette.secondary.main, 0.62));
+            setColor(palette.Slider, 'errorTrack', (0, _colorManipulator.private_safeLighten)(palette.error.main, 0.62));
+            setColor(palette.Slider, 'infoTrack', (0, _colorManipulator.private_safeLighten)(palette.info.main, 0.62));
+            setColor(palette.Slider, 'successTrack', (0, _colorManipulator.private_safeLighten)(palette.success.main, 0.62));
+            setColor(palette.Slider, 'warningTrack', (0, _colorManipulator.private_safeLighten)(palette.warning.main, 0.62));
+            const snackbarContentBackground = (0, _colorManipulator.private_safeEmphasize)(palette.background.default, 0.8);
+            setColor(palette.SnackbarContent, 'bg', snackbarContentBackground);
+            setColor(palette.SnackbarContent, 'color', silent(()=>palette.getContrastText(snackbarContentBackground)));
+            setColor(palette.SpeedDialAction, 'fabHoverBg', (0, _colorManipulator.private_safeEmphasize)(palette.background.paper, 0.15));
+            setColor(palette.StepConnector, 'border', setCssVarColor('palette-grey-400'));
+            setColor(palette.StepContent, 'border', setCssVarColor('palette-grey-400'));
+            setColor(palette.Switch, 'defaultColor', setCssVarColor('palette-common-white'));
+            setColor(palette.Switch, 'defaultDisabledColor', setCssVarColor('palette-grey-100'));
+            setColor(palette.Switch, 'primaryDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.primary.main, 0.62));
+            setColor(palette.Switch, 'secondaryDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.secondary.main, 0.62));
+            setColor(palette.Switch, 'errorDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.error.main, 0.62));
+            setColor(palette.Switch, 'infoDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.info.main, 0.62));
+            setColor(palette.Switch, 'successDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.success.main, 0.62));
+            setColor(palette.Switch, 'warningDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.warning.main, 0.62));
+            setColor(palette.TableCell, 'border', (0, _colorManipulator.private_safeLighten)((0, _colorManipulator.private_safeAlpha)(palette.divider, 1), 0.88));
+            setColor(palette.Tooltip, 'bg', (0, _colorManipulator.private_safeAlpha)(palette.grey[700], 0.92));
+        }
+        if (palette.mode === 'dark') {
+            setColor(palette.Alert, 'errorColor', (0, _colorManipulator.private_safeLighten)(palette.error.light, 0.6));
+            setColor(palette.Alert, 'infoColor', (0, _colorManipulator.private_safeLighten)(palette.info.light, 0.6));
+            setColor(palette.Alert, 'successColor', (0, _colorManipulator.private_safeLighten)(palette.success.light, 0.6));
+            setColor(palette.Alert, 'warningColor', (0, _colorManipulator.private_safeLighten)(palette.warning.light, 0.6));
+            setColor(palette.Alert, 'errorFilledBg', setCssVarColor('palette-error-dark'));
+            setColor(palette.Alert, 'infoFilledBg', setCssVarColor('palette-info-dark'));
+            setColor(palette.Alert, 'successFilledBg', setCssVarColor('palette-success-dark'));
+            setColor(palette.Alert, 'warningFilledBg', setCssVarColor('palette-warning-dark'));
+            setColor(palette.Alert, 'errorFilledColor', silent(()=>palette.getContrastText(palette.error.dark)));
+            setColor(palette.Alert, 'infoFilledColor', silent(()=>palette.getContrastText(palette.info.dark)));
+            setColor(palette.Alert, 'successFilledColor', silent(()=>palette.getContrastText(palette.success.dark)));
+            setColor(palette.Alert, 'warningFilledColor', silent(()=>palette.getContrastText(palette.warning.dark)));
+            setColor(palette.Alert, 'errorStandardBg', (0, _colorManipulator.private_safeDarken)(palette.error.light, 0.9));
+            setColor(palette.Alert, 'infoStandardBg', (0, _colorManipulator.private_safeDarken)(palette.info.light, 0.9));
+            setColor(palette.Alert, 'successStandardBg', (0, _colorManipulator.private_safeDarken)(palette.success.light, 0.9));
+            setColor(palette.Alert, 'warningStandardBg', (0, _colorManipulator.private_safeDarken)(palette.warning.light, 0.9));
+            setColor(palette.Alert, 'errorIconColor', setCssVarColor('palette-error-main'));
+            setColor(palette.Alert, 'infoIconColor', setCssVarColor('palette-info-main'));
+            setColor(palette.Alert, 'successIconColor', setCssVarColor('palette-success-main'));
+            setColor(palette.Alert, 'warningIconColor', setCssVarColor('palette-warning-main'));
+            setColor(palette.AppBar, 'defaultBg', setCssVarColor('palette-grey-900'));
+            setColor(palette.AppBar, 'darkBg', setCssVarColor('palette-background-paper')); // specific for dark mode
+            setColor(palette.AppBar, 'darkColor', setCssVarColor('palette-text-primary')); // specific for dark mode
+            setColor(palette.Avatar, 'defaultBg', setCssVarColor('palette-grey-600'));
+            setColor(palette.Button, 'inheritContainedBg', setCssVarColor('palette-grey-800'));
+            setColor(palette.Button, 'inheritContainedHoverBg', setCssVarColor('palette-grey-700'));
+            setColor(palette.Chip, 'defaultBorder', setCssVarColor('palette-grey-700'));
+            setColor(palette.Chip, 'defaultAvatarColor', setCssVarColor('palette-grey-300'));
+            setColor(palette.Chip, 'defaultIconColor', setCssVarColor('palette-grey-300'));
+            setColor(palette.FilledInput, 'bg', 'rgba(255, 255, 255, 0.09)');
+            setColor(palette.FilledInput, 'hoverBg', 'rgba(255, 255, 255, 0.13)');
+            setColor(palette.FilledInput, 'disabledBg', 'rgba(255, 255, 255, 0.12)');
+            setColor(palette.LinearProgress, 'primaryBg', (0, _colorManipulator.private_safeDarken)(palette.primary.main, 0.5));
+            setColor(palette.LinearProgress, 'secondaryBg', (0, _colorManipulator.private_safeDarken)(palette.secondary.main, 0.5));
+            setColor(palette.LinearProgress, 'errorBg', (0, _colorManipulator.private_safeDarken)(palette.error.main, 0.5));
+            setColor(palette.LinearProgress, 'infoBg', (0, _colorManipulator.private_safeDarken)(palette.info.main, 0.5));
+            setColor(palette.LinearProgress, 'successBg', (0, _colorManipulator.private_safeDarken)(palette.success.main, 0.5));
+            setColor(palette.LinearProgress, 'warningBg', (0, _colorManipulator.private_safeDarken)(palette.warning.main, 0.5));
+            setColor(palette.Skeleton, 'bg', `rgba(${setCssVarColor('palette-text-primaryChannel')} / 0.13)`);
+            setColor(palette.Slider, 'primaryTrack', (0, _colorManipulator.private_safeDarken)(palette.primary.main, 0.5));
+            setColor(palette.Slider, 'secondaryTrack', (0, _colorManipulator.private_safeDarken)(palette.secondary.main, 0.5));
+            setColor(palette.Slider, 'errorTrack', (0, _colorManipulator.private_safeDarken)(palette.error.main, 0.5));
+            setColor(palette.Slider, 'infoTrack', (0, _colorManipulator.private_safeDarken)(palette.info.main, 0.5));
+            setColor(palette.Slider, 'successTrack', (0, _colorManipulator.private_safeDarken)(palette.success.main, 0.5));
+            setColor(palette.Slider, 'warningTrack', (0, _colorManipulator.private_safeDarken)(palette.warning.main, 0.5));
+            const snackbarContentBackground = (0, _colorManipulator.private_safeEmphasize)(palette.background.default, 0.98);
+            setColor(palette.SnackbarContent, 'bg', snackbarContentBackground);
+            setColor(palette.SnackbarContent, 'color', silent(()=>palette.getContrastText(snackbarContentBackground)));
+            setColor(palette.SpeedDialAction, 'fabHoverBg', (0, _colorManipulator.private_safeEmphasize)(palette.background.paper, 0.15));
+            setColor(palette.StepConnector, 'border', setCssVarColor('palette-grey-600'));
+            setColor(palette.StepContent, 'border', setCssVarColor('palette-grey-600'));
+            setColor(palette.Switch, 'defaultColor', setCssVarColor('palette-grey-300'));
+            setColor(palette.Switch, 'defaultDisabledColor', setCssVarColor('palette-grey-600'));
+            setColor(palette.Switch, 'primaryDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.primary.main, 0.55));
+            setColor(palette.Switch, 'secondaryDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.secondary.main, 0.55));
+            setColor(palette.Switch, 'errorDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.error.main, 0.55));
+            setColor(palette.Switch, 'infoDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.info.main, 0.55));
+            setColor(palette.Switch, 'successDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.success.main, 0.55));
+            setColor(palette.Switch, 'warningDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.warning.main, 0.55));
+            setColor(palette.TableCell, 'border', (0, _colorManipulator.private_safeDarken)((0, _colorManipulator.private_safeAlpha)(palette.divider, 1), 0.68));
+            setColor(palette.Tooltip, 'bg', (0, _colorManipulator.private_safeAlpha)(palette.grey[700], 0.92));
+        }
+        // MUI X - DataGrid needs this token.
+        setColorChannel(palette.background, 'default');
+        // added for consistency with the `background.default` token
+        setColorChannel(palette.background, 'paper');
+        setColorChannel(palette.common, 'background');
+        setColorChannel(palette.common, 'onBackground');
+        setColorChannel(palette, 'divider');
+        Object.keys(palette).forEach((color)=>{
+            const colors = palette[color];
+            // The default palettes (primary, secondary, error, info, success, and warning) errors are handled by the above `createTheme(...)`.
+            if (color !== 'tonalOffset' && colors && typeof colors === 'object') {
+                // Silent the error for custom palettes.
+                if (colors.main) setColor(palette[color], 'mainChannel', (0, _colorManipulator.private_safeColorChannel)(toRgb(colors.main)));
+                if (colors.light) setColor(palette[color], 'lightChannel', (0, _colorManipulator.private_safeColorChannel)(toRgb(colors.light)));
+                if (colors.dark) setColor(palette[color], 'darkChannel', (0, _colorManipulator.private_safeColorChannel)(toRgb(colors.dark)));
+                if (colors.contrastText) setColor(palette[color], 'contrastTextChannel', (0, _colorManipulator.private_safeColorChannel)(toRgb(colors.contrastText)));
+                if (color === 'text') {
+                    // Text colors: text.primary, text.secondary
+                    setColorChannel(palette[color], 'primary');
+                    setColorChannel(palette[color], 'secondary');
+                }
+                if (color === 'action') {
+                    // Action colors: action.active, action.selected
+                    if (colors.active) setColorChannel(palette[color], 'active');
+                    if (colors.selected) setColorChannel(palette[color], 'selected');
+                }
+            }
+        });
+    });
+    theme = args.reduce((acc, argument)=>(0, _deepmerge.default)(acc, argument), theme);
+    const parserConfig = {
+        prefix: cssVarPrefix,
+        disableCssColorScheme,
+        shouldSkipGeneratingVar,
+        getSelector: (0, _createGetSelector.default)(theme)
+    };
+    const { vars, generateThemeVars, generateStyleSheets } = (0, _cssVars.prepareCssVars)(theme, parserConfig);
+    theme.vars = vars;
+    Object.entries(theme.colorSchemes[theme.defaultColorScheme]).forEach(([key, value])=>{
+        theme[key] = value;
+    });
+    theme.generateThemeVars = generateThemeVars;
+    theme.generateStyleSheets = generateStyleSheets;
+    theme.generateSpacing = function generateSpacing() {
+        return (0, _system.createSpacing)(input.spacing, (0, _spacing.createUnarySpacing)(this));
+    };
+    theme.getColorSchemeSelector = (0, _cssVars.createGetColorSchemeSelector)(selector);
+    theme.spacing = theme.generateSpacing();
+    theme.shouldSkipGeneratingVar = shouldSkipGeneratingVar;
+    theme.unstable_sxConfig = {
+        ..._styleFunctionSx.unstable_defaultSxConfig,
+        ...input?.unstable_sxConfig
+    };
+    theme.unstable_sx = function sx(props) {
+        return (0, _styleFunctionSx.default)({
+            sx: props,
+            theme: this
+        });
+    };
+    theme.toRuntimeSource = _stringifyTheme.stringifyTheme; // for Pigment CSS integration
+    return theme;
+}
+
+},{"d8808f819a1bf945":"6TFJp","bea5e0872ce0e7c":"1P3rZ","751b6f741077bdbc":"cXsuk","e7792937e505ac24":"bLPf1","9eb61503fd6adc33":"1WaIj","59490245e8036a49":"cUfeI","2face3efcd065aaf":"jrqSW","a25b28b771837a2a":"3qmy1","6884cbd1e7c9be0a":"b9Snp","27733fa219b7fb30":"dhKZY","5e5614154b2981d1":"4jSXe","dbc865706904d0d5":"4q7TV","2cca8165c721c3f":"5tahi","4b7f097c78e64286":"gfY4l"}],"dhKZY":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireWildcard = require("d9ce763f7b929c20").default;
+var _interopRequireDefault = require("4ca1ae3b8db86e4").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _formatMuiErrorMessage = _interopRequireDefault(require("2ce25b3954411343"));
+var _deepmerge = _interopRequireDefault(require("dfbc1ae367572d65"));
+var _styleFunctionSx = _interopRequireWildcard(require("bc903d7f62929142"));
+var _createTheme = _interopRequireDefault(require("b30260b8d167117"));
+var _generateUtilityClass = _interopRequireDefault(require("cc7616ad38094a17"));
+var _createMixins = _interopRequireDefault(require("6738902b69256df3"));
+var _createPalette = _interopRequireDefault(require("e87ac0dc0f47e984"));
+var _createTypography = _interopRequireDefault(require("eacfc05dd7822340"));
+var _shadows = _interopRequireDefault(require("720618e07ac7b6c0"));
+var _createTransitions = _interopRequireDefault(require("81833621a096484c"));
+var _zIndex = _interopRequireDefault(require("b63c3c17828ab144"));
+var _stringifyTheme = require("402a5e9a32837486");
+function createThemeNoVars(options = {}, ...args) {
+    const { breakpoints: breakpointsInput, mixins: mixinsInput = {}, spacing: spacingInput, palette: paletteInput = {}, transitions: transitionsInput = {}, typography: typographyInput = {}, shape: shapeInput, ...other } = options;
+    if (options.vars && // The error should throw only for the root theme creation because user is not allowed to use a custom node `vars`.
+    // `generateThemeVars` is the closest identifier for checking that the `options` is a result of `createTheme` with CSS variables so that user can create new theme for nested ThemeProvider.
+    options.generateThemeVars === undefined) throw new Error("MUI: `vars` is a private field used for CSS variables support.\nPlease use another name or follow the [docs](https://mui.com/material-ui/customization/css-theme-variables/usage/) to enable the feature.");
+    const palette = (0, _createPalette.default)(paletteInput);
+    const systemTheme = (0, _createTheme.default)(options);
+    let muiTheme = (0, _deepmerge.default)(systemTheme, {
+        mixins: (0, _createMixins.default)(systemTheme.breakpoints, mixinsInput),
+        palette,
+        // Don't use [...shadows] until you've verified its transpiled code is not invoking the iterator protocol.
+        shadows: _shadows.default.slice(),
+        typography: (0, _createTypography.default)(palette, typographyInput),
+        transitions: (0, _createTransitions.default)(transitionsInput),
+        zIndex: {
+            ..._zIndex.default
+        }
+    });
+    muiTheme = (0, _deepmerge.default)(muiTheme, other);
+    muiTheme = args.reduce((acc, argument)=>(0, _deepmerge.default)(acc, argument), muiTheme);
+    {
+        // TODO v6: Refactor to use globalStateClassesMapping from @mui/utils once `readOnly` state class is used in Rating component.
+        const stateClasses = [
+            'active',
+            'checked',
+            'completed',
+            'disabled',
+            'error',
+            'expanded',
+            'focused',
+            'focusVisible',
+            'required',
+            'selected'
+        ];
+        const traverse = (node, component)=>{
+            let key;
+            // eslint-disable-next-line guard-for-in
+            for(key in node){
+                const child = node[key];
+                if (stateClasses.includes(key) && Object.keys(child).length > 0) {
+                    {
+                        const stateClass = (0, _generateUtilityClass.default)('', key);
+                        console.error([
+                            `MUI: The \`${component}\` component increases ` + `the CSS specificity of the \`${key}\` internal state.`,
+                            'You can not override it like this: ',
+                            JSON.stringify(node, null, 2),
+                            '',
+                            `Instead, you need to use the '&.${stateClass}' syntax:`,
+                            JSON.stringify({
+                                root: {
+                                    [`&.${stateClass}`]: child
+                                }
+                            }, null, 2),
+                            '',
+                            'https://mui.com/r/state-classes-guide'
+                        ].join('\n'));
+                    }
+                    // Remove the style to prevent global conflicts.
+                    node[key] = {};
+                }
+            }
+        };
+        Object.keys(muiTheme.components).forEach((component)=>{
+            const styleOverrides = muiTheme.components[component].styleOverrides;
+            if (styleOverrides && component.startsWith('Mui')) traverse(styleOverrides, component);
+        });
+    }
+    muiTheme.unstable_sxConfig = {
+        ..._styleFunctionSx.unstable_defaultSxConfig,
+        ...other?.unstable_sxConfig
+    };
+    muiTheme.unstable_sx = function sx(props) {
+        return (0, _styleFunctionSx.default)({
+            sx: props,
+            theme: this
+        });
+    };
+    muiTheme.toRuntimeSource = _stringifyTheme.stringifyTheme; // for Pigment CSS integration
+    return muiTheme;
+}
+var _default = exports.default = createThemeNoVars;
+
+},{"d9ce763f7b929c20":"6TFJp","4ca1ae3b8db86e4":"1P3rZ","2ce25b3954411343":"cXsuk","dfbc1ae367572d65":"bLPf1","bc903d7f62929142":"3qmy1","b30260b8d167117":"kryy7","cc7616ad38094a17":"iAc9p","6738902b69256df3":"2RmTc","e87ac0dc0f47e984":"6gFd1","eacfc05dd7822340":"iYA5e","720618e07ac7b6c0":"kLBXl","81833621a096484c":"kquFJ","b63c3c17828ab144":"rQjwg","402a5e9a32837486":"gfY4l"}],"2RmTc":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = createMixins;
+function createMixins(breakpoints, mixins) {
+    return {
+        toolbar: {
+            minHeight: 56,
+            [breakpoints.up('xs')]: {
+                '@media (orientation: landscape)': {
+                    minHeight: 48
+                }
+            },
+            [breakpoints.up('sm')]: {
+                minHeight: 64
+            }
+        },
+        ...mixins
+    };
+}
+
+},{}],"iYA5e":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("75255ca3acc1f720").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = createTypography;
+var _deepmerge = _interopRequireDefault(require("cacbc6b8de202000"));
+function round(value) {
+    return Math.round(value * 1e5) / 1e5;
+}
+const caseAllCaps = {
+    textTransform: 'uppercase'
+};
+const defaultFontFamily = '"Roboto", "Helvetica", "Arial", sans-serif';
+/**
+ * @see @link{https://m2.material.io/design/typography/the-type-system.html}
+ * @see @link{https://m2.material.io/design/typography/understanding-typography.html}
+ */ function createTypography(palette, typography) {
+    const { fontFamily = defaultFontFamily, // The default font size of the Material Specification.
+    fontSize = 14, // px
+    fontWeightLight = 300, fontWeightRegular = 400, fontWeightMedium = 500, fontWeightBold = 700, // Tell MUI what's the font-size on the html element.
+    // 16px is the default font-size used by browsers.
+    htmlFontSize = 16, // Apply the CSS properties to all the variants.
+    allVariants, pxToRem: pxToRem2, ...other } = typeof typography === 'function' ? typography(palette) : typography;
+    if (typeof fontSize !== 'number') console.error('MUI: `fontSize` is required to be a number.');
+    if (typeof htmlFontSize !== 'number') console.error('MUI: `htmlFontSize` is required to be a number.');
+    const coef = fontSize / 14;
+    const pxToRem = pxToRem2 || ((size)=>`${size / htmlFontSize * coef}rem`);
+    const buildVariant = (fontWeight, size, lineHeight, letterSpacing, casing)=>({
+            fontFamily,
+            fontWeight,
+            fontSize: pxToRem(size),
+            // Unitless following https://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+            lineHeight,
+            // The letter spacing was designed for the Roboto font-family. Using the same letter-spacing
+            // across font-families can cause issues with the kerning.
+            ...fontFamily === defaultFontFamily ? {
+                letterSpacing: `${round(letterSpacing / size)}em`
+            } : {},
+            ...casing,
+            ...allVariants
+        });
+    const variants = {
+        h1: buildVariant(fontWeightLight, 96, 1.167, -1.5),
+        h2: buildVariant(fontWeightLight, 60, 1.2, -0.5),
+        h3: buildVariant(fontWeightRegular, 48, 1.167, 0),
+        h4: buildVariant(fontWeightRegular, 34, 1.235, 0.25),
+        h5: buildVariant(fontWeightRegular, 24, 1.334, 0),
+        h6: buildVariant(fontWeightMedium, 20, 1.6, 0.15),
+        subtitle1: buildVariant(fontWeightRegular, 16, 1.75, 0.15),
+        subtitle2: buildVariant(fontWeightMedium, 14, 1.57, 0.1),
+        body1: buildVariant(fontWeightRegular, 16, 1.5, 0.15),
+        body2: buildVariant(fontWeightRegular, 14, 1.43, 0.15),
+        button: buildVariant(fontWeightMedium, 14, 1.75, 0.4, caseAllCaps),
+        caption: buildVariant(fontWeightRegular, 12, 1.66, 0.4),
+        overline: buildVariant(fontWeightRegular, 12, 2.66, 1, caseAllCaps),
+        // TODO v6: Remove handling of 'inherit' variant from the theme as it is already handled in Material UI's Typography component. Also, remember to remove the associated types.
+        inherit: {
+            fontFamily: 'inherit',
+            fontWeight: 'inherit',
+            fontSize: 'inherit',
+            lineHeight: 'inherit',
+            letterSpacing: 'inherit'
+        }
+    };
+    return (0, _deepmerge.default)({
+        htmlFontSize,
+        pxToRem,
+        fontFamily,
+        fontSize,
+        fontWeightLight,
+        fontWeightRegular,
+        fontWeightMedium,
+        fontWeightBold,
+        ...variants
+    }, other, {
+        clone: false // No need to clone deep
+    });
+}
+
+},{"75255ca3acc1f720":"1P3rZ","cacbc6b8de202000":"bLPf1"}],"kLBXl":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+const shadowKeyUmbraOpacity = 0.2;
+const shadowKeyPenumbraOpacity = 0.14;
+const shadowAmbientShadowOpacity = 0.12;
+function createShadow(...px) {
+    return [
+        `${px[0]}px ${px[1]}px ${px[2]}px ${px[3]}px rgba(0,0,0,${shadowKeyUmbraOpacity})`,
+        `${px[4]}px ${px[5]}px ${px[6]}px ${px[7]}px rgba(0,0,0,${shadowKeyPenumbraOpacity})`,
+        `${px[8]}px ${px[9]}px ${px[10]}px ${px[11]}px rgba(0,0,0,${shadowAmbientShadowOpacity})`
+    ].join(',');
+}
+// Values from https://github.com/material-components/material-components-web/blob/be8747f94574669cb5e7add1a7c54fa41a89cec7/packages/mdc-elevation/_variables.scss
+const shadows = [
+    'none',
+    createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0),
+    createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0),
+    createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0),
+    createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0),
+    createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0),
+    createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0),
+    createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1),
+    createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2),
+    createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2),
+    createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3),
+    createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3),
+    createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4),
+    createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4),
+    createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4),
+    createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5),
+    createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5),
+    createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5),
+    createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6),
+    createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6),
+    createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7),
+    createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7),
+    createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7),
+    createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8),
+    createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)
+];
+var _default = exports.default = shadows;
+
+},{}],"kquFJ":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = createTransitions;
+exports.easing = exports.duration = void 0;
+// Follow https://material.google.com/motion/duration-easing.html#duration-easing-natural-easing-curves
+// to learn the context in which each easing should be used.
+const easing = exports.easing = {
+    // This is the most common easing curve.
+    easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    // Objects enter the screen at full velocity from off-screen and
+    // slowly decelerate to a resting point.
+    easeOut: 'cubic-bezier(0.0, 0, 0.2, 1)',
+    // Objects leave the screen at full velocity. They do not decelerate when off-screen.
+    easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
+    // The sharp curve is used by objects that may return to the screen at any time.
+    sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
+};
+// Follow https://m2.material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
+// to learn when use what timing
+const duration = exports.duration = {
+    shortest: 150,
+    shorter: 200,
+    short: 250,
+    // most basic recommended timing
+    standard: 300,
+    // this is to be used in complex animations
+    complex: 375,
+    // recommended when something is entering screen
+    enteringScreen: 225,
+    // recommended when something is leaving screen
+    leavingScreen: 195
+};
+function formatMs(milliseconds) {
+    return `${Math.round(milliseconds)}ms`;
+}
+function getAutoHeightDuration(height) {
+    if (!height) return 0;
+    const constant = height / 36;
+    // https://www.desmos.com/calculator/vbrp3ggqet
+    return Math.min(Math.round((4 + 15 * constant ** 0.25 + constant / 5) * 10), 3000);
+}
+function createTransitions(inputTransitions) {
+    const mergedEasing = {
+        ...easing,
+        ...inputTransitions.easing
+    };
+    const mergedDuration = {
+        ...duration,
+        ...inputTransitions.duration
+    };
+    const create = (props = [
+        'all'
+    ], options = {})=>{
+        const { duration: durationOption = mergedDuration.standard, easing: easingOption = mergedEasing.easeInOut, delay = 0, ...other } = options;
+        {
+            const isString = (value)=>typeof value === 'string';
+            const isNumber = (value)=>!Number.isNaN(parseFloat(value));
+            if (!isString(props) && !Array.isArray(props)) console.error('MUI: Argument "props" must be a string or Array.');
+            if (!isNumber(durationOption) && !isString(durationOption)) console.error(`MUI: Argument "duration" must be a number or a string but found ${durationOption}.`);
+            if (!isString(easingOption)) console.error('MUI: Argument "easing" must be a string.');
+            if (!isNumber(delay) && !isString(delay)) console.error('MUI: Argument "delay" must be a number or a string.');
+            if (typeof options !== 'object') console.error([
+                'MUI: Secong argument of transition.create must be an object.',
+                "Arguments should be either `create('prop1', options)` or `create(['prop1', 'prop2'], options)`"
+            ].join('\n'));
+            if (Object.keys(other).length !== 0) console.error(`MUI: Unrecognized argument(s) [${Object.keys(other).join(',')}].`);
+        }
+        return (Array.isArray(props) ? props : [
+            props
+        ]).map((animatedProp)=>`${animatedProp} ${typeof durationOption === 'string' ? durationOption : formatMs(durationOption)} ${easingOption} ${typeof delay === 'string' ? delay : formatMs(delay)}`).join(',');
+    };
+    return {
+        getAutoHeightDuration,
+        create,
+        ...inputTransitions,
+        easing: mergedEasing,
+        duration: mergedDuration
+    };
+}
+
+},{}],"rQjwg":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+// We need to centralize the zIndex definitions as they work
+// like global values in the browser.
+const zIndex = {
+    mobileStepper: 1000,
+    fab: 1050,
+    speedDial: 1050,
+    appBar: 1100,
+    drawer: 1200,
+    modal: 1300,
+    snackbar: 1400,
+    tooltip: 1500
+};
+var _default = exports.default = zIndex;
+
+},{}],"gfY4l":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.stringifyTheme = stringifyTheme;
+var _deepmerge = require("252af5ceea3ec102");
+/* eslint-disable import/prefer-default-export */ function isSerializable(val) {
+    return (0, _deepmerge.isPlainObject)(val) || typeof val === 'undefined' || typeof val === 'string' || typeof val === 'boolean' || typeof val === 'number' || Array.isArray(val);
+}
+/**
+ * `baseTheme` usually comes from `createTheme()` or `extendTheme()`.
+ *
+ * This function is intended to be used with zero-runtime CSS-in-JS like Pigment CSS
+ * For example, in a Next.js project:
+ *
+ * ```js
+ * // next.config.js
+ * const { extendTheme } = require('@mui/material/styles');
+ *
+ * const theme = extendTheme();
+ * // `.toRuntimeSource` is Pigment CSS specific to create a theme that is available at runtime.
+ * theme.toRuntimeSource = stringifyTheme;
+ *
+ * module.exports = withPigment({
+ *  theme,
+ * });
+ * ```
+ */ function stringifyTheme(baseTheme = {}) {
+    const serializableTheme = {
+        ...baseTheme
+    };
+    function serializeTheme(object) {
+        const array = Object.entries(object);
+        // eslint-disable-next-line no-plusplus
+        for(let index = 0; index < array.length; index++){
+            const [key, value] = array[index];
+            if (!isSerializable(value) || key.startsWith('unstable_')) delete object[key];
+            else if ((0, _deepmerge.isPlainObject)(value)) {
+                object[key] = {
+                    ...value
+                };
+                serializeTheme(object[key]);
+            }
+        }
+    }
+    serializeTheme(serializableTheme);
+    return `import { unstable_createBreakpoints as createBreakpoints, createTransitions } from '@mui/material/styles';
+
+const theme = ${JSON.stringify(serializableTheme, null, 2)};
+
+theme.breakpoints = createBreakpoints(theme.breakpoints || {});
+theme.transitions = createTransitions(theme.transitions || {});
+
+export default theme;`;
+}
+
+},{"252af5ceea3ec102":"bLPf1"}],"4jSXe":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("618e944942a678bc").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = createColorScheme;
+exports.getOpacity = getOpacity;
+exports.getOverlays = getOverlays;
+var _createPalette = _interopRequireDefault(require("d85774e08ce63ca1"));
+var _getOverlayAlpha = _interopRequireDefault(require("37ea8458a36a9021"));
+const defaultDarkOverlays = [
+    ...Array(25)
+].map((_, index)=>{
+    if (index === 0) return 'none';
+    const overlay = (0, _getOverlayAlpha.default)(index);
+    return `linear-gradient(rgba(255 255 255 / ${overlay}), rgba(255 255 255 / ${overlay}))`;
+});
+function getOpacity(mode) {
+    return {
+        inputPlaceholder: mode === 'dark' ? 0.5 : 0.42,
+        inputUnderline: mode === 'dark' ? 0.7 : 0.42,
+        switchTrackDisabled: mode === 'dark' ? 0.2 : 0.12,
+        switchTrack: mode === 'dark' ? 0.3 : 0.38
+    };
+}
+function getOverlays(mode) {
+    return mode === 'dark' ? defaultDarkOverlays : [];
+}
+function createColorScheme(options) {
+    const { palette: paletteInput = {
+        mode: 'light'
+    }, // need to cast to avoid module augmentation test
+    opacity, overlays, ...rest } = options;
+    const palette = (0, _createPalette.default)(paletteInput);
+    return {
+        palette,
+        opacity: {
+            ...getOpacity(palette.mode),
+            ...opacity
+        },
+        overlays: overlays || getOverlays(palette.mode),
+        ...rest
+    };
+}
+
+},{"618e944942a678bc":"1P3rZ","d85774e08ce63ca1":"6gFd1","37ea8458a36a9021":"gVmXd"}],"gVmXd":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = getOverlayAlpha;
+// Inspired by https://github.com/material-components/material-components-ios/blob/bca36107405594d5b7b16265a5b0ed698f85a5ee/components/Elevation/src/UIColor%2BMaterialElevation.m#L61
+function getOverlayAlpha(elevation) {
+    let alphaValue;
+    if (elevation < 1) alphaValue = 5.11916 * elevation ** 2;
+    else alphaValue = 4.5 * Math.log(elevation + 1) + 2;
+    return Math.round(alphaValue * 10) / 1000;
+}
+
+},{}],"4q7TV":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = shouldSkipGeneratingVar;
+function shouldSkipGeneratingVar(keys) {
+    return !!keys[0].match(/(cssVarPrefix|colorSchemeSelector|rootSelector|typography|mixins|breakpoints|direction|transitions)/) || !!keys[0].match(/sxConfig$/) || // ends with sxConfig
+    keys[0] === 'palette' && !!keys[1]?.match(/(mode|contrastThreshold|tonalOffset)/);
+}
+
+},{}],"5tahi":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("d6ca57478bef72be").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _excludeVariablesFromRoot = _interopRequireDefault(require("85ae86ef6d080de1"));
+var _default = (theme)=>(colorScheme, css)=>{
+        const root = theme.rootSelector || ':root';
+        const selector = theme.colorSchemeSelector;
+        let rule = selector;
+        if (selector === 'class') rule = '.%s';
+        if (selector === 'data') rule = '[data-%s]';
+        if (selector?.startsWith('data-') && !selector.includes('%s')) // 'data-mui-color-scheme' -> '[data-mui-color-scheme="%s"]'
+        rule = `[${selector}="%s"]`;
+        if (theme.defaultColorScheme === colorScheme) {
+            if (colorScheme === 'dark') {
+                const excludedVariables = {};
+                (0, _excludeVariablesFromRoot.default)(theme.cssVarPrefix).forEach((cssVar)=>{
+                    excludedVariables[cssVar] = css[cssVar];
+                    delete css[cssVar];
+                });
+                if (rule === 'media') return {
+                    [root]: css,
+                    [`@media (prefers-color-scheme: dark)`]: {
+                        [root]: excludedVariables
+                    }
+                };
+                if (rule) return {
+                    [rule.replace('%s', colorScheme)]: excludedVariables,
+                    [`${root}, ${rule.replace('%s', colorScheme)}`]: css
+                };
+                return {
+                    [root]: {
+                        ...css,
+                        ...excludedVariables
+                    }
+                };
+            }
+            if (rule && rule !== 'media') return `${root}, ${rule.replace('%s', String(colorScheme))}`;
+        } else if (colorScheme) {
+            if (rule === 'media') return {
+                [`@media (prefers-color-scheme: ${String(colorScheme)})`]: {
+                    [root]: css
+                }
+            };
+            if (rule) return rule.replace('%s', String(colorScheme));
+        }
+        return root;
+    };
+exports.default = _default;
+
+},{"d6ca57478bef72be":"1P3rZ","85ae86ef6d080de1":"bxBFd"}],"bxBFd":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+/**
+ * @internal These variables should not appear in the :root stylesheet when the `defaultColorScheme="dark"`
+ */ const excludeVariablesFromRoot = (cssVarPrefix)=>[
+        ...[
+            ...Array(25)
+        ].map((_, index)=>`--${cssVarPrefix ? `${cssVarPrefix}-` : ''}overlays-${index}`),
+        `--${cssVarPrefix ? `${cssVarPrefix}-` : ''}palette-AppBar-darkBg`,
+        `--${cssVarPrefix ? `${cssVarPrefix}-` : ''}palette-AppBar-darkColor`
+    ];
+var _default = exports.default = excludeVariablesFromRoot;
+
+},{}],"6SSma":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _default = exports.default = '$$material';
+
+},{}],"eiQV8":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("f9880f8d885ac2e8").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _GlobalStyles.default;
+    }
+});
+var _GlobalStyles = _interopRequireDefault(require("b9f4976014d6913f"));
+
+},{"f9880f8d885ac2e8":"1P3rZ","b9f4976014d6913f":"fqcFY"}],"fqcFY":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("1392d07de526b602").default;
+var _interopRequireWildcard = require("b6c7628a193f95bd").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var React = _interopRequireWildcard(require("5856fa52a3decdab"));
+var _propTypes = _interopRequireDefault(require("7185862242ebb481"));
+var _system = require("b58da0205ef0cfe2");
+var _defaultTheme = _interopRequireDefault(require("bbea7f156f2694a7"));
+var _identifier = _interopRequireDefault(require("2e904b2a2708b805"));
+var _jsxRuntime = require("33d9951a73ac4f90");
+function GlobalStyles(props) {
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_system.GlobalStyles, {
+        ...props,
+        defaultTheme: _defaultTheme.default,
+        themeId: _identifier.default
+    });
+}
+GlobalStyles.propTypes = {
+    // ┌────────────────────────────── Warning ──────────────────────────────┐
+    // │ These PropTypes are generated from the TypeScript type definitions. │
+    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
+    // └─────────────────────────────────────────────────────────────────────┘
+    /**
+   * The styles you want to apply globally.
+   */ styles: _propTypes.default/* @typescript-to-proptypes-ignore */ .oneOfType([
+        _propTypes.default.array,
+        _propTypes.default.func,
+        _propTypes.default.number,
+        _propTypes.default.object,
+        _propTypes.default.string,
+        _propTypes.default.bool
+    ])
+};
+var _default = exports.default = GlobalStyles;
+
+},{"1392d07de526b602":"1P3rZ","b6c7628a193f95bd":"6TFJp","5856fa52a3decdab":"jMk1U","7185862242ebb481":"GNqOQ","b58da0205ef0cfe2":"1WaIj","bbea7f156f2694a7":"dsVJp","2e904b2a2708b805":"6SSma","33d9951a73ac4f90":"05iiF"}],"gU1yq":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("46f194eea215b25b").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+Object.defineProperty(exports, "rootShouldForwardProp", {
+    enumerable: true,
+    get: function() {
+        return _rootShouldForwardProp.default;
+    }
+});
+Object.defineProperty(exports, "slotShouldForwardProp", {
+    enumerable: true,
+    get: function() {
+        return _slotShouldForwardProp.default;
+    }
+});
+var _createStyled = _interopRequireDefault(require("7541497f21100948"));
+var _defaultTheme = _interopRequireDefault(require("a51c70a755109123"));
+var _identifier = _interopRequireDefault(require("e01ea68023bdabf7"));
+var _rootShouldForwardProp = _interopRequireDefault(require("b52a4685664121c4"));
+var _slotShouldForwardProp = _interopRequireDefault(require("c865ce001be73693"));
+const styled = (0, _createStyled.default)({
+    themeId: _identifier.default,
+    defaultTheme: _defaultTheme.default,
+    rootShouldForwardProp: _rootShouldForwardProp.default
+});
+var _default = exports.default = styled;
+
+},{"46f194eea215b25b":"1P3rZ","7541497f21100948":"8Psnj","a51c70a755109123":"dsVJp","e01ea68023bdabf7":"6SSma","b52a4685664121c4":"5Hs5J","c865ce001be73693":"iWX0F"}],"5Hs5J":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("6404fb53913fc632").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _slotShouldForwardProp = _interopRequireDefault(require("3aac4bd51a94273"));
+const rootShouldForwardProp = (prop)=>(0, _slotShouldForwardProp.default)(prop) && prop !== 'classes';
+var _default = exports.default = rootShouldForwardProp;
+
+},{"6404fb53913fc632":"1P3rZ","3aac4bd51a94273":"iWX0F"}],"iWX0F":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+// copied from @mui/system/createStyled
+function slotShouldForwardProp(prop) {
+    return prop !== 'ownerState' && prop !== 'theme' && prop !== 'sx' && prop !== 'as';
+}
+var _default = exports.default = slotShouldForwardProp;
+
+},{}],"5vr4t":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getTransitionProps = getTransitionProps;
+exports.reflow = void 0;
+const reflow = (node)=>node.scrollTop;
+exports.reflow = reflow;
+function getTransitionProps(props, options) {
+    const { timeout, easing, style = {} } = props;
+    return {
+        duration: style.transitionDuration ?? (typeof timeout === 'number' ? timeout : timeout[options.mode] || 0),
+        easing: style.transitionTimingFunction ?? (typeof easing === 'object' ? easing[options.mode] : easing),
+        delay: style.transitionDelay
+    };
+}
+
+},{}],"iEdsJ":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("69a3a6f070339fed").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _useForkRef = _interopRequireDefault(require("751098f668527ee9"));
+var _default = exports.default = _useForkRef.default;
+
+},{"69a3a6f070339fed":"1P3rZ","751098f668527ee9":"g7kn5"}],"g7kn5":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("e65de141a07c5e4b").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _useForkRef.default;
+    }
+});
+var _useForkRef = _interopRequireDefault(require("76422d3c27bc6864"));
+
+},{"e65de141a07c5e4b":"1P3rZ","76422d3c27bc6864":"bY4YC"}],"bY4YC":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireWildcard = require("c5001007a90df00").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = useForkRef;
+var React = _interopRequireWildcard(require("ba3eef59680b5588"));
+/**
+ * Merges refs into a single memoized callback ref or `null`.
+ *
+ * ```tsx
+ * const rootRef = React.useRef<Instance>(null);
+ * const refFork = useForkRef(rootRef, props.ref);
+ *
+ * return (
+ *   <Root {...props} ref={refFork} />
+ * );
+ * ```
+ *
+ * @param {Array<React.Ref<Instance> | undefined>} refs The ref array.
+ * @returns {React.RefCallback<Instance> | null} The new ref callback.
+ */ function useForkRef(...refs) {
+    const cleanupRef = React.useRef(undefined);
+    const refEffect = React.useCallback((instance)=>{
+        const cleanups = refs.map((ref)=>{
+            if (ref == null) return null;
+            if (typeof ref === 'function') {
+                const refCallback = ref;
+                const refCleanup = refCallback(instance);
+                return typeof refCleanup === 'function' ? refCleanup : ()=>{
+                    refCallback(null);
+                };
+            }
+            ref.current = instance;
+            return ()=>{
+                ref.current = null;
+            };
+        });
+        return ()=>{
+            cleanups.forEach((refCleanup)=>refCleanup?.());
+        };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, refs);
+    return React.useMemo(()=>{
+        if (refs.every((ref)=>ref == null)) return null;
+        return (value)=>{
+            if (cleanupRef.current) {
+                cleanupRef.current();
+                cleanupRef.current = undefined;
+            }
+            if (value != null) cleanupRef.current = refEffect(value);
+        };
+    // TODO: uncomment once we enable eslint-plugin-react-compiler // eslint-disable-next-line react-compiler/react-compiler -- intentionally ignoring that the dependency array must be an array literal
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, refs);
+}
+
+},{"c5001007a90df00":"6TFJp","ba3eef59680b5588":"jMk1U"}],"8vOp5":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$c690 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$c690.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -84967,7 +88466,8 @@ const KaiserslauternMapView = ({ selected, setSelected, viewMode })=>{
                 columnNumber: 7
             }, undefined),
             selected && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungInfoCardDefault.default), {
-                wohnungTitle: selected
+                wohnungTitle: selected,
+                selected: !!selected
             }, void 0, false, {
                 fileName: "src/components/mapviews/KaiserslauternMapView.jsx",
                 lineNumber: 46,
@@ -85193,9 +88693,9 @@ const WohnungsBarChart = ({ data, selected, dataKey, label })=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
                     dataKey: dataKey,
                     children: data.map((entry, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
-                            fill: entry.title === selected ? '#ffffff' : entry.color,
-                            stroke: entry.title === selected ? '#000000' : undefined,
-                            strokeWidth: entry.title === selected ? 6 : 1
+                            fill: entry.title === selected ? '#000000' : entry.color,
+                            stroke: entry.title === selected ? '#ffffff' : undefined,
+                            strokeWidth: entry.title === selected ? 12 : 1
                         }, `cell-${entry.id ?? index}`, false, {
                             fileName: "src/components/barcharts/WohnungsBarChart.jsx",
                             lineNumber: 21,
@@ -85228,7 +88728,7 @@ $RefreshReg$(_c, "WohnungsBarChart");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","recharts":"k9rge","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39","../../utils/utilFunctions":"iAfo0","../../utils/customToolTop":"erhpM"}],"k9rge":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","recharts":"k9rge","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39","../../utils/customToolTop":"erhpM","../../utils/utilFunctions":"iAfo0"}],"k9rge":[function(require,module,exports,__globalThis) {
 // "export type" declarations on separate lines are in use
 // to workaround babel issue(s) 11465 12578
 //
@@ -118781,35 +122281,24 @@ const CustomTooltip = ({ active, payload })=>{
     const wohnung = payload[0].payload;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
         sx: {
-            backgroundColor: "white",
-            maxWidth: 400,
-            boxShadow: 3
+            backgroundColor: "#1e1e2f",
+            color: "#f5f5f5",
+            border: "1px solid #c792ea",
+            borderRadius: 2,
+            padding: 2,
+            maxWidth: 320,
+            boxShadow: 6
         },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                variant: "body2",
-                fontWeight: "bold",
-                gutterBottom: true,
+                variant: "subtitle2",
+                sx: {
+                    fontWeight: "bold",
+                    color: "#c792ea",
+                    mb: 1
+                },
                 children: wohnung.title
             }, void 0, false, {
-                fileName: "src/utils/customToolTop.js",
-                lineNumber: 17,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                variant: "body2",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                        children: "Preis \u20AC/m\xb2:"
-                    }, void 0, false, {
-                        fileName: "src/utils/customToolTop.js",
-                        lineNumber: 22,
-                        columnNumber: 17
-                    }, undefined),
-                    " ",
-                    wohnung.price_per_qm
-                ]
-            }, void 0, true, {
                 fileName: "src/utils/customToolTop.js",
                 lineNumber: 21,
                 columnNumber: 13
@@ -118818,10 +122307,34 @@ const CustomTooltip = ({ active, payload })=>{
                 variant: "body2",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        style: {
+                            color: "#c792ea"
+                        },
+                        children: "Preis \u20AC/m\xb2:"
+                    }, void 0, false, {
+                        fileName: "src/utils/customToolTop.js",
+                        lineNumber: 26,
+                        columnNumber: 17
+                    }, undefined),
+                    " ",
+                    wohnung.price_per_qm
+                ]
+            }, void 0, true, {
+                fileName: "src/utils/customToolTop.js",
+                lineNumber: 25,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                variant: "body2",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        style: {
+                            color: "#c792ea"
+                        },
                         children: "Preis Kalt:"
                     }, void 0, false, {
                         fileName: "src/utils/customToolTop.js",
-                        lineNumber: 25,
+                        lineNumber: 29,
                         columnNumber: 17
                     }, undefined),
                     " ",
@@ -118829,17 +122342,20 @@ const CustomTooltip = ({ active, payload })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/utils/customToolTop.js",
-                lineNumber: 24,
+                lineNumber: 28,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
                 variant: "body2",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        style: {
+                            color: "#c792ea"
+                        },
                         children: "Preis Warm:"
                     }, void 0, false, {
                         fileName: "src/utils/customToolTop.js",
-                        lineNumber: 28,
+                        lineNumber: 32,
                         columnNumber: 17
                     }, undefined),
                     " ",
@@ -118847,17 +122363,20 @@ const CustomTooltip = ({ active, payload })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/utils/customToolTop.js",
-                lineNumber: 27,
+                lineNumber: 31,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
                 variant: "body2",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        style: {
+                            color: "#c792ea"
+                        },
                         children: "Fl\xe4che:"
                     }, void 0, false, {
                         fileName: "src/utils/customToolTop.js",
-                        lineNumber: 31,
+                        lineNumber: 35,
                         columnNumber: 17
                     }, undefined),
                     " ",
@@ -118866,17 +122385,20 @@ const CustomTooltip = ({ active, payload })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/utils/customToolTop.js",
-                lineNumber: 30,
+                lineNumber: 34,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
                 variant: "body2",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        style: {
+                            color: "#c792ea"
+                        },
                         children: "Adresse:"
                     }, void 0, false, {
                         fileName: "src/utils/customToolTop.js",
-                        lineNumber: 34,
+                        lineNumber: 38,
                         columnNumber: 17
                     }, undefined),
                     " ",
@@ -118884,17 +122406,20 @@ const CustomTooltip = ({ active, payload })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/utils/customToolTop.js",
-                lineNumber: 33,
+                lineNumber: 37,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
                 variant: "body2",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        style: {
+                            color: "#c792ea"
+                        },
                         children: "Stadt:"
                     }, void 0, false, {
                         fileName: "src/utils/customToolTop.js",
-                        lineNumber: 37,
+                        lineNumber: 41,
                         columnNumber: 17
                     }, undefined),
                     " ",
@@ -118902,17 +122427,20 @@ const CustomTooltip = ({ active, payload })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/utils/customToolTop.js",
-                lineNumber: 36,
+                lineNumber: 40,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
                 variant: "body2",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        style: {
+                            color: "#c792ea"
+                        },
                         children: "Zimmer:"
                     }, void 0, false, {
                         fileName: "src/utils/customToolTop.js",
-                        lineNumber: 40,
+                        lineNumber: 44,
                         columnNumber: 17
                     }, undefined),
                     " ",
@@ -118920,17 +122448,20 @@ const CustomTooltip = ({ active, payload })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/utils/customToolTop.js",
-                lineNumber: 39,
+                lineNumber: 43,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
                 variant: "body2",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        style: {
+                            color: "#c792ea"
+                        },
                         children: "Etage:"
                     }, void 0, false, {
                         fileName: "src/utils/customToolTop.js",
-                        lineNumber: 43,
+                        lineNumber: 47,
                         columnNumber: 17
                     }, undefined),
                     " ",
@@ -118938,7 +122469,7 @@ const CustomTooltip = ({ active, payload })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/utils/customToolTop.js",
-                lineNumber: 42,
+                lineNumber: 46,
                 columnNumber: 13
             }, undefined)
         ]
@@ -118980,126 +122511,139 @@ var _processedDataKaiserslautern = require("./../../utils/processedDataKaisersla
 var _processedDataKaiserslauternDefault = parcelHelpers.interopDefault(_processedDataKaiserslautern);
 var _processedDataMannheim = require("./../../utils/processedDataMannheim");
 var _processedDataMannheimDefault = parcelHelpers.interopDefault(_processedDataMannheim);
+var _slide = require("@mui/material/Slide");
+var _slideDefault = parcelHelpers.interopDefault(_slide);
 const BottomChartBar = ({ selectedObject, learSelections })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.AppBar), {
-        position: "fixed",
-        color: "default",
-        sx: {
-            top: 'auto',
-            bottom: 0,
-            boxShadow: 10
-        },
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Toolbar), {
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
-                sx: {
-                    display: 'flex',
-                    width: '100%'
-                },
-                children: [
-                    selectedObject && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
-                        sx: {
-                            flex: 1
-                        },
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
-                                data: [
-                                    ...(0, _processedDataKaiserslauternDefault.default)
-                                ].sort((a, b)=>a.price_per_qm - b.price_per_qm),
-                                selected: selectedObject,
-                                dataKey: "price_per_qm",
-                                label: "Kaiserslautern (\u20AC/m\xb2)"
-                            }, void 0, false, {
-                                fileName: "src/components/appbar/BottomChartBar.jsx",
-                                lineNumber: 18,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
-                                data: [
-                                    ...(0, _processedDataKaiserslauternDefault.default)
-                                ].sort((a, b)=>a.qm - b.qm),
-                                selected: selectedObject,
-                                dataKey: "qm",
-                                label: "Kaiserslautern (\u20AC/m\xb2)"
-                            }, void 0, false, {
-                                fileName: "src/components/appbar/BottomChartBar.jsx",
-                                lineNumber: 25,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
-                                data: [
-                                    ...(0, _processedDataKaiserslauternDefault.default)
-                                ].sort((a, b)=>a.price_per_qm - b.price_per_qm),
-                                selected: selectedObject,
-                                dataKey: "price_per_qm",
-                                label: "Kaiserslautern (\u20AC/m\xb2)"
-                            }, void 0, false, {
-                                fileName: "src/components/appbar/BottomChartBar.jsx",
-                                lineNumber: 32,
-                                columnNumber: 15
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/appbar/BottomChartBar.jsx",
-                        lineNumber: 17,
-                        columnNumber: 13
-                    }, undefined),
-                    selectedObject && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
-                        sx: {
-                            flex: 1
-                        },
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
-                                data: [
-                                    ...(0, _processedDataMannheimDefault.default)
-                                ].sort((a, b)=>a.price_per_qm - b.price_per_qm),
-                                selected: selectedObject,
-                                dataKey: "price_per_qm",
-                                label: "Mannheim (\u20AC/m\xb2)"
-                            }, void 0, false, {
-                                fileName: "src/components/appbar/BottomChartBar.jsx",
-                                lineNumber: 44,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
-                                data: [
-                                    ...(0, _processedDataMannheimDefault.default)
-                                ].sort((a, b)=>a.qm - b.qm),
-                                selected: selectedObject,
-                                dataKey: "qm",
-                                label: "Mannheim (\u20AC/m\xb2)"
-                            }, void 0, false, {
-                                fileName: "src/components/appbar/BottomChartBar.jsx",
-                                lineNumber: 50,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
-                                data: [
-                                    ...(0, _processedDataMannheimDefault.default)
-                                ].sort((a, b)=>a.price_per_qm - b.price_per_qm),
-                                selected: selectedObject,
-                                dataKey: "price_per_qm",
-                                label: "Mannheim (\u20AC/m\xb2)"
-                            }, void 0, false, {
-                                fileName: "src/components/appbar/BottomChartBar.jsx",
-                                lineNumber: 56,
-                                columnNumber: 15
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/appbar/BottomChartBar.jsx",
-                        lineNumber: 43,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slideDefault.default), {
+        direction: "up",
+        in: !!selectedObject,
+        mountOnEnter: true,
+        unmountOnExit: true,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.AppBar), {
+            position: "fixed",
+            sx: {
+                top: 'auto',
+                bottom: 0,
+                boxShadow: 10,
+                backgroundColor: '#1e1e2f',
+                color: '#ffffff'
+            },
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Toolbar), {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+                    sx: {
+                        display: 'flex',
+                        width: '100%'
+                    },
+                    children: [
+                        selectedObject && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+                            sx: {
+                                flex: 1
+                            },
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
+                                    data: [
+                                        ...(0, _processedDataKaiserslauternDefault.default)
+                                    ].sort((a, b)=>a.price_per_qm - b.price_per_qm),
+                                    selected: selectedObject,
+                                    dataKey: "price_per_qm",
+                                    label: "Kaiserslautern (\u20AC/m\xb2)"
+                                }, void 0, false, {
+                                    fileName: "src/components/appbar/BottomChartBar.jsx",
+                                    lineNumber: 28,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
+                                    data: [
+                                        ...(0, _processedDataKaiserslauternDefault.default)
+                                    ].sort((a, b)=>a.qm - b.qm),
+                                    selected: selectedObject,
+                                    dataKey: "qm",
+                                    label: "Kaiserslautern (\u20AC/m\xb2)"
+                                }, void 0, false, {
+                                    fileName: "src/components/appbar/BottomChartBar.jsx",
+                                    lineNumber: 35,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
+                                    data: [
+                                        ...(0, _processedDataKaiserslauternDefault.default)
+                                    ].sort((a, b)=>a.price_per_qm - b.price_per_qm),
+                                    selected: selectedObject,
+                                    dataKey: "price_per_qm",
+                                    label: "Kaiserslautern (\u20AC/m\xb2)"
+                                }, void 0, false, {
+                                    fileName: "src/components/appbar/BottomChartBar.jsx",
+                                    lineNumber: 42,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/appbar/BottomChartBar.jsx",
+                            lineNumber: 27,
+                            columnNumber: 13
+                        }, undefined),
+                        selectedObject && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+                            sx: {
+                                flex: 1
+                            },
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
+                                    data: [
+                                        ...(0, _processedDataMannheimDefault.default)
+                                    ].sort((a, b)=>a.price_per_qm - b.price_per_qm),
+                                    selected: selectedObject,
+                                    dataKey: "price_per_qm",
+                                    label: "Mannheim (\u20AC/m\xb2)"
+                                }, void 0, false, {
+                                    fileName: "src/components/appbar/BottomChartBar.jsx",
+                                    lineNumber: 54,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
+                                    data: [
+                                        ...(0, _processedDataMannheimDefault.default)
+                                    ].sort((a, b)=>a.qm - b.qm),
+                                    selected: selectedObject,
+                                    dataKey: "qm",
+                                    label: "Mannheim (\u20AC/m\xb2)"
+                                }, void 0, false, {
+                                    fileName: "src/components/appbar/BottomChartBar.jsx",
+                                    lineNumber: 60,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wohnungsBarChartDefault.default), {
+                                    data: [
+                                        ...(0, _processedDataMannheimDefault.default)
+                                    ].sort((a, b)=>a.price_per_qm - b.price_per_qm),
+                                    selected: selectedObject,
+                                    dataKey: "price_per_qm",
+                                    label: "Mannheim (\u20AC/m\xb2)"
+                                }, void 0, false, {
+                                    fileName: "src/components/appbar/BottomChartBar.jsx",
+                                    lineNumber: 66,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/appbar/BottomChartBar.jsx",
+                            lineNumber: 53,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/appbar/BottomChartBar.jsx",
+                    lineNumber: 25,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/components/appbar/BottomChartBar.jsx",
-                lineNumber: 15,
-                columnNumber: 9
+                lineNumber: 24,
+                columnNumber: 7
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/appbar/BottomChartBar.jsx",
             lineNumber: 14,
-            columnNumber: 7
+            columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/appbar/BottomChartBar.jsx",
@@ -119117,7 +122661,7 @@ $RefreshReg$(_c, "BottomChartBar");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"9mWks","@mui/material/Icon":"70Qlx","../barcharts/WohnungsBarChart":"cyrRS","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39","./../../utils/processedDataKaiserslautern":"3LGQW","./../../utils/processedDataMannheim":"7YC05"}],"70Qlx":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"9mWks","@mui/material/Icon":"70Qlx","../barcharts/WohnungsBarChart":"cyrRS","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39","./../../utils/processedDataKaiserslautern":"3LGQW","./../../utils/processedDataMannheim":"7YC05","@mui/material/Slide":"jGPlL"}],"70Qlx":[function(require,module,exports,__globalThis) {
 "use strict";
 var _interopRequireWildcard = require("3c43c23915561e00").default;
 var _interopRequireDefault = require("af47538ffba19a0").default;
@@ -119378,1471 +122922,7 @@ exports.default = void 0;
 var _capitalize = _interopRequireDefault(require("4a6ed00df881e6ba"));
 var _default = exports.default = _capitalize.default;
 
-},{"75f0dec6104f6363":"1P3rZ","4a6ed00df881e6ba":"igOKi"}],"7wsk9":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireDefault = require("407069ea89e26f09").default;
-var _interopRequireWildcard = require("31f2783b9a91bef7").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "css", {
-    enumerable: true,
-    get: function() {
-        return _system.css;
-    }
-});
-exports.globalCss = globalCss;
-exports.internal_createExtendSxProp = internal_createExtendSxProp;
-Object.defineProperty(exports, "keyframes", {
-    enumerable: true,
-    get: function() {
-        return _system.keyframes;
-    }
-});
-Object.defineProperty(exports, "styled", {
-    enumerable: true,
-    get: function() {
-        return _styled.default;
-    }
-});
-Object.defineProperty(exports, "useTheme", {
-    enumerable: true,
-    get: function() {
-        return _useTheme.default;
-    }
-});
-var React = _interopRequireWildcard(require("3e71abd26e55f26b"));
-var _styleFunctionSx = require("bfd0e1aeb380e6d1");
-var _useTheme = _interopRequireDefault(require("d299e6c723c421bf"));
-var _GlobalStyles = _interopRequireDefault(require("27d002377f60cb4e"));
-var _jsxRuntime = require("6713fc0ccce24c19");
-var _system = require("4a4d550ba1eacd52");
-var _styled = _interopRequireDefault(require("2ed34ee38246058d"));
-function globalCss(styles) {
-    return function GlobalStylesWrapper(props) {
-        return(/*#__PURE__*/ // Pigment CSS `globalCss` support callback with theme inside an object but `GlobalStyles` support theme as a callback value.
-        (0, _jsxRuntime.jsx)(_GlobalStyles.default, {
-            styles: typeof styles === 'function' ? (theme)=>styles({
-                    theme,
-                    ...props
-                }) : styles
-        }));
-    };
-}
-// eslint-disable-next-line @typescript-eslint/naming-convention
-function internal_createExtendSxProp() {
-    return _styleFunctionSx.extendSxProp;
-}
-
-},{"407069ea89e26f09":"1P3rZ","31f2783b9a91bef7":"6TFJp","3e71abd26e55f26b":"jMk1U","bfd0e1aeb380e6d1":"3qmy1","d299e6c723c421bf":"03DWO","27d002377f60cb4e":"eiQV8","6713fc0ccce24c19":"05iiF","4a4d550ba1eacd52":"1WaIj","2ed34ee38246058d":"gU1yq"}],"03DWO":[function(require,module,exports,__globalThis) {
-"use strict";
-'use client';
-var _interopRequireDefault = require("61e03a0156e416a1").default;
-var _interopRequireWildcard = require("6ffa06d021160115").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = useTheme;
-var React = _interopRequireWildcard(require("8a40016487b63d87"));
-var _system = require("457df495ffa84322");
-var _defaultTheme = _interopRequireDefault(require("63ebbe502362c7c9"));
-var _identifier = _interopRequireDefault(require("81c53f68f8a78aa5"));
-function useTheme() {
-    const theme = (0, _system.useTheme)(_defaultTheme.default);
-    // TODO: uncomment once we enable eslint-plugin-react-compiler // eslint-disable-next-line react-compiler/react-compiler
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    React.useDebugValue(theme);
-    return theme[_identifier.default] || theme;
-}
-
-},{"61e03a0156e416a1":"1P3rZ","6ffa06d021160115":"6TFJp","8a40016487b63d87":"jMk1U","457df495ffa84322":"1WaIj","63ebbe502362c7c9":"dsVJp","81c53f68f8a78aa5":"6SSma"}],"dsVJp":[function(require,module,exports,__globalThis) {
-"use strict";
-'use client';
-var _interopRequireDefault = require("c992951b753a9ab3").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-var _createTheme = _interopRequireDefault(require("e0a3c219f881eb2a"));
-const defaultTheme = (0, _createTheme.default)();
-var _default = exports.default = defaultTheme;
-
-},{"c992951b753a9ab3":"1P3rZ","e0a3c219f881eb2a":"a1TKj"}],"a1TKj":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireDefault = require("f53bf87bf42dedc").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = createTheme;
-var _createPalette = _interopRequireDefault(require("ce01a4e2b614fac5"));
-var _createThemeWithVars = _interopRequireDefault(require("9ef23b096d7a489b"));
-var _createThemeNoVars = _interopRequireDefault(require("22170ee3bd11250f"));
-// eslint-disable-next-line consistent-return
-function attachColorScheme(theme, scheme, colorScheme) {
-    if (!theme.colorSchemes) return undefined;
-    if (colorScheme) theme.colorSchemes[scheme] = {
-        ...colorScheme !== true && colorScheme,
-        palette: (0, _createPalette.default)({
-            ...colorScheme === true ? {} : colorScheme.palette,
-            mode: scheme
-        }) // cast type to skip module augmentation test
-    };
-}
-/**
- * Generate a theme base on the options received.
- * @param options Takes an incomplete theme object and adds the missing parts.
- * @param args Deep merge the arguments with the about to be returned theme.
- * @returns A complete, ready-to-use theme object.
- */ function createTheme(options = {}, // cast type to skip module augmentation test
-...args) {
-    const { palette, cssVariables = false, colorSchemes: initialColorSchemes = !palette ? {
-        light: true
-    } : undefined, defaultColorScheme: initialDefaultColorScheme = palette?.mode, ...rest } = options;
-    const defaultColorSchemeInput = initialDefaultColorScheme || 'light';
-    const defaultScheme = initialColorSchemes?.[defaultColorSchemeInput];
-    const colorSchemesInput = {
-        ...initialColorSchemes,
-        ...palette ? {
-            [defaultColorSchemeInput]: {
-                ...typeof defaultScheme !== 'boolean' && defaultScheme,
-                palette
-            }
-        } : undefined
-    };
-    if (cssVariables === false) {
-        if (!('colorSchemes' in options)) // Behaves exactly as v5
-        return (0, _createThemeNoVars.default)(options, ...args);
-        let paletteOptions = palette;
-        if (!('palette' in options)) {
-            if (colorSchemesInput[defaultColorSchemeInput]) {
-                if (colorSchemesInput[defaultColorSchemeInput] !== true) paletteOptions = colorSchemesInput[defaultColorSchemeInput].palette;
-                else if (defaultColorSchemeInput === 'dark') // @ts-ignore to prevent the module augmentation test from failing
-                paletteOptions = {
-                    mode: 'dark'
-                };
-            }
-        }
-        const theme = (0, _createThemeNoVars.default)({
-            ...options,
-            palette: paletteOptions
-        }, ...args);
-        theme.defaultColorScheme = defaultColorSchemeInput;
-        theme.colorSchemes = colorSchemesInput;
-        if (theme.palette.mode === 'light') {
-            theme.colorSchemes.light = {
-                ...colorSchemesInput.light !== true && colorSchemesInput.light,
-                palette: theme.palette
-            };
-            attachColorScheme(theme, 'dark', colorSchemesInput.dark);
-        }
-        if (theme.palette.mode === 'dark') {
-            theme.colorSchemes.dark = {
-                ...colorSchemesInput.dark !== true && colorSchemesInput.dark,
-                palette: theme.palette
-            };
-            attachColorScheme(theme, 'light', colorSchemesInput.light);
-        }
-        return theme;
-    }
-    if (!palette && !('light' in colorSchemesInput) && defaultColorSchemeInput === 'light') colorSchemesInput.light = true;
-    return (0, _createThemeWithVars.default)({
-        ...rest,
-        colorSchemes: colorSchemesInput,
-        defaultColorScheme: defaultColorSchemeInput,
-        ...typeof cssVariables !== 'boolean' && cssVariables
-    }, ...args);
-}
-
-},{"f53bf87bf42dedc":"1P3rZ","ce01a4e2b614fac5":"6gFd1","9ef23b096d7a489b":"asCkD","22170ee3bd11250f":"dhKZY"}],"6gFd1":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireDefault = require("11300292bb3e3dc3").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.dark = void 0;
-exports.default = createPalette;
-exports.light = void 0;
-var _formatMuiErrorMessage = _interopRequireDefault(require("a2877fe4b287d6b0"));
-var _deepmerge = _interopRequireDefault(require("fa27818bbfce2f16"));
-var _colorManipulator = require("984635010f11e72f");
-var _common = _interopRequireDefault(require("2df4f74bc61cb41e"));
-var _grey = _interopRequireDefault(require("3b7e746b54059808"));
-var _purple = _interopRequireDefault(require("38df14157d06197c"));
-var _red = _interopRequireDefault(require("3b28d80ed8bb4b59"));
-var _orange = _interopRequireDefault(require("90db4edb20684717"));
-var _blue = _interopRequireDefault(require("9701b07c082fb52f"));
-var _lightBlue = _interopRequireDefault(require("ecf564fbe0fdcdd4"));
-var _green = _interopRequireDefault(require("827981c919ddbe32"));
-function getLight() {
-    return {
-        // The colors used to style the text.
-        text: {
-            // The most important text.
-            primary: 'rgba(0, 0, 0, 0.87)',
-            // Secondary text.
-            secondary: 'rgba(0, 0, 0, 0.6)',
-            // Disabled text have even lower visual prominence.
-            disabled: 'rgba(0, 0, 0, 0.38)'
-        },
-        // The color used to divide different elements.
-        divider: 'rgba(0, 0, 0, 0.12)',
-        // The background colors used to style the surfaces.
-        // Consistency between these values is important.
-        background: {
-            paper: _common.default.white,
-            default: _common.default.white
-        },
-        // The colors used to style the action elements.
-        action: {
-            // The color of an active action like an icon button.
-            active: 'rgba(0, 0, 0, 0.54)',
-            // The color of an hovered action.
-            hover: 'rgba(0, 0, 0, 0.04)',
-            hoverOpacity: 0.04,
-            // The color of a selected action.
-            selected: 'rgba(0, 0, 0, 0.08)',
-            selectedOpacity: 0.08,
-            // The color of a disabled action.
-            disabled: 'rgba(0, 0, 0, 0.26)',
-            // The background color of a disabled action.
-            disabledBackground: 'rgba(0, 0, 0, 0.12)',
-            disabledOpacity: 0.38,
-            focus: 'rgba(0, 0, 0, 0.12)',
-            focusOpacity: 0.12,
-            activatedOpacity: 0.12
-        }
-    };
-}
-const light = exports.light = getLight();
-function getDark() {
-    return {
-        text: {
-            primary: _common.default.white,
-            secondary: 'rgba(255, 255, 255, 0.7)',
-            disabled: 'rgba(255, 255, 255, 0.5)',
-            icon: 'rgba(255, 255, 255, 0.5)'
-        },
-        divider: 'rgba(255, 255, 255, 0.12)',
-        background: {
-            paper: '#121212',
-            default: '#121212'
-        },
-        action: {
-            active: _common.default.white,
-            hover: 'rgba(255, 255, 255, 0.08)',
-            hoverOpacity: 0.08,
-            selected: 'rgba(255, 255, 255, 0.16)',
-            selectedOpacity: 0.16,
-            disabled: 'rgba(255, 255, 255, 0.3)',
-            disabledBackground: 'rgba(255, 255, 255, 0.12)',
-            disabledOpacity: 0.38,
-            focus: 'rgba(255, 255, 255, 0.12)',
-            focusOpacity: 0.12,
-            activatedOpacity: 0.24
-        }
-    };
-}
-const dark = exports.dark = getDark();
-function addLightOrDark(intent, direction, shade, tonalOffset) {
-    const tonalOffsetLight = tonalOffset.light || tonalOffset;
-    const tonalOffsetDark = tonalOffset.dark || tonalOffset * 1.5;
-    if (!intent[direction]) {
-        if (intent.hasOwnProperty(shade)) intent[direction] = intent[shade];
-        else if (direction === 'light') intent.light = (0, _colorManipulator.lighten)(intent.main, tonalOffsetLight);
-        else if (direction === 'dark') intent.dark = (0, _colorManipulator.darken)(intent.main, tonalOffsetDark);
-    }
-}
-function getDefaultPrimary(mode = 'light') {
-    if (mode === 'dark') return {
-        main: _blue.default[200],
-        light: _blue.default[50],
-        dark: _blue.default[400]
-    };
-    return {
-        main: _blue.default[700],
-        light: _blue.default[400],
-        dark: _blue.default[800]
-    };
-}
-function getDefaultSecondary(mode = 'light') {
-    if (mode === 'dark') return {
-        main: _purple.default[200],
-        light: _purple.default[50],
-        dark: _purple.default[400]
-    };
-    return {
-        main: _purple.default[500],
-        light: _purple.default[300],
-        dark: _purple.default[700]
-    };
-}
-function getDefaultError(mode = 'light') {
-    if (mode === 'dark') return {
-        main: _red.default[500],
-        light: _red.default[300],
-        dark: _red.default[700]
-    };
-    return {
-        main: _red.default[700],
-        light: _red.default[400],
-        dark: _red.default[800]
-    };
-}
-function getDefaultInfo(mode = 'light') {
-    if (mode === 'dark') return {
-        main: _lightBlue.default[400],
-        light: _lightBlue.default[300],
-        dark: _lightBlue.default[700]
-    };
-    return {
-        main: _lightBlue.default[700],
-        light: _lightBlue.default[500],
-        dark: _lightBlue.default[900]
-    };
-}
-function getDefaultSuccess(mode = 'light') {
-    if (mode === 'dark') return {
-        main: _green.default[400],
-        light: _green.default[300],
-        dark: _green.default[700]
-    };
-    return {
-        main: _green.default[800],
-        light: _green.default[500],
-        dark: _green.default[900]
-    };
-}
-function getDefaultWarning(mode = 'light') {
-    if (mode === 'dark') return {
-        main: _orange.default[400],
-        light: _orange.default[300],
-        dark: _orange.default[700]
-    };
-    return {
-        main: '#ed6c02',
-        // closest to orange[800] that pass 3:1.
-        light: _orange.default[500],
-        dark: _orange.default[900]
-    };
-}
-function createPalette(palette) {
-    const { mode = 'light', contrastThreshold = 3, tonalOffset = 0.2, ...other } = palette;
-    const primary = palette.primary || getDefaultPrimary(mode);
-    const secondary = palette.secondary || getDefaultSecondary(mode);
-    const error = palette.error || getDefaultError(mode);
-    const info = palette.info || getDefaultInfo(mode);
-    const success = palette.success || getDefaultSuccess(mode);
-    const warning = palette.warning || getDefaultWarning(mode);
-    // Use the same logic as
-    // Bootstrap: https://github.com/twbs/bootstrap/blob/1d6e3710dd447de1a200f29e8fa521f8a0908f70/scss/_functions.scss#L59
-    // and material-components-web https://github.com/material-components/material-components-web/blob/ac46b8863c4dab9fc22c4c662dc6bd1b65dd652f/packages/mdc-theme/_functions.scss#L54
-    function getContrastText(background) {
-        const contrastText = (0, _colorManipulator.getContrastRatio)(background, dark.text.primary) >= contrastThreshold ? dark.text.primary : light.text.primary;
-        {
-            const contrast = (0, _colorManipulator.getContrastRatio)(background, contrastText);
-            if (contrast < 3) console.error([
-                `MUI: The contrast ratio of ${contrast}:1 for ${contrastText} on ${background}`,
-                'falls below the WCAG recommended absolute minimum contrast ratio of 3:1.',
-                'https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast'
-            ].join('\n'));
-        }
-        return contrastText;
-    }
-    const augmentColor = ({ color, name, mainShade = 500, lightShade = 300, darkShade = 700 })=>{
-        color = {
-            ...color
-        };
-        if (!color.main && color[mainShade]) color.main = color[mainShade];
-        if (!color.hasOwnProperty('main')) throw new Error(`MUI: The color${name ? ` (${name})` : ''} provided to augmentColor(color) is invalid.\n` + `The color object needs to have a \`main\` property or a \`${mainShade}\` property.`);
-        if (typeof color.main !== 'string') throw new Error(`MUI: The color${name ? ` (${name})` : ''} provided to augmentColor(color) is invalid.\n` + `\`color.main\` should be a string, but \`${JSON.stringify(color.main)}\` was provided instead.\n` + '\n' + 'Did you intend to use one of the following approaches?\n' + '\n' + 'import { green } from "@mui/material/colors";\n' + '\n' + 'const theme1 = createTheme({ palette: {\n' + '  primary: green,\n' + '} });\n' + '\n' + 'const theme2 = createTheme({ palette: {\n' + '  primary: { main: green[500] },\n' + '} });');
-        addLightOrDark(color, 'light', lightShade, tonalOffset);
-        addLightOrDark(color, 'dark', darkShade, tonalOffset);
-        if (!color.contrastText) color.contrastText = getContrastText(color.main);
-        return color;
-    };
-    let modeHydrated;
-    if (mode === 'light') modeHydrated = getLight();
-    else if (mode === 'dark') modeHydrated = getDark();
-    if (!modeHydrated) console.error(`MUI: The palette mode \`${mode}\` is not supported.`);
-    const paletteOutput = (0, _deepmerge.default)({
-        // A collection of common colors.
-        common: {
-            ..._common.default
-        },
-        // prevent mutable object.
-        // The palette mode, can be light or dark.
-        mode,
-        // The colors used to represent primary interface elements for a user.
-        primary: augmentColor({
-            color: primary,
-            name: 'primary'
-        }),
-        // The colors used to represent secondary interface elements for a user.
-        secondary: augmentColor({
-            color: secondary,
-            name: 'secondary',
-            mainShade: 'A400',
-            lightShade: 'A200',
-            darkShade: 'A700'
-        }),
-        // The colors used to represent interface elements that the user should be made aware of.
-        error: augmentColor({
-            color: error,
-            name: 'error'
-        }),
-        // The colors used to represent potentially dangerous actions or important messages.
-        warning: augmentColor({
-            color: warning,
-            name: 'warning'
-        }),
-        // The colors used to present information to the user that is neutral and not necessarily important.
-        info: augmentColor({
-            color: info,
-            name: 'info'
-        }),
-        // The colors used to indicate the successful completion of an action that user triggered.
-        success: augmentColor({
-            color: success,
-            name: 'success'
-        }),
-        // The grey colors.
-        grey: _grey.default,
-        // Used by `getContrastText()` to maximize the contrast between
-        // the background and the text.
-        contrastThreshold,
-        // Takes a background color and returns the text color that maximizes the contrast.
-        getContrastText,
-        // Generate a rich color object.
-        augmentColor,
-        // Used by the functions below to shift a color's luminance by approximately
-        // two indexes within its tonal palette.
-        // E.g., shift from Red 500 to Red 300 or Red 700.
-        tonalOffset,
-        // The light and dark mode object.
-        ...modeHydrated
-    }, other);
-    return paletteOutput;
-}
-
-},{"11300292bb3e3dc3":"1P3rZ","a2877fe4b287d6b0":"cXsuk","fa27818bbfce2f16":"bLPf1","984635010f11e72f":"b9Snp","2df4f74bc61cb41e":"d3A6z","3b7e746b54059808":"jfM6b","38df14157d06197c":"9z7Hc","3b28d80ed8bb4b59":"iHk0B","90db4edb20684717":"hArgZ","9701b07c082fb52f":"4oXdI","ecf564fbe0fdcdd4":"fad5T","827981c919ddbe32":"7ocW7"}],"asCkD":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireWildcard = require("d8808f819a1bf945").default;
-var _interopRequireDefault = require("bea5e0872ce0e7c").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.createGetCssVar = void 0;
-exports.default = createThemeWithVars;
-var _formatMuiErrorMessage = _interopRequireDefault(require("751b6f741077bdbc"));
-var _deepmerge = _interopRequireDefault(require("e7792937e505ac24"));
-var _system = require("9eb61503fd6adc33");
-var _spacing = require("59490245e8036a49");
-var _cssVars = require("2face3efcd065aaf");
-var _styleFunctionSx = _interopRequireWildcard(require("a25b28b771837a2a"));
-var _colorManipulator = require("6884cbd1e7c9be0a");
-var _createThemeNoVars = _interopRequireDefault(require("27733fa219b7fb30"));
-var _createColorScheme = _interopRequireWildcard(require("5e5614154b2981d1"));
-var _shouldSkipGeneratingVar = _interopRequireDefault(require("dbc865706904d0d5"));
-var _createGetSelector = _interopRequireDefault(require("2cca8165c721c3f"));
-var _stringifyTheme = require("4b7f097c78e64286");
-function assignNode(obj, keys) {
-    keys.forEach((k)=>{
-        if (!obj[k]) obj[k] = {};
-    });
-}
-function setColor(obj, key, defaultValue) {
-    if (!obj[key] && defaultValue) obj[key] = defaultValue;
-}
-function toRgb(color) {
-    if (typeof color !== 'string' || !color.startsWith('hsl')) return color;
-    return (0, _colorManipulator.hslToRgb)(color);
-}
-function setColorChannel(obj, key) {
-    if (!(`${key}Channel` in obj)) // custom channel token is not provided, generate one.
-    // if channel token can't be generated, show a warning.
-    obj[`${key}Channel`] = (0, _colorManipulator.private_safeColorChannel)(toRgb(obj[key]), `MUI: Can't create \`palette.${key}Channel\` because \`palette.${key}\` is not one of these formats: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla(), color().` + '\n' + `To suppress this warning, you need to explicitly provide the \`palette.${key}Channel\` as a string (in rgb format, for example "12 12 12") or undefined if you want to remove the channel token.`);
-}
-function getSpacingVal(spacingInput) {
-    if (typeof spacingInput === 'number') return `${spacingInput}px`;
-    if (typeof spacingInput === 'string' || typeof spacingInput === 'function' || Array.isArray(spacingInput)) return spacingInput;
-    return '8px';
-}
-const silent = (fn)=>{
-    try {
-        return fn();
-    } catch (error) {
-    // ignore error
-    }
-    return undefined;
-};
-const createGetCssVar = (cssVarPrefix = 'mui')=>(0, _system.unstable_createGetCssVar)(cssVarPrefix);
-exports.createGetCssVar = createGetCssVar;
-function attachColorScheme(colorSchemes, scheme, restTheme, colorScheme) {
-    if (!scheme) return undefined;
-    scheme = scheme === true ? {} : scheme;
-    const mode = colorScheme === 'dark' ? 'dark' : 'light';
-    if (!restTheme) {
-        colorSchemes[colorScheme] = (0, _createColorScheme.default)({
-            ...scheme,
-            palette: {
-                mode,
-                ...scheme?.palette
-            }
-        });
-        return undefined;
-    }
-    const { palette, ...muiTheme } = (0, _createThemeNoVars.default)({
-        ...restTheme,
-        palette: {
-            mode,
-            ...scheme?.palette
-        }
-    });
-    colorSchemes[colorScheme] = {
-        ...scheme,
-        palette,
-        opacity: {
-            ...(0, _createColorScheme.getOpacity)(mode),
-            ...scheme?.opacity
-        },
-        overlays: scheme?.overlays || (0, _createColorScheme.getOverlays)(mode)
-    };
-    return muiTheme;
-}
-/**
- * A default `createThemeWithVars` comes with a single color scheme, either `light` or `dark` based on the `defaultColorScheme`.
- * This is better suited for apps that only need a single color scheme.
- *
- * To enable built-in `light` and `dark` color schemes, either:
- * 1. provide a `colorSchemeSelector` to define how the color schemes will change.
- * 2. provide `colorSchemes.dark` will set `colorSchemeSelector: 'media'` by default.
- */ function createThemeWithVars(options = {}, ...args) {
-    const { colorSchemes: colorSchemesInput = {
-        light: true
-    }, defaultColorScheme: defaultColorSchemeInput, disableCssColorScheme = false, cssVarPrefix = 'mui', shouldSkipGeneratingVar = _shouldSkipGeneratingVar.default, colorSchemeSelector: selector = colorSchemesInput.light && colorSchemesInput.dark ? 'media' : undefined, rootSelector = ':root', ...input } = options;
-    const firstColorScheme = Object.keys(colorSchemesInput)[0];
-    const defaultColorScheme = defaultColorSchemeInput || (colorSchemesInput.light && firstColorScheme !== 'light' ? 'light' : firstColorScheme);
-    const getCssVar = createGetCssVar(cssVarPrefix);
-    const { [defaultColorScheme]: defaultSchemeInput, light: builtInLight, dark: builtInDark, ...customColorSchemes } = colorSchemesInput;
-    const colorSchemes = {
-        ...customColorSchemes
-    };
-    let defaultScheme = defaultSchemeInput;
-    // For built-in light and dark color schemes, ensure that the value is valid if they are the default color scheme.
-    if (defaultColorScheme === 'dark' && !('dark' in colorSchemesInput) || defaultColorScheme === 'light' && !('light' in colorSchemesInput)) defaultScheme = true;
-    if (!defaultScheme) throw new Error(`MUI: The \`colorSchemes.${defaultColorScheme}\` option is either missing or invalid.`);
-    // Create the palette for the default color scheme, either `light`, `dark`, or custom color scheme.
-    const muiTheme = attachColorScheme(colorSchemes, defaultScheme, input, defaultColorScheme);
-    if (builtInLight && !colorSchemes.light) attachColorScheme(colorSchemes, builtInLight, undefined, 'light');
-    if (builtInDark && !colorSchemes.dark) attachColorScheme(colorSchemes, builtInDark, undefined, 'dark');
-    let theme = {
-        defaultColorScheme,
-        ...muiTheme,
-        cssVarPrefix,
-        colorSchemeSelector: selector,
-        rootSelector,
-        getCssVar,
-        colorSchemes,
-        font: {
-            ...(0, _cssVars.prepareTypographyVars)(muiTheme.typography),
-            ...muiTheme.font
-        },
-        spacing: getSpacingVal(input.spacing)
-    };
-    Object.keys(theme.colorSchemes).forEach((key)=>{
-        const palette = theme.colorSchemes[key].palette;
-        const setCssVarColor = (cssVar)=>{
-            const tokens = cssVar.split('-');
-            const color = tokens[1];
-            const colorToken = tokens[2];
-            return getCssVar(cssVar, palette[color][colorToken]);
-        };
-        // attach black & white channels to common node
-        if (palette.mode === 'light') {
-            setColor(palette.common, 'background', '#fff');
-            setColor(palette.common, 'onBackground', '#000');
-        }
-        if (palette.mode === 'dark') {
-            setColor(palette.common, 'background', '#000');
-            setColor(palette.common, 'onBackground', '#fff');
-        }
-        // assign component variables
-        assignNode(palette, [
-            'Alert',
-            'AppBar',
-            'Avatar',
-            'Button',
-            'Chip',
-            'FilledInput',
-            'LinearProgress',
-            'Skeleton',
-            'Slider',
-            'SnackbarContent',
-            'SpeedDialAction',
-            'StepConnector',
-            'StepContent',
-            'Switch',
-            'TableCell',
-            'Tooltip'
-        ]);
-        if (palette.mode === 'light') {
-            setColor(palette.Alert, 'errorColor', (0, _colorManipulator.private_safeDarken)(palette.error.light, 0.6));
-            setColor(palette.Alert, 'infoColor', (0, _colorManipulator.private_safeDarken)(palette.info.light, 0.6));
-            setColor(palette.Alert, 'successColor', (0, _colorManipulator.private_safeDarken)(palette.success.light, 0.6));
-            setColor(palette.Alert, 'warningColor', (0, _colorManipulator.private_safeDarken)(palette.warning.light, 0.6));
-            setColor(palette.Alert, 'errorFilledBg', setCssVarColor('palette-error-main'));
-            setColor(palette.Alert, 'infoFilledBg', setCssVarColor('palette-info-main'));
-            setColor(palette.Alert, 'successFilledBg', setCssVarColor('palette-success-main'));
-            setColor(palette.Alert, 'warningFilledBg', setCssVarColor('palette-warning-main'));
-            setColor(palette.Alert, 'errorFilledColor', silent(()=>palette.getContrastText(palette.error.main)));
-            setColor(palette.Alert, 'infoFilledColor', silent(()=>palette.getContrastText(palette.info.main)));
-            setColor(palette.Alert, 'successFilledColor', silent(()=>palette.getContrastText(palette.success.main)));
-            setColor(palette.Alert, 'warningFilledColor', silent(()=>palette.getContrastText(palette.warning.main)));
-            setColor(palette.Alert, 'errorStandardBg', (0, _colorManipulator.private_safeLighten)(palette.error.light, 0.9));
-            setColor(palette.Alert, 'infoStandardBg', (0, _colorManipulator.private_safeLighten)(palette.info.light, 0.9));
-            setColor(palette.Alert, 'successStandardBg', (0, _colorManipulator.private_safeLighten)(palette.success.light, 0.9));
-            setColor(palette.Alert, 'warningStandardBg', (0, _colorManipulator.private_safeLighten)(palette.warning.light, 0.9));
-            setColor(palette.Alert, 'errorIconColor', setCssVarColor('palette-error-main'));
-            setColor(palette.Alert, 'infoIconColor', setCssVarColor('palette-info-main'));
-            setColor(palette.Alert, 'successIconColor', setCssVarColor('palette-success-main'));
-            setColor(palette.Alert, 'warningIconColor', setCssVarColor('palette-warning-main'));
-            setColor(palette.AppBar, 'defaultBg', setCssVarColor('palette-grey-100'));
-            setColor(palette.Avatar, 'defaultBg', setCssVarColor('palette-grey-400'));
-            setColor(palette.Button, 'inheritContainedBg', setCssVarColor('palette-grey-300'));
-            setColor(palette.Button, 'inheritContainedHoverBg', setCssVarColor('palette-grey-A100'));
-            setColor(palette.Chip, 'defaultBorder', setCssVarColor('palette-grey-400'));
-            setColor(palette.Chip, 'defaultAvatarColor', setCssVarColor('palette-grey-700'));
-            setColor(palette.Chip, 'defaultIconColor', setCssVarColor('palette-grey-700'));
-            setColor(palette.FilledInput, 'bg', 'rgba(0, 0, 0, 0.06)');
-            setColor(palette.FilledInput, 'hoverBg', 'rgba(0, 0, 0, 0.09)');
-            setColor(palette.FilledInput, 'disabledBg', 'rgba(0, 0, 0, 0.12)');
-            setColor(palette.LinearProgress, 'primaryBg', (0, _colorManipulator.private_safeLighten)(palette.primary.main, 0.62));
-            setColor(palette.LinearProgress, 'secondaryBg', (0, _colorManipulator.private_safeLighten)(palette.secondary.main, 0.62));
-            setColor(palette.LinearProgress, 'errorBg', (0, _colorManipulator.private_safeLighten)(palette.error.main, 0.62));
-            setColor(palette.LinearProgress, 'infoBg', (0, _colorManipulator.private_safeLighten)(palette.info.main, 0.62));
-            setColor(palette.LinearProgress, 'successBg', (0, _colorManipulator.private_safeLighten)(palette.success.main, 0.62));
-            setColor(palette.LinearProgress, 'warningBg', (0, _colorManipulator.private_safeLighten)(palette.warning.main, 0.62));
-            setColor(palette.Skeleton, 'bg', `rgba(${setCssVarColor('palette-text-primaryChannel')} / 0.11)`);
-            setColor(palette.Slider, 'primaryTrack', (0, _colorManipulator.private_safeLighten)(palette.primary.main, 0.62));
-            setColor(palette.Slider, 'secondaryTrack', (0, _colorManipulator.private_safeLighten)(palette.secondary.main, 0.62));
-            setColor(palette.Slider, 'errorTrack', (0, _colorManipulator.private_safeLighten)(palette.error.main, 0.62));
-            setColor(palette.Slider, 'infoTrack', (0, _colorManipulator.private_safeLighten)(palette.info.main, 0.62));
-            setColor(palette.Slider, 'successTrack', (0, _colorManipulator.private_safeLighten)(palette.success.main, 0.62));
-            setColor(palette.Slider, 'warningTrack', (0, _colorManipulator.private_safeLighten)(palette.warning.main, 0.62));
-            const snackbarContentBackground = (0, _colorManipulator.private_safeEmphasize)(palette.background.default, 0.8);
-            setColor(palette.SnackbarContent, 'bg', snackbarContentBackground);
-            setColor(palette.SnackbarContent, 'color', silent(()=>palette.getContrastText(snackbarContentBackground)));
-            setColor(palette.SpeedDialAction, 'fabHoverBg', (0, _colorManipulator.private_safeEmphasize)(palette.background.paper, 0.15));
-            setColor(palette.StepConnector, 'border', setCssVarColor('palette-grey-400'));
-            setColor(palette.StepContent, 'border', setCssVarColor('palette-grey-400'));
-            setColor(palette.Switch, 'defaultColor', setCssVarColor('palette-common-white'));
-            setColor(palette.Switch, 'defaultDisabledColor', setCssVarColor('palette-grey-100'));
-            setColor(palette.Switch, 'primaryDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.primary.main, 0.62));
-            setColor(palette.Switch, 'secondaryDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.secondary.main, 0.62));
-            setColor(palette.Switch, 'errorDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.error.main, 0.62));
-            setColor(palette.Switch, 'infoDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.info.main, 0.62));
-            setColor(palette.Switch, 'successDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.success.main, 0.62));
-            setColor(palette.Switch, 'warningDisabledColor', (0, _colorManipulator.private_safeLighten)(palette.warning.main, 0.62));
-            setColor(palette.TableCell, 'border', (0, _colorManipulator.private_safeLighten)((0, _colorManipulator.private_safeAlpha)(palette.divider, 1), 0.88));
-            setColor(palette.Tooltip, 'bg', (0, _colorManipulator.private_safeAlpha)(palette.grey[700], 0.92));
-        }
-        if (palette.mode === 'dark') {
-            setColor(palette.Alert, 'errorColor', (0, _colorManipulator.private_safeLighten)(palette.error.light, 0.6));
-            setColor(palette.Alert, 'infoColor', (0, _colorManipulator.private_safeLighten)(palette.info.light, 0.6));
-            setColor(palette.Alert, 'successColor', (0, _colorManipulator.private_safeLighten)(palette.success.light, 0.6));
-            setColor(palette.Alert, 'warningColor', (0, _colorManipulator.private_safeLighten)(palette.warning.light, 0.6));
-            setColor(palette.Alert, 'errorFilledBg', setCssVarColor('palette-error-dark'));
-            setColor(palette.Alert, 'infoFilledBg', setCssVarColor('palette-info-dark'));
-            setColor(palette.Alert, 'successFilledBg', setCssVarColor('palette-success-dark'));
-            setColor(palette.Alert, 'warningFilledBg', setCssVarColor('palette-warning-dark'));
-            setColor(palette.Alert, 'errorFilledColor', silent(()=>palette.getContrastText(palette.error.dark)));
-            setColor(palette.Alert, 'infoFilledColor', silent(()=>palette.getContrastText(palette.info.dark)));
-            setColor(palette.Alert, 'successFilledColor', silent(()=>palette.getContrastText(palette.success.dark)));
-            setColor(palette.Alert, 'warningFilledColor', silent(()=>palette.getContrastText(palette.warning.dark)));
-            setColor(palette.Alert, 'errorStandardBg', (0, _colorManipulator.private_safeDarken)(palette.error.light, 0.9));
-            setColor(palette.Alert, 'infoStandardBg', (0, _colorManipulator.private_safeDarken)(palette.info.light, 0.9));
-            setColor(palette.Alert, 'successStandardBg', (0, _colorManipulator.private_safeDarken)(palette.success.light, 0.9));
-            setColor(palette.Alert, 'warningStandardBg', (0, _colorManipulator.private_safeDarken)(palette.warning.light, 0.9));
-            setColor(palette.Alert, 'errorIconColor', setCssVarColor('palette-error-main'));
-            setColor(palette.Alert, 'infoIconColor', setCssVarColor('palette-info-main'));
-            setColor(palette.Alert, 'successIconColor', setCssVarColor('palette-success-main'));
-            setColor(palette.Alert, 'warningIconColor', setCssVarColor('palette-warning-main'));
-            setColor(palette.AppBar, 'defaultBg', setCssVarColor('palette-grey-900'));
-            setColor(palette.AppBar, 'darkBg', setCssVarColor('palette-background-paper')); // specific for dark mode
-            setColor(palette.AppBar, 'darkColor', setCssVarColor('palette-text-primary')); // specific for dark mode
-            setColor(palette.Avatar, 'defaultBg', setCssVarColor('palette-grey-600'));
-            setColor(palette.Button, 'inheritContainedBg', setCssVarColor('palette-grey-800'));
-            setColor(palette.Button, 'inheritContainedHoverBg', setCssVarColor('palette-grey-700'));
-            setColor(palette.Chip, 'defaultBorder', setCssVarColor('palette-grey-700'));
-            setColor(palette.Chip, 'defaultAvatarColor', setCssVarColor('palette-grey-300'));
-            setColor(palette.Chip, 'defaultIconColor', setCssVarColor('palette-grey-300'));
-            setColor(palette.FilledInput, 'bg', 'rgba(255, 255, 255, 0.09)');
-            setColor(palette.FilledInput, 'hoverBg', 'rgba(255, 255, 255, 0.13)');
-            setColor(palette.FilledInput, 'disabledBg', 'rgba(255, 255, 255, 0.12)');
-            setColor(palette.LinearProgress, 'primaryBg', (0, _colorManipulator.private_safeDarken)(palette.primary.main, 0.5));
-            setColor(palette.LinearProgress, 'secondaryBg', (0, _colorManipulator.private_safeDarken)(palette.secondary.main, 0.5));
-            setColor(palette.LinearProgress, 'errorBg', (0, _colorManipulator.private_safeDarken)(palette.error.main, 0.5));
-            setColor(palette.LinearProgress, 'infoBg', (0, _colorManipulator.private_safeDarken)(palette.info.main, 0.5));
-            setColor(palette.LinearProgress, 'successBg', (0, _colorManipulator.private_safeDarken)(palette.success.main, 0.5));
-            setColor(palette.LinearProgress, 'warningBg', (0, _colorManipulator.private_safeDarken)(palette.warning.main, 0.5));
-            setColor(palette.Skeleton, 'bg', `rgba(${setCssVarColor('palette-text-primaryChannel')} / 0.13)`);
-            setColor(palette.Slider, 'primaryTrack', (0, _colorManipulator.private_safeDarken)(palette.primary.main, 0.5));
-            setColor(palette.Slider, 'secondaryTrack', (0, _colorManipulator.private_safeDarken)(palette.secondary.main, 0.5));
-            setColor(palette.Slider, 'errorTrack', (0, _colorManipulator.private_safeDarken)(palette.error.main, 0.5));
-            setColor(palette.Slider, 'infoTrack', (0, _colorManipulator.private_safeDarken)(palette.info.main, 0.5));
-            setColor(palette.Slider, 'successTrack', (0, _colorManipulator.private_safeDarken)(palette.success.main, 0.5));
-            setColor(palette.Slider, 'warningTrack', (0, _colorManipulator.private_safeDarken)(palette.warning.main, 0.5));
-            const snackbarContentBackground = (0, _colorManipulator.private_safeEmphasize)(palette.background.default, 0.98);
-            setColor(palette.SnackbarContent, 'bg', snackbarContentBackground);
-            setColor(palette.SnackbarContent, 'color', silent(()=>palette.getContrastText(snackbarContentBackground)));
-            setColor(palette.SpeedDialAction, 'fabHoverBg', (0, _colorManipulator.private_safeEmphasize)(palette.background.paper, 0.15));
-            setColor(palette.StepConnector, 'border', setCssVarColor('palette-grey-600'));
-            setColor(palette.StepContent, 'border', setCssVarColor('palette-grey-600'));
-            setColor(palette.Switch, 'defaultColor', setCssVarColor('palette-grey-300'));
-            setColor(palette.Switch, 'defaultDisabledColor', setCssVarColor('palette-grey-600'));
-            setColor(palette.Switch, 'primaryDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.primary.main, 0.55));
-            setColor(palette.Switch, 'secondaryDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.secondary.main, 0.55));
-            setColor(palette.Switch, 'errorDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.error.main, 0.55));
-            setColor(palette.Switch, 'infoDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.info.main, 0.55));
-            setColor(palette.Switch, 'successDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.success.main, 0.55));
-            setColor(palette.Switch, 'warningDisabledColor', (0, _colorManipulator.private_safeDarken)(palette.warning.main, 0.55));
-            setColor(palette.TableCell, 'border', (0, _colorManipulator.private_safeDarken)((0, _colorManipulator.private_safeAlpha)(palette.divider, 1), 0.68));
-            setColor(palette.Tooltip, 'bg', (0, _colorManipulator.private_safeAlpha)(palette.grey[700], 0.92));
-        }
-        // MUI X - DataGrid needs this token.
-        setColorChannel(palette.background, 'default');
-        // added for consistency with the `background.default` token
-        setColorChannel(palette.background, 'paper');
-        setColorChannel(palette.common, 'background');
-        setColorChannel(palette.common, 'onBackground');
-        setColorChannel(palette, 'divider');
-        Object.keys(palette).forEach((color)=>{
-            const colors = palette[color];
-            // The default palettes (primary, secondary, error, info, success, and warning) errors are handled by the above `createTheme(...)`.
-            if (color !== 'tonalOffset' && colors && typeof colors === 'object') {
-                // Silent the error for custom palettes.
-                if (colors.main) setColor(palette[color], 'mainChannel', (0, _colorManipulator.private_safeColorChannel)(toRgb(colors.main)));
-                if (colors.light) setColor(palette[color], 'lightChannel', (0, _colorManipulator.private_safeColorChannel)(toRgb(colors.light)));
-                if (colors.dark) setColor(palette[color], 'darkChannel', (0, _colorManipulator.private_safeColorChannel)(toRgb(colors.dark)));
-                if (colors.contrastText) setColor(palette[color], 'contrastTextChannel', (0, _colorManipulator.private_safeColorChannel)(toRgb(colors.contrastText)));
-                if (color === 'text') {
-                    // Text colors: text.primary, text.secondary
-                    setColorChannel(palette[color], 'primary');
-                    setColorChannel(palette[color], 'secondary');
-                }
-                if (color === 'action') {
-                    // Action colors: action.active, action.selected
-                    if (colors.active) setColorChannel(palette[color], 'active');
-                    if (colors.selected) setColorChannel(palette[color], 'selected');
-                }
-            }
-        });
-    });
-    theme = args.reduce((acc, argument)=>(0, _deepmerge.default)(acc, argument), theme);
-    const parserConfig = {
-        prefix: cssVarPrefix,
-        disableCssColorScheme,
-        shouldSkipGeneratingVar,
-        getSelector: (0, _createGetSelector.default)(theme)
-    };
-    const { vars, generateThemeVars, generateStyleSheets } = (0, _cssVars.prepareCssVars)(theme, parserConfig);
-    theme.vars = vars;
-    Object.entries(theme.colorSchemes[theme.defaultColorScheme]).forEach(([key, value])=>{
-        theme[key] = value;
-    });
-    theme.generateThemeVars = generateThemeVars;
-    theme.generateStyleSheets = generateStyleSheets;
-    theme.generateSpacing = function generateSpacing() {
-        return (0, _system.createSpacing)(input.spacing, (0, _spacing.createUnarySpacing)(this));
-    };
-    theme.getColorSchemeSelector = (0, _cssVars.createGetColorSchemeSelector)(selector);
-    theme.spacing = theme.generateSpacing();
-    theme.shouldSkipGeneratingVar = shouldSkipGeneratingVar;
-    theme.unstable_sxConfig = {
-        ..._styleFunctionSx.unstable_defaultSxConfig,
-        ...input?.unstable_sxConfig
-    };
-    theme.unstable_sx = function sx(props) {
-        return (0, _styleFunctionSx.default)({
-            sx: props,
-            theme: this
-        });
-    };
-    theme.toRuntimeSource = _stringifyTheme.stringifyTheme; // for Pigment CSS integration
-    return theme;
-}
-
-},{"d8808f819a1bf945":"6TFJp","bea5e0872ce0e7c":"1P3rZ","751b6f741077bdbc":"cXsuk","e7792937e505ac24":"bLPf1","9eb61503fd6adc33":"1WaIj","59490245e8036a49":"cUfeI","2face3efcd065aaf":"jrqSW","a25b28b771837a2a":"3qmy1","6884cbd1e7c9be0a":"b9Snp","27733fa219b7fb30":"dhKZY","5e5614154b2981d1":"4jSXe","dbc865706904d0d5":"4q7TV","2cca8165c721c3f":"5tahi","4b7f097c78e64286":"gfY4l"}],"dhKZY":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireWildcard = require("d9ce763f7b929c20").default;
-var _interopRequireDefault = require("4ca1ae3b8db86e4").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-var _formatMuiErrorMessage = _interopRequireDefault(require("2ce25b3954411343"));
-var _deepmerge = _interopRequireDefault(require("dfbc1ae367572d65"));
-var _styleFunctionSx = _interopRequireWildcard(require("bc903d7f62929142"));
-var _createTheme = _interopRequireDefault(require("b30260b8d167117"));
-var _generateUtilityClass = _interopRequireDefault(require("cc7616ad38094a17"));
-var _createMixins = _interopRequireDefault(require("6738902b69256df3"));
-var _createPalette = _interopRequireDefault(require("e87ac0dc0f47e984"));
-var _createTypography = _interopRequireDefault(require("eacfc05dd7822340"));
-var _shadows = _interopRequireDefault(require("720618e07ac7b6c0"));
-var _createTransitions = _interopRequireDefault(require("81833621a096484c"));
-var _zIndex = _interopRequireDefault(require("b63c3c17828ab144"));
-var _stringifyTheme = require("402a5e9a32837486");
-function createThemeNoVars(options = {}, ...args) {
-    const { breakpoints: breakpointsInput, mixins: mixinsInput = {}, spacing: spacingInput, palette: paletteInput = {}, transitions: transitionsInput = {}, typography: typographyInput = {}, shape: shapeInput, ...other } = options;
-    if (options.vars && // The error should throw only for the root theme creation because user is not allowed to use a custom node `vars`.
-    // `generateThemeVars` is the closest identifier for checking that the `options` is a result of `createTheme` with CSS variables so that user can create new theme for nested ThemeProvider.
-    options.generateThemeVars === undefined) throw new Error("MUI: `vars` is a private field used for CSS variables support.\nPlease use another name or follow the [docs](https://mui.com/material-ui/customization/css-theme-variables/usage/) to enable the feature.");
-    const palette = (0, _createPalette.default)(paletteInput);
-    const systemTheme = (0, _createTheme.default)(options);
-    let muiTheme = (0, _deepmerge.default)(systemTheme, {
-        mixins: (0, _createMixins.default)(systemTheme.breakpoints, mixinsInput),
-        palette,
-        // Don't use [...shadows] until you've verified its transpiled code is not invoking the iterator protocol.
-        shadows: _shadows.default.slice(),
-        typography: (0, _createTypography.default)(palette, typographyInput),
-        transitions: (0, _createTransitions.default)(transitionsInput),
-        zIndex: {
-            ..._zIndex.default
-        }
-    });
-    muiTheme = (0, _deepmerge.default)(muiTheme, other);
-    muiTheme = args.reduce((acc, argument)=>(0, _deepmerge.default)(acc, argument), muiTheme);
-    {
-        // TODO v6: Refactor to use globalStateClassesMapping from @mui/utils once `readOnly` state class is used in Rating component.
-        const stateClasses = [
-            'active',
-            'checked',
-            'completed',
-            'disabled',
-            'error',
-            'expanded',
-            'focused',
-            'focusVisible',
-            'required',
-            'selected'
-        ];
-        const traverse = (node, component)=>{
-            let key;
-            // eslint-disable-next-line guard-for-in
-            for(key in node){
-                const child = node[key];
-                if (stateClasses.includes(key) && Object.keys(child).length > 0) {
-                    {
-                        const stateClass = (0, _generateUtilityClass.default)('', key);
-                        console.error([
-                            `MUI: The \`${component}\` component increases ` + `the CSS specificity of the \`${key}\` internal state.`,
-                            'You can not override it like this: ',
-                            JSON.stringify(node, null, 2),
-                            '',
-                            `Instead, you need to use the '&.${stateClass}' syntax:`,
-                            JSON.stringify({
-                                root: {
-                                    [`&.${stateClass}`]: child
-                                }
-                            }, null, 2),
-                            '',
-                            'https://mui.com/r/state-classes-guide'
-                        ].join('\n'));
-                    }
-                    // Remove the style to prevent global conflicts.
-                    node[key] = {};
-                }
-            }
-        };
-        Object.keys(muiTheme.components).forEach((component)=>{
-            const styleOverrides = muiTheme.components[component].styleOverrides;
-            if (styleOverrides && component.startsWith('Mui')) traverse(styleOverrides, component);
-        });
-    }
-    muiTheme.unstable_sxConfig = {
-        ..._styleFunctionSx.unstable_defaultSxConfig,
-        ...other?.unstable_sxConfig
-    };
-    muiTheme.unstable_sx = function sx(props) {
-        return (0, _styleFunctionSx.default)({
-            sx: props,
-            theme: this
-        });
-    };
-    muiTheme.toRuntimeSource = _stringifyTheme.stringifyTheme; // for Pigment CSS integration
-    return muiTheme;
-}
-var _default = exports.default = createThemeNoVars;
-
-},{"d9ce763f7b929c20":"6TFJp","4ca1ae3b8db86e4":"1P3rZ","2ce25b3954411343":"cXsuk","dfbc1ae367572d65":"bLPf1","bc903d7f62929142":"3qmy1","b30260b8d167117":"kryy7","cc7616ad38094a17":"iAc9p","6738902b69256df3":"2RmTc","e87ac0dc0f47e984":"6gFd1","eacfc05dd7822340":"iYA5e","720618e07ac7b6c0":"kLBXl","81833621a096484c":"kquFJ","b63c3c17828ab144":"rQjwg","402a5e9a32837486":"gfY4l"}],"2RmTc":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = createMixins;
-function createMixins(breakpoints, mixins) {
-    return {
-        toolbar: {
-            minHeight: 56,
-            [breakpoints.up('xs')]: {
-                '@media (orientation: landscape)': {
-                    minHeight: 48
-                }
-            },
-            [breakpoints.up('sm')]: {
-                minHeight: 64
-            }
-        },
-        ...mixins
-    };
-}
-
-},{}],"iYA5e":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireDefault = require("75255ca3acc1f720").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = createTypography;
-var _deepmerge = _interopRequireDefault(require("cacbc6b8de202000"));
-function round(value) {
-    return Math.round(value * 1e5) / 1e5;
-}
-const caseAllCaps = {
-    textTransform: 'uppercase'
-};
-const defaultFontFamily = '"Roboto", "Helvetica", "Arial", sans-serif';
-/**
- * @see @link{https://m2.material.io/design/typography/the-type-system.html}
- * @see @link{https://m2.material.io/design/typography/understanding-typography.html}
- */ function createTypography(palette, typography) {
-    const { fontFamily = defaultFontFamily, // The default font size of the Material Specification.
-    fontSize = 14, // px
-    fontWeightLight = 300, fontWeightRegular = 400, fontWeightMedium = 500, fontWeightBold = 700, // Tell MUI what's the font-size on the html element.
-    // 16px is the default font-size used by browsers.
-    htmlFontSize = 16, // Apply the CSS properties to all the variants.
-    allVariants, pxToRem: pxToRem2, ...other } = typeof typography === 'function' ? typography(palette) : typography;
-    if (typeof fontSize !== 'number') console.error('MUI: `fontSize` is required to be a number.');
-    if (typeof htmlFontSize !== 'number') console.error('MUI: `htmlFontSize` is required to be a number.');
-    const coef = fontSize / 14;
-    const pxToRem = pxToRem2 || ((size)=>`${size / htmlFontSize * coef}rem`);
-    const buildVariant = (fontWeight, size, lineHeight, letterSpacing, casing)=>({
-            fontFamily,
-            fontWeight,
-            fontSize: pxToRem(size),
-            // Unitless following https://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
-            lineHeight,
-            // The letter spacing was designed for the Roboto font-family. Using the same letter-spacing
-            // across font-families can cause issues with the kerning.
-            ...fontFamily === defaultFontFamily ? {
-                letterSpacing: `${round(letterSpacing / size)}em`
-            } : {},
-            ...casing,
-            ...allVariants
-        });
-    const variants = {
-        h1: buildVariant(fontWeightLight, 96, 1.167, -1.5),
-        h2: buildVariant(fontWeightLight, 60, 1.2, -0.5),
-        h3: buildVariant(fontWeightRegular, 48, 1.167, 0),
-        h4: buildVariant(fontWeightRegular, 34, 1.235, 0.25),
-        h5: buildVariant(fontWeightRegular, 24, 1.334, 0),
-        h6: buildVariant(fontWeightMedium, 20, 1.6, 0.15),
-        subtitle1: buildVariant(fontWeightRegular, 16, 1.75, 0.15),
-        subtitle2: buildVariant(fontWeightMedium, 14, 1.57, 0.1),
-        body1: buildVariant(fontWeightRegular, 16, 1.5, 0.15),
-        body2: buildVariant(fontWeightRegular, 14, 1.43, 0.15),
-        button: buildVariant(fontWeightMedium, 14, 1.75, 0.4, caseAllCaps),
-        caption: buildVariant(fontWeightRegular, 12, 1.66, 0.4),
-        overline: buildVariant(fontWeightRegular, 12, 2.66, 1, caseAllCaps),
-        // TODO v6: Remove handling of 'inherit' variant from the theme as it is already handled in Material UI's Typography component. Also, remember to remove the associated types.
-        inherit: {
-            fontFamily: 'inherit',
-            fontWeight: 'inherit',
-            fontSize: 'inherit',
-            lineHeight: 'inherit',
-            letterSpacing: 'inherit'
-        }
-    };
-    return (0, _deepmerge.default)({
-        htmlFontSize,
-        pxToRem,
-        fontFamily,
-        fontSize,
-        fontWeightLight,
-        fontWeightRegular,
-        fontWeightMedium,
-        fontWeightBold,
-        ...variants
-    }, other, {
-        clone: false // No need to clone deep
-    });
-}
-
-},{"75255ca3acc1f720":"1P3rZ","cacbc6b8de202000":"bLPf1"}],"kLBXl":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-const shadowKeyUmbraOpacity = 0.2;
-const shadowKeyPenumbraOpacity = 0.14;
-const shadowAmbientShadowOpacity = 0.12;
-function createShadow(...px) {
-    return [
-        `${px[0]}px ${px[1]}px ${px[2]}px ${px[3]}px rgba(0,0,0,${shadowKeyUmbraOpacity})`,
-        `${px[4]}px ${px[5]}px ${px[6]}px ${px[7]}px rgba(0,0,0,${shadowKeyPenumbraOpacity})`,
-        `${px[8]}px ${px[9]}px ${px[10]}px ${px[11]}px rgba(0,0,0,${shadowAmbientShadowOpacity})`
-    ].join(',');
-}
-// Values from https://github.com/material-components/material-components-web/blob/be8747f94574669cb5e7add1a7c54fa41a89cec7/packages/mdc-elevation/_variables.scss
-const shadows = [
-    'none',
-    createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0),
-    createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0),
-    createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0),
-    createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0),
-    createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0),
-    createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0),
-    createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1),
-    createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2),
-    createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2),
-    createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3),
-    createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3),
-    createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4),
-    createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4),
-    createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4),
-    createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5),
-    createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5),
-    createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5),
-    createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6),
-    createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6),
-    createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7),
-    createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7),
-    createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7),
-    createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8),
-    createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)
-];
-var _default = exports.default = shadows;
-
-},{}],"kquFJ":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = createTransitions;
-exports.easing = exports.duration = void 0;
-// Follow https://material.google.com/motion/duration-easing.html#duration-easing-natural-easing-curves
-// to learn the context in which each easing should be used.
-const easing = exports.easing = {
-    // This is the most common easing curve.
-    easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
-    // Objects enter the screen at full velocity from off-screen and
-    // slowly decelerate to a resting point.
-    easeOut: 'cubic-bezier(0.0, 0, 0.2, 1)',
-    // Objects leave the screen at full velocity. They do not decelerate when off-screen.
-    easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
-    // The sharp curve is used by objects that may return to the screen at any time.
-    sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
-};
-// Follow https://m2.material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
-// to learn when use what timing
-const duration = exports.duration = {
-    shortest: 150,
-    shorter: 200,
-    short: 250,
-    // most basic recommended timing
-    standard: 300,
-    // this is to be used in complex animations
-    complex: 375,
-    // recommended when something is entering screen
-    enteringScreen: 225,
-    // recommended when something is leaving screen
-    leavingScreen: 195
-};
-function formatMs(milliseconds) {
-    return `${Math.round(milliseconds)}ms`;
-}
-function getAutoHeightDuration(height) {
-    if (!height) return 0;
-    const constant = height / 36;
-    // https://www.desmos.com/calculator/vbrp3ggqet
-    return Math.min(Math.round((4 + 15 * constant ** 0.25 + constant / 5) * 10), 3000);
-}
-function createTransitions(inputTransitions) {
-    const mergedEasing = {
-        ...easing,
-        ...inputTransitions.easing
-    };
-    const mergedDuration = {
-        ...duration,
-        ...inputTransitions.duration
-    };
-    const create = (props = [
-        'all'
-    ], options = {})=>{
-        const { duration: durationOption = mergedDuration.standard, easing: easingOption = mergedEasing.easeInOut, delay = 0, ...other } = options;
-        {
-            const isString = (value)=>typeof value === 'string';
-            const isNumber = (value)=>!Number.isNaN(parseFloat(value));
-            if (!isString(props) && !Array.isArray(props)) console.error('MUI: Argument "props" must be a string or Array.');
-            if (!isNumber(durationOption) && !isString(durationOption)) console.error(`MUI: Argument "duration" must be a number or a string but found ${durationOption}.`);
-            if (!isString(easingOption)) console.error('MUI: Argument "easing" must be a string.');
-            if (!isNumber(delay) && !isString(delay)) console.error('MUI: Argument "delay" must be a number or a string.');
-            if (typeof options !== 'object') console.error([
-                'MUI: Secong argument of transition.create must be an object.',
-                "Arguments should be either `create('prop1', options)` or `create(['prop1', 'prop2'], options)`"
-            ].join('\n'));
-            if (Object.keys(other).length !== 0) console.error(`MUI: Unrecognized argument(s) [${Object.keys(other).join(',')}].`);
-        }
-        return (Array.isArray(props) ? props : [
-            props
-        ]).map((animatedProp)=>`${animatedProp} ${typeof durationOption === 'string' ? durationOption : formatMs(durationOption)} ${easingOption} ${typeof delay === 'string' ? delay : formatMs(delay)}`).join(',');
-    };
-    return {
-        getAutoHeightDuration,
-        create,
-        ...inputTransitions,
-        easing: mergedEasing,
-        duration: mergedDuration
-    };
-}
-
-},{}],"rQjwg":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-// We need to centralize the zIndex definitions as they work
-// like global values in the browser.
-const zIndex = {
-    mobileStepper: 1000,
-    fab: 1050,
-    speedDial: 1050,
-    appBar: 1100,
-    drawer: 1200,
-    modal: 1300,
-    snackbar: 1400,
-    tooltip: 1500
-};
-var _default = exports.default = zIndex;
-
-},{}],"gfY4l":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.stringifyTheme = stringifyTheme;
-var _deepmerge = require("252af5ceea3ec102");
-/* eslint-disable import/prefer-default-export */ function isSerializable(val) {
-    return (0, _deepmerge.isPlainObject)(val) || typeof val === 'undefined' || typeof val === 'string' || typeof val === 'boolean' || typeof val === 'number' || Array.isArray(val);
-}
-/**
- * `baseTheme` usually comes from `createTheme()` or `extendTheme()`.
- *
- * This function is intended to be used with zero-runtime CSS-in-JS like Pigment CSS
- * For example, in a Next.js project:
- *
- * ```js
- * // next.config.js
- * const { extendTheme } = require('@mui/material/styles');
- *
- * const theme = extendTheme();
- * // `.toRuntimeSource` is Pigment CSS specific to create a theme that is available at runtime.
- * theme.toRuntimeSource = stringifyTheme;
- *
- * module.exports = withPigment({
- *  theme,
- * });
- * ```
- */ function stringifyTheme(baseTheme = {}) {
-    const serializableTheme = {
-        ...baseTheme
-    };
-    function serializeTheme(object) {
-        const array = Object.entries(object);
-        // eslint-disable-next-line no-plusplus
-        for(let index = 0; index < array.length; index++){
-            const [key, value] = array[index];
-            if (!isSerializable(value) || key.startsWith('unstable_')) delete object[key];
-            else if ((0, _deepmerge.isPlainObject)(value)) {
-                object[key] = {
-                    ...value
-                };
-                serializeTheme(object[key]);
-            }
-        }
-    }
-    serializeTheme(serializableTheme);
-    return `import { unstable_createBreakpoints as createBreakpoints, createTransitions } from '@mui/material/styles';
-
-const theme = ${JSON.stringify(serializableTheme, null, 2)};
-
-theme.breakpoints = createBreakpoints(theme.breakpoints || {});
-theme.transitions = createTransitions(theme.transitions || {});
-
-export default theme;`;
-}
-
-},{"252af5ceea3ec102":"bLPf1"}],"4jSXe":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireDefault = require("618e944942a678bc").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = createColorScheme;
-exports.getOpacity = getOpacity;
-exports.getOverlays = getOverlays;
-var _createPalette = _interopRequireDefault(require("d85774e08ce63ca1"));
-var _getOverlayAlpha = _interopRequireDefault(require("37ea8458a36a9021"));
-const defaultDarkOverlays = [
-    ...Array(25)
-].map((_, index)=>{
-    if (index === 0) return 'none';
-    const overlay = (0, _getOverlayAlpha.default)(index);
-    return `linear-gradient(rgba(255 255 255 / ${overlay}), rgba(255 255 255 / ${overlay}))`;
-});
-function getOpacity(mode) {
-    return {
-        inputPlaceholder: mode === 'dark' ? 0.5 : 0.42,
-        inputUnderline: mode === 'dark' ? 0.7 : 0.42,
-        switchTrackDisabled: mode === 'dark' ? 0.2 : 0.12,
-        switchTrack: mode === 'dark' ? 0.3 : 0.38
-    };
-}
-function getOverlays(mode) {
-    return mode === 'dark' ? defaultDarkOverlays : [];
-}
-function createColorScheme(options) {
-    const { palette: paletteInput = {
-        mode: 'light'
-    }, // need to cast to avoid module augmentation test
-    opacity, overlays, ...rest } = options;
-    const palette = (0, _createPalette.default)(paletteInput);
-    return {
-        palette,
-        opacity: {
-            ...getOpacity(palette.mode),
-            ...opacity
-        },
-        overlays: overlays || getOverlays(palette.mode),
-        ...rest
-    };
-}
-
-},{"618e944942a678bc":"1P3rZ","d85774e08ce63ca1":"6gFd1","37ea8458a36a9021":"gVmXd"}],"gVmXd":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = getOverlayAlpha;
-// Inspired by https://github.com/material-components/material-components-ios/blob/bca36107405594d5b7b16265a5b0ed698f85a5ee/components/Elevation/src/UIColor%2BMaterialElevation.m#L61
-function getOverlayAlpha(elevation) {
-    let alphaValue;
-    if (elevation < 1) alphaValue = 5.11916 * elevation ** 2;
-    else alphaValue = 4.5 * Math.log(elevation + 1) + 2;
-    return Math.round(alphaValue * 10) / 1000;
-}
-
-},{}],"4q7TV":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = shouldSkipGeneratingVar;
-function shouldSkipGeneratingVar(keys) {
-    return !!keys[0].match(/(cssVarPrefix|colorSchemeSelector|rootSelector|typography|mixins|breakpoints|direction|transitions)/) || !!keys[0].match(/sxConfig$/) || // ends with sxConfig
-    keys[0] === 'palette' && !!keys[1]?.match(/(mode|contrastThreshold|tonalOffset)/);
-}
-
-},{}],"5tahi":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireDefault = require("d6ca57478bef72be").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-var _excludeVariablesFromRoot = _interopRequireDefault(require("85ae86ef6d080de1"));
-var _default = (theme)=>(colorScheme, css)=>{
-        const root = theme.rootSelector || ':root';
-        const selector = theme.colorSchemeSelector;
-        let rule = selector;
-        if (selector === 'class') rule = '.%s';
-        if (selector === 'data') rule = '[data-%s]';
-        if (selector?.startsWith('data-') && !selector.includes('%s')) // 'data-mui-color-scheme' -> '[data-mui-color-scheme="%s"]'
-        rule = `[${selector}="%s"]`;
-        if (theme.defaultColorScheme === colorScheme) {
-            if (colorScheme === 'dark') {
-                const excludedVariables = {};
-                (0, _excludeVariablesFromRoot.default)(theme.cssVarPrefix).forEach((cssVar)=>{
-                    excludedVariables[cssVar] = css[cssVar];
-                    delete css[cssVar];
-                });
-                if (rule === 'media') return {
-                    [root]: css,
-                    [`@media (prefers-color-scheme: dark)`]: {
-                        [root]: excludedVariables
-                    }
-                };
-                if (rule) return {
-                    [rule.replace('%s', colorScheme)]: excludedVariables,
-                    [`${root}, ${rule.replace('%s', colorScheme)}`]: css
-                };
-                return {
-                    [root]: {
-                        ...css,
-                        ...excludedVariables
-                    }
-                };
-            }
-            if (rule && rule !== 'media') return `${root}, ${rule.replace('%s', String(colorScheme))}`;
-        } else if (colorScheme) {
-            if (rule === 'media') return {
-                [`@media (prefers-color-scheme: ${String(colorScheme)})`]: {
-                    [root]: css
-                }
-            };
-            if (rule) return rule.replace('%s', String(colorScheme));
-        }
-        return root;
-    };
-exports.default = _default;
-
-},{"d6ca57478bef72be":"1P3rZ","85ae86ef6d080de1":"bxBFd"}],"bxBFd":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-/**
- * @internal These variables should not appear in the :root stylesheet when the `defaultColorScheme="dark"`
- */ const excludeVariablesFromRoot = (cssVarPrefix)=>[
-        ...[
-            ...Array(25)
-        ].map((_, index)=>`--${cssVarPrefix ? `${cssVarPrefix}-` : ''}overlays-${index}`),
-        `--${cssVarPrefix ? `${cssVarPrefix}-` : ''}palette-AppBar-darkBg`,
-        `--${cssVarPrefix ? `${cssVarPrefix}-` : ''}palette-AppBar-darkColor`
-    ];
-var _default = exports.default = excludeVariablesFromRoot;
-
-},{}],"6SSma":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-var _default = exports.default = '$$material';
-
-},{}],"eiQV8":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireDefault = require("f9880f8d885ac2e8").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "default", {
-    enumerable: true,
-    get: function() {
-        return _GlobalStyles.default;
-    }
-});
-var _GlobalStyles = _interopRequireDefault(require("b9f4976014d6913f"));
-
-},{"f9880f8d885ac2e8":"1P3rZ","b9f4976014d6913f":"fqcFY"}],"fqcFY":[function(require,module,exports,__globalThis) {
-"use strict";
-'use client';
-var _interopRequireDefault = require("1392d07de526b602").default;
-var _interopRequireWildcard = require("b6c7628a193f95bd").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-var React = _interopRequireWildcard(require("5856fa52a3decdab"));
-var _propTypes = _interopRequireDefault(require("7185862242ebb481"));
-var _system = require("b58da0205ef0cfe2");
-var _defaultTheme = _interopRequireDefault(require("bbea7f156f2694a7"));
-var _identifier = _interopRequireDefault(require("2e904b2a2708b805"));
-var _jsxRuntime = require("33d9951a73ac4f90");
-function GlobalStyles(props) {
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_system.GlobalStyles, {
-        ...props,
-        defaultTheme: _defaultTheme.default,
-        themeId: _identifier.default
-    });
-}
-GlobalStyles.propTypes = {
-    // ┌────────────────────────────── Warning ──────────────────────────────┐
-    // │ These PropTypes are generated from the TypeScript type definitions. │
-    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
-    // └─────────────────────────────────────────────────────────────────────┘
-    /**
-   * The styles you want to apply globally.
-   */ styles: _propTypes.default/* @typescript-to-proptypes-ignore */ .oneOfType([
-        _propTypes.default.array,
-        _propTypes.default.func,
-        _propTypes.default.number,
-        _propTypes.default.object,
-        _propTypes.default.string,
-        _propTypes.default.bool
-    ])
-};
-var _default = exports.default = GlobalStyles;
-
-},{"1392d07de526b602":"1P3rZ","b6c7628a193f95bd":"6TFJp","5856fa52a3decdab":"jMk1U","7185862242ebb481":"GNqOQ","b58da0205ef0cfe2":"1WaIj","bbea7f156f2694a7":"dsVJp","2e904b2a2708b805":"6SSma","33d9951a73ac4f90":"05iiF"}],"gU1yq":[function(require,module,exports,__globalThis) {
-"use strict";
-'use client';
-var _interopRequireDefault = require("46f194eea215b25b").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-Object.defineProperty(exports, "rootShouldForwardProp", {
-    enumerable: true,
-    get: function() {
-        return _rootShouldForwardProp.default;
-    }
-});
-Object.defineProperty(exports, "slotShouldForwardProp", {
-    enumerable: true,
-    get: function() {
-        return _slotShouldForwardProp.default;
-    }
-});
-var _createStyled = _interopRequireDefault(require("7541497f21100948"));
-var _defaultTheme = _interopRequireDefault(require("a51c70a755109123"));
-var _identifier = _interopRequireDefault(require("e01ea68023bdabf7"));
-var _rootShouldForwardProp = _interopRequireDefault(require("b52a4685664121c4"));
-var _slotShouldForwardProp = _interopRequireDefault(require("c865ce001be73693"));
-const styled = (0, _createStyled.default)({
-    themeId: _identifier.default,
-    defaultTheme: _defaultTheme.default,
-    rootShouldForwardProp: _rootShouldForwardProp.default
-});
-var _default = exports.default = styled;
-
-},{"46f194eea215b25b":"1P3rZ","7541497f21100948":"8Psnj","a51c70a755109123":"dsVJp","e01ea68023bdabf7":"6SSma","b52a4685664121c4":"5Hs5J","c865ce001be73693":"iWX0F"}],"5Hs5J":[function(require,module,exports,__globalThis) {
-"use strict";
-var _interopRequireDefault = require("6404fb53913fc632").default;
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-var _slotShouldForwardProp = _interopRequireDefault(require("3aac4bd51a94273"));
-const rootShouldForwardProp = (prop)=>(0, _slotShouldForwardProp.default)(prop) && prop !== 'classes';
-var _default = exports.default = rootShouldForwardProp;
-
-},{"6404fb53913fc632":"1P3rZ","3aac4bd51a94273":"iWX0F"}],"iWX0F":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-// copied from @mui/system/createStyled
-function slotShouldForwardProp(prop) {
-    return prop !== 'ownerState' && prop !== 'theme' && prop !== 'sx' && prop !== 'as';
-}
-var _default = exports.default = slotShouldForwardProp;
-
-},{}],"02BGR":[function(require,module,exports,__globalThis) {
+},{"75f0dec6104f6363":"1P3rZ","4a6ed00df881e6ba":"igOKi"}],"02BGR":[function(require,module,exports,__globalThis) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -120975,6 +123055,1526 @@ const iconClasses = (0, _generateUtilityClasses.default)('MuiIcon', [
 ]);
 var _default = exports.default = iconClasses;
 
-},{"61285556148ebb4c":"1P3rZ","b15b5ea5b0c4175e":"3J0Rs","a9849ff9435ae50a":"iAc9p"}]},["90mp3","eM1fv"], "eM1fv", "parcelRequire09a6", {}, null, null, "http://localhost:1234")
+},{"61285556148ebb4c":"1P3rZ","b15b5ea5b0c4175e":"3J0Rs","a9849ff9435ae50a":"iAc9p"}],"jGPlL":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("9d619b569da94270").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _Slide.default;
+    }
+});
+var _Slide = _interopRequireDefault(require("9755caf0671e788d"));
+
+},{"9d619b569da94270":"1P3rZ","9755caf0671e788d":"9dr0u"}],"9dr0u":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("51c6486b68b583a7").default;
+var _interopRequireWildcard = require("d2a6aee089e3dddb").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+exports.setTranslateValue = setTranslateValue;
+var React = _interopRequireWildcard(require("501c81a1c8c4041e"));
+var _propTypes = _interopRequireDefault(require("610f62788566ce7e"));
+var _reactTransitionGroup = require("5397a0920f312bb1");
+var _chainPropTypes = _interopRequireDefault(require("5f0594c96f1c5a07"));
+var _HTMLElementType = _interopRequireDefault(require("1de210a03436ab33"));
+var _elementAcceptingRef = _interopRequireDefault(require("154820b212535a1"));
+var _getReactElementRef = _interopRequireDefault(require("e2b7f99c5c778790"));
+var _debounce = _interopRequireDefault(require("3cec3cee3ac5de7e"));
+var _useForkRef = _interopRequireDefault(require("ceab7a68c1f6a683"));
+var _zeroStyled = require("71bde4a73ab8fbe0");
+var _utils = require("17eaa317675a9639");
+var _utils2 = require("9a3542965441fc0c");
+var _jsxRuntime = require("24a9d88ea7dcee55");
+// Translate the node so it can't be seen on the screen.
+// Later, we're going to translate the node back to its original location with `none`.
+function getTranslateValue(direction, node, resolvedContainer) {
+    const rect = node.getBoundingClientRect();
+    const containerRect = resolvedContainer && resolvedContainer.getBoundingClientRect();
+    const containerWindow = (0, _utils2.ownerWindow)(node);
+    let transform;
+    if (node.fakeTransform) transform = node.fakeTransform;
+    else {
+        const computedStyle = containerWindow.getComputedStyle(node);
+        transform = computedStyle.getPropertyValue('-webkit-transform') || computedStyle.getPropertyValue('transform');
+    }
+    let offsetX = 0;
+    let offsetY = 0;
+    if (transform && transform !== 'none' && typeof transform === 'string') {
+        const transformValues = transform.split('(')[1].split(')')[0].split(',');
+        offsetX = parseInt(transformValues[4], 10);
+        offsetY = parseInt(transformValues[5], 10);
+    }
+    if (direction === 'left') {
+        if (containerRect) return `translateX(${containerRect.right + offsetX - rect.left}px)`;
+        return `translateX(${containerWindow.innerWidth + offsetX - rect.left}px)`;
+    }
+    if (direction === 'right') {
+        if (containerRect) return `translateX(-${rect.right - containerRect.left - offsetX}px)`;
+        return `translateX(-${rect.left + rect.width - offsetX}px)`;
+    }
+    if (direction === 'up') {
+        if (containerRect) return `translateY(${containerRect.bottom + offsetY - rect.top}px)`;
+        return `translateY(${containerWindow.innerHeight + offsetY - rect.top}px)`;
+    }
+    // direction === 'down'
+    if (containerRect) return `translateY(-${rect.top - containerRect.top + rect.height - offsetY}px)`;
+    return `translateY(-${rect.top + rect.height - offsetY}px)`;
+}
+function resolveContainer(containerPropProp) {
+    return typeof containerPropProp === 'function' ? containerPropProp() : containerPropProp;
+}
+function setTranslateValue(direction, node, containerProp) {
+    const resolvedContainer = resolveContainer(containerProp);
+    const transform = getTranslateValue(direction, node, resolvedContainer);
+    if (transform) {
+        node.style.webkitTransform = transform;
+        node.style.transform = transform;
+    }
+}
+/**
+ * The Slide transition is used by the [Drawer](/material-ui/react-drawer/) component.
+ * It uses [react-transition-group](https://github.com/reactjs/react-transition-group) internally.
+ */ const Slide = /*#__PURE__*/ React.forwardRef(function Slide(props, ref) {
+    const theme = (0, _zeroStyled.useTheme)();
+    const defaultEasing = {
+        enter: theme.transitions.easing.easeOut,
+        exit: theme.transitions.easing.sharp
+    };
+    const defaultTimeout = {
+        enter: theme.transitions.duration.enteringScreen,
+        exit: theme.transitions.duration.leavingScreen
+    };
+    const { addEndListener, appear = true, children, container: containerProp, direction = 'down', easing: easingProp = defaultEasing, in: inProp, onEnter, onEntered, onEntering, onExit, onExited, onExiting, style, timeout = defaultTimeout, // eslint-disable-next-line react/prop-types
+    TransitionComponent = _reactTransitionGroup.Transition, ...other } = props;
+    const childrenRef = React.useRef(null);
+    const handleRef = (0, _useForkRef.default)((0, _getReactElementRef.default)(children), childrenRef, ref);
+    const normalizedTransitionCallback = (callback)=>(isAppearing)=>{
+            if (callback) {
+                // onEnterXxx and onExitXxx callbacks have a different arguments.length value.
+                if (isAppearing === undefined) callback(childrenRef.current);
+                else callback(childrenRef.current, isAppearing);
+            }
+        };
+    const handleEnter = normalizedTransitionCallback((node, isAppearing)=>{
+        setTranslateValue(direction, node, containerProp);
+        (0, _utils.reflow)(node);
+        if (onEnter) onEnter(node, isAppearing);
+    });
+    const handleEntering = normalizedTransitionCallback((node, isAppearing)=>{
+        const transitionProps = (0, _utils.getTransitionProps)({
+            timeout,
+            style,
+            easing: easingProp
+        }, {
+            mode: 'enter'
+        });
+        node.style.webkitTransition = theme.transitions.create('-webkit-transform', {
+            ...transitionProps
+        });
+        node.style.transition = theme.transitions.create('transform', {
+            ...transitionProps
+        });
+        node.style.webkitTransform = 'none';
+        node.style.transform = 'none';
+        if (onEntering) onEntering(node, isAppearing);
+    });
+    const handleEntered = normalizedTransitionCallback(onEntered);
+    const handleExiting = normalizedTransitionCallback(onExiting);
+    const handleExit = normalizedTransitionCallback((node)=>{
+        const transitionProps = (0, _utils.getTransitionProps)({
+            timeout,
+            style,
+            easing: easingProp
+        }, {
+            mode: 'exit'
+        });
+        node.style.webkitTransition = theme.transitions.create('-webkit-transform', transitionProps);
+        node.style.transition = theme.transitions.create('transform', transitionProps);
+        setTranslateValue(direction, node, containerProp);
+        if (onExit) onExit(node);
+    });
+    const handleExited = normalizedTransitionCallback((node)=>{
+        // No need for transitions when the component is hidden
+        node.style.webkitTransition = '';
+        node.style.transition = '';
+        if (onExited) onExited(node);
+    });
+    const handleAddEndListener = (next)=>{
+        if (addEndListener) // Old call signature before `react-transition-group` implemented `nodeRef`
+        addEndListener(childrenRef.current, next);
+    };
+    const updatePosition = React.useCallback(()=>{
+        if (childrenRef.current) setTranslateValue(direction, childrenRef.current, containerProp);
+    }, [
+        direction,
+        containerProp
+    ]);
+    React.useEffect(()=>{
+        // Skip configuration where the position is screen size invariant.
+        if (inProp || direction === 'down' || direction === 'right') return undefined;
+        const handleResize = (0, _debounce.default)(()=>{
+            if (childrenRef.current) setTranslateValue(direction, childrenRef.current, containerProp);
+        });
+        const containerWindow = (0, _utils2.ownerWindow)(childrenRef.current);
+        containerWindow.addEventListener('resize', handleResize);
+        return ()=>{
+            handleResize.clear();
+            containerWindow.removeEventListener('resize', handleResize);
+        };
+    }, [
+        direction,
+        inProp,
+        containerProp
+    ]);
+    React.useEffect(()=>{
+        if (!inProp) // We need to update the position of the drawer when the direction change and
+        // when it's hidden.
+        updatePosition();
+    }, [
+        inProp,
+        updatePosition
+    ]);
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(TransitionComponent, {
+        nodeRef: childrenRef,
+        onEnter: handleEnter,
+        onEntered: handleEntered,
+        onEntering: handleEntering,
+        onExit: handleExit,
+        onExited: handleExited,
+        onExiting: handleExiting,
+        addEndListener: handleAddEndListener,
+        appear: appear,
+        in: inProp,
+        timeout: timeout,
+        ...other,
+        children: (state, { ownerState, ...restChildProps })=>{
+            return /*#__PURE__*/ React.cloneElement(children, {
+                ref: handleRef,
+                style: {
+                    visibility: state === 'exited' && !inProp ? 'hidden' : undefined,
+                    ...style,
+                    ...children.props.style
+                },
+                ...restChildProps
+            });
+        }
+    });
+});
+Slide.propTypes = {
+    // ┌────────────────────────────── Warning ──────────────────────────────┐
+    // │ These PropTypes are generated from the TypeScript type definitions. │
+    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
+    // └─────────────────────────────────────────────────────────────────────┘
+    /**
+   * Add a custom transition end trigger. Called with the transitioning DOM
+   * node and a done callback. Allows for more fine grained transition end
+   * logic. Note: Timeouts are still used as a fallback if provided.
+   */ addEndListener: _propTypes.default.func,
+    /**
+   * Perform the enter transition when it first mounts if `in` is also `true`.
+   * Set this to `false` to disable this behavior.
+   * @default true
+   */ appear: _propTypes.default.bool,
+    /**
+   * A single child content element.
+   */ children: _elementAcceptingRef.default.isRequired,
+    /**
+   * An HTML element, or a function that returns one.
+   * It's used to set the container the Slide is transitioning from.
+   */ container: (0, _chainPropTypes.default)(_propTypes.default.oneOfType([
+        _HTMLElementType.default,
+        _propTypes.default.func
+    ]), (props)=>{
+        if (props.open) {
+            const resolvedContainer = resolveContainer(props.container);
+            if (resolvedContainer && resolvedContainer.nodeType === 1) {
+                const box = resolvedContainer.getBoundingClientRect();
+                if (box.top === 0 && box.left === 0 && box.right === 0 && box.bottom === 0) return new Error([
+                    'MUI: The `container` prop provided to the component is invalid.',
+                    'The anchor element should be part of the document layout.',
+                    "Make sure the element is present in the document or that it's not display none."
+                ].join('\n'));
+            } else if (!resolvedContainer || typeof resolvedContainer.getBoundingClientRect !== 'function' || resolvedContainer.contextElement != null && resolvedContainer.contextElement.nodeType !== 1) return new Error([
+                'MUI: The `container` prop provided to the component is invalid.',
+                'It should be an HTML element instance.'
+            ].join('\n'));
+        }
+        return null;
+    }),
+    /**
+   * Direction the child node will enter from.
+   * @default 'down'
+   */ direction: _propTypes.default.oneOf([
+        'down',
+        'left',
+        'right',
+        'up'
+    ]),
+    /**
+   * The transition timing function.
+   * You may specify a single easing or a object containing enter and exit values.
+   * @default {
+   *   enter: theme.transitions.easing.easeOut,
+   *   exit: theme.transitions.easing.sharp,
+   * }
+   */ easing: _propTypes.default.oneOfType([
+        _propTypes.default.shape({
+            enter: _propTypes.default.string,
+            exit: _propTypes.default.string
+        }),
+        _propTypes.default.string
+    ]),
+    /**
+   * If `true`, the component will transition in.
+   */ in: _propTypes.default.bool,
+    /**
+   * @ignore
+   */ onEnter: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onEntered: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onEntering: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onExit: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onExited: _propTypes.default.func,
+    /**
+   * @ignore
+   */ onExiting: _propTypes.default.func,
+    /**
+   * @ignore
+   */ style: _propTypes.default.object,
+    /**
+   * The duration for the transition, in milliseconds.
+   * You may specify a single timeout for all transitions, or individually with an object.
+   * @default {
+   *   enter: theme.transitions.duration.enteringScreen,
+   *   exit: theme.transitions.duration.leavingScreen,
+   * }
+   */ timeout: _propTypes.default.oneOfType([
+        _propTypes.default.number,
+        _propTypes.default.shape({
+            appear: _propTypes.default.number,
+            enter: _propTypes.default.number,
+            exit: _propTypes.default.number
+        })
+    ])
+};
+var _default = exports.default = Slide;
+
+},{"51c6486b68b583a7":"1P3rZ","d2a6aee089e3dddb":"6TFJp","501c81a1c8c4041e":"jMk1U","610f62788566ce7e":"GNqOQ","5397a0920f312bb1":"caYxp","5f0594c96f1c5a07":"kOKf5","1de210a03436ab33":"azl5Y","154820b212535a1":"2Ur26","e2b7f99c5c778790":"jsGSm","3cec3cee3ac5de7e":"hhxJC","ceab7a68c1f6a683":"iEdsJ","71bde4a73ab8fbe0":"7wsk9","17eaa317675a9639":"5vr4t","9a3542965441fc0c":"eqqgP","24a9d88ea7dcee55":"05iiF"}],"azl5Y":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("89e8fb25f09695e1").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _HTMLElementType.default;
+    }
+});
+var _HTMLElementType = _interopRequireDefault(require("88ee6fc53668f5c7"));
+
+},{"89e8fb25f09695e1":"1P3rZ","88ee6fc53668f5c7":"8mCTW"}],"8mCTW":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = HTMLElementType;
+function HTMLElementType(props, propName, componentName, location, propFullName) {
+    const propValue = props[propName];
+    const safePropName = propFullName || propName;
+    if (propValue == null) return null;
+    if (propValue && propValue.nodeType !== 1) return new Error(`Invalid ${location} \`${safePropName}\` supplied to \`${componentName}\`. ` + `Expected an HTMLElement.`);
+    return null;
+}
+
+},{}],"hhxJC":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("3822caca522cc087").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _debounce = _interopRequireDefault(require("4269fbe739e9527"));
+var _default = exports.default = _debounce.default;
+
+},{"3822caca522cc087":"1P3rZ","4269fbe739e9527":"f8LrO"}],"f8LrO":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireWildcard = require("a3becdb8c7cbcb7c").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _exportNames = {};
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _debounce.default;
+    }
+});
+var _debounce = _interopRequireWildcard(require("4b2abf07988b4df"));
+Object.keys(_debounce).forEach(function(key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _debounce[key]) return;
+    Object.defineProperty(exports, key, {
+        enumerable: true,
+        get: function() {
+            return _debounce[key];
+        }
+    });
+});
+
+},{"a3becdb8c7cbcb7c":"6TFJp","4b2abf07988b4df":"gNAea"}],"gNAea":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = debounce;
+// Corresponds to 10 frames at 60 Hz.
+// A few bytes payload overhead when lodash/debounce is ~3 kB and debounce ~300 B.
+function debounce(func, wait = 166) {
+    let timeout;
+    function debounced(...args) {
+        const later = ()=>{
+            // @ts-ignore
+            func.apply(this, args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    }
+    debounced.clear = ()=>{
+        clearTimeout(timeout);
+    };
+    return debounced;
+}
+
+},{}],"eqqgP":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("fe68be4f4e9c9b7d").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "capitalize", {
+    enumerable: true,
+    get: function() {
+        return _capitalize.default;
+    }
+});
+Object.defineProperty(exports, "createChainedFunction", {
+    enumerable: true,
+    get: function() {
+        return _createChainedFunction.default;
+    }
+});
+Object.defineProperty(exports, "createSvgIcon", {
+    enumerable: true,
+    get: function() {
+        return _createSvgIcon.default;
+    }
+});
+Object.defineProperty(exports, "debounce", {
+    enumerable: true,
+    get: function() {
+        return _debounce.default;
+    }
+});
+Object.defineProperty(exports, "deprecatedPropType", {
+    enumerable: true,
+    get: function() {
+        return _deprecatedPropType.default;
+    }
+});
+Object.defineProperty(exports, "isMuiElement", {
+    enumerable: true,
+    get: function() {
+        return _isMuiElement.default;
+    }
+});
+Object.defineProperty(exports, "mergeSlotProps", {
+    enumerable: true,
+    get: function() {
+        return _mergeSlotProps.default;
+    }
+});
+Object.defineProperty(exports, "ownerDocument", {
+    enumerable: true,
+    get: function() {
+        return _ownerDocument.default;
+    }
+});
+Object.defineProperty(exports, "ownerWindow", {
+    enumerable: true,
+    get: function() {
+        return _ownerWindow.default;
+    }
+});
+Object.defineProperty(exports, "requirePropFactory", {
+    enumerable: true,
+    get: function() {
+        return _requirePropFactory.default;
+    }
+});
+Object.defineProperty(exports, "setRef", {
+    enumerable: true,
+    get: function() {
+        return _setRef.default;
+    }
+});
+exports.unstable_ClassNameGenerator = void 0;
+Object.defineProperty(exports, "unstable_memoTheme", {
+    enumerable: true,
+    get: function() {
+        return _memoTheme.default;
+    }
+});
+Object.defineProperty(exports, "unstable_useEnhancedEffect", {
+    enumerable: true,
+    get: function() {
+        return _useEnhancedEffect.default;
+    }
+});
+Object.defineProperty(exports, "unstable_useId", {
+    enumerable: true,
+    get: function() {
+        return _useId.default;
+    }
+});
+Object.defineProperty(exports, "unsupportedProp", {
+    enumerable: true,
+    get: function() {
+        return _unsupportedProp.default;
+    }
+});
+Object.defineProperty(exports, "useControlled", {
+    enumerable: true,
+    get: function() {
+        return _useControlled.default;
+    }
+});
+Object.defineProperty(exports, "useEventCallback", {
+    enumerable: true,
+    get: function() {
+        return _useEventCallback.default;
+    }
+});
+Object.defineProperty(exports, "useForkRef", {
+    enumerable: true,
+    get: function() {
+        return _useForkRef.default;
+    }
+});
+var _ClassNameGenerator = _interopRequireDefault(require("c9fee60f48214d3"));
+var _capitalize = _interopRequireDefault(require("c41a926b04503884"));
+var _createChainedFunction = _interopRequireDefault(require("1146004479c2fe1b"));
+var _createSvgIcon = _interopRequireDefault(require("36bfebe35ecd0024"));
+var _debounce = _interopRequireDefault(require("48bded4c65db6527"));
+var _deprecatedPropType = _interopRequireDefault(require("222fa68f40f8f2d3"));
+var _isMuiElement = _interopRequireDefault(require("d06d3e567cf8d6a5"));
+var _memoTheme = _interopRequireDefault(require("53c4db0492d69485"));
+var _ownerDocument = _interopRequireDefault(require("d488249e22350b5e"));
+var _ownerWindow = _interopRequireDefault(require("91466b50fbd787e4"));
+var _requirePropFactory = _interopRequireDefault(require("5ae7b9617f5fe292"));
+var _setRef = _interopRequireDefault(require("bd80a0ce8a6a3f24"));
+var _useEnhancedEffect = _interopRequireDefault(require("e079abe502005455"));
+var _useId = _interopRequireDefault(require("e3eca599e3d9d91d"));
+var _unsupportedProp = _interopRequireDefault(require("844b385b0983c57c"));
+var _useControlled = _interopRequireDefault(require("eb5d5bfe0ffc137a"));
+var _useEventCallback = _interopRequireDefault(require("6acf69e34252b5e1"));
+var _useForkRef = _interopRequireDefault(require("e817ca39c5cb7de4"));
+var _mergeSlotProps = _interopRequireDefault(require("46e8fbb132108b0f"));
+// TODO: remove this export once ClassNameGenerator is stable
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const unstable_ClassNameGenerator = exports.unstable_ClassNameGenerator = {
+    configure: (generator)=>{
+        console.warn([
+            'MUI: `ClassNameGenerator` import from `@mui/material/utils` is outdated and might cause unexpected issues.',
+            '',
+            "You should use `import { unstable_ClassNameGenerator } from '@mui/material/className'` instead",
+            '',
+            'The detail of the issue: https://github.com/mui/material-ui/issues/30011#issuecomment-1024993401',
+            '',
+            'The updated documentation: https://mui.com/guides/classname-generator/'
+        ].join('\n'));
+        _ClassNameGenerator.default.configure(generator);
+    }
+};
+
+},{"fe68be4f4e9c9b7d":"1P3rZ","c9fee60f48214d3":"16RUE","c41a926b04503884":"ltCvY","1146004479c2fe1b":"aEwoC","36bfebe35ecd0024":"9VL7q","48bded4c65db6527":"hhxJC","222fa68f40f8f2d3":"hpmCl","d06d3e567cf8d6a5":"dz1Nj","53c4db0492d69485":"02BGR","d488249e22350b5e":"dex0E","91466b50fbd787e4":"cR5he","5ae7b9617f5fe292":"gBZhy","bd80a0ce8a6a3f24":"gtFph","e079abe502005455":"jt0yo","e3eca599e3d9d91d":"55Tau","844b385b0983c57c":"hJKsD","eb5d5bfe0ffc137a":"bqXNu","6acf69e34252b5e1":"42JPB","e817ca39c5cb7de4":"iEdsJ","46e8fbb132108b0f":"1qwdB"}],"aEwoC":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("b4afa8e66738decb").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _createChainedFunction = _interopRequireDefault(require("20638173a47f8954"));
+var _default = exports.default = _createChainedFunction.default;
+
+},{"b4afa8e66738decb":"1P3rZ","20638173a47f8954":"lNJnc"}],"lNJnc":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("79901e6f5e514c7e").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _createChainedFunction.default;
+    }
+});
+var _createChainedFunction = _interopRequireDefault(require("514b1bcfafb9a895"));
+
+},{"79901e6f5e514c7e":"1P3rZ","514b1bcfafb9a895":"4NOVs"}],"4NOVs":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = createChainedFunction;
+/**
+ * Safe chained function.
+ *
+ * Will only create a new function if needed,
+ * otherwise will pass back existing functions or null.
+ */ function createChainedFunction(...funcs) {
+    return funcs.reduce((acc, func)=>{
+        if (func == null) return acc;
+        return function chainedFunction(...args) {
+            acc.apply(this, args);
+            func.apply(this, args);
+        };
+    }, ()=>{});
+}
+
+},{}],"9VL7q":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("eaa629dc12c59d1c").default;
+var _interopRequireWildcard = require("2039f6f23990e2f5").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = createSvgIcon;
+var React = _interopRequireWildcard(require("dd4de61ce89bf7c7"));
+var _SvgIcon = _interopRequireDefault(require("7115e1344747904f"));
+var _jsxRuntime = require("d845a6fc27363639");
+/**
+ * Private module reserved for @mui packages.
+ */ function createSvgIcon(path, displayName) {
+    function Component(props, ref) {
+        return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_SvgIcon.default, {
+            "data-testid": `${displayName}Icon`,
+            ref: ref,
+            ...props,
+            children: path
+        });
+    }
+    // Need to set `displayName` on the inner component for React.memo.
+    // React prior to 16.14 ignores `displayName` on the wrapper.
+    Component.displayName = `${displayName}Icon`;
+    Component.muiName = _SvgIcon.default.muiName;
+    return /*#__PURE__*/ React.memo(/*#__PURE__*/ React.forwardRef(Component));
+}
+
+},{"eaa629dc12c59d1c":"1P3rZ","2039f6f23990e2f5":"6TFJp","dd4de61ce89bf7c7":"jMk1U","7115e1344747904f":"cFkBJ","d845a6fc27363639":"05iiF"}],"cFkBJ":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireWildcard = require("6923fccbc7caaaf7").default;
+var _interopRequireDefault = require("6e85136b3fac334f").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _exportNames = {
+    svgIconClasses: true
+};
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _SvgIcon.default;
+    }
+});
+Object.defineProperty(exports, "svgIconClasses", {
+    enumerable: true,
+    get: function() {
+        return _svgIconClasses.default;
+    }
+});
+var _SvgIcon = _interopRequireDefault(require("4a6edce592d9b10c"));
+var _svgIconClasses = _interopRequireWildcard(require("dfef36d65b2dc626"));
+Object.keys(_svgIconClasses).forEach(function(key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _svgIconClasses[key]) return;
+    Object.defineProperty(exports, key, {
+        enumerable: true,
+        get: function() {
+            return _svgIconClasses[key];
+        }
+    });
+});
+
+},{"6923fccbc7caaaf7":"6TFJp","6e85136b3fac334f":"1P3rZ","4a6edce592d9b10c":"4ZE8t","dfef36d65b2dc626":"5E53h"}],"4ZE8t":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("61cf636d01386d66").default;
+var _interopRequireWildcard = require("9936ddd8bdd8f37e").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var React = _interopRequireWildcard(require("45b04dd441f158ad"));
+var _propTypes = _interopRequireDefault(require("8d84faf47fdd1ffe"));
+var _clsx = _interopRequireDefault(require("8dc5af541bb865d3"));
+var _composeClasses = _interopRequireDefault(require("92c3b024d68d3c69"));
+var _capitalize = _interopRequireDefault(require("5ce4cb5d9c8fdaae"));
+var _zeroStyled = require("66607a03afd6646c");
+var _memoTheme = _interopRequireDefault(require("90201fdf4fdda7f0"));
+var _DefaultPropsProvider = require("84de6c30d042e840");
+var _svgIconClasses = require("d24176c80eb5e106");
+var _jsxRuntime = require("929beafcb667b7c4");
+const useUtilityClasses = (ownerState)=>{
+    const { color, fontSize, classes } = ownerState;
+    const slots = {
+        root: [
+            'root',
+            color !== 'inherit' && `color${(0, _capitalize.default)(color)}`,
+            `fontSize${(0, _capitalize.default)(fontSize)}`
+        ]
+    };
+    return (0, _composeClasses.default)(slots, _svgIconClasses.getSvgIconUtilityClass, classes);
+};
+const SvgIconRoot = (0, _zeroStyled.styled)('svg', {
+    name: 'MuiSvgIcon',
+    slot: 'Root',
+    overridesResolver: (props, styles)=>{
+        const { ownerState } = props;
+        return [
+            styles.root,
+            ownerState.color !== 'inherit' && styles[`color${(0, _capitalize.default)(ownerState.color)}`],
+            styles[`fontSize${(0, _capitalize.default)(ownerState.fontSize)}`]
+        ];
+    }
+})((0, _memoTheme.default)(({ theme })=>({
+        userSelect: 'none',
+        width: '1em',
+        height: '1em',
+        display: 'inline-block',
+        flexShrink: 0,
+        transition: theme.transitions?.create?.('fill', {
+            duration: (theme.vars ?? theme).transitions?.duration?.shorter
+        }),
+        variants: [
+            {
+                props: (props)=>!props.hasSvgAsChild,
+                style: {
+                    // the <svg> will define the property that has `currentColor`
+                    // for example heroicons uses fill="none" and stroke="currentColor"
+                    fill: 'currentColor'
+                }
+            },
+            {
+                props: {
+                    fontSize: 'inherit'
+                },
+                style: {
+                    fontSize: 'inherit'
+                }
+            },
+            {
+                props: {
+                    fontSize: 'small'
+                },
+                style: {
+                    fontSize: theme.typography?.pxToRem?.(20) || '1.25rem'
+                }
+            },
+            {
+                props: {
+                    fontSize: 'medium'
+                },
+                style: {
+                    fontSize: theme.typography?.pxToRem?.(24) || '1.5rem'
+                }
+            },
+            {
+                props: {
+                    fontSize: 'large'
+                },
+                style: {
+                    fontSize: theme.typography?.pxToRem?.(35) || '2.1875rem'
+                }
+            },
+            // TODO v5 deprecate color prop, v6 remove for sx
+            ...Object.entries((theme.vars ?? theme).palette).filter(([, value])=>value && value.main).map(([color])=>({
+                    props: {
+                        color
+                    },
+                    style: {
+                        color: (theme.vars ?? theme).palette?.[color]?.main
+                    }
+                })),
+            {
+                props: {
+                    color: 'action'
+                },
+                style: {
+                    color: (theme.vars ?? theme).palette?.action?.active
+                }
+            },
+            {
+                props: {
+                    color: 'disabled'
+                },
+                style: {
+                    color: (theme.vars ?? theme).palette?.action?.disabled
+                }
+            },
+            {
+                props: {
+                    color: 'inherit'
+                },
+                style: {
+                    color: undefined
+                }
+            }
+        ]
+    })));
+const SvgIcon = /*#__PURE__*/ React.forwardRef(function SvgIcon(inProps, ref) {
+    const props = (0, _DefaultPropsProvider.useDefaultProps)({
+        props: inProps,
+        name: 'MuiSvgIcon'
+    });
+    const { children, className, color = 'inherit', component = 'svg', fontSize = 'medium', htmlColor, inheritViewBox = false, titleAccess, viewBox = '0 0 24 24', ...other } = props;
+    const hasSvgAsChild = /*#__PURE__*/ React.isValidElement(children) && children.type === 'svg';
+    const ownerState = {
+        ...props,
+        color,
+        component,
+        fontSize,
+        instanceFontSize: inProps.fontSize,
+        inheritViewBox,
+        viewBox,
+        hasSvgAsChild
+    };
+    const more = {};
+    if (!inheritViewBox) more.viewBox = viewBox;
+    const classes = useUtilityClasses(ownerState);
+    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)(SvgIconRoot, {
+        as: component,
+        className: (0, _clsx.default)(classes.root, className),
+        focusable: "false",
+        color: htmlColor,
+        "aria-hidden": titleAccess ? undefined : true,
+        role: titleAccess ? 'img' : undefined,
+        ref: ref,
+        ...more,
+        ...other,
+        ...hasSvgAsChild && children.props,
+        ownerState: ownerState,
+        children: [
+            hasSvgAsChild ? children.props.children : children,
+            titleAccess ? /*#__PURE__*/ (0, _jsxRuntime.jsx)("title", {
+                children: titleAccess
+            }) : null
+        ]
+    });
+});
+SvgIcon.propTypes = {
+    // ┌────────────────────────────── Warning ──────────────────────────────┐
+    // │ These PropTypes are generated from the TypeScript type definitions. │
+    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
+    // └─────────────────────────────────────────────────────────────────────┘
+    /**
+   * Node passed into the SVG element.
+   */ children: _propTypes.default.node,
+    /**
+   * Override or extend the styles applied to the component.
+   */ classes: _propTypes.default.object,
+    /**
+   * @ignore
+   */ className: _propTypes.default.string,
+    /**
+   * The color of the component.
+   * It supports both default and custom theme colors, which can be added as shown in the
+   * [palette customization guide](https://mui.com/material-ui/customization/palette/#custom-colors).
+   * You can use the `htmlColor` prop to apply a color attribute to the SVG element.
+   * @default 'inherit'
+   */ color: _propTypes.default/* @typescript-to-proptypes-ignore */ .oneOfType([
+        _propTypes.default.oneOf([
+            'inherit',
+            'action',
+            'disabled',
+            'primary',
+            'secondary',
+            'error',
+            'info',
+            'success',
+            'warning'
+        ]),
+        _propTypes.default.string
+    ]),
+    /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */ component: _propTypes.default.elementType,
+    /**
+   * The fontSize applied to the icon. Defaults to 24px, but can be configure to inherit font size.
+   * @default 'medium'
+   */ fontSize: _propTypes.default/* @typescript-to-proptypes-ignore */ .oneOfType([
+        _propTypes.default.oneOf([
+            'inherit',
+            'large',
+            'medium',
+            'small'
+        ]),
+        _propTypes.default.string
+    ]),
+    /**
+   * Applies a color attribute to the SVG element.
+   */ htmlColor: _propTypes.default.string,
+    /**
+   * If `true`, the root node will inherit the custom `component`'s viewBox and the `viewBox`
+   * prop will be ignored.
+   * Useful when you want to reference a custom `component` and have `SvgIcon` pass that
+   * `component`'s viewBox to the root node.
+   * @default false
+   */ inheritViewBox: _propTypes.default.bool,
+    /**
+   * The shape-rendering attribute. The behavior of the different options is described on the
+   * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/shape-rendering).
+   * If you are having issues with blurry icons you should investigate this prop.
+   */ shapeRendering: _propTypes.default.string,
+    /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */ sx: _propTypes.default.oneOfType([
+        _propTypes.default.arrayOf(_propTypes.default.oneOfType([
+            _propTypes.default.func,
+            _propTypes.default.object,
+            _propTypes.default.bool
+        ])),
+        _propTypes.default.func,
+        _propTypes.default.object
+    ]),
+    /**
+   * Provides a human-readable title for the element that contains it.
+   * https://www.w3.org/TR/SVG-access/#Equivalent
+   */ titleAccess: _propTypes.default.string,
+    /**
+   * Allows you to redefine what the coordinates without units mean inside an SVG element.
+   * For example, if the SVG element is 500 (width) by 200 (height),
+   * and you pass viewBox="0 0 50 20",
+   * this means that the coordinates inside the SVG will go from the top left corner (0,0)
+   * to bottom right (50,20) and each unit will be worth 10px.
+   * @default '0 0 24 24'
+   */ viewBox: _propTypes.default.string
+};
+SvgIcon.muiName = 'SvgIcon';
+var _default = exports.default = SvgIcon;
+
+},{"61cf636d01386d66":"1P3rZ","9936ddd8bdd8f37e":"6TFJp","45b04dd441f158ad":"jMk1U","8d84faf47fdd1ffe":"GNqOQ","8dc5af541bb865d3":"dOSJC","92c3b024d68d3c69":"gluJr","5ce4cb5d9c8fdaae":"ltCvY","66607a03afd6646c":"7wsk9","90201fdf4fdda7f0":"02BGR","84de6c30d042e840":"jO2tX","d24176c80eb5e106":"5E53h","929beafcb667b7c4":"05iiF"}],"5E53h":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("6b145cf177abb3fd").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+exports.getSvgIconUtilityClass = getSvgIconUtilityClass;
+var _generateUtilityClasses = _interopRequireDefault(require("4bee8b0548abe6a0"));
+var _generateUtilityClass = _interopRequireDefault(require("df2eb8ab8aaff529"));
+function getSvgIconUtilityClass(slot) {
+    return (0, _generateUtilityClass.default)('MuiSvgIcon', slot);
+}
+const svgIconClasses = (0, _generateUtilityClasses.default)('MuiSvgIcon', [
+    'root',
+    'colorPrimary',
+    'colorSecondary',
+    'colorAction',
+    'colorError',
+    'colorDisabled',
+    'fontSizeInherit',
+    'fontSizeSmall',
+    'fontSizeMedium',
+    'fontSizeLarge'
+]);
+var _default = exports.default = svgIconClasses;
+
+},{"6b145cf177abb3fd":"1P3rZ","4bee8b0548abe6a0":"3J0Rs","df2eb8ab8aaff529":"iAc9p"}],"hpmCl":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("7ef2d20d084bd68a").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _deprecatedPropType = _interopRequireDefault(require("151ffb2240185ab0"));
+var _default = exports.default = _deprecatedPropType.default;
+
+},{"7ef2d20d084bd68a":"1P3rZ","151ffb2240185ab0":"4BnpN"}],"4BnpN":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("1f481973754c8944").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _deprecatedPropType.default;
+    }
+});
+var _deprecatedPropType = _interopRequireDefault(require("1cab4921ab9b2795"));
+
+},{"1f481973754c8944":"1P3rZ","1cab4921ab9b2795":"e9eHt"}],"e9eHt":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = deprecatedPropType;
+function deprecatedPropType(validator, reason) {
+    return (props, propName, componentName, location, propFullName)=>{
+        const componentNameSafe = componentName || '<<anonymous>>';
+        const propFullNameSafe = propFullName || propName;
+        if (typeof props[propName] !== 'undefined') return new Error(`The ${location} \`${propFullNameSafe}\` of ` + `\`${componentNameSafe}\` is deprecated. ${reason}`);
+        return null;
+    };
+}
+
+},{}],"dz1Nj":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("55297cc2e8834fdd").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _isMuiElement = _interopRequireDefault(require("461ab8f5c7fe311b"));
+var _default = exports.default = _isMuiElement.default;
+
+},{"55297cc2e8834fdd":"1P3rZ","461ab8f5c7fe311b":"ah8yj"}],"dex0E":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("28e50b3e9fd11f52").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _ownerDocument = _interopRequireDefault(require("ca94342cc2753d59"));
+var _default = exports.default = _ownerDocument.default;
+
+},{"28e50b3e9fd11f52":"1P3rZ","ca94342cc2753d59":"3d5eX"}],"3d5eX":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("9f2d06c503f836b5").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _ownerDocument.default;
+    }
+});
+var _ownerDocument = _interopRequireDefault(require("6d6ee90026376a0b"));
+
+},{"9f2d06c503f836b5":"1P3rZ","6d6ee90026376a0b":"02Hya"}],"02Hya":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = ownerDocument;
+function ownerDocument(node) {
+    return node && node.ownerDocument || document;
+}
+
+},{}],"cR5he":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("aa797ec0df2f33ba").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _ownerWindow = _interopRequireDefault(require("9c4553051371c676"));
+var _default = exports.default = _ownerWindow.default;
+
+},{"aa797ec0df2f33ba":"1P3rZ","9c4553051371c676":"b6EvF"}],"b6EvF":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("ca87500865535871").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _ownerWindow.default;
+    }
+});
+var _ownerWindow = _interopRequireDefault(require("20b38ecbd8f1e81f"));
+
+},{"ca87500865535871":"1P3rZ","20b38ecbd8f1e81f":"dhacn"}],"dhacn":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("1ad8c8c4fdb095e2").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = ownerWindow;
+var _ownerDocument = _interopRequireDefault(require("cac48f005287af1e"));
+function ownerWindow(node) {
+    const doc = (0, _ownerDocument.default)(node);
+    return doc.defaultView || window;
+}
+
+},{"1ad8c8c4fdb095e2":"1P3rZ","cac48f005287af1e":"3d5eX"}],"gBZhy":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("56b7b495be505bcb").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _requirePropFactory = _interopRequireDefault(require("f9f10cc361b82a43"));
+var _default = exports.default = _requirePropFactory.default;
+
+},{"56b7b495be505bcb":"1P3rZ","f9f10cc361b82a43":"bCT4C"}],"bCT4C":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("c1bcf01a016f83f0").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _requirePropFactory.default;
+    }
+});
+var _requirePropFactory = _interopRequireDefault(require("b1f417e6f4e8785a"));
+
+},{"c1bcf01a016f83f0":"1P3rZ","b1f417e6f4e8785a":"7itwd"}],"7itwd":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = requirePropFactory;
+function requirePropFactory(componentNameInError, Component) {
+    // eslint-disable-next-line react/forbid-foreign-prop-types
+    const prevPropTypes = Component ? {
+        ...Component.propTypes
+    } : null;
+    const requireProp = (requiredProp)=>(props, propName, componentName, location, propFullName, ...args)=>{
+            const propFullNameSafe = propFullName || propName;
+            const defaultTypeChecker = prevPropTypes?.[propFullNameSafe];
+            if (defaultTypeChecker) {
+                const typeCheckerResult = defaultTypeChecker(props, propName, componentName, location, propFullName, ...args);
+                if (typeCheckerResult) return typeCheckerResult;
+            }
+            if (typeof props[propName] !== 'undefined' && !props[requiredProp]) return new Error(`The prop \`${propFullNameSafe}\` of ` + `\`${componentNameInError}\` can only be used together with the \`${requiredProp}\` prop.`);
+            return null;
+        };
+    return requireProp;
+}
+
+},{}],"gtFph":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("e24796f0966f49d").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _setRef = _interopRequireDefault(require("fee9bdd29dfbbf15"));
+var _default = exports.default = _setRef.default;
+
+},{"e24796f0966f49d":"1P3rZ","fee9bdd29dfbbf15":"3D5vo"}],"3D5vo":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("d564c69d8b111b7").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _setRef.default;
+    }
+});
+var _setRef = _interopRequireDefault(require("45a9b5e2f170cd8a"));
+
+},{"d564c69d8b111b7":"1P3rZ","45a9b5e2f170cd8a":"iHdNc"}],"iHdNc":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = setRef;
+/**
+ * TODO v5: consider making it private
+ *
+ * passes {value} to {ref}
+ *
+ * WARNING: Be sure to only call this inside a callback that is passed as a ref.
+ * Otherwise, make sure to cleanup the previous {ref} if it changes. See
+ * https://github.com/mui/material-ui/issues/13539
+ *
+ * Useful if you want to expose the ref of an inner component to the public API
+ * while still using it inside the component.
+ * @param ref A ref callback or ref object. If anything falsy, this is a no-op.
+ */ function setRef(ref, value) {
+    if (typeof ref === 'function') ref(value);
+    else if (ref) ref.current = value;
+}
+
+},{}],"jt0yo":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("64b708bdadfd621a").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _useEnhancedEffect = _interopRequireDefault(require("2acbeb468710cf8f"));
+var _default = exports.default = _useEnhancedEffect.default;
+
+},{"64b708bdadfd621a":"1P3rZ","2acbeb468710cf8f":"egHZg"}],"55Tau":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("bb5749fb3ccef0e6").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _useId = _interopRequireDefault(require("949bff5092237717"));
+var _default = exports.default = _useId.default;
+
+},{"bb5749fb3ccef0e6":"1P3rZ","949bff5092237717":"ko2Df"}],"ko2Df":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("255675d84f92bae").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _useId.default;
+    }
+});
+var _useId = _interopRequireDefault(require("25989ce2deac7de"));
+
+},{"255675d84f92bae":"1P3rZ","25989ce2deac7de":"c4oMX"}],"c4oMX":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireWildcard = require("24efb0879cb32d1").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = useId;
+var React = _interopRequireWildcard(require("38095c9d28295399"));
+let globalId = 0;
+// TODO React 17: Remove `useGlobalId` once React 17 support is removed
+function useGlobalId(idOverride) {
+    const [defaultId, setDefaultId] = React.useState(idOverride);
+    const id = idOverride || defaultId;
+    React.useEffect(()=>{
+        if (defaultId == null) {
+            // Fallback to this default id when possible.
+            // Use the incrementing value for client-side rendering only.
+            // We can't use it server-side.
+            // If you want to use random values please consider the Birthday Problem: https://en.wikipedia.org/wiki/Birthday_problem
+            globalId += 1;
+            setDefaultId(`mui-${globalId}`);
+        }
+    }, [
+        defaultId
+    ]);
+    return id;
+}
+// See https://github.com/mui/material-ui/issues/41190#issuecomment-2040873379 for why
+const safeReact = {
+    ...React
+};
+const maybeReactUseId = safeReact.useId;
+/**
+ *
+ * @example <div id={useId()} />
+ * @param idOverride
+ * @returns {string}
+ */ function useId(idOverride) {
+    // React.useId() is only available from React 17.0.0.
+    if (maybeReactUseId !== undefined) {
+        const reactId = maybeReactUseId();
+        return idOverride ?? reactId;
+    }
+    // TODO: uncomment once we enable eslint-plugin-react-compiler // eslint-disable-next-line react-compiler/react-compiler
+    // eslint-disable-next-line react-hooks/rules-of-hooks -- `React.useId` is invariant at runtime.
+    return useGlobalId(idOverride);
+}
+
+},{"24efb0879cb32d1":"6TFJp","38095c9d28295399":"jMk1U"}],"hJKsD":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("3eca2a8869ff9e8c").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _unsupportedProp = _interopRequireDefault(require("fca16de8fd487075"));
+var _default = exports.default = _unsupportedProp.default;
+
+},{"3eca2a8869ff9e8c":"1P3rZ","fca16de8fd487075":"gXkXd"}],"gXkXd":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("213b3de644fa3340").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _unsupportedProp.default;
+    }
+});
+var _unsupportedProp = _interopRequireDefault(require("d18bb2c9d3d9c779"));
+
+},{"213b3de644fa3340":"1P3rZ","d18bb2c9d3d9c779":"iTuEs"}],"iTuEs":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = unsupportedProp;
+function unsupportedProp(props, propName, componentName, location, propFullName) {
+    const propFullNameSafe = propFullName || propName;
+    if (typeof props[propName] !== 'undefined') return new Error(`The prop \`${propFullNameSafe}\` is not supported. Please remove it.`);
+    return null;
+}
+
+},{}],"bqXNu":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("12e10b690fd82a1b").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _useControlled = _interopRequireDefault(require("9a5904ff431507bf"));
+var _default = exports.default = _useControlled.default;
+
+},{"12e10b690fd82a1b":"1P3rZ","9a5904ff431507bf":"64SYR"}],"64SYR":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireWildcard = require("d1a4ff17b7de5042").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _exportNames = {};
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _useControlled.default;
+    }
+});
+var _useControlled = _interopRequireWildcard(require("c45633a7233faed6"));
+Object.keys(_useControlled).forEach(function(key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _useControlled[key]) return;
+    Object.defineProperty(exports, key, {
+        enumerable: true,
+        get: function() {
+            return _useControlled[key];
+        }
+    });
+});
+
+},{"d1a4ff17b7de5042":"6TFJp","c45633a7233faed6":"i1dlN"}],"i1dlN":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+// TODO: uncomment once we enable eslint-plugin-react-compiler // eslint-disable-next-line react-compiler/react-compiler -- process.env never changes, dependency arrays are intentionally ignored
+/* eslint-disable react-hooks/rules-of-hooks, react-hooks/exhaustive-deps */ var _interopRequireWildcard = require("5aa3c6f3be017418").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = useControlled;
+var React = _interopRequireWildcard(require("8ffaa81b2ea8b5bc"));
+function useControlled(props) {
+    const { controlled, default: defaultProp, name, state = 'value' } = props;
+    // isControlled is ignored in the hook dependency lists as it should never change.
+    const { current: isControlled } = React.useRef(controlled !== undefined);
+    const [valueState, setValue] = React.useState(defaultProp);
+    const value = isControlled ? controlled : valueState;
+    {
+        React.useEffect(()=>{
+            if (isControlled !== (controlled !== undefined)) console.error([
+                `MUI: A component is changing the ${isControlled ? '' : 'un'}controlled ${state} state of ${name} to be ${isControlled ? 'un' : ''}controlled.`,
+                'Elements should not switch from uncontrolled to controlled (or vice versa).',
+                `Decide between using a controlled or uncontrolled ${name} ` + 'element for the lifetime of the component.',
+                "The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.",
+                'More info: https://fb.me/react-controlled-components'
+            ].join('\n'));
+        }, [
+            state,
+            name,
+            controlled
+        ]);
+        const { current: defaultValue } = React.useRef(defaultProp);
+        React.useEffect(()=>{
+            // Object.is() is not equivalent to the === operator.
+            // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is for more details.
+            if (!isControlled && !Object.is(defaultValue, defaultProp)) console.error([
+                `MUI: A component is changing the default ${state} state of an uncontrolled ${name} after being initialized. ` + `To suppress this warning opt to use a controlled ${name}.`
+            ].join('\n'));
+        }, [
+            JSON.stringify(defaultProp)
+        ]);
+    }
+    const setValueIfUncontrolled = React.useCallback((newValue)=>{
+        if (!isControlled) setValue(newValue);
+    }, []);
+    // TODO: provide overloads for the useControlled function to account for the case where either
+    // controlled or default is not undefiend.
+    // In that case the return type should be [T, React.Dispatch<React.SetStateAction<T>>]
+    // otherwise it should be [T | undefined, React.Dispatch<React.SetStateAction<T | undefined>>]
+    return [
+        value,
+        setValueIfUncontrolled
+    ];
+}
+
+},{"5aa3c6f3be017418":"6TFJp","8ffaa81b2ea8b5bc":"jMk1U"}],"42JPB":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("e78d2301afd5a250").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _useEventCallback = _interopRequireDefault(require("db042c62a6b9bd92"));
+var _default = exports.default = _useEventCallback.default;
+
+},{"e78d2301afd5a250":"1P3rZ","db042c62a6b9bd92":"7odel"}],"7odel":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("52c799e74f10efbb").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _useEventCallback.default;
+    }
+});
+var _useEventCallback = _interopRequireDefault(require("e162981f063f520c"));
+
+},{"52c799e74f10efbb":"1P3rZ","e162981f063f520c":"fqVPL"}],"fqVPL":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("97395a092909d98c").default;
+var _interopRequireWildcard = require("b7e73551969fa13d").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var React = _interopRequireWildcard(require("564559aa06a2b11"));
+var _useEnhancedEffect = _interopRequireDefault(require("deaacaef493326fc"));
+/**
+ * Inspired by https://github.com/facebook/react/issues/14099#issuecomment-440013892
+ * See RFC in https://github.com/reactjs/rfcs/pull/220
+ */ function useEventCallback(fn) {
+    const ref = React.useRef(fn);
+    (0, _useEnhancedEffect.default)(()=>{
+        ref.current = fn;
+    });
+    return React.useRef((...args)=>// @ts-expect-error hide `this`
+        (0, ref.current)(...args)).current;
+}
+var _default = exports.default = useEventCallback;
+
+},{"97395a092909d98c":"1P3rZ","b7e73551969fa13d":"6TFJp","564559aa06a2b11":"jMk1U","deaacaef493326fc":"egHZg"}],"1qwdB":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("749246e667319985").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = mergeSlotProps;
+var _clsx = _interopRequireDefault(require("bafa59885bdd07cb"));
+// Brought from [Base UI](https://github.com/mui/base-ui/blob/master/packages/react/src/merge-props/mergeProps.ts#L119)
+// Use it directly from Base UI once it's a package dependency.
+function isEventHandler(key, value) {
+    // This approach is more efficient than using a regex.
+    const thirdCharCode = key.charCodeAt(2);
+    return key[0] === 'o' && key[1] === 'n' && thirdCharCode >= 65 /* A */  && thirdCharCode <= 90 /* Z */  && typeof value === 'function';
+}
+function mergeSlotProps(externalSlotProps, defaultSlotProps) {
+    if (!externalSlotProps) return defaultSlotProps;
+    function extractHandlers(externalSlotPropsValue, defaultSlotPropsValue) {
+        const handlers = {};
+        Object.keys(defaultSlotPropsValue).forEach((key)=>{
+            if (isEventHandler(key, defaultSlotPropsValue[key]) && typeof externalSlotPropsValue[key] === 'function') // only compose the handlers if both default and external slot props match the event handler
+            handlers[key] = (...args)=>{
+                externalSlotPropsValue[key](...args);
+                defaultSlotPropsValue[key](...args);
+            };
+        });
+        return handlers;
+    }
+    if (typeof externalSlotProps === 'function' || typeof defaultSlotProps === 'function') return (ownerState)=>{
+        const defaultSlotPropsValue = typeof defaultSlotProps === 'function' ? defaultSlotProps(ownerState) : defaultSlotProps;
+        const externalSlotPropsValue = typeof externalSlotProps === 'function' ? externalSlotProps({
+            ...ownerState,
+            ...defaultSlotPropsValue
+        }) : externalSlotProps;
+        const className = (0, _clsx.default)(ownerState?.className, defaultSlotPropsValue?.className, externalSlotPropsValue?.className);
+        const handlers = extractHandlers(externalSlotPropsValue, defaultSlotPropsValue);
+        return {
+            ...defaultSlotPropsValue,
+            ...externalSlotPropsValue,
+            ...handlers,
+            ...!!className && {
+                className
+            },
+            ...defaultSlotPropsValue?.style && externalSlotPropsValue?.style && {
+                style: {
+                    ...defaultSlotPropsValue.style,
+                    ...externalSlotPropsValue.style
+                }
+            },
+            ...defaultSlotPropsValue?.sx && externalSlotPropsValue?.sx && {
+                sx: [
+                    ...Array.isArray(defaultSlotPropsValue.sx) ? defaultSlotPropsValue.sx : [
+                        defaultSlotPropsValue.sx
+                    ],
+                    ...Array.isArray(externalSlotPropsValue.sx) ? externalSlotPropsValue.sx : [
+                        externalSlotPropsValue.sx
+                    ]
+                ]
+            }
+        };
+    };
+    const typedDefaultSlotProps = defaultSlotProps;
+    const handlers = extractHandlers(externalSlotProps, typedDefaultSlotProps);
+    const className = (0, _clsx.default)(typedDefaultSlotProps?.className, externalSlotProps?.className);
+    return {
+        ...defaultSlotProps,
+        ...externalSlotProps,
+        ...handlers,
+        ...!!className && {
+            className
+        },
+        ...typedDefaultSlotProps?.style && externalSlotProps?.style && {
+            style: {
+                ...typedDefaultSlotProps.style,
+                ...externalSlotProps.style
+            }
+        },
+        ...typedDefaultSlotProps?.sx && externalSlotProps?.sx && {
+            sx: [
+                ...Array.isArray(typedDefaultSlotProps.sx) ? typedDefaultSlotProps.sx : [
+                    typedDefaultSlotProps.sx
+                ],
+                ...Array.isArray(externalSlotProps.sx) ? externalSlotProps.sx : [
+                    externalSlotProps.sx
+                ]
+            ]
+        }
+    };
+}
+
+},{"749246e667319985":"1P3rZ","bafa59885bdd07cb":"dOSJC"}]},["90mp3","eM1fv"], "eM1fv", "parcelRequire09a6", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=GDV_Projekt.64b87d6c.js.map

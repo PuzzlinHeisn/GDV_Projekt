@@ -14,9 +14,9 @@ const App = () => {
     <div style={{ height: '100vh', width: '100vw', position: 'relative' }}>
   
   {/* Obere schwebende Leiste mit Balkendiagrammen */}
-   <BottomChartBar
-        selectedObject={selectedObject}
-      />
+
+  <BottomChartBar selectedObject={selectedObject} />
+
 
   {/* Kartenbereich */}
   <div style={{ height: '100vh', display: 'flex' }}>

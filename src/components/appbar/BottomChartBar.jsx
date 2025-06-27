@@ -7,7 +7,7 @@ import processedDataMannheim from './../../utils/processedDataMannheim'
 import WohnungsBarChart from '../barcharts/WohnungsBarChart';
 import Slide from '@mui/material/Slide';
 
-const BottomChartBar = ({ selectedObject, learSelections }) => {
+const BottomChartBar = ({ selectedObject, foundApartement}) => {
 
   return (
     <Slide direction="up" in={!!selectedObject} mountOnEnter unmountOnExit > 
@@ -29,21 +29,25 @@ const BottomChartBar = ({ selectedObject, learSelections }) => {
                 data={[...processedDataKaiserslautern].sort((a, b) => a.price_per_qm - b.price_per_qm)}
                 selected={selectedObject}
                 dataKey="price_per_qm"
-                label="Kaiserslautern (€/m²)"
+                label="Kaiserslautern(€/m²)"
+                foundApartement={foundApartement}
             
               />
               <WohnungsBarChart
                 data={[...processedDataKaiserslautern].sort((a, b) => a.qm - b.qm)}
                 selected={selectedObject}
                 dataKey="qm"
-                label="Kaiserslautern (€/m²)"
+                label="Kaiserslautern(qm)"
+                foundApartement={foundApartement}
             
               />
               <WohnungsBarChart
-                data={[...processedDataKaiserslautern].sort((a, b) => a.price_per_qm - b.price_per_qm)}
+                data={[...processedDataKaiserslautern].sort((a, b) => a.distance_to_center - b.distance_to_center)}
                 selected={selectedObject}
-                dataKey="price_per_qm"
-                label="Kaiserslautern (€/m²)"
+                dataKey="distance_to_center"
+                label="Distanz zum Zentrum(km)"
+                foundApartement={foundApartement}
+
             
               />
             </Box>
@@ -55,19 +59,22 @@ const BottomChartBar = ({ selectedObject, learSelections }) => {
                 data={[...processedDataMannheim].sort((a, b) => a.price_per_qm - b.price_per_qm)}
                 selected={selectedObject}
                 dataKey="price_per_qm"
-                label="Mannheim (€/m²)"
+                label="Mannheim(€/m²)"
+                foundApartement={foundApartement}
               />
               <WohnungsBarChart
                 data={[...processedDataMannheim].sort((a, b) => a.qm - b.qm)}
                 selected={selectedObject}
                 dataKey="qm"
-                label="Mannheim (€/m²)"
+                label="Mannheim(qm)"
+                foundApartement={foundApartement}
               />
               <WohnungsBarChart
-                data={[...processedDataMannheim].sort((a, b) => a.price_per_qm - b.price_per_qm)}
+                data={[...processedDataMannheim].sort((a, b) => a.distance_to_center - b.distance_to_center)}
                 selected={selectedObject}
-                dataKey="price_per_qm"
-                label="Mannheim (€/m²)"
+                dataKey="distance_to_center"
+                label="Distanz zum Zentrum(km)"
+                foundApartement={foundApartement}
               />
             </Box>
           )}

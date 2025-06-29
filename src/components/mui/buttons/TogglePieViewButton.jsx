@@ -1,7 +1,7 @@
 
 import React from 'react';
-import {Button} from '@mui/material'
-const TogglePieViewButton = ({ ShowPie, setShowPie }) => (
+import { Button } from '@mui/material'
+const TogglePieViewButton = React.memo(({ ShowPie, setShowPie }) => (
   <Button
     variant="contained"
     color="secondary"
@@ -17,5 +17,5 @@ const TogglePieViewButton = ({ ShowPie, setShowPie }) => (
       ? "🏢 Städtevergleich anzeigen"
       : "Städtevergleich schließen"}
   </Button>
-);
+));
 export default TogglePieViewButton;

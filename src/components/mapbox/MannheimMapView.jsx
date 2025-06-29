@@ -1,13 +1,12 @@
 import React from 'react';
 import { DeckGL } from '@deck.gl/react';
 import { Map } from 'react-map-gl';
-import BarsWohnungenKaiserslauternLayer from '../decklayers/columnlayers/BarsWohnungenKLLayer';
-import StadtOutlineLayerKaiserslautern from '../decklayers/geojsonlayers/StadtOutlineLayerKL';
-import WohnungInfoCard from '../cards/WohnungInfoCard';
-import stadtteilLabelLayerKaiserslautern from '../decklayers/textlayers/StadtteilLabelLayerKaiserslautern';
+import BarsWohnungenMannheimLayer from '../deckgl/columnlayers/BarsWohnungenMannheimLayer';
+import StadtteileOutlineLayerMannheim from '../deckgl/geojsonlayers/StadtteileOutlineLayerMannheim';
+import stadtteilLabelLayerMannheim from '../deckgl/textlayers/StadtteilLabelLayerMannheim';
 const INITIAL_VIEW_KL = {
-  longitude: 7.760,
-  latitude: 49.444,
+  longitude: 8.520,
+  latitude: 49.4875,
   zoom: 12,
   pitch: 45,
   bearing: 0,
@@ -15,11 +14,11 @@ const INITIAL_VIEW_KL = {
 
 const MAPBOX_TOKEN = "pk.eyJ1IjoibGF1cmVudDE1NCIsImEiOiJjbWI4ZXRmYWowYnM3MmtzYnpxdnluNmlyIn0.5Y8kOPYR-F_Ac-bAJTPiog";
 
-const KaiserslauternMapView = ({ selected, setSelected, setFoundApartment }) => {
+const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, foundApartement }) => {
   const layers = [
-    StadtOutlineLayerKaiserslautern(),
-    BarsWohnungenKaiserslauternLayer(),
-    stadtteilLabelLayerKaiserslautern(),
+    StadtteileOutlineLayerMannheim(),
+    BarsWohnungenMannheimLayer(selected, foundApartement),
+    stadtteilLabelLayerMannheim(),
   ];
 
 
@@ -35,25 +34,16 @@ const KaiserslauternMapView = ({ selected, setSelected, setFoundApartment }) => 
             setFoundApartment(null);
           } else {
             setSelected(null);
-            
           }
         }}
       >
-        <Map
+        <Map          
           mapStyle="mapbox://styles/mapbox/dark-v11"
           mapboxAccessToken={MAPBOX_TOKEN}
         />
       </DeckGL>
-      
     </div>
   );
 };
-
-
-function getWohnungWithIdByTitle(title, allWohnungen) {
-    const fullWohnung = allWohnungen.find(w => w.title === title);
-    return fullWohnung;
-}
-
 
 export default KaiserslauternMapView;

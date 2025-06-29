@@ -16,6 +16,7 @@ const CustomTooltip = ({ active, payload }) => {
                 padding: 2,
                 maxWidth: 320,
                 boxShadow: 6,
+                zIndex: 9999,
             }}
         >
             <Typography variant="subtitle2" sx={{ fontWeight: "bold", color: "#c792ea", mb: 1 }}>

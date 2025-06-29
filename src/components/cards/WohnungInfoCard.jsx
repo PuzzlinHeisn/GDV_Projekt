@@ -1,64 +1,56 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
-import { green } from '@mui/material/colors';
-import merged_data from './../../data/merged_data.json'
+import { Card, CardContent, Typography, Box } from '@mui/material';
 import Zoom from '@mui/material/Zoom';
+import merged_data from './../../data/merged_data.json';
+
 const WohnungInfoCard = ({ wohnungTitle, selected }) => {
   const wohnung = merged_data.find(w => w.title === wohnungTitle);
   if (!wohnung) return null;
-    return(
+
+
+
+  return (
     <Zoom in={selected}>
-    <Card
-        sx={{
-            position: 'absolute',
-            top: 20,
-            left: 20,
-            maxWidth: 300,
-            zIndex: 999,
-            boxShadow: 9,
-            backgroundColor: 'black'
-        }}
-        >
-   <CardContent sx={{ backgroundColor: '#1e1e2f', borderRadius: 2 }}>
-  <Typography variant="h5" sx={{ color: '#ffffff' }} gutterBottom>
-    {wohnung.title}
-  </Typography>
+      <Box>
+        <Card
+  sx={{
+    position: 'absolute',
+    top: 80,
+    left: wohnung.city_short === 'KL' ? 20 : 'auto',
+    right: wohnung.city_short === 'MA' ? 20 : 'auto',
+    maxWidth: 400,
+    zIndex: 10,
+    boxShadow: 9,
+  }}
+>
 
-  <Typography variant="h6" sx={{ color: '#ffffff' }}>
-    Preis €/m²: <Typography variant="h6" component="span" sx={{ color: '#c792ea', fontWeight: 'bold' }}>{wohnung.price_per_qm}</Typography>
-  </Typography>
+          <CardContent sx={{ backgroundColor: '#1e1e2f', borderRadius: 2 }}>
+            <Typography variant="h6" sx={{ color: '#ffffff', mb: 1 }}>
+              {wohnung.title}
+            </Typography>
 
-  <Typography variant="h6" sx={{ color: '#ffffff' }}>
-    Preis Kalt: <Typography variant="h6" component="span" sx={{ color: '#c792ea', fontWeight: 'bold' }}>{wohnung.price_cold}</Typography>
-  </Typography>
-
-  <Typography variant="h6" sx={{ color: '#ffffff' }}>
-    Preis Warm: <Typography variant="h6" component="span" sx={{ color: '#c792ea', fontWeight: 'bold' }}>{wohnung.price_warm}</Typography>
-  </Typography>
-
-  <Typography variant="h6" sx={{ color: '#ffffff' }}>
-    Fläche: <Typography  variant="h6" component="span" sx={{ color: '#c792ea', fontWeight: 'bold' }}>{wohnung.qm}</Typography> qm
-  </Typography>
-
-  <Typography variant="h6" sx={{ color: '#ffffff' }}>
-    Adresse: <Typography variant="h6" component="span" sx={{ color: '#c792ea', fontWeight: 'bold' }}>{wohnung.street}</Typography>
-  </Typography>
-
-  <Typography variant="h6" sx={{ color: '#ffffff' }}>
-    Stadt: <Typography variant="h6" component="span" sx={{ color: '#c792ea', fontWeight: 'bold' }}>{wohnung.city}</Typography>
-  </Typography>
-
-  <Typography variant="h6" sx={{ color: '#ffffff' }}>
-    Anzahl Zimmer: <Typography variant="h6" component="span" sx={{ color: '#c792ea', fontWeight: 'bold' }}>{wohnung.rooms}</Typography>
-  </Typography>
-
-  <Typography variant="h6" sx={{ color: '#ffffff' }}>
-    Anzahl Etagen: <Typography variant="h6" component="span" sx={{ color: '#c792ea', fontWeight: 'bold' }}>{wohnung.floor}</Typography>
-  </Typography>
-</CardContent>
-  
-    </Card>
+            {[
+              ['Preis €/m²', wohnung.price_per_qm],
+              ['Preis Kalt', wohnung.price_cold],
+              ['Preis Warm', wohnung.price_warm],
+              ['Fläche', `${wohnung.qm} qm`],
+              ['Adresse', wohnung.street],
+              ['Stadt', wohnung.city],
+              ['Anzahl Zimmer', wohnung.rooms],
+              ['Etage', wohnung.floor],
+            ].map(([label, value]) => (
+              <Typography key={label} variant="body1" sx={{ color: '#ffffff' }}>
+                {label}:{' '}
+                <Box component="span" sx={{ color: '#c792ea', fontWeight: 'bold' }}>
+                  {value}
+                </Box>
+              </Typography>
+            ))}
+          </CardContent>
+        </Card>
+      </Box>
     </Zoom>
-)};
+  );
+};
 
 export default WohnungInfoCard;

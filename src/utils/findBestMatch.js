@@ -48,6 +48,5 @@ export function findBestMatch(source, candidates) {
       
     }
   }
-  console.log(bestMatch);
   return bestMatch;
 }

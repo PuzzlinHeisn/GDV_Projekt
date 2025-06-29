@@ -5,7 +5,6 @@ import BarsWohnungenKaiserslauternLayer from '../decklayers/columnlayers/BarsWoh
 import StadtOutlineLayerKaiserslautern from '../decklayers/geojsonlayers/StadtOutlineLayerKL';
 import WohnungInfoCard from '../cards/WohnungInfoCard';
 import stadtteilLabelLayerKaiserslautern from '../decklayers/textlayers/StadtteilLabelLayerKaiserslautern';
-import merged_data from '../../data/merged_data.json'
 const INITIAL_VIEW_KL = {
   longitude: 7.760,
   latitude: 49.444,
@@ -16,7 +15,7 @@ const INITIAL_VIEW_KL = {
 
 const MAPBOX_TOKEN = "pk.eyJ1IjoibGF1cmVudDE1NCIsImEiOiJjbWI4ZXRmYWowYnM3MmtzYnpxdnluNmlyIn0.5Y8kOPYR-F_Ac-bAJTPiog";
 
-const KaiserslauternMapView = ({ selected, setSelected, viewMode }) => {
+const KaiserslauternMapView = ({ selected, setSelected, setFoundApartment }) => {
   const layers = [
     StadtOutlineLayerKaiserslautern(),
     BarsWohnungenKaiserslauternLayer(),
@@ -31,10 +30,12 @@ const KaiserslauternMapView = ({ selected, setSelected, viewMode }) => {
         controller={true}
         layers={layers}
         onClick={info => {
-          if (info.object && viewMode === "wohnungen") {
+          if (info.object) {
             setSelected(prev => prev === info.object.title ? null : info.object.title);
+            setFoundApartment(null);
           } else {
             setSelected(null);
+            
           }
         }}
       >
@@ -43,7 +44,7 @@ const KaiserslauternMapView = ({ selected, setSelected, viewMode }) => {
           mapboxAccessToken={MAPBOX_TOKEN}
         />
       </DeckGL>
-      {selected && <WohnungInfoCard wohnungTitle={selected} selected={!!selected}/>}
+      
     </div>
   );
 };

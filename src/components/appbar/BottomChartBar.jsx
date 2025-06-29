@@ -1,11 +1,11 @@
 import React from 'react';
 import { AppBar, Toolbar, Box, Typography, IconButton } from '@mui/material';
 import CloseIcon from '@mui/material/Icon';
-import WohnungsBarChart from '../barcharts/WohnungsBarChart';
 import processedDataKaiserslautern from './../../utils/processedDataKaiserslautern'
 import processedDataMannheim from './../../utils/processedDataMannheim'
-import WohnungsBarChart from '../barcharts/WohnungsBarChart';
+import WohnungsBarChart from '../charts/WohnungsBarChart';
 import Slide from '@mui/material/Slide';
+import StadtPieChart from '../charts/StadtPieChart';
 
 const BottomChartBar = ({ selectedObject, foundApartement}) => {
 
@@ -22,39 +22,37 @@ const BottomChartBar = ({ selectedObject, foundApartement}) => {
   }}
 >
       <Toolbar>
-        <Box sx={{ display: 'flex', width: '100%'}}>
-          {selectedObject && (
+        <Box sx={{ display: 'flex', width: '100%'}}>       
             <Box sx={{ flex: 1 }}>
+              <Typography variant="h6" sx={{ color: 'white', mt: 2 }}>
+               Kaiserslautern
+              </Typography>
               <WohnungsBarChart
                 data={[...processedDataKaiserslautern].sort((a, b) => a.price_per_qm - b.price_per_qm)}
                 selected={selectedObject}
                 dataKey="price_per_qm"
                 label="Kaiserslautern(€/m²)"
-                foundApartement={foundApartement}
-            
+                foundApartement={foundApartement}           
               />
               <WohnungsBarChart
                 data={[...processedDataKaiserslautern].sort((a, b) => a.qm - b.qm)}
                 selected={selectedObject}
                 dataKey="qm"
                 label="Kaiserslautern(qm)"
-                foundApartement={foundApartement}
-            
+                foundApartement={foundApartement}            
               />
               <WohnungsBarChart
                 data={[...processedDataKaiserslautern].sort((a, b) => a.distance_to_center - b.distance_to_center)}
                 selected={selectedObject}
                 dataKey="distance_to_center"
                 label="Distanz zum Zentrum(km)"
-                foundApartement={foundApartement}
-
-            
+                foundApartement={foundApartement}           
               />
             </Box>
-            
-          )}
-          {selectedObject && (
             <Box sx={{ flex: 1 }}>
+              <Typography variant="h6" sx={{ color: 'white', mt: 2 }}>
+               Mannheim
+              </Typography>
               <WohnungsBarChart
                 data={[...processedDataMannheim].sort((a, b) => a.price_per_qm - b.price_per_qm)}
                 selected={selectedObject}
@@ -77,9 +75,6 @@ const BottomChartBar = ({ selectedObject, foundApartement}) => {
                 foundApartement={foundApartement}
               />
             </Box>
-          )}
-
-
         </Box>
       </Toolbar>
     </AppBar>

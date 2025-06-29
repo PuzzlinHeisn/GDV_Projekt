@@ -12,5 +12,4 @@ const StadtOutlineLayerKL = () => new GeoJsonLayer({
     getFillColor: [180, 180, 255, 80],
     getLineColor: [255, 255, 255],
   });
-
 export default StadtOutlineLayerKL;

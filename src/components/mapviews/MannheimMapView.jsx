@@ -16,7 +16,7 @@ const INITIAL_VIEW_KL = {
 
 const MAPBOX_TOKEN = "pk.eyJ1IjoibGF1cmVudDE1NCIsImEiOiJjbWI4ZXRmYWowYnM3MmtzYnpxdnluNmlyIn0.5Y8kOPYR-F_Ac-bAJTPiog";
 
-const KaiserslauternMapView = ({ selected, setSelected, viewMode }) => {
+const KaiserslauternMapView = ({ selected, setSelected, setFoundApartment }) => {
   const layers = [
     StadtteileOutlineLayerMannheim(),
     BarsWohnungenMannheimLayer(),
@@ -31,14 +31,15 @@ const KaiserslauternMapView = ({ selected, setSelected, viewMode }) => {
         controller={true}
         layers={layers}
         onClick={info => {
-          if (info.object && viewMode === "wohnungen") {
+          if (info.object) {
             setSelected(prev => prev === info.object.title ? null : info.object.title);
+            setFoundApartment(null);
           } else {
             setSelected(null);
           }
         }}
       >
-        <Map
+        <Map          
           mapStyle="mapbox://styles/mapbox/dark-v11"
           mapboxAccessToken={MAPBOX_TOKEN}
         />

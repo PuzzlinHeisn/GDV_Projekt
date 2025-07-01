@@ -19,9 +19,20 @@ const StadtPieChart = ({dataKey}) => {
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
-<text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" fontSize={26} stroke='black' fontWeight="bold" strokeWidth={1}>
-      {`${name}: ${value.toFixed(0)} `}
-    </text>
+<text
+  x={x}
+  y={y}
+  fill="white"
+  textAnchor={x > cx ? 'start' : 'end'}
+  dominantBaseline="central"
+  fontSize={26}
+  stroke="black"
+  fontWeight="bold"
+  strokeWidth={1}
+  fontFamily="'Roboto', sans-serif"  // Hier die Schriftart
+>
+  {`${name}: ${value.toFixed(0)} `}
+</text>
   );
 };
     return (

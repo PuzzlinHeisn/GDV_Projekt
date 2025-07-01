@@ -38953,7 +38953,104 @@ const stackClasses = (0, _generateUtilityClassesDefault.default)('MuiStack', [
 ]);
 exports.default = stackClasses;
 
-},{"@mui/utils/generateUtilityClasses":"3J0Rs","@mui/utils/generateUtilityClass":"iAc9p","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"5Ap6r":[function(require,module,exports,__globalThis) {
+},{"@mui/utils/generateUtilityClasses":"3J0Rs","@mui/utils/generateUtilityClass":"iAc9p","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS"}],"9ZDyZ":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("4e75d35597054138").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "unstable_createBreakpoints", {
+    enumerable: true,
+    get: function() {
+        return _createBreakpoints.default;
+    }
+});
+var _createBreakpoints = _interopRequireDefault(require("251dd965507dcb6c"));
+
+},{"4e75d35597054138":"1P3rZ","251dd965507dcb6c":"k5Ify"}],"k5Ify":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.breakpointKeys = void 0;
+exports.default = createBreakpoints;
+// Sorted ASC by size. That's important.
+// It can't be configured as it's used statically for propTypes.
+const breakpointKeys = exports.breakpointKeys = [
+    'xs',
+    'sm',
+    'md',
+    'lg',
+    'xl'
+];
+const sortBreakpointsValues = (values)=>{
+    const breakpointsAsArray = Object.keys(values).map((key)=>({
+            key,
+            val: values[key]
+        })) || [];
+    // Sort in ascending order
+    breakpointsAsArray.sort((breakpoint1, breakpoint2)=>breakpoint1.val - breakpoint2.val);
+    return breakpointsAsArray.reduce((acc, obj)=>{
+        return {
+            ...acc,
+            [obj.key]: obj.val
+        };
+    }, {});
+};
+// Keep in mind that @media is inclusive by the CSS specification.
+function createBreakpoints(breakpoints) {
+    const { // The breakpoint **start** at this value.
+    // For instance with the first breakpoint xs: [xs, sm).
+    values = {
+        xs: 0,
+        // phone
+        sm: 600,
+        // tablet
+        md: 900,
+        // small laptop
+        lg: 1200,
+        // desktop
+        xl: 1536 // large screen
+    }, unit = 'px', step = 5, ...other } = breakpoints;
+    const sortedValues = sortBreakpointsValues(values);
+    const keys = Object.keys(sortedValues);
+    function up(key) {
+        const value = typeof values[key] === 'number' ? values[key] : key;
+        return `@media (min-width:${value}${unit})`;
+    }
+    function down(key) {
+        const value = typeof values[key] === 'number' ? values[key] : key;
+        return `@media (max-width:${value - step / 100}${unit})`;
+    }
+    function between(start, end) {
+        const endIndex = keys.indexOf(end);
+        return `@media (min-width:${typeof values[start] === 'number' ? values[start] : start}${unit}) and ` + `(max-width:${(endIndex !== -1 && typeof values[keys[endIndex]] === 'number' ? values[keys[endIndex]] : end) - step / 100}${unit})`;
+    }
+    function only(key) {
+        if (keys.indexOf(key) + 1 < keys.length) return between(key, keys[keys.indexOf(key) + 1]);
+        return up(key);
+    }
+    function not(key) {
+        // handle first and last key separately, for better readability
+        const keyIndex = keys.indexOf(key);
+        if (keyIndex === 0) return up(keys[1]);
+        if (keyIndex === keys.length - 1) return down(keys[keyIndex]);
+        return between(key, keys[keys.indexOf(key) + 1]).replace('@media', '@media not all and');
+    }
+    return {
+        keys,
+        values: sortedValues,
+        up,
+        down,
+        between,
+        only,
+        not,
+        unit,
+        ...other
+    };
+}
+
+},{}],"5Ap6r":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>createTheme);
@@ -43160,90 +43257,7 @@ function createTheme(options = {}, ...args) {
 }
 var _default = exports.default = createTheme;
 
-},{"a7a69b6314ef6820":"1P3rZ","f08de1e574d96be4":"bLPf1","fef76d655aaa132e":"k5Ify","83f3137514b70a38":"6Ko3S","e487320954df9b05":"foDcD","4a83e44bc56a5742":"xzviA","5ae03db25d336f5a":"b0FDg","e9031ccc4da151b1":"4f7E8","555272fc77b24fc5":"gMzgD"}],"k5Ify":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.breakpointKeys = void 0;
-exports.default = createBreakpoints;
-// Sorted ASC by size. That's important.
-// It can't be configured as it's used statically for propTypes.
-const breakpointKeys = exports.breakpointKeys = [
-    'xs',
-    'sm',
-    'md',
-    'lg',
-    'xl'
-];
-const sortBreakpointsValues = (values)=>{
-    const breakpointsAsArray = Object.keys(values).map((key)=>({
-            key,
-            val: values[key]
-        })) || [];
-    // Sort in ascending order
-    breakpointsAsArray.sort((breakpoint1, breakpoint2)=>breakpoint1.val - breakpoint2.val);
-    return breakpointsAsArray.reduce((acc, obj)=>{
-        return {
-            ...acc,
-            [obj.key]: obj.val
-        };
-    }, {});
-};
-// Keep in mind that @media is inclusive by the CSS specification.
-function createBreakpoints(breakpoints) {
-    const { // The breakpoint **start** at this value.
-    // For instance with the first breakpoint xs: [xs, sm).
-    values = {
-        xs: 0,
-        // phone
-        sm: 600,
-        // tablet
-        md: 900,
-        // small laptop
-        lg: 1200,
-        // desktop
-        xl: 1536 // large screen
-    }, unit = 'px', step = 5, ...other } = breakpoints;
-    const sortedValues = sortBreakpointsValues(values);
-    const keys = Object.keys(sortedValues);
-    function up(key) {
-        const value = typeof values[key] === 'number' ? values[key] : key;
-        return `@media (min-width:${value}${unit})`;
-    }
-    function down(key) {
-        const value = typeof values[key] === 'number' ? values[key] : key;
-        return `@media (max-width:${value - step / 100}${unit})`;
-    }
-    function between(start, end) {
-        const endIndex = keys.indexOf(end);
-        return `@media (min-width:${typeof values[start] === 'number' ? values[start] : start}${unit}) and ` + `(max-width:${(endIndex !== -1 && typeof values[keys[endIndex]] === 'number' ? values[keys[endIndex]] : end) - step / 100}${unit})`;
-    }
-    function only(key) {
-        if (keys.indexOf(key) + 1 < keys.length) return between(key, keys[keys.indexOf(key) + 1]);
-        return up(key);
-    }
-    function not(key) {
-        // handle first and last key separately, for better readability
-        const keyIndex = keys.indexOf(key);
-        if (keyIndex === 0) return up(keys[1]);
-        if (keyIndex === keys.length - 1) return down(keys[keyIndex]);
-        return between(key, keys[keys.indexOf(key) + 1]).replace('@media', '@media not all and');
-    }
-    return {
-        keys,
-        values: sortedValues,
-        up,
-        down,
-        between,
-        only,
-        not,
-        unit,
-        ...other
-    };
-}
-
-},{}],"foDcD":[function(require,module,exports,__globalThis) {
+},{"a7a69b6314ef6820":"1P3rZ","f08de1e574d96be4":"bLPf1","fef76d655aaa132e":"k5Ify","83f3137514b70a38":"6Ko3S","e487320954df9b05":"foDcD","4a83e44bc56a5742":"xzviA","5ae03db25d336f5a":"b0FDg","e9031ccc4da151b1":"4f7E8","555272fc77b24fc5":"gMzgD"}],"foDcD":[function(require,module,exports,__globalThis) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -52309,6 +52323,7 @@ var _stadtteileOutlineLayerMannheim = require("../deckgl/geojsonlayers/Stadtteil
 var _stadtteileOutlineLayerMannheimDefault = parcelHelpers.interopDefault(_stadtteileOutlineLayerMannheim);
 var _stadtteilLabelLayerMannheim = require("../deckgl/textlayers/StadtteilLabelLayerMannheim");
 var _stadtteilLabelLayerMannheimDefault = parcelHelpers.interopDefault(_stadtteilLabelLayerMannheim);
+var _s = $RefreshSig$();
 const INITIAL_VIEW_KL = {
     longitude: 8.520,
     latitude: 49.4875,
@@ -52318,11 +52333,31 @@ const INITIAL_VIEW_KL = {
 };
 const MAPBOX_TOKEN = "pk.eyJ1IjoibGF1cmVudDE1NCIsImEiOiJjbWI4ZXRmYWowYnM3MmtzYnpxdnluNmlyIn0.5Y8kOPYR-F_Ac-bAJTPiog";
 const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, foundApartement })=>{
+    _s();
+    const [viewState, setViewState] = (0, _react.useState)(INITIAL_VIEW_KL);
+    const [isInteracting, setIsInteracting] = (0, _react.useState)(false);
+    const animationFrameId = (0, _react.useRef)(null);
     const layers = [
         (0, _stadtteileOutlineLayerMannheimDefault.default)(),
         (0, _barsWohnungenMannheimLayerDefault.default)(selected, foundApartement),
         (0, _stadtteilLabelLayerMannheimDefault.default)()
     ];
+    // Animation loop für Rotation
+    (0, _react.useEffect)(()=>{
+        if (!isInteracting) {
+            const animate = ()=>{
+                setViewState((prev)=>({
+                        ...prev,
+                        bearing: (prev.bearing + 0.01) % 360
+                    }));
+                animationFrameId.current = requestAnimationFrame(animate);
+            };
+            animationFrameId.current = requestAnimationFrame(animate);
+            return ()=>cancelAnimationFrame(animationFrameId.current);
+        } else if (animationFrameId.current) cancelAnimationFrame(animationFrameId.current);
+    }, [
+        isInteracting
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         style: {
             flex: 1,
@@ -52330,8 +52365,12 @@ const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, found
             display: 'flex'
         },
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react1.DeckGL), {
-            initialViewState: INITIAL_VIEW_KL,
             controller: true,
+            viewState: viewState,
+            onViewStateChange: ({ viewState: vs, interactionState })=>{
+                setViewState(vs);
+                setIsInteracting(interactionState.isDragging || interactionState.isRotating || interactionState.isZooming);
+            },
             layers: layers,
             onClick: (info)=>{
                 if (info.object) {
@@ -52344,20 +52383,21 @@ const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, found
                 mapboxAccessToken: MAPBOX_TOKEN
             }, void 0, false, {
                 fileName: "src/components/mapbox/MannheimMapView.jsx",
-                lineNumber: 40,
+                lineNumber: 72,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/mapbox/MannheimMapView.jsx",
-            lineNumber: 27,
+            lineNumber: 51,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/mapbox/MannheimMapView.jsx",
-        lineNumber: 26,
+        lineNumber: 50,
         columnNumber: 5
     }, undefined);
 };
+_s(KaiserslauternMapView, "RqZyvCrrf5QjLC75qQi9BsN59M0=");
 _c = KaiserslauternMapView;
 exports.default = KaiserslauternMapView;
 var _c;
@@ -90781,14 +90821,17 @@ const staticLayers = [
 ];
 const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, foundApartement })=>{
     _s();
-    const layers = (0, _reactDefault.default).useMemo(()=>[
+    const [viewState, setViewState] = (0, _react.useState)(INITIAL_VIEW_KL);
+    const [isInteracting, setIsInteracting] = (0, _react.useState)(false);
+    const animationFrameId = (0, _react.useRef)(null);
+    const layers = (0, _react.useMemo)(()=>[
             ...staticLayers,
             (0, _barsWohnungenKLLayerDefault.default)(selected, foundApartement)
         ], [
         selected,
         foundApartement
     ]);
-    const handleClick = (0, _reactDefault.default).useCallback((info)=>{
+    const handleClick = (0, _react.useCallback)((info)=>{
         if (info.object) {
             setSelected((prev)=>prev === info.object.title ? null : info.object.title);
             setFoundApartment(null);
@@ -90797,6 +90840,22 @@ const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, found
         setSelected,
         setFoundApartment
     ]);
+    // Animation für automatische Drehung
+    (0, _react.useEffect)(()=>{
+        if (!isInteracting) {
+            const animate = ()=>{
+                setViewState((prev)=>({
+                        ...prev,
+                        bearing: (prev.bearing + 0.01) % 360
+                    }));
+                animationFrameId.current = requestAnimationFrame(animate);
+            };
+            animationFrameId.current = requestAnimationFrame(animate);
+            return ()=>cancelAnimationFrame(animationFrameId.current);
+        } else if (animationFrameId.current) cancelAnimationFrame(animationFrameId.current);
+    }, [
+        isInteracting
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         style: {
             flex: 1,
@@ -90804,8 +90863,12 @@ const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, found
             display: 'flex'
         },
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react1.DeckGL), {
-            initialViewState: INITIAL_VIEW_KL,
+            viewState: viewState,
             controller: true,
+            onViewStateChange: ({ viewState: vs, interactionState })=>{
+                setViewState(vs);
+                setIsInteracting(interactionState.isDragging || interactionState.isRotating || interactionState.isZooming);
+            },
             layers: layers,
             onClick: handleClick,
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactMapGl.Map), {
@@ -90813,21 +90876,21 @@ const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, found
                 mapboxAccessToken: MAPBOX_TOKEN
             }, void 0, false, {
                 fileName: "src/components/mapbox/KaiserslauternMapView.jsx",
-                lineNumber: 46,
+                lineNumber: 77,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/mapbox/KaiserslauternMapView.jsx",
-            lineNumber: 40,
+            lineNumber: 63,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/mapbox/KaiserslauternMapView.jsx",
-        lineNumber: 39,
+        lineNumber: 62,
         columnNumber: 5
     }, undefined);
 };
-_s(KaiserslauternMapView, "mbkrg/nuKJdEIhuQ1hHbeXd/Jaw=");
+_s(KaiserslauternMapView, "/EH1QJ5mqlGiDqst2p/6e5+hmUE=");
 _c = KaiserslauternMapView;
 exports.default = /*#__PURE__*/ _c1 = (0, _reactDefault.default).memo(KaiserslauternMapView);
 var _c, _c1;
@@ -91639,9 +91702,11 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _recharts = require("recharts");
 var _customToolTop = require("../../utils/customToolTop");
 var _customToolTopDefault = parcelHelpers.interopDefault(_customToolTop);
+var _styles = require("@mui/material/styles");
 var _s = $RefreshSig$();
 const WohnungsBarChart = ({ data, selected, dataKey, foundApartement })=>{
     _s();
+    const theme = (0, _styles.useTheme)();
     let max_y = null;
     if (dataKey === "qm") max_y = 200;
     else if (dataKey === "price_per_qm") max_y = 65;
@@ -91657,7 +91722,7 @@ const WohnungsBarChart = ({ data, selected, dataKey, foundApartement })=>{
                 strokeWidth: strokeWidth
             }, `cell-${entry.id ?? entry.title ?? index}`, false, {
                 fileName: "src/components/rechart/WohnungsBarChart.jsx",
-                lineNumber: 20,
+                lineNumber: 24,
                 columnNumber: 7
             }, undefined);
         }), [
@@ -91678,23 +91743,30 @@ const WohnungsBarChart = ({ data, selected, dataKey, foundApartement })=>{
                     ]
                 }, void 0, false, {
                     fileName: "src/components/rechart/WohnungsBarChart.jsx",
-                    lineNumber: 32,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {
                     content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _customToolTopDefault.default), {}, void 0, false, {
                         fileName: "src/components/rechart/WohnungsBarChart.jsx",
-                        lineNumber: 33,
+                        lineNumber: 37,
                         columnNumber: 27
                     }, void 0)
                 }, void 0, false, {
                     fileName: "src/components/rechart/WohnungsBarChart.jsx",
-                    lineNumber: 33,
+                    lineNumber: 37,
                     columnNumber: 9
                 }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {}, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {
+                    wrapperStyle: {
+                        fontFamily: theme.typography.h6.fontFamily,
+                        fontWeight: theme.typography.h6.fontWeight,
+                        fontSize: theme.typography.h6.fontSize,
+                        color: 'white'
+                    }
+                }, void 0, false, {
                     fileName: "src/components/rechart/WohnungsBarChart.jsx",
-                    lineNumber: 34,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
@@ -91703,22 +91775,26 @@ const WohnungsBarChart = ({ data, selected, dataKey, foundApartement })=>{
                     children: cells
                 }, void 0, false, {
                     fileName: "src/components/rechart/WohnungsBarChart.jsx",
-                    lineNumber: 35,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/rechart/WohnungsBarChart.jsx",
-            lineNumber: 31,
+            lineNumber: 35,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/rechart/WohnungsBarChart.jsx",
-        lineNumber: 30,
+        lineNumber: 34,
         columnNumber: 5
     }, undefined);
 };
-_s(WohnungsBarChart, "M1j72coUl7JyMTMKfnollIaW2jE=");
+_s(WohnungsBarChart, "HbR2QJHYTRi+78PVSEjaLNXvUcI=", false, function() {
+    return [
+        (0, _styles.useTheme)
+    ];
+});
 _c = WohnungsBarChart;
 exports.default = WohnungsBarChart;
 const getLabelName = (key)=>{
@@ -91741,7 +91817,7 @@ $RefreshReg$(_c, "WohnungsBarChart");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","recharts":"k9rge","../../utils/customToolTop":"erhpM","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39"}],"k9rge":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","recharts":"k9rge","../../utils/customToolTop":"erhpM","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39","@mui/material/styles":"7eExx"}],"k9rge":[function(require,module,exports,__globalThis) {
 // "export type" declarations on separate lines are in use
 // to workaround babel issue(s) 11465 12578
 //
@@ -126855,7 +126931,1082 @@ $RefreshReg$(_c, "CustomTooltip");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"9mWks","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39"}],"jGPlL":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"9mWks","@parcel/transformer-js/src/esmodule-helpers.js":"jK5mS","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fEK39"}],"7eExx":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireWildcard = require("9e0b4dc971269a3").default;
+var _interopRequireDefault = require("2d7e4e1648158fbb").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _exportNames = {
+    experimental_sx: true,
+    THEME_ID: true,
+    adaptV4Theme: true,
+    hexToRgb: true,
+    rgbToHex: true,
+    hslToRgb: true,
+    decomposeColor: true,
+    recomposeColor: true,
+    getContrastRatio: true,
+    getLuminance: true,
+    emphasize: true,
+    alpha: true,
+    darken: true,
+    lighten: true,
+    css: true,
+    keyframes: true,
+    StyledEngineProvider: true,
+    unstable_createBreakpoints: true,
+    createTheme: true,
+    unstable_createMuiStrictModeTheme: true,
+    createStyles: true,
+    unstable_getUnit: true,
+    unstable_toUnitless: true,
+    responsiveFontSizes: true,
+    createTransitions: true,
+    duration: true,
+    easing: true,
+    createColorScheme: true,
+    useTheme: true,
+    useThemeProps: true,
+    styled: true,
+    ThemeProvider: true,
+    makeStyles: true,
+    withStyles: true,
+    withTheme: true,
+    extendTheme: true,
+    experimental_extendTheme: true,
+    getOverlayAlpha: true,
+    shouldSkipGeneratingVar: true,
+    private_createTypography: true,
+    private_createMixins: true,
+    private_excludeVariablesFromRoot: true
+};
+Object.defineProperty(exports, "StyledEngineProvider", {
+    enumerable: true,
+    get: function() {
+        return _system.StyledEngineProvider;
+    }
+});
+Object.defineProperty(exports, "THEME_ID", {
+    enumerable: true,
+    get: function() {
+        return _identifier.default;
+    }
+});
+Object.defineProperty(exports, "ThemeProvider", {
+    enumerable: true,
+    get: function() {
+        return _ThemeProvider.default;
+    }
+});
+Object.defineProperty(exports, "adaptV4Theme", {
+    enumerable: true,
+    get: function() {
+        return _adaptV4Theme.default;
+    }
+});
+Object.defineProperty(exports, "alpha", {
+    enumerable: true,
+    get: function() {
+        return _system.alpha;
+    }
+});
+Object.defineProperty(exports, "createColorScheme", {
+    enumerable: true,
+    get: function() {
+        return _createColorScheme.default;
+    }
+});
+Object.defineProperty(exports, "createStyles", {
+    enumerable: true,
+    get: function() {
+        return _createStyles.default;
+    }
+});
+Object.defineProperty(exports, "createTheme", {
+    enumerable: true,
+    get: function() {
+        return _createTheme.default;
+    }
+});
+Object.defineProperty(exports, "createTransitions", {
+    enumerable: true,
+    get: function() {
+        return _createTransitions.default;
+    }
+});
+Object.defineProperty(exports, "css", {
+    enumerable: true,
+    get: function() {
+        return _system.css;
+    }
+});
+Object.defineProperty(exports, "darken", {
+    enumerable: true,
+    get: function() {
+        return _system.darken;
+    }
+});
+Object.defineProperty(exports, "decomposeColor", {
+    enumerable: true,
+    get: function() {
+        return _system.decomposeColor;
+    }
+});
+Object.defineProperty(exports, "duration", {
+    enumerable: true,
+    get: function() {
+        return _createTransitions.duration;
+    }
+});
+Object.defineProperty(exports, "easing", {
+    enumerable: true,
+    get: function() {
+        return _createTransitions.easing;
+    }
+});
+Object.defineProperty(exports, "emphasize", {
+    enumerable: true,
+    get: function() {
+        return _system.emphasize;
+    }
+});
+Object.defineProperty(exports, "experimental_extendTheme", {
+    enumerable: true,
+    get: function() {
+        return _experimental_extendTheme.default;
+    }
+});
+exports.experimental_sx = experimental_sx;
+Object.defineProperty(exports, "extendTheme", {
+    enumerable: true,
+    get: function() {
+        return _createThemeWithVars.default;
+    }
+});
+Object.defineProperty(exports, "getContrastRatio", {
+    enumerable: true,
+    get: function() {
+        return _system.getContrastRatio;
+    }
+});
+Object.defineProperty(exports, "getLuminance", {
+    enumerable: true,
+    get: function() {
+        return _system.getLuminance;
+    }
+});
+Object.defineProperty(exports, "getOverlayAlpha", {
+    enumerable: true,
+    get: function() {
+        return _getOverlayAlpha.default;
+    }
+});
+Object.defineProperty(exports, "hexToRgb", {
+    enumerable: true,
+    get: function() {
+        return _system.hexToRgb;
+    }
+});
+Object.defineProperty(exports, "hslToRgb", {
+    enumerable: true,
+    get: function() {
+        return _system.hslToRgb;
+    }
+});
+Object.defineProperty(exports, "keyframes", {
+    enumerable: true,
+    get: function() {
+        return _system.keyframes;
+    }
+});
+Object.defineProperty(exports, "lighten", {
+    enumerable: true,
+    get: function() {
+        return _system.lighten;
+    }
+});
+Object.defineProperty(exports, "makeStyles", {
+    enumerable: true,
+    get: function() {
+        return _makeStyles.default;
+    }
+});
+Object.defineProperty(exports, "private_createMixins", {
+    enumerable: true,
+    get: function() {
+        return _createMixins.default;
+    }
+});
+Object.defineProperty(exports, "private_createTypography", {
+    enumerable: true,
+    get: function() {
+        return _createTypography.default;
+    }
+});
+Object.defineProperty(exports, "private_excludeVariablesFromRoot", {
+    enumerable: true,
+    get: function() {
+        return _excludeVariablesFromRoot.default;
+    }
+});
+Object.defineProperty(exports, "recomposeColor", {
+    enumerable: true,
+    get: function() {
+        return _system.recomposeColor;
+    }
+});
+Object.defineProperty(exports, "responsiveFontSizes", {
+    enumerable: true,
+    get: function() {
+        return _responsiveFontSizes.default;
+    }
+});
+Object.defineProperty(exports, "rgbToHex", {
+    enumerable: true,
+    get: function() {
+        return _system.rgbToHex;
+    }
+});
+Object.defineProperty(exports, "shouldSkipGeneratingVar", {
+    enumerable: true,
+    get: function() {
+        return _shouldSkipGeneratingVar.default;
+    }
+});
+Object.defineProperty(exports, "styled", {
+    enumerable: true,
+    get: function() {
+        return _styled.default;
+    }
+});
+Object.defineProperty(exports, "unstable_createBreakpoints", {
+    enumerable: true,
+    get: function() {
+        return _createBreakpoints.unstable_createBreakpoints;
+    }
+});
+Object.defineProperty(exports, "unstable_createMuiStrictModeTheme", {
+    enumerable: true,
+    get: function() {
+        return _createMuiStrictModeTheme.default;
+    }
+});
+Object.defineProperty(exports, "unstable_getUnit", {
+    enumerable: true,
+    get: function() {
+        return _cssUtils.getUnit;
+    }
+});
+Object.defineProperty(exports, "unstable_toUnitless", {
+    enumerable: true,
+    get: function() {
+        return _cssUtils.toUnitless;
+    }
+});
+Object.defineProperty(exports, "useTheme", {
+    enumerable: true,
+    get: function() {
+        return _useTheme.default;
+    }
+});
+Object.defineProperty(exports, "useThemeProps", {
+    enumerable: true,
+    get: function() {
+        return _useThemeProps.default;
+    }
+});
+Object.defineProperty(exports, "withStyles", {
+    enumerable: true,
+    get: function() {
+        return _withStyles.default;
+    }
+});
+Object.defineProperty(exports, "withTheme", {
+    enumerable: true,
+    get: function() {
+        return _withTheme.default;
+    }
+});
+var _formatMuiErrorMessage = _interopRequireDefault(require("1426be4a4155a7db"));
+var _identifier = _interopRequireDefault(require("60e446a07e752fc1"));
+var _adaptV4Theme = _interopRequireDefault(require("4e01c7764d7ad72b"));
+var _system = require("50a86352ec4c604d");
+var _createBreakpoints = require("fc745d3a8e6128b6");
+var _createTheme = _interopRequireDefault(require("c02345c0d2fe9c26"));
+var _createMuiStrictModeTheme = _interopRequireDefault(require("325a3b3f8eefd8c8"));
+var _createStyles = _interopRequireDefault(require("bf76f6a96f96ef46"));
+var _cssUtils = require("d74cc28e333acb9c");
+var _responsiveFontSizes = _interopRequireDefault(require("996875b8cae62043"));
+var _createTransitions = _interopRequireWildcard(require("c5eb00d594046f72"));
+var _createColorScheme = _interopRequireDefault(require("4050e24442ae9870"));
+var _useTheme = _interopRequireDefault(require("be60b7a50df0d204"));
+var _useThemeProps = _interopRequireDefault(require("9ef0b9dc8ad1fc2a"));
+var _styled = _interopRequireDefault(require("7525de448df38c88"));
+var _ThemeProvider = _interopRequireDefault(require("755dbd5cca9108e5"));
+var _makeStyles = _interopRequireDefault(require("4ca70a1175195400"));
+var _withStyles = _interopRequireDefault(require("6a3fda33b23d335a"));
+var _withTheme = _interopRequireDefault(require("de95f5b02dd259e3"));
+var _ThemeProviderWithVars = require("597fd1722bc1e31a");
+Object.keys(_ThemeProviderWithVars).forEach(function(key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _ThemeProviderWithVars[key]) return;
+    Object.defineProperty(exports, key, {
+        enumerable: true,
+        get: function() {
+            return _ThemeProviderWithVars[key];
+        }
+    });
+});
+var _createThemeWithVars = _interopRequireDefault(require("c58e64473d69acc5"));
+var _experimental_extendTheme = _interopRequireDefault(require("7b6ebb63ac28ee0a"));
+var _getOverlayAlpha = _interopRequireDefault(require("24dd3ab8b230fd52"));
+var _shouldSkipGeneratingVar = _interopRequireDefault(require("9ccd3464d7f82d2f"));
+var _createTypography = _interopRequireDefault(require("1935a726b59862c"));
+var _createMixins = _interopRequireDefault(require("1388ea8ab0baac7a"));
+var _excludeVariablesFromRoot = _interopRequireDefault(require("37713734b0c1956"));
+// TODO: Remove this function in v6.
+// eslint-disable-next-line @typescript-eslint/naming-convention
+function experimental_sx() {
+    throw new Error("MUI: The `experimental_sx` has been moved to `theme.unstable_sx`.For more details, see https://github.com/mui/material-ui/pull/35150.");
+} // The legacy utilities from @mui/styles
+ // These are just empty functions that throws when invoked
+ // TODO: Remove in v7
+ // Private methods for creating parts of the theme
+
+},{"9e0b4dc971269a3":"6TFJp","2d7e4e1648158fbb":"1P3rZ","1426be4a4155a7db":"cXsuk","60e446a07e752fc1":"6SSma","4e01c7764d7ad72b":"8FKfg","50a86352ec4c604d":"1WaIj","fc745d3a8e6128b6":"9ZDyZ","c02345c0d2fe9c26":"a1TKj","325a3b3f8eefd8c8":"8fLO4","bf76f6a96f96ef46":"e3r46","d74cc28e333acb9c":"btihx","996875b8cae62043":"6wsxG","c5eb00d594046f72":"kquFJ","4050e24442ae9870":"4jSXe","be60b7a50df0d204":"03DWO","9ef0b9dc8ad1fc2a":"iFNHX","7525de448df38c88":"gU1yq","755dbd5cca9108e5":"6exTj","4ca70a1175195400":"7KmGh","6a3fda33b23d335a":"hJccm","de95f5b02dd259e3":"bQ1k9","597fd1722bc1e31a":"kXiIm","c58e64473d69acc5":"asCkD","7b6ebb63ac28ee0a":"48VoL","24dd3ab8b230fd52":"gVmXd","9ccd3464d7f82d2f":"4q7TV","1935a726b59862c":"iYA5e","1388ea8ab0baac7a":"2RmTc","37713734b0c1956":"bxBFd"}],"8FKfg":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = adaptV4Theme;
+var _system = require("3242de34b3b788aa");
+function adaptV4Theme(inputTheme) {
+    console.warn([
+        'MUI: adaptV4Theme() is deprecated.',
+        'Follow the upgrade guide on https://mui.com/r/migration-v4#theme.'
+    ].join('\n'));
+    const { defaultProps = {}, mixins = {}, overrides = {}, palette = {}, props = {}, styleOverrides = {}, ...other } = inputTheme;
+    const theme = {
+        ...other,
+        components: {}
+    };
+    // default props
+    Object.keys(defaultProps).forEach((component)=>{
+        const componentValue = theme.components[component] || {};
+        componentValue.defaultProps = defaultProps[component];
+        theme.components[component] = componentValue;
+    });
+    Object.keys(props).forEach((component)=>{
+        const componentValue = theme.components[component] || {};
+        componentValue.defaultProps = props[component];
+        theme.components[component] = componentValue;
+    });
+    // CSS overrides
+    Object.keys(styleOverrides).forEach((component)=>{
+        const componentValue = theme.components[component] || {};
+        componentValue.styleOverrides = styleOverrides[component];
+        theme.components[component] = componentValue;
+    });
+    Object.keys(overrides).forEach((component)=>{
+        const componentValue = theme.components[component] || {};
+        componentValue.styleOverrides = overrides[component];
+        theme.components[component] = componentValue;
+    });
+    // theme.spacing
+    theme.spacing = (0, _system.createSpacing)(inputTheme.spacing);
+    // theme.mixins.gutters
+    const breakpoints = (0, _system.createBreakpoints)(inputTheme.breakpoints || {});
+    const spacing = theme.spacing;
+    theme.mixins = {
+        gutters: (styles = {})=>{
+            return {
+                paddingLeft: spacing(2),
+                paddingRight: spacing(2),
+                ...styles,
+                [breakpoints.up('sm')]: {
+                    paddingLeft: spacing(3),
+                    paddingRight: spacing(3),
+                    ...styles[breakpoints.up('sm')]
+                }
+            };
+        },
+        ...mixins
+    };
+    const { type: typeInput, mode: modeInput, ...paletteRest } = palette;
+    const finalMode = modeInput || typeInput || 'light';
+    theme.palette = {
+        // theme.palette.text.hint
+        text: {
+            hint: finalMode === 'dark' ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.38)'
+        },
+        mode: finalMode,
+        type: finalMode,
+        ...paletteRest
+    };
+    return theme;
+}
+
+},{"3242de34b3b788aa":"1WaIj"}],"8fLO4":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("f0500c51d91f5f68").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = createMuiStrictModeTheme;
+var _deepmerge = _interopRequireDefault(require("bac7ee1d4630c8a4"));
+var _createTheme = _interopRequireDefault(require("8175099ea82f8d89"));
+function createMuiStrictModeTheme(options, ...args) {
+    return (0, _createTheme.default)((0, _deepmerge.default)({
+        unstable_strictMode: true
+    }, options), ...args);
+}
+
+},{"f0500c51d91f5f68":"1P3rZ","bac7ee1d4630c8a4":"bLPf1","8175099ea82f8d89":"a1TKj"}],"e3r46":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = createStyles;
+let warnedOnce = false;
+// To remove in v6
+function createStyles(styles) {
+    if (!warnedOnce) {
+        console.warn([
+            'MUI: createStyles from @mui/material/styles is deprecated.',
+            'Please use @mui/styles/createStyles'
+        ].join('\n'));
+        warnedOnce = true;
+    }
+    return styles;
+}
+
+},{}],"btihx":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.alignProperty = alignProperty;
+exports.convertLength = convertLength;
+exports.fontGrid = fontGrid;
+exports.getUnit = getUnit;
+exports.isUnitless = isUnitless;
+exports.responsiveProperty = responsiveProperty;
+exports.toUnitless = toUnitless;
+function isUnitless(value) {
+    return String(parseFloat(value)).length === String(value).length;
+}
+// Ported from Compass
+// https://github.com/Compass/compass/blob/master/core/stylesheets/compass/typography/_units.scss
+// Emulate the sass function "unit"
+function getUnit(input) {
+    return String(input).match(/[\d.\-+]*\s*(.*)/)[1] || '';
+}
+// Emulate the sass function "unitless"
+function toUnitless(length) {
+    return parseFloat(length);
+}
+// Convert any CSS <length> or <percentage> value to any another.
+// From https://github.com/KyleAMathews/convert-css-length
+function convertLength(baseFontSize) {
+    return (length, toUnit)=>{
+        const fromUnit = getUnit(length);
+        // Optimize for cases where `from` and `to` units are accidentally the same.
+        if (fromUnit === toUnit) return length;
+        // Convert input length to pixels.
+        let pxLength = toUnitless(length);
+        if (fromUnit !== 'px') {
+            if (fromUnit === 'em') pxLength = toUnitless(length) * toUnitless(baseFontSize);
+            else if (fromUnit === 'rem') pxLength = toUnitless(length) * toUnitless(baseFontSize);
+        }
+        // Convert length in pixels to the output unit
+        let outputLength = pxLength;
+        if (toUnit !== 'px') {
+            if (toUnit === 'em') outputLength = pxLength / toUnitless(baseFontSize);
+            else if (toUnit === 'rem') outputLength = pxLength / toUnitless(baseFontSize);
+            else return length;
+        }
+        return parseFloat(outputLength.toFixed(5)) + toUnit;
+    };
+}
+function alignProperty({ size, grid }) {
+    const sizeBelow = size - size % grid;
+    const sizeAbove = sizeBelow + grid;
+    return size - sizeBelow < sizeAbove - size ? sizeBelow : sizeAbove;
+}
+// fontGrid finds a minimal grid (in rem) for the fontSize values so that the
+// lineHeight falls under a x pixels grid, 4px in the case of Material Design,
+// without changing the relative line height
+function fontGrid({ lineHeight, pixels, htmlFontSize }) {
+    return pixels / (lineHeight * htmlFontSize);
+}
+/**
+ * generate a responsive version of a given CSS property
+ * @example
+ * responsiveProperty({
+ *   cssProperty: 'fontSize',
+ *   min: 15,
+ *   max: 20,
+ *   unit: 'px',
+ *   breakpoints: [300, 600],
+ * })
+ *
+ * // this returns
+ *
+ * {
+ *   fontSize: '15px',
+ *   '@media (min-width:300px)': {
+ *     fontSize: '17.5px',
+ *   },
+ *   '@media (min-width:600px)': {
+ *     fontSize: '20px',
+ *   },
+ * }
+ * @param {Object} params
+ * @param {string} params.cssProperty - The CSS property to be made responsive
+ * @param {number} params.min - The smallest value of the CSS property
+ * @param {number} params.max - The largest value of the CSS property
+ * @param {string} [params.unit] - The unit to be used for the CSS property
+ * @param {Array.number} [params.breakpoints]  - An array of breakpoints
+ * @param {number} [params.alignStep] - Round scaled value to fall under this grid
+ * @returns {Object} responsive styles for {params.cssProperty}
+ */ function responsiveProperty({ cssProperty, min, max, unit = 'rem', breakpoints = [
+    600,
+    900,
+    1200
+], transform = null }) {
+    const output = {
+        [cssProperty]: `${min}${unit}`
+    };
+    const factor = (max - min) / breakpoints[breakpoints.length - 1];
+    breakpoints.forEach((breakpoint)=>{
+        let value = min + factor * breakpoint;
+        if (transform !== null) value = transform(value);
+        output[`@media (min-width:${breakpoint}px)`] = {
+            [cssProperty]: `${Math.round(value * 10000) / 10000}${unit}`
+        };
+    });
+    return output;
+}
+
+},{}],"6wsxG":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("6abea5402ef82489").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = responsiveFontSizes;
+var _formatMuiErrorMessage = _interopRequireDefault(require("ce2f38ea61eee0ac"));
+var _cssUtils = require("4eca37b22368d6d4");
+function responsiveFontSizes(themeInput, options = {}) {
+    const { breakpoints = [
+        'sm',
+        'md',
+        'lg'
+    ], disableAlign = false, factor = 2, variants = [
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'subtitle1',
+        'subtitle2',
+        'body1',
+        'body2',
+        'caption',
+        'button',
+        'overline'
+    ] } = options;
+    const theme = {
+        ...themeInput
+    };
+    theme.typography = {
+        ...theme.typography
+    };
+    const typography = theme.typography;
+    // Convert between CSS lengths e.g. em->px or px->rem
+    // Set the baseFontSize for your project. Defaults to 16px (also the browser default).
+    const convert = (0, _cssUtils.convertLength)(typography.htmlFontSize);
+    const breakpointValues = breakpoints.map((x)=>theme.breakpoints.values[x]);
+    variants.forEach((variant)=>{
+        const style = typography[variant];
+        if (!style) return;
+        const remFontSize = parseFloat(convert(style.fontSize, 'rem'));
+        if (remFontSize <= 1) return;
+        const maxFontSize = remFontSize;
+        const minFontSize = 1 + (maxFontSize - 1) / factor;
+        let { lineHeight } = style;
+        if (!(0, _cssUtils.isUnitless)(lineHeight) && !disableAlign) throw new Error("MUI: Unsupported non-unitless line height with grid alignment.\nUse unitless line heights instead.");
+        if (!(0, _cssUtils.isUnitless)(lineHeight)) // make it unitless
+        lineHeight = parseFloat(convert(lineHeight, 'rem')) / parseFloat(remFontSize);
+        let transform = null;
+        if (!disableAlign) transform = (value)=>(0, _cssUtils.alignProperty)({
+                size: value,
+                grid: (0, _cssUtils.fontGrid)({
+                    pixels: 4,
+                    lineHeight,
+                    htmlFontSize: typography.htmlFontSize
+                })
+            });
+        typography[variant] = {
+            ...style,
+            ...(0, _cssUtils.responsiveProperty)({
+                cssProperty: 'fontSize',
+                min: minFontSize,
+                max: maxFontSize,
+                unit: 'rem',
+                breakpoints: breakpointValues,
+                transform
+            })
+        };
+    });
+    return theme;
+}
+
+},{"6abea5402ef82489":"1P3rZ","ce2f38ea61eee0ac":"cXsuk","4eca37b22368d6d4":"btihx"}],"iFNHX":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("e55debba6a3a698f").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = useThemeProps;
+var _useThemeProps = _interopRequireDefault(require("f37c43e4f51955ae"));
+var _defaultTheme = _interopRequireDefault(require("76daab5ec9258913"));
+var _identifier = _interopRequireDefault(require("f7d86afa37ac55f0"));
+function useThemeProps({ props, name }) {
+    return (0, _useThemeProps.default)({
+        props,
+        name,
+        defaultTheme: _defaultTheme.default,
+        themeId: _identifier.default
+    });
+}
+
+},{"e55debba6a3a698f":"1P3rZ","f37c43e4f51955ae":"l068H","76daab5ec9258913":"dsVJp","f7d86afa37ac55f0":"6SSma"}],"l068H":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("1c909ce09236dc56").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _useThemeProps.default;
+    }
+});
+Object.defineProperty(exports, "getThemeProps", {
+    enumerable: true,
+    get: function() {
+        return _getThemeProps.default;
+    }
+});
+var _useThemeProps = _interopRequireDefault(require("9ae2857601959f0a"));
+var _getThemeProps = _interopRequireDefault(require("a3e4fe27a5e6a7f4"));
+
+},{"1c909ce09236dc56":"1P3rZ","9ae2857601959f0a":"aDaxt","a3e4fe27a5e6a7f4":"cyqcd"}],"aDaxt":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("267804c15a5e3f7a").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = useThemeProps;
+var _getThemeProps = _interopRequireDefault(require("dc2d62e4900991ca"));
+var _useTheme = _interopRequireDefault(require("ebc6b593badac40c"));
+function useThemeProps({ props, name, defaultTheme, themeId }) {
+    let theme = (0, _useTheme.default)(defaultTheme);
+    if (themeId) theme = theme[themeId] || theme;
+    return (0, _getThemeProps.default)({
+        theme,
+        name,
+        props
+    });
+}
+
+},{"267804c15a5e3f7a":"1P3rZ","dc2d62e4900991ca":"cyqcd","ebc6b593badac40c":"9bObT"}],"cyqcd":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("76bf39b56103a8b1").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = getThemeProps;
+var _resolveProps = _interopRequireDefault(require("a769613b6a670c93"));
+function getThemeProps(params) {
+    const { theme, name, props } = params;
+    if (!theme || !theme.components || !theme.components[name] || !theme.components[name].defaultProps) return props;
+    return (0, _resolveProps.default)(theme.components[name].defaultProps, props);
+}
+
+},{"76bf39b56103a8b1":"1P3rZ","a769613b6a670c93":"hO4GV"}],"9bObT":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireWildcard = require("a2c0d6dcb9e05d5e").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _exportNames = {};
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _useTheme.default;
+    }
+});
+var _useTheme = _interopRequireWildcard(require("1e8d72b9c5b75a36"));
+Object.keys(_useTheme).forEach(function(key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _useTheme[key]) return;
+    Object.defineProperty(exports, key, {
+        enumerable: true,
+        get: function() {
+            return _useTheme[key];
+        }
+    });
+});
+
+},{"a2c0d6dcb9e05d5e":"6TFJp","1e8d72b9c5b75a36":"iX5Bx"}],"iX5Bx":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("56d9c0ef8420c115").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.systemDefaultTheme = exports.default = void 0;
+var _createTheme = _interopRequireDefault(require("828191d9ac14be9d"));
+var _useThemeWithoutDefault = _interopRequireDefault(require("844ae56d568ac095"));
+const systemDefaultTheme = exports.systemDefaultTheme = (0, _createTheme.default)();
+function useTheme(defaultTheme = systemDefaultTheme) {
+    return (0, _useThemeWithoutDefault.default)(defaultTheme);
+}
+var _default = exports.default = useTheme;
+
+},{"56d9c0ef8420c115":"1P3rZ","828191d9ac14be9d":"kryy7","844ae56d568ac095":"2vDOS"}],"6exTj":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("ec96335914447116").default;
+var _interopRequireWildcard = require("4473e0986fd3d9eb").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = ThemeProvider;
+var React = _interopRequireWildcard(require("ffff5d2b95997a92"));
+var _ThemeProviderNoVars = _interopRequireDefault(require("dd88efac0a0d0447"));
+var _ThemeProviderWithVars = require("56240afa2f411c2");
+var _identifier = _interopRequireDefault(require("2373d5eac4aed5f8"));
+var _jsxRuntime = require("abee41afeef16458");
+function ThemeProvider({ theme, ...props }) {
+    const noVarsTheme = React.useMemo(()=>{
+        if (typeof theme === 'function') return theme;
+        const muiTheme = _identifier.default in theme ? theme[_identifier.default] : theme;
+        if (!('colorSchemes' in muiTheme)) {
+            if (!('vars' in muiTheme)) // For non-CSS variables themes, set `vars` to null to prevent theme inheritance from the upper theme.
+            // The example use case is the docs demo that uses ThemeProvider to customize the theme while the upper theme is using CSS variables.
+            return {
+                ...theme,
+                vars: null
+            };
+            return theme;
+        }
+        return null;
+    }, [
+        theme
+    ]);
+    if (noVarsTheme) return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_ThemeProviderNoVars.default, {
+        theme: noVarsTheme,
+        ...props
+    });
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_ThemeProviderWithVars.CssVarsProvider, {
+        theme: theme,
+        ...props
+    });
+}
+
+},{"ec96335914447116":"1P3rZ","4473e0986fd3d9eb":"6TFJp","ffff5d2b95997a92":"jMk1U","dd88efac0a0d0447":"fp7A6","56240afa2f411c2":"kXiIm","2373d5eac4aed5f8":"6SSma","abee41afeef16458":"05iiF"}],"fp7A6":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("a93a67505f03cc38").default;
+var _interopRequireWildcard = require("1db8d7324e225fd3").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = ThemeProviderNoVars;
+var React = _interopRequireWildcard(require("3fe683a4b392ee76"));
+var _system = require("b57fa2925038b41e");
+var _identifier = _interopRequireDefault(require("37fefba726673ef6"));
+var _jsxRuntime = require("bf89517dbf20f6ff");
+function ThemeProviderNoVars({ theme: themeInput, ...props }) {
+    const scopedTheme = _identifier.default in themeInput ? themeInput[_identifier.default] : undefined;
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_system.ThemeProvider, {
+        ...props,
+        themeId: scopedTheme ? _identifier.default : undefined,
+        theme: scopedTheme || themeInput
+    });
+}
+
+},{"a93a67505f03cc38":"1P3rZ","1db8d7324e225fd3":"6TFJp","3fe683a4b392ee76":"jMk1U","b57fa2925038b41e":"1WaIj","37fefba726673ef6":"6SSma","bf89517dbf20f6ff":"05iiF"}],"kXiIm":[function(require,module,exports,__globalThis) {
+"use strict";
+'use client';
+var _interopRequireDefault = require("f71f1606772f3699").default;
+var _interopRequireWildcard = require("f45e67c3152f4567").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.CssVarsProvider = void 0;
+exports.Experimental_CssVarsProvider = Experimental_CssVarsProvider;
+exports.useColorScheme = exports.getInitColorSchemeScript = void 0;
+var React = _interopRequireWildcard(require("6bf61cb1c17e6356"));
+var _styleFunctionSx = _interopRequireDefault(require("dde767c79e68e2dc"));
+var _system = require("d484ec0e330425d2");
+var _createTheme = _interopRequireDefault(require("51df668dd926bb48"));
+var _createTypography = _interopRequireDefault(require("95a4777f6a634239"));
+var _identifier = _interopRequireDefault(require("bd071396e0851da4"));
+var _InitColorSchemeScript = require("bd1e778adf083ad9");
+var _jsxRuntime = require("be4becea9d8a6c73");
+const { CssVarsProvider: InternalCssVarsProvider, useColorScheme, getInitColorSchemeScript: deprecatedGetInitColorSchemeScript } = (0, _system.unstable_createCssVarsProvider)({
+    themeId: _identifier.default,
+    // @ts-ignore ignore module augmentation tests
+    theme: ()=>(0, _createTheme.default)({
+            cssVariables: true
+        }),
+    colorSchemeStorageKey: _InitColorSchemeScript.defaultConfig.colorSchemeStorageKey,
+    modeStorageKey: _InitColorSchemeScript.defaultConfig.modeStorageKey,
+    defaultColorScheme: {
+        light: _InitColorSchemeScript.defaultConfig.defaultLightColorScheme,
+        dark: _InitColorSchemeScript.defaultConfig.defaultDarkColorScheme
+    },
+    resolveTheme: (theme)=>{
+        const newTheme = {
+            ...theme,
+            typography: (0, _createTypography.default)(theme.palette, theme.typography)
+        };
+        newTheme.unstable_sx = function sx(props) {
+            return (0, _styleFunctionSx.default)({
+                sx: props,
+                theme: this
+            });
+        };
+        return newTheme;
+    }
+});
+exports.useColorScheme = useColorScheme;
+let warnedOnce = false;
+// TODO: remove in v7
+// eslint-disable-next-line @typescript-eslint/naming-convention
+function Experimental_CssVarsProvider(props) {
+    if (!warnedOnce) {
+        console.warn([
+            'MUI: The Experimental_CssVarsProvider component has been ported into ThemeProvider.',
+            '',
+            "You should use `import { ThemeProvider } from '@mui/material/styles'` instead.",
+            'For more details, check out https://mui.com/material-ui/customization/css-theme-variables/usage/'
+        ].join('\n'));
+        warnedOnce = true;
+    }
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(InternalCssVarsProvider, {
+        ...props
+    });
+}
+let warnedInitScriptOnce = false;
+// TODO: remove in v7
+const getInitColorSchemeScript = (params)=>{
+    if (!warnedInitScriptOnce) {
+        console.warn([
+            'MUI: The getInitColorSchemeScript function has been deprecated.',
+            '',
+            "You should use `import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'`",
+            'and replace the function call with `<InitColorSchemeScript />` instead.'
+        ].join('\n'));
+        warnedInitScriptOnce = true;
+    }
+    return deprecatedGetInitColorSchemeScript(params);
+};
+/**
+ * TODO: remove this export in v7
+ * @deprecated
+ * The `CssVarsProvider` component has been deprecated and ported into `ThemeProvider`.
+ *
+ * You should use `ThemeProvider` and `createTheme()` instead:
+ *
+ * ```diff
+ * - import { CssVarsProvider, extendTheme } from '@mui/material/styles';
+ * + import { ThemeProvider, createTheme } from '@mui/material/styles';
+ *
+ * - const theme = extendTheme();
+ * + const theme = createTheme({
+ * +   cssVariables: true,
+ * +   colorSchemes: { light: true, dark: true },
+ * + });
+ *
+ * - <CssVarsProvider theme={theme}>
+ * + <ThemeProvider theme={theme}>
+ * ```
+ *
+ * To see the full documentation, check out https://mui.com/material-ui/customization/css-theme-variables/usage/.
+ */ exports.getInitColorSchemeScript = getInitColorSchemeScript;
+const CssVarsProvider = exports.CssVarsProvider = InternalCssVarsProvider;
+
+},{"f71f1606772f3699":"1P3rZ","f45e67c3152f4567":"6TFJp","6bf61cb1c17e6356":"jMk1U","dde767c79e68e2dc":"3qmy1","d484ec0e330425d2":"1WaIj","51df668dd926bb48":"a1TKj","95a4777f6a634239":"iYA5e","bd071396e0851da4":"6SSma","bd1e778adf083ad9":"4rGvI","be4becea9d8a6c73":"05iiF"}],"4rGvI":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("4aa77561176f0b87").default;
+var _interopRequireWildcard = require("215d8ee5be69ebdf").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.defaultConfig = exports.default = void 0;
+var React = _interopRequireWildcard(require("69b0ba915d677858"));
+var _propTypes = _interopRequireDefault(require("61b47b75a330a65a"));
+var _InitColorSchemeScript = _interopRequireDefault(require("c6b16aa0a6624eae"));
+var _jsxRuntime = require("7a3f1a6efb295a5d");
+const defaultConfig = exports.defaultConfig = {
+    attribute: 'data-mui-color-scheme',
+    colorSchemeStorageKey: 'mui-color-scheme',
+    defaultLightColorScheme: 'light',
+    defaultDarkColorScheme: 'dark',
+    modeStorageKey: 'mui-mode'
+};
+/**
+ *
+ * Demos:
+ *
+ * - [InitColorSchemeScript](https://mui.com/material-ui/react-init-color-scheme-script/)
+ *
+ * API:
+ *
+ * - [InitColorSchemeScript API](https://mui.com/material-ui/api/init-color-scheme-script/)
+ */ function InitColorSchemeScript(props) {
+    const { defaultMode = 'system', defaultLightColorScheme = defaultConfig.defaultLightColorScheme, defaultDarkColorScheme = defaultConfig.defaultDarkColorScheme, modeStorageKey = defaultConfig.modeStorageKey, colorSchemeStorageKey = defaultConfig.colorSchemeStorageKey, attribute: initialAttribute = defaultConfig.attribute, colorSchemeNode = 'document.documentElement', nonce } = props;
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_InitColorSchemeScript.default, {
+        defaultMode: defaultMode,
+        defaultLightColorScheme: defaultLightColorScheme,
+        defaultDarkColorScheme: defaultDarkColorScheme,
+        modeStorageKey: modeStorageKey,
+        colorSchemeStorageKey: colorSchemeStorageKey,
+        attribute: initialAttribute,
+        colorSchemeNode: colorSchemeNode,
+        nonce: nonce
+    });
+}
+InitColorSchemeScript.propTypes = {
+    // ┌────────────────────────────── Warning ──────────────────────────────┐
+    // │ These PropTypes are generated from the TypeScript type definitions. │
+    // │ To update them, edit the TypeScript types and run `pnpm proptypes`. │
+    // └─────────────────────────────────────────────────────────────────────┘
+    /**
+   * DOM attribute for applying a color scheme.
+   * @default 'data-mui-color-scheme'
+   * @example '.mode-%s' // for class based color scheme
+   * @example '[data-mode-%s]' // for data-attribute without '='
+   */ attribute: _propTypes.default.string,
+    /**
+   * The node (provided as string) used to attach the color-scheme attribute.
+   * @default 'document.documentElement'
+   */ colorSchemeNode: _propTypes.default.string,
+    /**
+   * localStorage key used to store `colorScheme`.
+   * @default 'mui-color-scheme'
+   */ colorSchemeStorageKey: _propTypes.default.string,
+    /**
+   * The default color scheme to be used in dark mode.
+   * @default 'dark'
+   */ defaultDarkColorScheme: _propTypes.default.string,
+    /**
+   * The default color scheme to be used in light mode.
+   * @default 'light'
+   */ defaultLightColorScheme: _propTypes.default.string,
+    /**
+   * The default mode when the storage is empty (user's first visit).
+   * @default 'system'
+   */ defaultMode: _propTypes.default.oneOf([
+        'dark',
+        'light',
+        'system'
+    ]),
+    /**
+   * localStorage key used to store `mode`.
+   * @default 'mui-mode'
+   */ modeStorageKey: _propTypes.default.string,
+    /**
+   * Nonce string to pass to the inline script for CSP headers.
+   */ nonce: _propTypes.default.string
+};
+var _default = exports.default = InitColorSchemeScript;
+
+},{"4aa77561176f0b87":"1P3rZ","215d8ee5be69ebdf":"6TFJp","69b0ba915d677858":"jMk1U","61b47b75a330a65a":"GNqOQ","c6b16aa0a6624eae":"8agna","7a3f1a6efb295a5d":"05iiF"}],"8agna":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("68a81deed96e3567").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function() {
+        return _InitColorSchemeScript.default;
+    }
+});
+var _InitColorSchemeScript = _interopRequireDefault(require("cf35a495af265f47"));
+
+},{"68a81deed96e3567":"1P3rZ","cf35a495af265f47":"6VlWa"}],"7KmGh":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("2813beb5fcead744").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = makeStyles;
+var _formatMuiErrorMessage = _interopRequireDefault(require("10fbff6465919068"));
+function makeStyles() {
+    throw new Error("MUI: makeStyles is no longer exported from @mui/material/styles.\nYou have to import it from @mui/styles.\nSee https://mui.com/r/migration-v4/#mui-material-styles for more details.");
+}
+
+},{"2813beb5fcead744":"1P3rZ","10fbff6465919068":"cXsuk"}],"hJccm":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("554aba97516b6810").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = withStyles;
+var _formatMuiErrorMessage = _interopRequireDefault(require("564138a0de96cd90"));
+function withStyles() {
+    throw new Error("MUI: withStyles is no longer exported from @mui/material/styles.\nYou have to import it from @mui/styles.\nSee https://mui.com/r/migration-v4/#mui-material-styles for more details.");
+}
+
+},{"554aba97516b6810":"1P3rZ","564138a0de96cd90":"cXsuk"}],"bQ1k9":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("92b08439aff2893b").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = withTheme;
+var _formatMuiErrorMessage = _interopRequireDefault(require("b3de7d1a7b044330"));
+function withTheme() {
+    throw new Error("MUI: withTheme is no longer exported from @mui/material/styles.\nYou have to import it from @mui/styles.\nSee https://mui.com/r/migration-v4/#mui-material-styles for more details.");
+}
+
+},{"92b08439aff2893b":"1P3rZ","b3de7d1a7b044330":"cXsuk"}],"48VoL":[function(require,module,exports,__globalThis) {
+"use strict";
+var _interopRequireDefault = require("4a6bddfaeb4e9e51").default;
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = deprecatedExtendTheme;
+var _createThemeWithVars = _interopRequireDefault(require("22d932b106c1ff8d"));
+let warnedOnce = false;
+function deprecatedExtendTheme(...args) {
+    if (!warnedOnce) {
+        console.warn([
+            'MUI: The `experimental_extendTheme` has been stabilized.',
+            '',
+            "You should use `import { extendTheme } from '@mui/material/styles'`"
+        ].join('\n'));
+        warnedOnce = true;
+    }
+    return (0, _createThemeWithVars.default)(...args);
+}
+
+},{"4a6bddfaeb4e9e51":"1P3rZ","22d932b106c1ff8d":"asCkD"}],"jGPlL":[function(require,module,exports,__globalThis) {
 "use strict";
 var _interopRequireDefault = require("9d619b569da94270").default;
 Object.defineProperty(exports, "__esModule", {
@@ -128537,6 +129688,8 @@ const StadtPieChart = ({ dataKey })=>{
             stroke: "black",
             fontWeight: "bold",
             strokeWidth: 1,
+            fontFamily: "'Roboto', sans-serif" // Hier die Schriftart
+            ,
             children: `${name}: ${value.toFixed(0)} `
         }, void 0, false, {
             fileName: "src/components/rechart/StadtPieChart.jsx",
@@ -128561,28 +129714,28 @@ const StadtPieChart = ({ dataKey })=>{
                             fill: COLORS[index % COLORS.length]
                         }, `cell-${index}`, false, {
                             fileName: "src/components/rechart/StadtPieChart.jsx",
-                            lineNumber: 42,
+                            lineNumber: 53,
                             columnNumber: 15
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/components/rechart/StadtPieChart.jsx",
-                    lineNumber: 30,
+                    lineNumber: 41,
                     columnNumber: 11
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
                     fileName: "src/components/rechart/StadtPieChart.jsx",
-                    lineNumber: 46,
+                    lineNumber: 57,
                     columnNumber: 11
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/rechart/StadtPieChart.jsx",
-            lineNumber: 29,
+            lineNumber: 40,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/rechart/StadtPieChart.jsx",
-        lineNumber: 28,
+        lineNumber: 39,
         columnNumber: 7
     }, undefined);
 };

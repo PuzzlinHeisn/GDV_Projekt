@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { DeckGL } from '@deck.gl/react';
 import { Map } from 'react-map-gl';
 import BarsWohnungenKaiserslauternLayer from '../deckgl/columnlayers/BarsWohnungenKLLayer';
@@ -21,12 +21,16 @@ const staticLayers = [
 ];
 
 const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, foundApartement }) => {
-  const layers = React.useMemo(() => [
+  const [viewState, setViewState] = useState(INITIAL_VIEW_KL);
+  const [isInteracting, setIsInteracting] = useState(false);
+  const animationFrameId = useRef(null);
+
+  const layers = useMemo(() => [
     ...staticLayers,
     BarsWohnungenKaiserslauternLayer(selected, foundApartement)
   ], [selected, foundApartement]);
 
-  const handleClick = React.useCallback((info) => {
+  const handleClick = useCallback((info) => {
     if (info.object) {
       setSelected(prev => prev === info.object.title ? null : info.object.title);
       setFoundApartment(null);
@@ -35,11 +39,38 @@ const KaiserslauternMapView = ({ setSelected, setFoundApartment, selected, found
     }
   }, [setSelected, setFoundApartment]);
 
+  // Animation für automatische Drehung
+  useEffect(() => {
+    if (!isInteracting) {
+      const animate = () => {
+        setViewState(prev => ({
+          ...prev,
+          bearing: (prev.bearing + 0.01) % 360,
+        }));
+        animationFrameId.current = requestAnimationFrame(animate);
+      };
+      animationFrameId.current = requestAnimationFrame(animate);
+      return () => cancelAnimationFrame(animationFrameId.current);
+    } else {
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+      }
+    }
+  }, [isInteracting]);
+
   return (
     <div style={{ flex: 1, position: 'relative', display: 'flex' }}>
       <DeckGL
-        initialViewState={INITIAL_VIEW_KL}
+        viewState={viewState}
         controller={true}
+        onViewStateChange={({ viewState: vs, interactionState }) => {
+          setViewState(vs);
+          setIsInteracting(
+            interactionState.isDragging ||
+            interactionState.isRotating ||
+            interactionState.isZooming
+          );
+        }}
         layers={layers}
         onClick={handleClick}
       >

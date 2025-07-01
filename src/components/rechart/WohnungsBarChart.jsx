@@ -1,8 +1,12 @@
-import React, {useMemo} from "react";
+import React, { useMemo } from "react";
 import { BarChart, Bar, YAxis, Tooltip, ResponsiveContainer, Cell, Legend } from "recharts";
 import CustomTooltip from "../../utils/customToolTop";
+import { useTheme } from '@mui/material/styles';
+
 const WohnungsBarChart = ({ data, selected, dataKey, foundApartement }) => {
-    let max_y = null;
+  const theme = useTheme();
+
+  let max_y = null;
   if (dataKey === "qm") {
     max_y = 200;
   } else if (dataKey === "price_per_qm") {
@@ -29,9 +33,16 @@ const WohnungsBarChart = ({ data, selected, dataKey, foundApartement }) => {
   return (
     <ResponsiveContainer width="100%" height={180}>
       <BarChart data={data}>
-        <YAxis domain={[0,max_y]} />
+        <YAxis domain={[0, max_y]} />
         <Tooltip content={<CustomTooltip />} />
-        <Legend />
+        <Legend
+          wrapperStyle={{
+            fontFamily: theme.typography.h6.fontFamily,
+            fontWeight: theme.typography.h6.fontWeight,
+            fontSize: theme.typography.h6.fontSize,
+            color: 'white',
+          }}
+        />
         <Bar dataKey={dataKey} name={getLabelName(dataKey)}>
           {cells}
         </Bar>
